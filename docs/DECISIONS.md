@@ -34,6 +34,10 @@ Tech choices, confirmed or changed against the Devvit docs (https://developers.r
 - Layer 10 gets no rarity bonus (the spec only defines it for layers 1–9).
 - Input longer than 40 characters after normalising is rejected with no penalty, rather than truncated.
 - An offensive answer breaks a pickaxe like any other invalid answer.
+- Share text says "1 rare find" (singular), and drops " · " when no pickaxe broke.
+- Invalid answers also count as used, so repeating one is ignored rather than breaking a second pickaxe (an answer that fails clues 1..N fails every later layer too).
+- Normalising deletes punctuation, so "sweet-potato" becomes "sweetpotato"; pools need aliases for hyphenated forms.
+- Puzzle number lives in each puzzle file (`number`), not derived from the date.
 
 ## Open questions and risks
 

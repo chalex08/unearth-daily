@@ -21,11 +21,11 @@ Each step is one prompt / one feature branch, merged to `main` when typecheck, l
 
 Pure TypeScript in `src/shared/`, no Devvit imports.
 
-- [ ] Normalisation (lowercase, trim, collapse spaces, strip punctuation, 40-char limit).
-- [ ] Mineral table, rarity bands with cold start / "estimated", scoring (base + bonus + 50 per pickaxe), share text.
-- [ ] Run state machine: 10 layers, 3 pickaxes, reuse without penalty, empty input without penalty, end conditions.
-- [ ] UTC day key and puzzle number, streak update.
-- [ ] Puzzle file type, plus a validator for it.
+- [x] Normalisation (lowercase, trim, collapse spaces, strip punctuation, 40-char limit).
+- [x] Mineral table, rarity bands with cold start / "estimated", scoring (base + bonus + 50 per pickaxe), share text.
+- [x] Run state machine: 10 layers, 3 pickaxes, reuse without penalty, empty input without penalty, end conditions.
+- [x] UTC day key and streak update. Puzzle number comes from the puzzle file (`number`).
+- [x] Puzzle file type, plus a validator for it.
 - **Done when:** Vitest covers every rule in SPEC §2–§4 using puzzle #14, including band boundaries and the 853-point share example.
 
 ### 3. Content pipeline + seed data — Mon 23 Nov
