@@ -11,6 +11,7 @@ Every session follows these rules. Repo layout, commands and Devvit client limit
 ## Never
 
 - Never run `devvit publish`, `npm run launch:after-hackathon`, or anything else that submits the app for review. Upload and playtest only (`npm run dev`, `npm run upload:dev`; `npm run deploy:prod` uploads the canonical app and does not publish).
+- Never print, cat, grep or read the contents of `.env` or any other secret. When searching the repo, exclude `.env*` files.
 - Never commit secrets. Offline keys (`GEMINI_FREE_API_KEY`, `GEMINI_FREE_MODEL`) live in `.env`, which is gitignored. The runtime AI key is the Devvit secret setting `geminiApiKey`.
 - Never send Reddit data of any kind to the free-tier Gemini key (`GEMINI_FREE_API_KEY`): no player answers, no SPEC §4.1 non-pool answer log, no answer counts, no usernames, nothing read from Redis or the Reddit API. Free-tier scripts read only hand-written seed themes and our own puzzle files. (SPEC §5.3)
 - Never let the Devvit server use any key but the paid-tier one (`geminiApiKey`, from a billed Google project, never the free one).

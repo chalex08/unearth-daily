@@ -4,12 +4,14 @@ import { createServer, getServerPort } from '@devvit/web/server';
 import { api } from './routes/api';
 import { forms } from './routes/forms';
 import { menu } from './routes/menu';
+import { seed } from './routes/seed';
 import { triggers } from './routes/triggers';
 
 const app = new Hono();
 const internal = new Hono();
 
 internal.route('/menu', menu);
+internal.route('/menu', seed);
 internal.route('/form', forms);
 internal.route('/triggers', triggers);
 

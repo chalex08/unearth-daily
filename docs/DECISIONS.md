@@ -69,3 +69,13 @@ Offline puzzle drafting uses the Gemini API free tier; the in-game judge uses th
 
 - `AGENTS.md` (from the template) mentions tRPC, React and Node 22; the template now uses Hono, plain TS and Node 24. Fix when next touched.
 - `CONTRIBUTING.md` describes a two-developer PR flow; the project now has one developer working branch → merge to `main`.
+
+## Content pipeline (21 Nov 2026)
+
+- **Offline model:** `gemini-3.8-flash` suggested for `GEMINI_FREE_MODEL` (free tier per the Gemini pricing page; free-tier RPM/RPD are only shown in AI Studio, per project, reset at midnight PT). The model is read from `.env`, so it can change without code.
+- **Gemini REST call:** plain `fetch` to `v1beta/models/{model}:generateContent` with header `x-goog-api-key` and `generationConfig.responseMimeType: "application/json"` + `responseJsonSchema`. No SDK dependency. The API reference page was only partly readable by automated fetch; the field names are confirmed by the first real run (see CONTENT.md). The docs don't document `RetryInfo` on 429; the script uses `retryDelay` if present, else exponential backoff.
+- **Draft format:** the model returns clues plus each answer's depth; `toPuzzle` expands that into per-layer pools, so the "answer at N is valid at 1..N" rule holds by construction.
+- **Dev seed:** the `devvit` 0.15.4 CLI has no Redis command and Redis is per install, reachable only from app code (developers.reddit.com blocks automated fetches; checked against the installed types and `devvit --help`). So fake counts are loaded by a moderator menu item, `/internal/menu/seed-fake-counts`, which refuses when `context.appSlug` is the canonical app.
+- **Stats keys** (step 4 writes real data to the same keys): `answers:{date}:{layer}` sorted set, canonical → count; `ends:{date}` hash, deepest layer → runs ended.
+- **Puzzle files on the server:** bundled with Vite `import.meta.glob` in `src/server/core/puzzles.ts`; verified they appear in `dist/server` and not `dist/client`.
+- **Puzzle #14:** dated 2026-11-21 in `content/` (the test fixture keeps 2026-12-05). Its layer-10 clue is now "…that's oval rather than round" (was "The one and only", which adds no constraint); the fixture matches.

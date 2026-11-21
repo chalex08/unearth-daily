@@ -32,6 +32,10 @@ jobs:
         run: npm run typecheck
       - name: Lint
         run: npm run lint
+      - name: Validate puzzles
+        run: npm run validate:puzzles
+      - name: No free-tier Gemini key in the app (SPEC §5.3)
+        run: '! grep -rn GEMINI_FREE src'
       - name: Test
         run: npm run test
       - name: Build

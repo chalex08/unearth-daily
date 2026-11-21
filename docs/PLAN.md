@@ -31,9 +31,10 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 3. Content pipeline + seed data — Mon 23 Nov
 
-- [ ] `tools/` script that drafts a puzzle with the Gemini free tier (`GEMINI_FREE_API_KEY`, `GEMINI_FREE_MODEL` from `.env`) from a hand-written seed theme into `content/puzzles/` as a draft for review. Its only inputs are seed themes and our own puzzle files: no Reddit data (SPEC §5.3).
-- [ ] Validator: 10 clues, a pool for each layer with aliases and commonness, exactly one answer at layer 10, and every answer at layer N also valid for layers 1..N−1.
-- [ ] Puzzle #14 seeded by hand, plus at least 6 more reviewed puzzles.
+- [x] `tools/` script that drafts a puzzle with the Gemini free tier (`GEMINI_FREE_API_KEY`, `GEMINI_FREE_MODEL` from `.env`) from a hand-written seed theme into `content/puzzles/` as a draft for review. Its only inputs are seed themes and our own puzzle files: no Reddit data (SPEC §5.3).
+- [x] Validator: 10 clues, a pool for each layer with aliases and commonness, exactly one answer at layer 10, and every answer at layer N also valid for layers 1..N−1.
+- [ ] Puzzle #14 seeded by hand (done: `content/puzzles/2026-11-21.json`), plus at least 6 more reviewed puzzles.
+- [x] Dev-only fake answer counts (mod menu item), see [CONTENT.md](CONTENT.md).
 - **Done when:** the validator passes on every committed puzzle in CI, nothing in `src/` reads `GEMINI_FREE_*`, and no `tools/` script reads Redis, the Reddit API or the answer log.
 
 ### 4. Server + AI judge — Tue 24 – Wed 25 Nov

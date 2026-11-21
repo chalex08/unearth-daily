@@ -1,0 +1,1376 @@
+{
+  "number": 14,
+  "date": "2026-11-21",
+  "layers": [
+    {
+      "clue": "Name something orange",
+      "pool": [
+        {
+          "canonical": "traffic cone",
+          "aliases": ["road cone", "cone", "traffic cones", "safety cone"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basketballs", "basket ball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "goldfish",
+          "aliases": ["gold fish"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tiger",
+          "aliases": ["tigers"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "fox",
+          "aliases": ["red fox", "foxes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sunset",
+          "aliases": ["sunsets", "sunrise"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "orangutan",
+          "aliases": ["orangutans", "orang utan", "orangutang"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "clownfish",
+          "aliases": ["clown fish", "nemo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "monarch butterfly",
+          "aliases": ["monarch", "butterfly"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "life jacket",
+          "aliases": ["lifejacket", "life vest"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hi vis vest",
+          "aliases": [
+            "hi vis",
+            "hivis",
+            "high vis",
+            "highvis",
+            "hi vis jacket",
+            "high visibility vest",
+            "safety vest"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "prison jumpsuit",
+          "aliases": ["prison uniform", "orange jumpsuit", "jumpsuit"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fire",
+          "aliases": ["flame", "flames"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rust",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "autumn leaves",
+          "aliases": ["autumn leaf", "fall leaves", "leaves", "leaf"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garfield",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "koi",
+          "aliases": ["koi fish", "koi carp"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jack o lantern",
+          "aliases": ["jackolantern", "jack o lanterns"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "marigold",
+          "aliases": ["marigolds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lava",
+          "aliases": ["magma"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "black box",
+          "aliases": ["flight recorder"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lifebuoy",
+          "aliases": ["life ring", "life preserver"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "highlighter",
+          "aliases": ["highlighters", "orange highlighter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "crayon",
+          "aliases": ["orange crayon"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tiger lily",
+          "aliases": ["tiger lilies"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "poison dart frog",
+          "aliases": ["dart frog"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "amber",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orange juice",
+          "aliases": ["oj", "juice"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "fanta",
+          "aliases": ["orange fanta"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cheddar",
+          "aliases": ["cheddar cheese", "cheese"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cheetos",
+          "aliases": ["cheeto", "cheese puffs", "cheezels"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orange soda",
+          "aliases": ["orange pop"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "salmon",
+          "aliases": ["salmon fillet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "egg yolk",
+          "aliases": ["yolk", "yolks", "egg yolks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mac and cheese",
+          "aliases": [
+            "macaroni and cheese",
+            "mac n cheese",
+            "mac cheese",
+            "kraft dinner",
+            "kd"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "candy corn",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "goldfish crackers",
+          "aliases": ["goldfish cracker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "irn bru",
+          "aliases": ["irnbru"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "aperol",
+          "aliases": ["aperol spritz"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "red leicester",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tang",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "salmon roe",
+          "aliases": ["ikura"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paprika",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chanterelle",
+          "aliases": ["chanterelles", "chanterelle mushroom"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carrot",
+          "aliases": ["carrots", "baby carrot", "baby carrots"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sweet potato",
+          "aliases": [
+            "sweet potatoes",
+            "kumara",
+            "kumera",
+            "yam",
+            "yams",
+            "sweetpotato"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "red lentils",
+          "aliases": ["red lentil", "lentils", "orange lentils"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turmeric",
+          "aliases": ["turmeric root"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nasturtium",
+          "aliases": ["nasturtiums"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saffron",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orange cauliflower",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pumpkin",
+          "aliases": ["pumpkins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cantaloupe",
+          "aliases": [
+            "rockmelon",
+            "canteloupe",
+            "muskmelon",
+            "musk melon",
+            "cantaloupes"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "butternut squash",
+          "aliases": ["butternut", "squash"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orange bell pepper",
+          "aliases": [
+            "orange pepper",
+            "orange capsicum",
+            "bell pepper",
+            "capsicum"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "habanero",
+          "aliases": ["habanero pepper", "habaneros"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "physalis",
+          "aliases": [
+            "cape gooseberry",
+            "golden berry",
+            "goldenberry",
+            "ground cherry"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cloudberry",
+          "aliases": ["cloudberries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "goji berry",
+          "aliases": ["goji", "goji berries", "wolfberry"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mango",
+          "aliases": ["mangoes", "mangos"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "peach",
+          "aliases": ["peaches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apricot",
+          "aliases": ["apricots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nectarine",
+          "aliases": ["nectarines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "papaya",
+          "aliases": ["pawpaw", "papaw", "papayas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "persimmon",
+          "aliases": ["sharon fruit", "kaki", "persimmons"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "loquat",
+          "aliases": ["loquats"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "navel orange",
+          "aliases": ["naval orange", "orange", "oranges", "navel oranges"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "blood orange",
+          "aliases": ["blood oranges"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seville orange",
+          "aliases": ["bitter orange", "sour orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "valencia orange",
+          "aliases": ["valencia"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cara cara orange",
+          "aliases": ["cara cara"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tangelo",
+          "aliases": ["minneola", "tangelos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sumo citrus",
+          "aliases": ["sumo", "dekopon", "hallabong"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that you can eat",
+      "pool": [
+        {
+          "canonical": "orange juice",
+          "aliases": ["oj", "juice"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "fanta",
+          "aliases": ["orange fanta"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cheddar",
+          "aliases": ["cheddar cheese", "cheese"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cheetos",
+          "aliases": ["cheeto", "cheese puffs", "cheezels"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orange soda",
+          "aliases": ["orange pop"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "salmon",
+          "aliases": ["salmon fillet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "egg yolk",
+          "aliases": ["yolk", "yolks", "egg yolks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mac and cheese",
+          "aliases": [
+            "macaroni and cheese",
+            "mac n cheese",
+            "mac cheese",
+            "kraft dinner",
+            "kd"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "candy corn",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "goldfish crackers",
+          "aliases": ["goldfish cracker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "irn bru",
+          "aliases": ["irnbru"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "aperol",
+          "aliases": ["aperol spritz"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "red leicester",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tang",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "salmon roe",
+          "aliases": ["ikura"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paprika",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chanterelle",
+          "aliases": ["chanterelles", "chanterelle mushroom"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carrot",
+          "aliases": ["carrots", "baby carrot", "baby carrots"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sweet potato",
+          "aliases": [
+            "sweet potatoes",
+            "kumara",
+            "kumera",
+            "yam",
+            "yams",
+            "sweetpotato"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "red lentils",
+          "aliases": ["red lentil", "lentils", "orange lentils"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turmeric",
+          "aliases": ["turmeric root"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nasturtium",
+          "aliases": ["nasturtiums"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saffron",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orange cauliflower",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pumpkin",
+          "aliases": ["pumpkins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cantaloupe",
+          "aliases": [
+            "rockmelon",
+            "canteloupe",
+            "muskmelon",
+            "musk melon",
+            "cantaloupes"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "butternut squash",
+          "aliases": ["butternut", "squash"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orange bell pepper",
+          "aliases": [
+            "orange pepper",
+            "orange capsicum",
+            "bell pepper",
+            "capsicum"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "habanero",
+          "aliases": ["habanero pepper", "habaneros"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "physalis",
+          "aliases": [
+            "cape gooseberry",
+            "golden berry",
+            "goldenberry",
+            "ground cherry"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cloudberry",
+          "aliases": ["cloudberries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "goji berry",
+          "aliases": ["goji", "goji berries", "wolfberry"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mango",
+          "aliases": ["mangoes", "mangos"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "peach",
+          "aliases": ["peaches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apricot",
+          "aliases": ["apricots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nectarine",
+          "aliases": ["nectarines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "papaya",
+          "aliases": ["pawpaw", "papaw", "papayas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "persimmon",
+          "aliases": ["sharon fruit", "kaki", "persimmons"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "loquat",
+          "aliases": ["loquats"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "navel orange",
+          "aliases": ["naval orange", "orange", "oranges", "navel oranges"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "blood orange",
+          "aliases": ["blood oranges"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seville orange",
+          "aliases": ["bitter orange", "sour orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "valencia orange",
+          "aliases": ["valencia"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cara cara orange",
+          "aliases": ["cara cara"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tangelo",
+          "aliases": ["minneola", "tangelos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sumo citrus",
+          "aliases": ["sumo", "dekopon", "hallabong"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that grows on a plant",
+      "pool": [
+        {
+          "canonical": "carrot",
+          "aliases": ["carrots", "baby carrot", "baby carrots"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sweet potato",
+          "aliases": [
+            "sweet potatoes",
+            "kumara",
+            "kumera",
+            "yam",
+            "yams",
+            "sweetpotato"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "red lentils",
+          "aliases": ["red lentil", "lentils", "orange lentils"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turmeric",
+          "aliases": ["turmeric root"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nasturtium",
+          "aliases": ["nasturtiums"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saffron",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orange cauliflower",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pumpkin",
+          "aliases": ["pumpkins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cantaloupe",
+          "aliases": [
+            "rockmelon",
+            "canteloupe",
+            "muskmelon",
+            "musk melon",
+            "cantaloupes"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "butternut squash",
+          "aliases": ["butternut", "squash"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orange bell pepper",
+          "aliases": [
+            "orange pepper",
+            "orange capsicum",
+            "bell pepper",
+            "capsicum"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "habanero",
+          "aliases": ["habanero pepper", "habaneros"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "physalis",
+          "aliases": [
+            "cape gooseberry",
+            "golden berry",
+            "goldenberry",
+            "ground cherry"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cloudberry",
+          "aliases": ["cloudberries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "goji berry",
+          "aliases": ["goji", "goji berries", "wolfberry"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mango",
+          "aliases": ["mangoes", "mangos"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "peach",
+          "aliases": ["peaches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apricot",
+          "aliases": ["apricots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nectarine",
+          "aliases": ["nectarines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "papaya",
+          "aliases": ["pawpaw", "papaw", "papayas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "persimmon",
+          "aliases": ["sharon fruit", "kaki", "persimmons"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "loquat",
+          "aliases": ["loquats"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "navel orange",
+          "aliases": ["naval orange", "orange", "oranges", "navel oranges"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "blood orange",
+          "aliases": ["blood oranges"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seville orange",
+          "aliases": ["bitter orange", "sour orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "valencia orange",
+          "aliases": ["valencia"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cara cara orange",
+          "aliases": ["cara cara"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tangelo",
+          "aliases": ["minneola", "tangelos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sumo citrus",
+          "aliases": ["sumo", "dekopon", "hallabong"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's a fruit",
+      "pool": [
+        {
+          "canonical": "pumpkin",
+          "aliases": ["pumpkins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cantaloupe",
+          "aliases": [
+            "rockmelon",
+            "canteloupe",
+            "muskmelon",
+            "musk melon",
+            "cantaloupes"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "butternut squash",
+          "aliases": ["butternut", "squash"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orange bell pepper",
+          "aliases": [
+            "orange pepper",
+            "orange capsicum",
+            "bell pepper",
+            "capsicum"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "habanero",
+          "aliases": ["habanero pepper", "habaneros"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "physalis",
+          "aliases": [
+            "cape gooseberry",
+            "golden berry",
+            "goldenberry",
+            "ground cherry"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cloudberry",
+          "aliases": ["cloudberries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "goji berry",
+          "aliases": ["goji", "goji berries", "wolfberry"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mango",
+          "aliases": ["mangoes", "mangos"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "peach",
+          "aliases": ["peaches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apricot",
+          "aliases": ["apricots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nectarine",
+          "aliases": ["nectarines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "papaya",
+          "aliases": ["pawpaw", "papaw", "papayas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "persimmon",
+          "aliases": ["sharon fruit", "kaki", "persimmons"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "loquat",
+          "aliases": ["loquats"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "navel orange",
+          "aliases": ["naval orange", "orange", "oranges", "navel oranges"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "blood orange",
+          "aliases": ["blood oranges"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seville orange",
+          "aliases": ["bitter orange", "sour orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "valencia orange",
+          "aliases": ["valencia"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cara cara orange",
+          "aliases": ["cara cara"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tangelo",
+          "aliases": ["minneola", "tangelos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sumo citrus",
+          "aliases": ["sumo", "dekopon", "hallabong"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that grows on a tree",
+      "pool": [
+        {
+          "canonical": "mango",
+          "aliases": ["mangoes", "mangos"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "peach",
+          "aliases": ["peaches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apricot",
+          "aliases": ["apricots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nectarine",
+          "aliases": ["nectarines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "papaya",
+          "aliases": ["pawpaw", "papaw", "papayas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "persimmon",
+          "aliases": ["sharon fruit", "kaki", "persimmons"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "loquat",
+          "aliases": ["loquats"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "navel orange",
+          "aliases": ["naval orange", "orange", "oranges", "navel oranges"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "blood orange",
+          "aliases": ["blood oranges"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seville orange",
+          "aliases": ["bitter orange", "sour orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "valencia orange",
+          "aliases": ["valencia"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cara cara orange",
+          "aliases": ["cara cara"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tangelo",
+          "aliases": ["minneola", "tangelos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sumo citrus",
+          "aliases": ["sumo", "dekopon", "hallabong"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's a citrus fruit",
+      "pool": [
+        {
+          "canonical": "navel orange",
+          "aliases": ["naval orange", "orange", "oranges", "navel oranges"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "blood orange",
+          "aliases": ["blood oranges"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seville orange",
+          "aliases": ["bitter orange", "sour orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "valencia orange",
+          "aliases": ["valencia"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cara cara orange",
+          "aliases": ["cara cara"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tangelo",
+          "aliases": ["minneola", "tangelos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sumo citrus",
+          "aliases": ["sumo", "dekopon", "hallabong"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…smaller than a tennis ball",
+      "pool": [
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…whose name doesn't contain \"orange\"",
+      "pool": [
+        {
+          "canonical": "clementine",
+          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mandarin",
+          "aliases": ["mandarins", "mandarin orange", "mandarine"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tangerine",
+          "aliases": ["tangerines"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "satsuma",
+          "aliases": ["satsumas", "mikan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…usually eaten peel and all",
+      "pool": [
+        {
+          "canonical": "calamondin",
+          "aliases": ["calamansi", "kalamansi", "calamondin orange"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's oval rather than round",
+      "pool": [
+        {
+          "canonical": "kumquat",
+          "aliases": ["cumquat", "kumquats", "cumquats"],
+          "commonness": "rare"
+        }
+      ]
+    }
+  ]
+}

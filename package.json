@@ -15,7 +15,10 @@
     "login": "devvit login",
     "upload:dev": "node tools/release/cli.ts upload-dev",
     "deploy:prod": "node tools/release/cli.ts deploy-prod",
-    "launch:after-hackathon": "node tools/release/cli.ts launch-after-hackathon"
+    "launch:after-hackathon": "node tools/release/cli.ts launch-after-hackathon",
+    "puzzle:generate": "node tools/generate-puzzle.ts",
+    "validate:puzzles": "node tools/validate-puzzles.ts",
+    "review": "node tools/review.ts"
   },
   "engines": {
     "node": ">=24.0.0"

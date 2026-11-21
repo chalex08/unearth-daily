@@ -62,7 +62,7 @@ const clues = [
   '…smaller than a tennis ball',
   '…whose name doesn\'t contain "orange"',
   '…usually eaten peel and all',
-  'The one and only',
+  "…that's oval rather than round",
 ];
 
 export const puzzle14: Puzzle = {
