@@ -20,7 +20,7 @@ GEMINI_FREE_API_KEY=...   # from a Google project with NO billing
 GEMINI_FREE_MODEL=gemini-3.8-flash
 ```
 
-`gemini-3.8-flash` is on the free tier (pricing page, checked 21 Nov 2026). Free-tier rate limits are per project and are only shown in AI Studio (aistudio.google.com/rate-limit); daily quotas reset at midnight Pacific. The script retries 429 and 5xx up to 6 times with exponential backoff, and uses the server's `retryDelay` when it gives one.
+`gemini-3.8-flash` is on the free tier (pricing page, checked 21 Nov 2026). Free-tier rate limits are per project and are only shown in AI Studio (aistudio.google.com/rate-limit); daily quotas reset at midnight Pacific. A draft takes several minutes. The script streams the response (a plain call hits Node's 300s fetch timeout while the model thinks) and retries network errors, 429 and 5xx up to 6 times with exponential backoff, using the server's `retryDelay` when it gives one. If a date still fails, run it again.
 
 ## Workflow
 

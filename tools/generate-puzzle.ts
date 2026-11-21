@@ -82,6 +82,7 @@ clues 1..N. Clue 10 must leave exactly one valid answer.
 Clue rules:
 - Early clues are generous and unambiguous: many answers fit, and nobody argues about them.
 - Each clue adds exactly one testable constraint, checkable by an ordinary adult without looking it up.
+- Keep clues short, under 8 words like "…that grows on a tree". One idea per clue: no "and", no "rather than" contrasts.
 - No trivia-only knowledge: the chain is solvable from everyday knowledge.
 - Avoid subjective clues ("tasty", "beautiful", "popular"); every constraint must be a yes/no fact.
 - Layer 10 leaves exactly one answer, and players should be able to reason their way to it.
@@ -102,46 +103,68 @@ Do not use any of these previous final answers: ${usedAnswers.join(', ') || '(no
 type Content = { role: 'user' | 'model'; parts: { text: string }[] };
 type GeminiBody = {
   candidates?: {
-    content?: { parts?: { text?: string }[] };
+    content?: { parts?: { text?: string; thought?: boolean }[] };
     finishReason?: string;
   }[];
   error?: { message?: string; details?: { retryDelay?: string }[] };
 };
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-/** One generateContent call, retrying 429 and 5xx with backoff (honouring RetryInfo when present). */
+/**
+ * One streamed generateContent call, retrying network errors, 429 and 5xx with backoff
+ * (honouring RetryInfo when present). Streaming with thought summaries keeps bytes flowing
+ * while the model thinks; a plain call hits Node fetch's 300s idle timeout.
+ */
 async function ask(contents: Content[]): Promise<string> {
   for (let attempt = 1; ; attempt++) {
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
-      {
-        method: 'POST',
-        headers: { 'content-type': 'application/json', 'x-goog-api-key': key! },
-        body: JSON.stringify({
-          contents,
-          generationConfig: {
-            responseMimeType: 'application/json',
-            responseJsonSchema: SCHEMA,
+    let res: Response;
+    let raw: string;
+    try {
+      res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse`,
+        {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+            'x-goog-api-key': key!,
           },
-        }),
+          body: JSON.stringify({
+            contents,
+            generationConfig: {
+              responseMimeType: 'application/json',
+              responseJsonSchema: SCHEMA,
+              thinkingConfig: { includeThoughts: true },
+            },
+          }),
+        }
+      );
+      raw = await res.text();
+    } catch (e) {
+      if (attempt > 6) throw e;
+      console.warn(`Network error (${String(e)}), retry ${attempt}/6`);
+      await sleep(2 ** attempt * 1000);
+      continue;
+    }
+    if (res.ok) {
+      // SSE: one "data: {json}" line per chunk; keep answer text, drop thought summaries.
+      let text = '';
+      let finish = 'no candidate';
+      for (const line of raw.split('\n')) {
+        if (!line.startsWith('data: ')) continue;
+        const chunk: GeminiBody = JSON.parse(line.slice(6));
+        const c = chunk.candidates?.[0];
+        finish = c?.finishReason ?? finish;
+        for (const p of c?.content?.parts ?? [])
+          if (!p.thought) text += p.text ?? '';
       }
-    );
-    const raw = await res.text();
+      if (!text) throw new Error(`empty response (${finish})`);
+      return text;
+    }
     let body: GeminiBody = {};
     try {
       body = JSON.parse(raw);
     } catch {
       // non-JSON error page; handled by the status checks below
-    }
-    if (res.ok) {
-      const text = body.candidates?.[0]?.content?.parts
-        ?.map((p) => p.text ?? '')
-        .join('');
-      if (!text)
-        throw new Error(
-          `empty response (${body.candidates?.[0]?.finishReason ?? 'no candidate'})`
-        );
-      return text;
     }
     if ((res.status === 429 || res.status >= 500) && attempt <= 6) {
       const hinted = body.error?.details?.find(
