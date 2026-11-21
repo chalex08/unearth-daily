@@ -204,7 +204,7 @@ Show the end screen plus a **countdown to the next puzzle** (next 00:00 UTC).
 
 - A **Devvit scheduler** job creates the daily post at **00:00 UTC**, titled **"Unearth #N — <first clue>"**.
 - **Streak flair** on the subreddit (permissions to be verified; see DECISIONS.md).
-- **Devvit Journeys** events: run started; layer progress (layer/10); finished or caved in. **No events for individual inputs.** Request journey approval early.
+- **Devvit Journeys** events: run started; layer progress (layer/10); finished or caved in. **No events for individual inputs.** Journeys are gated by Reddit's server-side allowlist; events only record on an allowlisted, non-playtest version (DECISIONS "Journeys setup").
 
 ## 8. Tech
 
