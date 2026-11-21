@@ -605,12 +605,47 @@
             "water volleyball"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "bossaball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cachibol",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canoe polo",
+          "aliases": ["kayak polo"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kin-ball",
+          "aliases": ["kinball"],
+          "commonness": "rare"
         }
       ]
     },
     {
       "clue": "…played with a ball",
       "pool": [
+        {
+          "canonical": "snooker",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
         {
           "canonical": "tennis",
           "aliases": ["lawn tennis"],
@@ -871,12 +906,47 @@
             "water volleyball"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "bossaball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cachibol",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canoe polo",
+          "aliases": ["kayak polo"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kin-ball",
+          "aliases": ["kinball"],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…with five or more players per side",
+      "clue": "…with four or more players per side",
       "pool": [
+        {
+          "canonical": "polo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
         {
           "canonical": "baseball",
           "aliases": [],
@@ -1037,6 +1107,36 @@
             "water volleyball"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "bossaball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cachibol",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canoe polo",
+          "aliases": ["kayak polo"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kin-ball",
+          "aliases": ["kinball"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1148,6 +1248,36 @@
             "water volleyball"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "bossaball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cachibol",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canoe polo",
+          "aliases": ["kayak polo"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kin-ball",
+          "aliases": ["kinball"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1239,16 +1369,56 @@
             "water volleyball"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "bossaball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cachibol",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canoe polo",
+          "aliases": ["kayak polo"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kin-ball",
+          "aliases": ["kinball"],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…played on a court",
+      "clue": "…played without a goalkeeper",
       "pool": [
+        {
+          "canonical": "kickball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
         {
           "canonical": "korfball",
           "aliases": [],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
         },
         {
           "canonical": "handball",
@@ -1286,11 +1456,6 @@
           "commonness": "rare"
         },
         {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "uncommon"
-        },
-        {
           "canonical": "volleyball",
           "aliases": [
             "volley ball",
@@ -1300,93 +1465,31 @@
             "water volleyball"
           ],
           "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…played without a goalkeeper",
-      "pool": [
-        {
-          "canonical": "korfball",
-          "aliases": [],
-          "commonness": "uncommon"
         },
         {
-          "canonical": "basketball",
-          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "dodgeball",
-          "aliases": ["dodge ball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "tchoukball",
+          "canonical": "bossaball",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "throwball",
-          "aliases": ["throw ball"],
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
           "commonness": "rare"
         },
         {
-          "canonical": "newcomb ball",
-          "aliases": ["newcomb"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "volleyball",
-          "aliases": [
-            "volley ball",
-            "indoor volleyball",
-            "sitting volleyball",
-            "nine-man volleyball",
-            "water volleyball"
-          ],
-          "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…with six or more players per side",
-      "pool": [
-        {
-          "canonical": "korfball",
-          "aliases": [],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "dodgeball",
-          "aliases": ["dodge ball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "tchoukball",
+          "canonical": "prellball",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "throwball",
-          "aliases": ["throw ball"],
+          "canonical": "cachibol",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "newcomb ball",
-          "aliases": ["newcomb"],
+          "canonical": "kin-ball",
+          "aliases": ["kinball"],
           "commonness": "rare"
-        },
-        {
-          "canonical": "volleyball",
-          "aliases": [
-            "volley ball",
-            "indoor volleyball",
-            "sitting volleyball",
-            "nine-man volleyball",
-            "water volleyball"
-          ],
-          "commonness": "common"
         }
       ]
     },
@@ -1394,6 +1497,11 @@
       "clue": "…played over a net",
       "pool": [
         {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
+        {
           "canonical": "throwball",
           "aliases": ["throw ball"],
           "commonness": "rare"
@@ -1413,12 +1521,37 @@
             "water volleyball"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "bossaball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cachibol",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
       "clue": "…where you can't catch the ball",
       "pool": [
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
         {
           "canonical": "volleyball",
           "aliases": [
@@ -1429,6 +1562,51 @@
             "water volleyball"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "bossaball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…where one bounce is allowed",
+      "pool": [
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jokgu",
+          "aliases": ["foot volleyball", "footvolleyball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "prellball",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…played on grass",
+      "pool": [
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
         }
       ]
     }

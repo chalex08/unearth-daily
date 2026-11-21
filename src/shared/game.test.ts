@@ -153,7 +153,7 @@ describe('run state machine', () => {
       'calamansi',
     ];
     for (const a of answers) ({ run } = play(run, a, 'Common'));
-    const last = play(run, 'Kumquat', 'Mother Lode');
+    const last = play(run, 'Chinotto', 'Mother Lode');
     expect(last.result).toMatchObject({
       kind: 'valid',
       layer: 10,
@@ -200,7 +200,7 @@ describe('sample run #14', () => {
       rareFinds: 3,
       hero: { name: 'Gold' },
     });
-    expect(() => play(run, 'kumquat', 'Common')).toThrow('run is over');
+    expect(() => play(run, 'chinotto', 'Common')).toThrow('run is over');
   });
 
   it('builds the exact share text from SPEC §6.6', () => {

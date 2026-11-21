@@ -22,15 +22,23 @@ Read only SPEC.md, our own puzzle files and the seed theme. **Never** read `.env
 
 ### 2. Design backwards
 
-1. **Final answer first.** A thing a normal adult anywhere in the English-speaking world would know and could spell: no niche trivia, brands, people or places that need specialist knowledge. It should be satisfying to reach ("oh, of course").
-2. **Build the ladder from broad to narrow.** Clue 1 is a wide, friendly category ("Name something round"). Each later clue is a continuation written as `…that X` and adds **exactly one** constraint that is:
-   - **clear and testable:** a stranger can answer yes or no for any candidate without looking it up;
+The difficulty comes from two things at once: every answer must satisfy all clues so far, **and** the deeper you dig, the nicher the surviving answers get. Layer 1 is full of answers anyone would say; layer 10 is a real thing that only a few players will know.
+
+1. **Final answer first: niche.** A real, checkable thing that most adults have never heard of but an enthusiast of the theme would recognise (a hobbyist, a cook, a birder, a musician, someone from the region it comes from). Examples of the right level: chinotto (a bitter Italian citrus), kakapo (a flightless New Zealand parrot), fistball. Too easy: kumquat, owl, spaghetti, harmonica. Not allowed: made-up or disputed things, brands, living people, slang known only in one small community, anything you can't verify against all 10 clues.
+2. **Lean nicher at every layer.** Choose clues so the common answers drop out steadily and the survivors get more obscure:
+   - layers 1–3: mostly everyday answers;
+   - layers 4–6: a mix, with the obvious answers thinning out;
+   - layers 7–9: mostly answers only enthusiasts know, plus perhaps one or two well-known "decoys" that a later clue removes;
+   - layer 10: the niche final answer.
+     A ladder whose last few layers are still full of household names is too easy. Rework it.
+3. **Build the ladder from broad to narrow.** Clue 1 is a wide, friendly category ("Name something round"). Each later clue is a continuation written as `…that X` and adds **exactly one** constraint that is:
+   - **clear and checkable:** anyone who knows a candidate can answer yes or no for it. Early clues need only everyday knowledge. Later clues may test a fact only enthusiasts know about the candidates (how a pasta is shaped, where a bird lives, how a sport is scored), because that is where the niche answers live;
    - **not subjective:** no "pretty", "popular", "fun", "big" without a measurable bar;
-   - **not trivia:** no dates, records, statistics or facts most adults wouldn't know;
+   - **no dates, records or statistics:** "invented before 1850" and "the fastest" are out even at deep layers;
    - **single:** no "and", no two facts in one clue;
    - **under 8 words** (count them; clue 1 too).
-3. **Every clue must remove a meaningful share of the pool** (roughly a third to two thirds at early layers; fewer at the end is fine as long as at least one goes). Sizes must shrink at every layer, and clue 10 must leave exactly one answer.
-4. Letter, word-shape and spelling clues ("…whose name has one syllable") are allowed sparingly, at most two, and never as clue 10 unless nothing else works.
+4. **Every clue must remove a meaningful share of the pool** (roughly a third to two thirds at early layers; fewer at the end is fine as long as at least one goes). Sizes must shrink at every layer, and clue 10 must leave exactly one answer.
+5. Letter, word-shape and spelling clues ("…whose name has one syllable") are allowed sparingly, at most two, and never as clue 10 unless nothing else works.
 
 ### 3. Pools
 
@@ -66,7 +74,8 @@ Write a **depth list** to `content/puzzles/drafts/<date>.ladder.json` (gitignore
 - **Every layer, especially 1–3, includes its obvious answers.** Pool hits need no AI; until LLM approval anything not in the pool gets "Couldn't check that, try again".
 - `canonical`: lowercase, the most common name. `aliases`: plurals, hyphenation and spacing variants (`golfball`, `golf-ball`), common spellings and misspellings, US/UK spellings, short forms people really type. Never an alias that is itself a different valid answer.
 - **Variants of one thing are aliases, not separate answers** (`tennis ball` vs `tennis balls`; `mandarin` vs `mandarin orange`). Genuinely different things stay separate (`tangerine` and `clementine` are both fine if players would see them as different).
-- `commonness`: `common` for what many players will type first, `uncommon` for reasonable but less obvious, `rare` for valid but surprising. Expect roughly 25% / 45% / 30% at layer 1.
+- **Deep layers hold the niche answers too.** Include every real answer an enthusiast could give at layers 6–10, not just the intended path, so a knowledgeable player isn't punished for knowing more than the pool.
+- `commonness`: `common` for what many players will type first, `uncommon` for reasonable but less obvious, `rare` for valid but surprising. Expect roughly 25% / 45% / 30% at layer 1. Answers that survive past layer 6 are mostly `rare`; the final answer is always `rare`.
 
 ### 4. Self-check every layer
 
@@ -75,6 +84,7 @@ Go layer by layer, before building:
 - Every answer with `depth >= N` truly satisfies **all** clues 1..N. Read each one against each clue; when in doubt about a borderline answer, lower its depth (or drop it) rather than argue.
 - Every answer with `depth == N-1` truly fails clue N (otherwise its depth is wrong).
 - No clue removes nothing; sizes shrink steadily; layer 10 has exactly one answer.
+- The gradient holds: layers 7–9 are mostly niche answers, and the final answer is one most adults wouldn't know.
 
 Then run `npm run puzzle:build -- <date>`. It writes `drafts/<date>.json` and prints each layer's size; it fails on validator errors, bad depths and clues that remove nothing, and warns when layer 1 has fewer than 100 answers. Fix and rerun until it passes with no warning.
 
@@ -86,14 +96,16 @@ Spawn a subagent with the Agent tool (`subagent_type: "general-purpose"`, not a 
 >
 > Clues: (1) … (10) …
 >
-> 1. List **every** answer you can find that satisfies all 10 clues. Try hard to find more than one; for each, say why it fits.
+> 1. List **every** answer you can find that satisfies all 10 clues. Try hard to find more than one, including niche ones; for each, say why it fits.
 > 2. For layers 1, 2 and 3, list the 30 most obvious answers a typical player would type first (satisfying clues 1..N).
-> 3. Flag any clue that is subjective, needs trivia, holds two constraints, or that a player could reasonably read two ways.
+> 3. Flag any clue that is subjective, relies on dates, records or statistics, holds two constraints, or that a player could reasonably read two ways.
+> 4. For layers 7 to 10, list every answer you can think of, and say how widely known the layer-10 answer is: most adults, enthusiasts only, or almost nobody.
 
 Then:
 
 - If it finds a second answer that really satisfies all 10 clues, change the ladder (a sharper clue, or a different clue 10), rebuild, and run a **new** critic (fresh agent again, never one that has seen the old version). Repeat until the final layer has one answer. If you judge its second answer wrong, note it in the review file.
-- Add every obvious answer it lists that is missing from the pools, at the right depth. Rebuild.
+- Add every obvious answer it lists that is missing from the pools, and every real niche answer it lists for layers 7–10, at the right depth. Rebuild.
+- If it says most adults know the final answer, the puzzle is too easy: rework the late clues towards a nicher final and run a new critic.
 - Fix clear-cut clue problems it flags; leave real judgement calls for the review file.
 
 ### 6. Outputs
