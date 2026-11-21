@@ -13,6 +13,12 @@
       }
     }
   },
+  "permissions": {
+    "redis": true,
+    "http": {
+      "domains": ["generativelanguage.googleapis.com"]
+    }
+  },
   "server": {
     "dir": "dist/server",
     "entry": "index.cjs"
@@ -56,7 +62,7 @@
       "geminiApiKey": {
         "type": "string",
         "label": "Gemini API key",
-        "helpText": "Runtime key for the AI answer validator. Set with: npx devvit settings set geminiApiKey",
+        "helpText": "Paid-tier key from the billed Google project only (never a free-tier key). Set with: npx devvit settings set geminiApiKey",
         "isSecret": true
       }
     }

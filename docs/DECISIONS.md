@@ -49,7 +49,7 @@ _Authoring part superseded on 21 Nov 2026 (see "Puzzle authoring moved to Claude
 - Share text says "1 rare find" (singular), and drops " · " when no pickaxe broke.
 - Invalid answers also count as used, so repeating one is ignored rather than breaking a second pickaxe (an answer that fails clues 1..N fails every later layer too).
 - Normalising deletes punctuation, so "sweet-potato" becomes "sweetpotato"; pools need aliases for hyphenated forms.
-- Puzzle number lives in each puzzle file (`number`), not derived from the date.
+- Puzzle number lives in each puzzle file (`number`), not derived from the date. _Changed 22 Nov: derived from launch day 2026-11-08; the file's `number` must match (see "Server and AI judge" below)._
 
 ## Open questions and risks
 
@@ -90,3 +90,17 @@ _Authoring part superseded on 21 Nov 2026 (see "Puzzle authoring moved to Claude
 - **Stats keys** (step 4 writes real data to the same keys): `answers:{date}:{layer}` sorted set, canonical → count; `ends:{date}` hash, deepest layer → runs ended.
 - **Puzzle files on the server:** bundled with Vite `import.meta.glob` in `src/server/core/puzzles.ts`; verified they appear in `dist/server` and not `dist/client`.
 - **Puzzle #14:** dated 2026-11-21 in `content/` (the test fixture keeps 2026-12-05). Its layer-10 clue is now "…that's oval rather than round" (was "The one and only", which adds no constraint); the fixture matches.
+
+## Server and AI judge (22 Nov 2026)
+
+- **Puzzle number** comes from a fixed launch day, 2026-11-08 (#1), so 2026-11-21 stays #14. `puzzleNumber()` in `src/shared/game.ts`; a test checks every bundled file's `number` against it.
+- **Judge model:** `gemini-3.5-flash-lite` (listed "Stable", "fastest, most cost-effective" on aistudio.google.com/docs/models, 22 Nov). Its default thinking level is "minimal", so no thinking config is sent.
+- **Judge call:** `POST v1beta/models/{model}:generateContent` with `x-goog-api-key`, `generationConfig.responseMimeType: "application/json"` + `responseJsonSchema`, `temperature: 0`, `AbortSignal.timeout(8000)`. This is the shape that worked in real runs on 21 Nov. Google's docs moved on 22 Nov to pages written for the new Interactions API (`/v1beta/interactions`, `response_format`) and no longer show these fields, so **confirm the call in playtest**, and switch to Interactions if generateContent stops working. No system instruction field: the whole prompt is one user turn, with the answer JSON-quoted last and marked as data.
+- **What the judge gets:** clues 1..N and the normalised answer (letters, digits and spaces, at most 40 characters). Nothing else.
+- **No-AI mode:** no `geminiApiKey` → `MockJudge` with no verdicts → every non-pool, uncached answer gets "Couldn't check that, try again". LLM approval not granted or domain not approved → the fetch fails → the same. Failures are never cached and never cost a pickaxe.
+- **Permissions:** `permissions.http.domains: ["generativelanguage.googleapis.com"]` and `permissions.redis: true` in `devvit.json`. Checked against the installed config schema (`@devvit/shared-types/schemas/config-file.v1.json` and its defaults code): Redis is inferred per field, so declaring `http` alone wouldn't disable it; it's explicit anyway.
+- **Races:** one submit at a time per user via `incrBy` on a lock key (1 = acquired) with a 15s TTL, longer than the 8s judge timeout. Requests carry the layer they answer, so a repeated submit after the first one finished gets 409 instead of a second move. Run creation uses `hSetNX` (returns 1 only for the creator), so the player count can't double.
+- **User identity in Redis:** `context.userId` (`t2_…`), never the username.
+- **Alias reuse:** if an answer misses the current pool but matches a layer-1 pool entry already used (e.g. "tigers" after "tiger"), it's ignored as reuse instead of going to the judge.
+- **Non-pool answer log:** no separate key. It's the members of `answers:{day}:{layer}` that aren't pool canonicals. The moderator menu item to read it is not built yet.
+- **Tests:** `@devvit/web/server` is mocked with a small in-memory Redis in `api.test.ts`; Gemini is mocked by stubbing global `fetch`, so the settings → judge → fetch wiring is tested for real.

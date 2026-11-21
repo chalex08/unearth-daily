@@ -77,7 +77,7 @@ export const PICKAXES = 3;
 export const PICKAXE_BONUS = 50;
 export const MAX_ANSWER_LENGTH = 40;
 
-export type AnswerResult =
+export type MoveResult =
   | { kind: 'ignored'; reason: 'empty' | 'too-long' | 'reused' }
   | {
       kind: 'valid';
@@ -91,7 +91,7 @@ export type AnswerResult =
     }
   | { kind: 'invalid'; reason: string };
 
-export type ClearedLayer = Extract<AnswerResult, { kind: 'valid' }>;
+export type ClearedLayer = Extract<MoveResult, { kind: 'valid' }>;
 
 /** Plain JSON, so it can be stored and resumed as is. */
 export type RunState = {
@@ -127,7 +127,7 @@ export function checkAnswer(
   raw: string,
   pool: AnswerEntry[]
 ):
-  | Extract<AnswerResult, { kind: 'ignored' }>
+  | Extract<MoveResult, { kind: 'ignored' }>
   | { kind: 'ok'; answer: string; match: AnswerEntry | null } {
   const answer = normalise(raw);
   if (!answer) return { kind: 'ignored', reason: 'empty' };
@@ -156,7 +156,7 @@ export type Verdict =
 export function applyAnswer(
   run: RunState,
   verdict: Verdict
-): { run: RunState; result: AnswerResult } {
+): { run: RunState; result: MoveResult } {
   if (runStatus(run) !== 'playing') throw new Error('run is over');
   const key = normalise(verdict.valid ? verdict.canonical : verdict.answer);
   if (run.used.includes(key) || run.used.includes(verdict.answer))
@@ -246,3 +246,9 @@ export function currentStreak(streak: Streak | null, today: string): number {
     ? streak.count
     : 0;
 }
+
+/** Day of puzzle #1. Puzzle number = UTC days since this date + 1. */
+export const LAUNCH_DAY = '2026-11-08';
+
+export const puzzleNumber = (day: string): number =>
+  Math.round((Date.parse(day) - Date.parse(LAUNCH_DAY)) / 86_400_000) + 1;

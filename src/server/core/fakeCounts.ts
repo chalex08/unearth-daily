@@ -2,14 +2,6 @@
 // Generated locally from our own puzzle file with a random number generator: no AI, no Reddit data.
 import type { Commonness, Puzzle } from '../../shared/puzzle';
 
-/** Redis keys for per-day stats. Step 4 writes real counts to the same keys. */
-export const keys = {
-  /** Sorted set: canonical answer → valid answers given at this layer. */
-  answers: (date: string, layer: number) => `answers:${date}:${layer}`,
-  /** Hash: deepest layer cleared (0–10, the mineral) → runs that ended there. */
-  ends: (date: string) => `ends:${date}`,
-};
-
 const WEIGHT: Record<Commonness, number> = {
   common: 12,
   uncommon: 3,

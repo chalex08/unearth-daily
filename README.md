@@ -65,3 +65,9 @@ Uploading puts a private version in the App Directory; only you can see it, and 
 - **Puzzle authoring** needs no key: it runs in Claude Code with `/write-puzzle` (see [docs/CONTENT.md](docs/CONTENT.md)). Never give it Reddit data (SPEC §5.3).
 
 Never commit `.env` or any key.
+
+## Fetch Domains
+
+The app requests permission to fetch:
+
+- `generativelanguage.googleapis.com`: the Google Gemini API (paid tier), used only to check answers that aren't in the day's hand-written answer pool. It receives the day's clues up to the current layer and the player's normalised answer. No usernames, user IDs or other Reddit data are sent.
