@@ -1,17 +1,146 @@
+/* Plain on purpose (PLAN step 5). Layout only: the world canvas fills the screen, the DOM overlay
+   sits on top, and #app follows the visual viewport so the mobile keyboard never covers the input. */
+html,
 body {
   margin: 0;
-  padding: 0;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0f0f0f;
+  height: 100%;
+  overflow: hidden;
+  background: #111;
+  color: #fff;
+  font:
+    16px/1.4 system-ui,
+    sans-serif;
+}
+
+#world,
+#app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--vh, 100dvh);
 }
 
 #app {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
 }
 
-#game-container {
+#app > * {
+  pointer-events: auto;
+}
+
+#hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 8px 12px;
+  padding-top: max(8px, env(safe-area-inset-top));
+  background: #000c;
+}
+
+#status {
+  margin: auto;
+  padding: 8px 12px;
+  background: #000c;
+}
+
+#status:empty {
+  display: none;
+}
+
+#retry {
+  align-self: center;
+  margin-bottom: auto;
+}
+
+#play {
+  margin-top: auto;
+  padding: 12px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  background: #000c;
+}
+
+#play p {
+  margin: 0 0 8px;
+}
+
+#clue {
+  font-size: 1.25rem;
+}
+
+#answer-form {
+  display: flex;
+  gap: 8px;
+}
+
+#answer {
+  flex: 1;
+  min-width: 0;
+  /* 16px or more stops iOS zooming the page on focus. */
+  font-size: 1rem;
+  padding: 10px;
+}
+
+button {
+  font: inherit;
+  padding: 10px 16px;
+  min-height: 44px;
+}
+
+#result {
+  min-height: 1.4em;
+}
+
+#end {
+  /* The top 40% stays clear for the pulled-back core sample (World.pullBack). */
+  margin-top: auto;
+  max-height: 60%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 12px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  background: #000d;
+}
+
+#end h1 {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+}
+
+#share {
+  display: block;
   width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  margin: 4px 0 8px;
+}
+
+:focus-visible {
+  outline: 3px solid #ffd54a;
+  outline-offset: 2px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Readable line length on wide desktop screens. */
+#play,
+#end {
+  width: 100%;
+  max-width: 40rem;
+  align-self: center;
+  box-sizing: border-box;
 }

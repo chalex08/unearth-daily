@@ -51,8 +51,8 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 5. Minimal playable client on Reddit — Thu 26 Nov (checkpoint)
 
-- [ ] Plain DOM: clue, input, pickaxes, result line, end summary and share text. No art.
-- [ ] Full run playable end to end in `npm run dev` on desktop and the Reddit mobile app; resume after reload works.
+- [x] Plain DOM: clue, input, pickaxes, result line, end summary and share text. No art. Plus a placeholder Phaser world (one rectangle per stratum, camera descends per layer, pull-back at the end), so later steps only add visuals.
+- [ ] Full run playable end to end in `npm run dev` on desktop and the Reddit mobile app; resume after reload works. _Verified 22 Nov against the real `/api` routes with in-memory Redis and a fake judge, at phone size, keyboard-height and desktop: start, resume after reload, strike, reuse, empty, too long, wrong, cave-in, end screen, copy, already played. Not yet checked on Reddit itself (desktop or the mobile app)._
 - **Done when:** you can play puzzle #14 on Reddit, cave in, come back and see "already played". **Go/no-go:** if this slips past Fri 27 Nov, cut step 7 to a static strata background.
 
 ### 6. Design direction (Hallmark) — Fri 27 Nov

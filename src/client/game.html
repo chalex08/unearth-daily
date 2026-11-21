@@ -2,14 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content"
+    />
     <link rel="stylesheet" href="game.css" />
-    <title>Phaser - Template</title>
+    <title>Unearth</title>
   </head>
 
   <body>
+    <div id="world" aria-hidden="true"></div>
     <div id="app">
-      <div id="game-container"></div>
+      <header id="hud" hidden>
+        <span id="puzzle"></span>
+        <span id="pickaxes"></span>
+        <span id="score"></span>
+        <span id="mineral"></span>
+      </header>
+
+      <p id="status" role="status">Loading…</p>
+      <button id="retry" type="button" hidden>Try again</button>
+
+      <main id="play" hidden>
+        <p id="layer"></p>
+        <p id="clue" aria-live="polite"></p>
+        <form id="answer-form" autocomplete="off">
+          <label for="answer" class="sr-only">Your answer</label>
+          <input
+            id="answer"
+            name="answer"
+            type="text"
+            maxlength="40"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            enterkeyhint="go"
+          />
+          <button id="dig" type="submit">Dig</button>
+        </form>
+        <p id="result" role="status"></p>
+      </main>
+
+      <main id="end" hidden>
+        <h1 id="end-title"></h1>
+        <p id="end-summary"></p>
+        <ol id="end-chain"></ol>
+        <p id="final-answer"></p>
+        <label for="share">Share</label>
+        <textarea id="share" rows="3" readonly></textarea>
+        <button id="copy" type="button">Copy</button>
+        <p id="next"></p>
+      </main>
     </div>
     <script type="module" src="game.ts"></script>
   </body>
