@@ -32,6 +32,13 @@
         "location": "subreddit",
         "forUserType": "moderator",
         "endpoint": "/internal/menu/example-form"
+      },
+      {
+        "label": "Seed fake answer counts (dev)",
+        "description": "Loads made-up counts for today's puzzle. Refuses on the canonical app.",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/seed-fake-counts"
       }
     ]
   },
