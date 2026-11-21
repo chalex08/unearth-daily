@@ -19,7 +19,7 @@ No AI tool or session used for content may ever receive Reddit data:
 
 What the skill does: reads the existing puzzles so it doesn't repeat a final answer, theme or first clue (`npm run puzzle:taken`); picks the final answer first and builds the 10 clues backwards, broad to narrow, one testable constraint each; writes generous pools (100+ answers at layer 1) as a depth list (`drafts/<date>.ladder.json`, gitignored) that `npm run puzzle:build -- <date>` expands into per-layer pools and checks (validator, clues that remove nothing, pool sizes); then a fresh-context critic subagent sees only the clues and looks for a second final answer and obvious answers missing from the pools.
 
-What reviewers check: early clues are generous; each clue adds one yes/no constraint; answers get nicher with depth and the final answer is niche (most adults wouldn't know it), never a household name; no dates, records or statistics; nothing subjective; layer 10 leaves exactly one answer; common answers are in the pool (pool hits need no AI, and until LLM approval anything else gets "Couldn't check that").
+What reviewers check: early clues are generous; each clue adds one yes/no constraint; answers get nicher with depth and the final answer is niche (most adults wouldn't know it), never a household name; no dates, records or statistics; nothing subjective; layer 10 leaves exactly one answer; common answers are in the pool (pool hits need no AI call, and only pool answers are ever shown to other players; when the AI judge is unavailable anything else gets "Couldn't check that").
 
 `npm run validate:puzzles` checks every file in `content/puzzles/` (not drafts): the shared validator, file name = date, unique numbers. CI runs it on every push.
 

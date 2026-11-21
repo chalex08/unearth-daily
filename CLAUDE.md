@@ -16,7 +16,7 @@ Every session follows these rules. Repo layout, commands and Devvit client limit
 - Never give Reddit data of any kind to an AI tool or session used for content, including this one and `/write-puzzle`: no player answers, no SPEC §4.1 non-pool answer log, no answer counts, no usernames, nothing read from Redis or the Reddit API. Content work reads only hand-written seed themes and our own puzzle files. (SPEC §5.3)
 - Never let the Devvit server use any key but the paid-tier one (`geminiApiKey`, from a billed Google project, never a free-tier one).
 - Never send the non-pool answer log to any AI; reviewing it and adding answers to pools is manual only.
-- Never make play depend on AI: until Devvit grants LLM approval, pool answers validate without AI and unknown answers get "Couldn't check that, try again" with no pickaxe lost.
+- Never make play depend on AI: Devvit granted LLM approval on 22 Nov 2026, but whenever the judge is unavailable (no key, timeout, error), pool answers validate without AI and unknown answers get "Couldn't check that, try again" with no pickaxe lost.
 - Never send future clues or answer pools to the client.
 
 ## Workflow

@@ -9,7 +9,7 @@ Each step is one prompt / one feature branch, merged to `main` when typecheck, l
 - [ ] Ask the Devvit team to allowlist Journeys for the app (DECISIONS open item 2). **By Mon 23 Nov.**
 - [ ] Confirm r/UnearthDaily is public, has fewer than 200 members, and you moderate it.
 - [ ] Draft Terms and Privacy pages (needed for fetch + LLM approval). **By step 4.**
-- [ ] Request LLM approval and Journeys approval from Devvit.
+- [ ] Request LLM approval and Journeys approval from Devvit. _LLM approval granted 22 Nov 2026; Journeys still to request._
 
 ## Steps
 
@@ -46,7 +46,8 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 - [x] Rarity counts per layer in Redis, locked when the answer is given; one run per user per UTC day; 30-day TTL on per-day user data.
 - [x] The client only ever receives cleared and current clues.
 - [ ] Display rules (SPEC §4.1): public answer text is pool-only, AI-approved answers count but show as "something else", the player's own answers are always returned to them; non-pool answers logged per puzzle and layer with counts, readable by a moderator-only menu item. _Done except the menu item: the log is the non-pool members of `answers:{day}:{layer}`._
-- **Done when:** route and judge tests pass with a fake judge; an AI timeout breaks no pickaxe; a full run plays with no judge at all; a test shows an AI-approved answer counted in rarity but never named in another player's response; the real judge works in playtest.
+- [x] Approvals (22 Nov 2026): `generativelanguage.googleapis.com` fetch domain approved, Devvit LLM approval granted, paid-tier `geminiApiKey` set on the dev app.
+- **Done when:** route and judge tests pass with a fake judge; an AI timeout breaks no pickaxe; a full run plays with no judge at all; a test shows an AI-approved answer counted in rarity but never named in another player's response; the real judge works in playtest. _All met except the last: confirm a non-pool answer gets a real Gemini verdict (not "unchecked") in playtest at the start of step 5._
 
 ### 5. Minimal playable client on Reddit — Thu 26 Nov (checkpoint)
 
@@ -91,7 +92,7 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 ### 11. Polish, audits, compliance, submission — Sat 5 – Sun 6 Dec
 
 - [ ] Accessibility, performance and Devvit-rules audits; data deletion on account deletion; README rewritten (non-template).
-- [ ] Terms and Privacy published and linked in the app details form (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app.
+- [ ] Terms and Privacy published and linked in the app details form (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app. _Domain and LLM approval granted 22 Nov for the dev app; confirm they also cover the canonical `unearth-daily` app, and set its `geminiApiKey`._
 - [ ] AI data audit (SPEC §5.3): the canonical app's `geminiApiKey` is from the billed project; no free-tier key exists in the project; no Reddit data reached any content-authoring AI session.
 - [ ] Enough reviewed puzzles (written with `/write-puzzle`, reviewed by hand) queued to cover every day through judging (the judging window isn't in the briefing; aim for 31 Dec).
 - [ ] Canonical app uploaded with `npm run deploy:prod` (upload only, **never publish**); public demo post live in r/UnearthDaily; demo video if required.

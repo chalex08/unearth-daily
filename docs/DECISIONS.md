@@ -55,14 +55,14 @@ _Authoring part superseded on 21 Nov 2026 (see "Puzzle authoring moved to Claude
 
 1. **Free-text input and showing other players' answers. Resolved 21 Nov:** the Devvit rules say in-app content should limit free expression and that user text should be published with attribution that can be reported. Agreed rule, now SPEC §4.1: others only ever see hand-reviewed pool answers; AI-approved answers still count everywhere but show as "something else"; players always see their own answers; non-pool answers are logged for review.
 2. **Journeys need approval and don't fire in playtest.** Receipts return `DENIED_NOT_ALLOWLISTED` until the app is allowlisted, and `DENIED_PLAYTEST` for playtest versions. No request form is documented, so ask the Devvit team (Discord / r/Devvit) now.
-3. **HTTP domain approval** takes 1–2 business days and is triggered by the first upload that lists the domain. The README also needs a "Fetch Domains" section. Add the domain on day 1 of step 4.
+3. **HTTP domain approval. Resolved 22 Nov:** `generativelanguage.googleapis.com` approved. (It took 1–2 business days and is triggered by the first upload that lists the domain. The README also needs a "Fetch Domains" section. Add the domain on day 1 of step 4.)
 4. **Terms and Privacy** links go in the app details form in the Developer Portal (there's no `devvit.json` key); they're required because we use fetch and an LLM. Reddit's own policies can't be used.
 5. **Data deletion:** the rules require removing a user's data when they delete their account, and recommend expiring user data after 30 days. Per-day run data gets a 30-day TTL; the streak record keeps only the count and last day.
 6. **Cron timezone** isn't documented; check the first daily post fires at 00:00 UTC in playtest.
 7. **Flair permission:** no extra permission is documented beyond `permissions.reddit`; check it in playtest.
 8. **Gemini model ID and JSON mode** (exact model name, `responseMimeType`/schema support): check against Google's docs in step 4.
 9. **Direct launch:** a reserved `_direct_launch` entrypoint lets Reddit's Daily Games surfaces open the game straight into expanded mode. It's a nice-to-have for step 10.
-10. **LLM approval.** Devvit requires prior approval for LLM use. Until it's granted the game runs without AI (SPEC §4, §5.3). Request it along with Journeys (PLAN "Start now").
+10. **LLM approval. Resolved 22 Nov:** Devvit granted LLM approval. The no-AI fallback stays: a missing key, timeout or error still gives "Couldn't check that, try again" with no pickaxe lost (SPEC §4).
 11. **Gemini age terms.** The Gemini API terms require users to be 18+ and bar use in an app "likely to be accessed by individuals under the age of 18". Reddit allows users from 13. This applies to both tiers; raise it with the Devvit team in the LLM approval request.
 
 ## Repo housekeeping noticed
@@ -104,3 +104,10 @@ _Authoring part superseded on 21 Nov 2026 (see "Puzzle authoring moved to Claude
 - **Alias reuse:** if an answer misses the current pool but matches a layer-1 pool entry already used (e.g. "tigers" after "tiger"), it's ignored as reuse instead of going to the judge.
 - **Non-pool answer log:** no separate key. It's the members of `answers:{day}:{layer}` that aren't pool canonicals. The moderator menu item to read it is not built yet.
 - **Tests:** `@devvit/web/server` is mocked with a small in-memory Redis in `api.test.ts`; Gemini is mocked by stubbing global `fetch`, so the settings → judge → fetch wiring is tested for real.
+
+## Approvals (22 Nov 2026)
+
+- **Fetch domain:** `generativelanguage.googleapis.com` approved by Devvit.
+- **LLM use:** Devvit LLM approval granted. The runtime judge (Gemini paid tier) may now run on Reddit.
+- **Key:** the paid-tier `geminiApiKey` (billed Google project) is set as a secret on the dev app with `npx devvit settings set geminiApiKey`.
+- **Still to check:** a real Gemini verdict in playtest (PLAN step 4 "Done when"); that both approvals cover the canonical `unearth-daily` app, whose own key must be set by the app owner before step 11; Journeys allowlisting (open item 2); Gemini age terms (open item 11).

@@ -71,7 +71,7 @@ Write a **depth list** to `content/puzzles/drafts/<date>.ladder.json` (gitignore
 `depth` is the deepest layer the answer still satisfies (it is valid at layers 1..depth). `npm run puzzle:build -- <date>` expands this into one pool per layer, so the "answer at N is valid at 1..N" rule holds by construction.
 
 - **Layer 1 holds 100+ answers.** Start with the obvious ones players will type first (brainstorm what ten different people would say in five seconds), then the long tail.
-- **Every layer, especially 1–3, includes its obvious answers.** Pool hits need no AI; until LLM approval anything not in the pool gets "Couldn't check that, try again".
+- **Every layer, especially 1–3, includes its obvious answers.** Pool hits need no AI call and are the only answers shown to other players; when the AI judge is unavailable, anything not in the pool gets "Couldn't check that, try again".
 - `canonical`: lowercase, the most common name. `aliases`: plurals, hyphenation and spacing variants (`golfball`, `golf-ball`), common spellings and misspellings, US/UK spellings, short forms people really type. Never an alias that is itself a different valid answer.
 - **Variants of one thing are aliases, not separate answers** (`tennis ball` vs `tennis balls`; `mandarin` vs `mandarin orange`). Genuinely different things stay separate (`tangerine` and `clementine` are both fine if players would see them as different).
 - **Deep layers hold the niche answers too.** Include every real answer an enthusiast could give at layers 6–10, not just the intended path, so a knowledgeable player isn't punished for knowing more than the pool.
