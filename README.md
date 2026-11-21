@@ -10,7 +10,7 @@ UNEARTH is a daily word game that runs inside a Reddit post: one new puzzle a da
 - **Server** (`src/server/`): Hono API routes, game logic, Redis access, AI answer validator
 - **Shared** (`src/shared/`): types and scoring logic used by both client and server
 - **Content** (`content/puzzles/`): daily puzzle JSON files
-- **Tools** (`tools/`): offline Node scripts (puzzle authoring with the Gemini free tier, validators, release guards) and the TypeScript project configs
+- **Tools** (`tools/`): offline Node scripts (puzzle draft helpers, validators, release guards); puzzles are written with the `/write-puzzle` Claude Code skill and the TypeScript project configs
 - **Docs** (`docs/`): briefing, plan, terms, privacy
 
 ## Local setup
@@ -62,6 +62,6 @@ Uploading puts a private version in the App Directory; only you can see it, and 
   npx devvit settings set geminiApiKey      # targets the app named by DEVVIT_APP_NAME
   ```
   The app owner sets the key for `unearth-daily` with `DEVVIT_APP_NAME=unearth-daily` set in their shell.
-- **Offline tools (Gemini free tier):** `GEMINI_FREE_API_KEY` (from a separate Google project with no billing) and `GEMINI_FREE_MODEL` go in your gitignored `.env`. Only the scripts in `tools/` use them, and they must never send Reddit data to it (SPEC §5.3).
+- **Puzzle authoring** needs no key: it runs in Claude Code with `/write-puzzle` (see [docs/CONTENT.md](docs/CONTENT.md)). Never give it Reddit data (SPEC §5.3).
 
 Never commit `.env` or any key.

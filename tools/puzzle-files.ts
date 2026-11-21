@@ -55,6 +55,32 @@ export type Draft = {
   answers: (AnswerEntry & { depth: number })[];
 };
 
+/** Inverse of toPuzzle: each canonical with the deepest layer whose pool holds it. */
+export function toDraft(puzzle: Puzzle): Draft {
+  return {
+    clues: puzzle.layers.map((l) => l.clue),
+    answers: puzzle.layers[0]!.pool.map((a) => ({
+      ...a,
+      depth: puzzle.layers.filter((l) =>
+        l.pool.some((b) => b.canonical === a.canonical)
+      ).length,
+    })),
+  };
+}
+
+/** Layers (1-based) whose clue removes nothing: same pool size as the layer above. */
+export const noOpLayers = (puzzle: Puzzle): number[] =>
+  puzzle.layers.flatMap((l, i) =>
+    i > 0 && l.pool.length === puzzle.layers[i - 1]!.pool.length ? [i + 1] : []
+  );
+
+/** Published puzzles and drafts, other than `date`, for the "don't repeat" lists. */
+export const otherPuzzles = (date: string): Puzzle[] =>
+  [...readPuzzleFiles(puzzlesDir), ...readPuzzleFiles(draftsDir)]
+    .map((f) => f.data)
+    .filter(isPuzzle)
+    .filter((p) => p.date !== date);
+
 /** Expands answers into per-layer pools; an answer with depth d is in layers 1..d. */
 export function toPuzzle(draft: Draft, number: number, date: string): Puzzle {
   return {

@@ -73,7 +73,7 @@ You need Node.js 24.18+ (`.nvmrc`), git, access to the GitHub repo, and a Reddit
 
    This targets the app named in `DEVVIT_APP_NAME`. Use your own **paid-tier** Gemini API key (a Google project with billing enabled, never a free-tier key); don't share keys.
 
-8. Optional: put `GEMINI_FREE_API_KEY` (a separate Google project with no billing) and `GEMINI_FREE_MODEL` in `.env` if you run the offline puzzle tools in `tools/`. Never send Reddit data to the free-tier key (SPEC §5.3).
+8. Puzzles are written in Claude Code with `/write-puzzle` (no key needed); see [docs/CONTENT.md](docs/CONTENT.md). Never give it Reddit data (SPEC §5.3).
 
 ## Branch workflow
 

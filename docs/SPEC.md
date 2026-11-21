@@ -99,13 +99,13 @@ Failure handling:
 
 ## 5. AI
 
-There are two separate AI paths, on two separate Google projects. Both use the Gemini API.
+There are two separate AI uses. Only the runtime judge calls an AI API; puzzles are written in a Claude Code session on the developer's machine.
 
-### 5.1 Offline content pipeline (Gemini free tier)
+### 5.1 Puzzle authoring (Claude Code, offline)
 
-- Runs on the developer's machine, using `GEMINI_FREE_API_KEY` and `GEMINI_FREE_MODEL` from `.env` (gitignored). The key comes from a Google project with **no billing** (Gemini API free tier).
-- **Input is only hand-written seed themes and our own puzzle files.** Never Reddit data (§5.3).
-- Drafts clue chains and per-layer answer pools, with **aliases** and a **commonness label** (`common` / `uncommon` / `rare`) for each answer.
+- Puzzles are written by Claude in a Claude Code session with the project skill `/write-puzzle` (`.claude/skills/write-puzzle/`). No API key and no Gemini call is involved.
+- **Input is only optional hand-written seed themes and our own puzzle files.** Never Reddit data (§5.3).
+- Produces the 10-clue chain and per-layer answer pools, with **aliases** and a **commonness label** (`common` / `uncommon` / `rare`) for each answer, as a draft in `content/puzzles/drafts/`.
 - **Every puzzle is reviewed by hand** before it is committed to `content/puzzles/`.
 
 ### 5.2 Runtime judge (inside Devvit, Gemini paid tier)
@@ -121,11 +121,11 @@ There are two separate AI paths, on two separate Google projects. Both use the G
 
 ### 5.3 Data rules (hard rules)
 
-Devvit Rules forbid using Reddit data to train or improve AI models, or letting third parties do so. Gemini's free tier may use submitted content to improve Google's products; the paid tier does not. So Reddit-derived data only ever reaches the paid tier.
+Devvit Rules forbid using Reddit data to train or improve AI models, or letting third parties do so. Gemini's free tier may use submitted content to improve Google's products; the paid tier does not. So Reddit-derived data only ever reaches the paid-tier runtime judge.
 
-- The **free-tier key must never receive Reddit data of any kind**: player answers, the §4.1 non-pool answer log, answer counts, usernames, or anything read from Redis or the Reddit API. Free-tier scripts may only read hand-written seed themes and our own puzzle files.
-- The **paid-tier key is the only key the Devvit server may use.** It must come from a billed Google project, never the free one.
-- Reviewing the §4.1 non-pool answer log and adding answers to pools is **manual, or uses the paid key only**.
+- **No AI tool or session used for content may ever receive Reddit data of any kind**: player answers, the §4.1 non-pool answer log, answer counts, usernames, or anything read from Redis or the Reddit API. Content sessions may only read hand-written seed themes and our own puzzle files.
+- The **paid-tier key is the only key the Devvit server may use.** It must come from a billed Google project, never a free-tier one. No free-tier Gemini key is used anywhere in the project.
+- Reviewing the §4.1 non-pool answer log and adding answers to pools is **manual only**.
 - Devvit requires **prior approval for LLM use**. Until it is granted, the game must fully work: pool answers validate without AI, and unknown answers get "Couldn't check that, try again" with no pickaxe lost (§4).
 
 ## 6. Experience flow
