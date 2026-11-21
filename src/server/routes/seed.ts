@@ -1,8 +1,9 @@
-// Dev-only: loads made-up answer counts into this install's Redis (docs/CONTENT.md).
-// Devvit Redis is only reachable from app code, so this runs from a moderator menu item.
+// Dev-only tools: made-up answer counts (docs/CONTENT.md) and replaying today's run.
+// Devvit Redis is only reachable from app code, so these run from moderator menu items.
 import { Hono } from 'hono';
 import type { UiResponse } from '@devvit/web/shared';
 import { context, redis } from '@devvit/web/server';
+import { dayKey } from '../../shared/game';
 import { fakeCounts } from '../core/fakeCounts';
 import { keys } from '../core/keys';
 import { puzzleFor, puzzles } from '../core/puzzles';
@@ -65,6 +66,23 @@ seed.post('/seed-fake-counts', async (c) => {
     {
       showToast: `Seeded ${PLAYERS} fake runs for #${puzzle.number} (${puzzle.date})`,
     },
+    200
+  );
+});
+
+/** Deletes the moderator's own run for today so they can play it again. Answer counts stay. */
+seed.post('/reset-my-run', async (c) => {
+  if (context.appSlug === CANONICAL_APP)
+    return c.json<UiResponse>(
+      { showToast: 'Resetting runs is for dev apps only' },
+      200
+    );
+  const userId = context.userId;
+  if (!userId) return c.json<UiResponse>({ showToast: 'Log in first' }, 200);
+  const day = dayKey(new Date());
+  await redis.del(keys.run(day, userId), keys.lock(day, userId));
+  return c.json<UiResponse>(
+    { showToast: `Run for ${day} cleared. Reopen the post to play again.` },
     200
   );
 });

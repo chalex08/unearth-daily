@@ -31,3 +31,7 @@ Devvit Redis can only be reached from app code (the `devvit` CLI 0.15.4 has no R
 2. In the playtest subreddit's mod menu, choose **Seed fake answer counts (dev)**.
 
 It writes 600 made-up runs for today's puzzle (or the latest bundled one): `answers:{date}:{layer}` sorted sets (canonical → count, pool answers only, weighted by commonness) and the `ends:{date}` hash (deepest layer → runs ended there). The previous keys for that day are cleared first. The numbers come from `Math.random` and our puzzle file, never from Reddit data or AI. It refuses on the canonical app (`unearth-daily`).
+
+## Replaying today's puzzle on a dev install
+
+One run per account per UTC day also applies in playtest. To play again, choose **Reset my run (dev)** in the playtest subreddit's mod menu, then reopen the post. It deletes only your own `run:{date}:{userId}` and its lock; answer counts, the graveyard and your streak stay as they were. It refuses on the canonical app (`unearth-daily`).
