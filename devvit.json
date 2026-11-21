@@ -41,6 +41,19 @@
   "triggers": {
     "onAppInstall": "/internal/triggers/on-app-install"
   },
+  "dev": {
+    "subreddit": "UnearthDaily"
+  },
+  "settings": {
+    "global": {
+      "geminiApiKey": {
+        "type": "string",
+        "label": "Gemini API key",
+        "helpText": "Runtime key for the AI answer validator. Set with: npx devvit settings set geminiApiKey",
+        "isSecret": true
+      }
+    }
+  },
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch"

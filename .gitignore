@@ -1,4 +1,9 @@
 node_modules
 .DS_Store
 dist
+coverage
+
+# Local secrets and per-developer Devvit overrides. Never commit.
 .env
+.env.*
+!.env.example

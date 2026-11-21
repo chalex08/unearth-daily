@@ -34,9 +34,11 @@ You are writing a Devvit web application that will be executed on Reddit.com.
 
 ## Commands
 
-- `npm run type-check`: Check typescript types
+- `npm run typecheck`: Check typescript types
 - `npm run lint`: Check the linter
-- `npm run test -- my-file-name`: Run tests isolated to a file
+- `npm run test -- my-file-name`: Run Vitest tests isolated to a file
+- `npm run dev`: Playtest on Reddit (uses DEVVIT_APP_NAME / DEVVIT_SUBREDDIT from .env)
+- Never run `devvit publish`, `npm run deploy:prod` or `npm run launch:after-hackathon`.
 
 ## Code Style
 

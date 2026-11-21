@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../dist/types/tools-scripts",
+    "tsBuildInfoFile": "../dist/types/tools-scripts/tsconfig.tsbuildinfo",
+    "types": ["node"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2023"],
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "rootDir": "."
+  },
+  "include": ["./**/*.ts"],
+  "exclude": []
+}
