@@ -1,0 +1,2411 @@
+{
+  "number": 20,
+  "date": "2026-11-27",
+  "layers": [
+    {
+      "clue": "Name something you can dig up",
+      "pool": [
+        {
+          "canonical": "potato",
+          "aliases": ["potatoes", "spud", "spuds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "carrot",
+          "aliases": ["carrots"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "onion",
+          "aliases": ["onions"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "garlic",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beetroot",
+          "aliases": ["beet", "beets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "turnip",
+          "aliases": ["turnips"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "radish",
+          "aliases": ["radishes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "parsnip",
+          "aliases": ["parsnips"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peanut",
+          "aliases": ["peanuts"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sweet potato",
+          "aliases": ["yam"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ginger",
+          "aliases": ["ginger root"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "truffle",
+          "aliases": ["truffles"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["worms", "earthworm", "earthworms"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bones",
+          "aliases": ["bone", "dog bone"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dinosaur bones",
+          "aliases": ["dinosaur bone", "dinosaur", "dinosaurs"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "fossil",
+          "aliases": ["fossils"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "skeleton",
+          "aliases": ["skeletons"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mummy",
+          "aliases": ["mummies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "coal",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "oil",
+          "aliases": ["crude oil", "petroleum"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "peat",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "amber",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jet",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "roots",
+          "aliases": ["root", "tree roots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bulbs",
+          "aliases": ["bulb", "tulip bulbs", "flower bulbs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "weeds",
+          "aliases": ["weed"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "grubs",
+          "aliases": ["grub"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cassava",
+          "aliases": ["yuca"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "horseradish",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "clams",
+          "aliases": ["clam"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cockles",
+          "aliases": ["cockle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lugworm",
+          "aliases": ["lugworms"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ivory",
+          "aliases": ["mammoth tusk", "mammoth tusks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dinosaur egg",
+          "aliases": ["dinosaur eggs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "petrified wood",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "swede",
+          "aliases": ["rutabaga"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celeriac",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jerusalem artichoke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shallot",
+          "aliases": ["shallots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mole",
+          "aliases": ["moles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "treasure",
+          "aliases": ["buried treasure", "treasure chest"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "coins",
+          "aliases": ["coin", "gold coins", "roman coins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pottery",
+          "aliases": ["pots", "potsherd"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "time capsule",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "artifacts",
+          "aliases": ["artefacts", "artifact", "artefact", "relics"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "landmine",
+          "aliases": ["land mine", "mine", "landmines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pipes",
+          "aliases": ["pipe", "water pipe"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cables",
+          "aliases": ["cable"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bricks",
+          "aliases": ["brick"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "statue",
+          "aliases": ["statues"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "arrowhead",
+          "aliases": ["arrowheads"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sword",
+          "aliases": ["swords", "weapons"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "helmet",
+          "aliases": ["helmets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ruins",
+          "aliases": ["ancient ruins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "old bottles",
+          "aliases": ["bottle", "bottles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tools",
+          "aliases": ["tool"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jewellery",
+          "aliases": ["jewelry"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cannonball",
+          "aliases": ["cannonballs"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bullet",
+          "aliases": ["bullets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mosaic",
+          "aliases": ["mosaics"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gold",
+          "aliases": ["gold nugget", "gold nuggets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "silver",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "iron",
+          "aliases": ["iron ore"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tin",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lead",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "platinum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "uranium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zinc",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nickel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rock",
+          "aliases": ["rocks", "stone", "stones"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "granite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "marble",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "limestone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sandstone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "slate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chalk",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flint",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "basalt",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "obsidian",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pumice",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sand",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "clay",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gravel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dirt",
+          "aliases": ["soil", "earth"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "salt",
+          "aliases": ["rock salt"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sulfur",
+          "aliases": ["sulphur"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "graphite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mica",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gypsum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "talc",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water",
+          "aliases": ["groundwater"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meteorite",
+          "aliases": ["meteorites"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crystal",
+          "aliases": ["crystals"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ore",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "metal",
+          "aliases": ["metals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mineral",
+          "aliases": ["minerals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fool's gold",
+          "aliases": ["pyrite"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "magnetite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hematite",
+          "aliases": ["haematite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bauxite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cobalt",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "diamond",
+          "aliases": ["diamonds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ruby",
+          "aliases": ["rubies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "emerald",
+          "aliases": ["emeralds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "amethyst",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "topaz",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "opal",
+          "aliases": ["opals"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jade",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "garnet",
+          "aliases": ["garnets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peridot",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "citrine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tourmaline",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "onyx",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moonstone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "agate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jasper",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "malachite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zircon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spinel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "alexandrite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quartz",
+          "aliases": ["rock crystal", "clear quartz"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rose quartz",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tiger's eye",
+          "aliases": ["tigers eye", "tiger eye"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "morganite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnelian",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "labradorite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fluorite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apatite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gem",
+          "aliases": ["gems", "gemstone", "gemstones", "jewel", "jewels"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryl",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bloodstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sunstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhodochrosite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "aventurine",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sapphire",
+          "aliases": ["sapphires", "blue sapphire"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aquamarine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iolite",
+          "aliases": ["cordierite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kyanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blue lace agate",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turquoise",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "azurite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chrysocolla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "larimar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lapis lazuli",
+          "aliases": ["lapis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodalite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paraiba tourmaline",
+          "aliases": ["paraíba tourmaline", "paraiba"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "body",
+          "aliases": ["bodies", "corpse"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that was never alive",
+      "pool": [
+        {
+          "canonical": "treasure",
+          "aliases": ["buried treasure", "treasure chest"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "coins",
+          "aliases": ["coin", "gold coins", "roman coins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pottery",
+          "aliases": ["pots", "potsherd"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "time capsule",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "artifacts",
+          "aliases": ["artefacts", "artifact", "artefact", "relics"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "landmine",
+          "aliases": ["land mine", "mine", "landmines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pipes",
+          "aliases": ["pipe", "water pipe"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cables",
+          "aliases": ["cable"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bricks",
+          "aliases": ["brick"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "statue",
+          "aliases": ["statues"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "arrowhead",
+          "aliases": ["arrowheads"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sword",
+          "aliases": ["swords", "weapons"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "helmet",
+          "aliases": ["helmets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ruins",
+          "aliases": ["ancient ruins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "old bottles",
+          "aliases": ["bottle", "bottles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tools",
+          "aliases": ["tool"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jewellery",
+          "aliases": ["jewelry"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cannonball",
+          "aliases": ["cannonballs"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bullet",
+          "aliases": ["bullets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mosaic",
+          "aliases": ["mosaics"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gold",
+          "aliases": ["gold nugget", "gold nuggets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "silver",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "iron",
+          "aliases": ["iron ore"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tin",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lead",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "platinum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "uranium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zinc",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nickel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rock",
+          "aliases": ["rocks", "stone", "stones"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "granite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "marble",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "limestone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sandstone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "slate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chalk",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flint",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "basalt",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "obsidian",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pumice",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sand",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "clay",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gravel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dirt",
+          "aliases": ["soil", "earth"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "salt",
+          "aliases": ["rock salt"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sulfur",
+          "aliases": ["sulphur"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "graphite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mica",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gypsum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "talc",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water",
+          "aliases": ["groundwater"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meteorite",
+          "aliases": ["meteorites"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crystal",
+          "aliases": ["crystals"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ore",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "metal",
+          "aliases": ["metals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mineral",
+          "aliases": ["minerals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fool's gold",
+          "aliases": ["pyrite"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "magnetite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hematite",
+          "aliases": ["haematite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bauxite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cobalt",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "diamond",
+          "aliases": ["diamonds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ruby",
+          "aliases": ["rubies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "emerald",
+          "aliases": ["emeralds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "amethyst",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "topaz",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "opal",
+          "aliases": ["opals"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jade",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "garnet",
+          "aliases": ["garnets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peridot",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "citrine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tourmaline",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "onyx",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moonstone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "agate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jasper",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "malachite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zircon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spinel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "alexandrite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quartz",
+          "aliases": ["rock crystal", "clear quartz"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rose quartz",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tiger's eye",
+          "aliases": ["tigers eye", "tiger eye"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "morganite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnelian",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "labradorite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fluorite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apatite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gem",
+          "aliases": ["gems", "gemstone", "gemstones", "jewel", "jewels"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryl",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bloodstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sunstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhodochrosite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "aventurine",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sapphire",
+          "aliases": ["sapphires", "blue sapphire"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aquamarine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iolite",
+          "aliases": ["cordierite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kyanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blue lace agate",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turquoise",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "azurite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chrysocolla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "larimar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lapis lazuli",
+          "aliases": ["lapis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodalite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paraiba tourmaline",
+          "aliases": ["paraíba tourmaline", "paraiba"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that occurs naturally",
+      "pool": [
+        {
+          "canonical": "gold",
+          "aliases": ["gold nugget", "gold nuggets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "silver",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "iron",
+          "aliases": ["iron ore"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tin",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lead",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "platinum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "uranium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zinc",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nickel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rock",
+          "aliases": ["rocks", "stone", "stones"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "granite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "marble",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "limestone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sandstone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "slate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chalk",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flint",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "basalt",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "obsidian",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pumice",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sand",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "clay",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gravel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dirt",
+          "aliases": ["soil", "earth"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "salt",
+          "aliases": ["rock salt"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sulfur",
+          "aliases": ["sulphur"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "graphite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mica",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gypsum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "talc",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water",
+          "aliases": ["groundwater"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meteorite",
+          "aliases": ["meteorites"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crystal",
+          "aliases": ["crystals"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ore",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "metal",
+          "aliases": ["metals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mineral",
+          "aliases": ["minerals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fool's gold",
+          "aliases": ["pyrite"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "magnetite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hematite",
+          "aliases": ["haematite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bauxite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cobalt",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "diamond",
+          "aliases": ["diamonds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ruby",
+          "aliases": ["rubies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "emerald",
+          "aliases": ["emeralds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "amethyst",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "topaz",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "opal",
+          "aliases": ["opals"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jade",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "garnet",
+          "aliases": ["garnets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peridot",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "citrine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tourmaline",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "onyx",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moonstone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "agate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jasper",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "malachite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zircon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spinel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "alexandrite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quartz",
+          "aliases": ["rock crystal", "clear quartz"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rose quartz",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tiger's eye",
+          "aliases": ["tigers eye", "tiger eye"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "morganite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnelian",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "labradorite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fluorite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apatite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gem",
+          "aliases": ["gems", "gemstone", "gemstones", "jewel", "jewels"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryl",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bloodstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sunstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhodochrosite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "aventurine",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sapphire",
+          "aliases": ["sapphires", "blue sapphire"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aquamarine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iolite",
+          "aliases": ["cordierite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kyanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blue lace agate",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turquoise",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "azurite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chrysocolla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "larimar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lapis lazuli",
+          "aliases": ["lapis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodalite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paraiba tourmaline",
+          "aliases": ["paraíba tourmaline", "paraiba"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's a gemstone",
+      "pool": [
+        {
+          "canonical": "diamond",
+          "aliases": ["diamonds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ruby",
+          "aliases": ["rubies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "emerald",
+          "aliases": ["emeralds"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "amethyst",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "topaz",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "opal",
+          "aliases": ["opals"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jade",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "garnet",
+          "aliases": ["garnets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peridot",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "citrine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tourmaline",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "onyx",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moonstone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "agate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jasper",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "malachite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zircon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spinel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "alexandrite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quartz",
+          "aliases": ["rock crystal", "clear quartz"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rose quartz",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tiger's eye",
+          "aliases": ["tigers eye", "tiger eye"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "morganite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnelian",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "labradorite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fluorite",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apatite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gem",
+          "aliases": ["gems", "gemstone", "gemstones", "jewel", "jewels"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryl",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bloodstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sunstone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhodochrosite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "aventurine",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sapphire",
+          "aliases": ["sapphires", "blue sapphire"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aquamarine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iolite",
+          "aliases": ["cordierite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kyanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blue lace agate",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turquoise",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "azurite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chrysocolla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "larimar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lapis lazuli",
+          "aliases": ["lapis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodalite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paraiba tourmaline",
+          "aliases": ["paraíba tourmaline", "paraiba"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's usually blue",
+      "pool": [
+        {
+          "canonical": "sapphire",
+          "aliases": ["sapphires", "blue sapphire"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aquamarine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iolite",
+          "aliases": ["cordierite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kyanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blue lace agate",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turquoise",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "azurite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chrysocolla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "larimar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lapis lazuli",
+          "aliases": ["lapis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodalite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paraiba tourmaline",
+          "aliases": ["paraíba tourmaline", "paraiba"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…softer than quartz",
+      "pool": [
+        {
+          "canonical": "turquoise",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "azurite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chrysocolla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "larimar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lapis lazuli",
+          "aliases": ["lapis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodalite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that contains no copper",
+      "pool": [
+        {
+          "canonical": "lapis lazuli",
+          "aliases": ["lapis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodalite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's transparent",
+      "pool": [
+        {
+          "canonical": "lazulite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hauyne",
+          "aliases": ["haüyne", "hauynite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavansite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celestine",
+          "aliases": ["celestite"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…named after a place",
+      "pool": [
+        {
+          "canonical": "tanzanite",
+          "aliases": ["blue zoisite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "afghanite",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…found in California",
+      "pool": [
+        {
+          "canonical": "benitoite",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    }
+  ]
+}
