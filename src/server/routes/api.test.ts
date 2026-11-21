@@ -252,6 +252,19 @@ describe('POST /answer', () => {
     }
   );
 
+  it('mid-run fossils never name an answer valid at the current layer', async () => {
+    env.state.userId = 't2_bob';
+    await start();
+    await answer('orange juice', 1); // also valid at layer 2
+    env.state.userId = 't2_alice';
+    await answer('tiger', 1);
+    const stats = await json<StatsResponse>(api.request('/stats'));
+    expect(stats.fossils[0]).toEqual([
+      { answer: 'something else', count: 1, percent: 50 },
+      { answer: 'tiger', count: 1, percent: 50 },
+    ]);
+  });
+
   it('AI-approved answers count, are cached, and show as "something else" to others', async () => {
     env.state.key = 'test-key';
     const fetchSpy = vi.fn(async () => verdict(true, 'orange kazoo'));

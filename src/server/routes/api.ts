@@ -341,6 +341,12 @@ api.get('/stats', async (c) => {
       Number(h[String(l)] ?? 0)
     );
   const cleared = run?.cleared.length ?? 0;
+  // Mid-run, answers valid at the current layer (and so every deeper one) would be free hints.
+  const hidden = new Set(
+    run && runStatus(run) === 'playing'
+      ? puzzle.layers[currentLayer(run) - 1]!.pool.map((a) => a.canonical)
+      : []
+  );
   const fossils = await Promise.all(
     puzzle.layers.slice(0, cleared).map(async (layer, i) => {
       const counts = await redis.zRange(keys.answers(day, i + 1), 0, -1);
@@ -348,7 +354,8 @@ api.get('/stats', async (c) => {
       // Only hand-reviewed pool answers are named to other players (SPEC §4.1).
       const shown = new Map<string, number>();
       for (const { member, score: n } of counts) {
-        const name = pool.has(member) ? member : SOMETHING_ELSE;
+        const name =
+          pool.has(member) && !hidden.has(member) ? member : SOMETHING_ELSE;
         shown.set(name, (shown.get(name) ?? 0) + n);
       }
       const total = [...shown.values()].reduce((a, b) => a + b, 0);

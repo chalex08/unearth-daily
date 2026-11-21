@@ -152,7 +152,7 @@ Two in-world hints (not modals):
 - The current clue is **carved into the rock face**. Earlier clues and answers stay visible above as a **chained core sample**.
 - The shaft walls **narrow** with each layer.
 - Lighting **darkens with depth** to a headlamp cone; a green **Uranium glow** sits at the bottom.
-- Other players' answers for cleared layers appear as **fossils** in the rock (tap for %).
+- Other players' answers for cleared layers appear as **fossils** in the rock (tap for %). While the run is still going, any fossil that is also valid at the current layer shows as "something else": pools nest, so naming it would give away an answer for the current or a deeper layer. Once the run ends, all pool fossils are named.
 - The answer input is a **real DOM input over the canvas** (mobile keyboards, accessibility).
 
 ### 6.4 Strike (correct answer)
@@ -226,7 +226,7 @@ Routes (types in `src/shared/api.ts`; all need a logged-in user and a puzzle for
 | `POST /api/start`  | Starts or resumes today's run: current clue, chain so far, lives, score, onboarding flag (true until the player's first finished run).                   |
 | `POST /api/answer` | `{ answer, layer }` → `AnswerResult`. A `layer` that isn't the current one, or a second submit while one is being checked, gets 409 and changes nothing. |
 | `GET /api/result`  | End-screen payload with the full chain and final answer. 409 until the run has ended.                                                                    |
-| `GET /api/stats`   | Players, graveyard, players reaching each mineral, and fossils only for layers this player has cleared (§4.1 display rules).                             |
+| `GET /api/stats`   | Players, graveyard, players reaching each mineral, and fossils only for layers this player has cleared (§4.1 display rules; mid-run hiding in §6.3).     |
 
 Redis keys (`src/server/core/keys.ts`). `{day}` is the UTC day key, `{userId}` the Reddit `t2_` id (never the username). Every key gets a **30-day** TTL, refreshed on write, except the lock.
 
