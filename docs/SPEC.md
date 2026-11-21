@@ -20,6 +20,7 @@ Platform facts referenced here were checked against the Devvit docs on 21 Nov 20
 - One shared puzzle per **UTC day**: a chain of **10 clues**.
 - Clue 1 is broad. Each later clue adds a constraint, so an answer at layer N must satisfy clues 1..N.
 - Clue 10 has **exactly one** valid answer.
+- **Answers get nicher with depth.** Early layers are full of everyday answers; by layers 7–9 most survivors are things only enthusiasts know; the layer-10 answer is **niche**: real and checkable, but unknown to most adults.
 - Each answer may be used **once per run**.
 - **3 pickaxes** (lives). An invalid answer breaks one. Repeated or empty input does not.
 - The run ends when layer 10 is cleared or all pickaxes are broken.
@@ -219,15 +220,15 @@ Confirmed or changed in [DECISIONS.md](DECISIONS.md).
 
 Used in tests and seed data.
 
-| Layer | Clue                        |
-| ----: | --------------------------- |
-|     1 | Name something orange       |
-|     2 | …that you can eat           |
-|     3 | …that grows on a plant      |
-|     4 | …that's a fruit             |
-|     5 | …that grows on a tree       |
-|     6 | …that's a citrus fruit      |
-|     7 | …smaller than a tennis ball |
-|     8 | …whose name has no letter E |
-|     9 | …usually eaten peel and all |
-|    10 | single answer: **kumquat**  |
+| Layer | Clue                                 |
+| ----: | ------------------------------------ |
+|     1 | Name something orange                |
+|     2 | …that you can eat                    |
+|     3 | …that grows on a plant               |
+|     4 | …that's a fruit                      |
+|     5 | …that grows on a tree                |
+|     6 | …that's a citrus fruit               |
+|     7 | …smaller than a tennis ball          |
+|     8 | …whose name has no letter E          |
+|     9 | …not usually eaten raw               |
+|    10 | …mostly grown in Italy: **chinotto** |

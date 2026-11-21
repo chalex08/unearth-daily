@@ -11,10 +11,15 @@ const a = (
   commonness,
 });
 
-const l10 = [a('kumquat', 'rare', 'cumquat')];
-const l9 = [...l10, a('calamondin', 'rare', 'calamansi')];
+const l10 = [a('chinotto', 'rare', 'myrtle-leaved orange')];
+const l9 = [
+  ...l10,
+  a('calamondin', 'rare', 'calamansi'),
+  a('rangpur', 'rare', 'rangpur lime'),
+];
 const l8 = [
   ...l9,
+  a('kumquat', 'rare', 'cumquat'),
   a('satsuma', 'uncommon'),
   a('mandarin', 'common', 'mandarin orange'),
 ];
@@ -63,8 +68,8 @@ const clues = [
   "…that's a citrus fruit",
   '…smaller than a tennis ball',
   '…whose name has no letter E',
-  '…usually eaten peel and all',
-  "…that's oval rather than round",
+  '…not usually eaten raw',
+  '…mostly grown in Italy',
 ];
 
 export const puzzle14: Puzzle = {

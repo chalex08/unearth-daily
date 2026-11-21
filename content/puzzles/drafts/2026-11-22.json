@@ -911,6 +911,126 @@
           "canonical": "hobby",
           "aliases": ["hobbies", "hobby falcon"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "moa",
+          "aliases": ["moas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "great auk",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "elephant bird",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhea",
+          "aliases": ["rheas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flightless cormorant",
+          "aliases": ["galapagos cormorant"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kagu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "inaccessible island rail",
+          "aliases": ["inaccessible rail"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "steamer duck",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kea",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tui",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pukeko",
+          "aliases": ["pūkeko"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lord howe woodhen",
+          "aliases": ["lord howe island woodhen"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snares penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "emperor penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "little penguin",
+          "aliases": ["little blue penguin", "fairy penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kaka",
+          "aliases": ["kākā"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1467,6 +1587,126 @@
           "canonical": "hobby",
           "aliases": ["hobbies", "hobby falcon"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "moa",
+          "aliases": ["moas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "great auk",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "elephant bird",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhea",
+          "aliases": ["rheas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flightless cormorant",
+          "aliases": ["galapagos cormorant"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kagu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "inaccessible island rail",
+          "aliases": ["inaccessible rail"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "steamer duck",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kea",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tui",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pukeko",
+          "aliases": ["pūkeko"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lord howe woodhen",
+          "aliases": ["lord howe island woodhen"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snares penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "emperor penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "little penguin",
+          "aliases": ["little blue penguin", "fairy penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kaka",
+          "aliases": ["kākā"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1788,533 +2028,651 @@
           "canonical": "hobby",
           "aliases": ["hobbies", "hobby falcon"],
           "commonness": "rare"
-        }
-      ]
-    },
-    {
-      "clue": "…that can fly",
-      "pool": [
-        {
-          "canonical": "parrot",
-          "aliases": ["parrots"],
-          "commonness": "common"
         },
         {
-          "canonical": "pigeon",
-          "aliases": ["pigeons"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "duck",
-          "aliases": ["ducks", "mallard", "duckling"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "goose",
-          "aliases": ["geese"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "swan",
-          "aliases": ["swans"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "crow",
-          "aliases": ["crows"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "raven",
-          "aliases": ["ravens"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "robin",
-          "aliases": ["robins"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "sparrow",
-          "aliases": ["sparrows"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "seagull",
-          "aliases": ["gull", "gulls", "seagulls"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "hummingbird",
-          "aliases": ["hummingbirds", "humming bird"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "flamingo",
-          "aliases": ["flamingos", "flamingoes"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "pelican",
-          "aliases": ["pelicans"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "peacock",
-          "aliases": ["peacocks", "peafowl", "peahen"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "stork",
-          "aliases": ["storks"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "heron",
-          "aliases": ["herons"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "woodpecker",
-          "aliases": ["woodpeckers"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "kingfisher",
-          "aliases": ["kingfishers"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "toucan",
-          "aliases": ["toucans"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "magpie",
-          "aliases": ["magpies"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "starling",
-          "aliases": ["starlings"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "swallow",
-          "aliases": ["swallows"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "puffin",
-          "aliases": ["puffins"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "albatross",
-          "aliases": ["albatrosses"],
+          "canonical": "moa",
+          "aliases": ["moas"],
           "commonness": "rare"
         },
         {
-          "canonical": "canary",
-          "aliases": ["canaries"],
+          "canonical": "great auk",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "elephant bird",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhea",
+          "aliases": ["rheas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flightless cormorant",
+          "aliases": ["galapagos cormorant"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kagu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "inaccessible island rail",
+          "aliases": ["inaccessible rail"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "steamer duck",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kea",
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
-          "canonical": "budgie",
-          "aliases": ["budgerigar", "budgies", "parakeet"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "finch",
-          "aliases": ["finches"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "wren",
-          "aliases": ["wrens"],
+          "canonical": "tui",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "blackbird",
-          "aliases": ["blackbirds"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "cockatoo",
-          "aliases": ["cockatoos"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "macaw",
-          "aliases": ["macaws"],
+          "canonical": "pukeko",
+          "aliases": ["pūkeko"],
           "commonness": "rare"
         },
         {
-          "canonical": "crane",
-          "aliases": ["cranes"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "dove",
-          "aliases": ["doves"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "blue jay",
-          "aliases": ["bluejay", "jay"],
+          "canonical": "auckland teal",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "cardinal",
-          "aliases": ["cardinals"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "bluebird",
-          "aliases": ["bluebirds"],
+          "canonical": "campbell teal",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "nightingale",
-          "aliases": ["nightingales"],
+          "canonical": "lord howe woodhen",
+          "aliases": ["lord howe island woodhen"],
           "commonness": "rare"
         },
         {
-          "canonical": "cuckoo",
-          "aliases": ["cuckoos"],
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
           "commonness": "rare"
         },
         {
-          "canonical": "lark",
-          "aliases": ["skylark"],
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
           "commonness": "rare"
         },
         {
-          "canonical": "bird",
-          "aliases": ["birds"],
+          "canonical": "snares penguin",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "vulture",
-          "aliases": ["vultures"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "condor",
-          "aliases": ["condors"],
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
           "commonness": "rare"
         },
         {
-          "canonical": "falcon",
-          "aliases": ["falcons", "peregrine", "peregrine falcon"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "osprey",
-          "aliases": ["ospreys"],
+          "canonical": "emperor penguin",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "kestrel",
-          "aliases": ["kestrels"],
+          "canonical": "little penguin",
+          "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
         },
         {
-          "canonical": "harrier",
-          "aliases": ["harriers"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "buzzard",
-          "aliases": ["buzzards"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "kite",
-          "aliases": ["kites", "red kite"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "eagle",
-          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "hawk",
-          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "owl",
-          "aliases": [
-            "owls",
-            "barn owl",
-            "snowy owl",
-            "eagle owl",
-            "tawny owl"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "merlin",
-          "aliases": ["merlins"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "hobby",
-          "aliases": ["hobbies", "hobby falcon"],
+          "canonical": "kaka",
+          "aliases": ["kākā"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that's a bird of prey",
+      "clue": "…that can't fly",
       "pool": [
         {
-          "canonical": "vulture",
-          "aliases": ["vultures"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "condor",
-          "aliases": ["condors"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "falcon",
-          "aliases": ["falcons", "peregrine", "peregrine falcon"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "osprey",
-          "aliases": ["ospreys"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "kestrel",
-          "aliases": ["kestrels"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "harrier",
-          "aliases": ["harriers"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "buzzard",
-          "aliases": ["buzzards"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "kite",
-          "aliases": ["kites", "red kite"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "eagle",
-          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "canonical": "penguin",
+          "aliases": ["penguins"],
           "commonness": "common"
         },
         {
-          "canonical": "hawk",
-          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "canonical": "ostrich",
+          "aliases": ["ostriches"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "owl",
-          "aliases": [
-            "owls",
-            "barn owl",
-            "snowy owl",
-            "eagle owl",
-            "tawny owl"
-          ],
-          "commonness": "common"
+          "canonical": "emu",
+          "aliases": ["emus"],
+          "commonness": "uncommon"
         },
         {
-          "canonical": "merlin",
-          "aliases": ["merlins"],
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodo",
+          "aliases": ["dodos"],
           "commonness": "rare"
         },
         {
-          "canonical": "hobby",
-          "aliases": ["hobbies", "hobby falcon"],
+          "canonical": "cassowary",
+          "aliases": ["cassowaries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "moa",
+          "aliases": ["moas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "great auk",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "elephant bird",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhea",
+          "aliases": ["rheas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flightless cormorant",
+          "aliases": ["galapagos cormorant"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kagu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "inaccessible island rail",
+          "aliases": ["inaccessible rail"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "steamer duck",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lord howe woodhen",
+          "aliases": ["lord howe island woodhen"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snares penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "emperor penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "little penguin",
+          "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that hunts live animals",
+      "clue": "…that isn't extinct",
       "pool": [
         {
-          "canonical": "falcon",
-          "aliases": ["falcons", "peregrine", "peregrine falcon"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "osprey",
-          "aliases": ["ospreys"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "kestrel",
-          "aliases": ["kestrels"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "harrier",
-          "aliases": ["harriers"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "buzzard",
-          "aliases": ["buzzards"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "kite",
-          "aliases": ["kites", "red kite"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "eagle",
-          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "canonical": "penguin",
+          "aliases": ["penguins"],
           "commonness": "common"
         },
         {
-          "canonical": "hawk",
-          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "canonical": "ostrich",
+          "aliases": ["ostriches"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "owl",
-          "aliases": [
-            "owls",
-            "barn owl",
-            "snowy owl",
-            "eagle owl",
-            "tawny owl"
-          ],
-          "commonness": "common"
+          "canonical": "emu",
+          "aliases": ["emus"],
+          "commonness": "uncommon"
         },
         {
-          "canonical": "merlin",
-          "aliases": ["merlins"],
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cassowary",
+          "aliases": ["cassowaries"],
           "commonness": "rare"
         },
         {
-          "canonical": "hobby",
-          "aliases": ["hobbies", "hobby falcon"],
+          "canonical": "rhea",
+          "aliases": ["rheas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flightless cormorant",
+          "aliases": ["galapagos cormorant"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kagu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "inaccessible island rail",
+          "aliases": ["inaccessible rail"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "steamer duck",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lord howe woodhen",
+          "aliases": ["lord howe island woodhen"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snares penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "emperor penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "little penguin",
+          "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…whose name has five letters or fewer",
+      "clue": "…that lives in the Southern Hemisphere",
       "pool": [
         {
-          "canonical": "kite",
-          "aliases": ["kites", "red kite"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "eagle",
-          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "canonical": "penguin",
+          "aliases": ["penguins"],
           "commonness": "common"
         },
         {
-          "canonical": "hawk",
-          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "canonical": "emu",
+          "aliases": ["emus"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "owl",
-          "aliases": [
-            "owls",
-            "barn owl",
-            "snowy owl",
-            "eagle owl",
-            "tawny owl"
-          ],
-          "commonness": "common"
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
+          "commonness": "uncommon"
         },
         {
-          "canonical": "hobby",
-          "aliases": ["hobbies", "hobby falcon"],
+          "canonical": "cassowary",
+          "aliases": ["cassowaries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhea",
+          "aliases": ["rheas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kagu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "inaccessible island rail",
+          "aliases": ["inaccessible rail"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "steamer duck",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lord howe woodhen",
+          "aliases": ["lord howe island woodhen"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snares penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "emperor penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "little penguin",
+          "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…whose name isn't also a toy",
+      "clue": "…smaller than an adult human",
       "pool": [
         {
-          "canonical": "eagle",
-          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "canonical": "penguin",
+          "aliases": ["penguins"],
           "commonness": "common"
         },
         {
-          "canonical": "hawk",
-          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "owl",
-          "aliases": [
-            "owls",
-            "barn owl",
-            "snowy owl",
-            "eagle owl",
-            "tawny owl"
-          ],
-          "commonness": "common"
+          "canonical": "kagu",
+          "aliases": [],
+          "commonness": "rare"
         },
         {
-          "canonical": "hobby",
-          "aliases": ["hobbies", "hobby falcon"],
+          "canonical": "inaccessible island rail",
+          "aliases": ["inaccessible rail"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "steamer duck",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lord howe woodhen",
+          "aliases": ["lord howe island woodhen"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snares penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "emperor penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "little penguin",
+          "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that's smaller than an eagle",
+      "clue": "…found only in New Zealand",
       "pool": [
         {
-          "canonical": "hawk",
-          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "owl",
-          "aliases": [
-            "owls",
-            "barn owl",
-            "snowy owl",
-            "eagle owl",
-            "tawny owl"
-          ],
-          "commonness": "common"
+          "canonical": "takahe",
+          "aliases": ["takahē"],
+          "commonness": "rare"
         },
         {
-          "canonical": "hobby",
-          "aliases": ["hobbies", "hobby falcon"],
+          "canonical": "weka",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yellow-eyed penguin",
+          "aliases": ["hoiho", "yellow eyed penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fiordland penguin",
+          "aliases": ["tawaki"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snares penguin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erect-crested penguin",
+          "aliases": ["erect crested penguin"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that's awake at night",
+      "clue": "…that's active at night",
       "pool": [
         {
-          "canonical": "owl",
-          "aliases": [
-            "owls",
-            "barn owl",
-            "snowy owl",
-            "eagle owl",
-            "tawny owl"
-          ],
-          "commonness": "common"
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's a parrot",
+      "pool": [
+        {
+          "canonical": "kakapo",
+          "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
         }
       ]
     }

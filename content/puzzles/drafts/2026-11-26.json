@@ -581,6 +581,101 @@
           "canonical": "whistle",
           "aliases": ["train whistle", "sports whistle"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "alphorn",
+          "aliases": ["alpenhorn", "alp horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "post horn",
+          "aliases": ["posthorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "natural horn",
+          "aliases": ["hunting horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sackbut",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ophicleide",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnyx",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trembita",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1038,6 +1133,101 @@
           "canonical": "harmonica",
           "aliases": ["harmonicas", "mouth organ", "blues harp"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "alphorn",
+          "aliases": ["alpenhorn", "alp horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "post horn",
+          "aliases": ["posthorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "natural horn",
+          "aliases": ["hunting horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sackbut",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ophicleide",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnyx",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trembita",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1338,6 +1528,96 @@
           "canonical": "harmonica",
           "aliases": ["harmonicas", "mouth organ", "blues harp"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "post horn",
+          "aliases": ["posthorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "natural horn",
+          "aliases": ["hunting horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sackbut",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ophicleide",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnyx",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trembita",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1493,12 +1773,117 @@
           "canonical": "harmonica",
           "aliases": ["harmonicas", "mouth organ", "blues harp"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "post horn",
+          "aliases": ["posthorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "natural horn",
+          "aliases": ["hunting horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sackbut",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ophicleide",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnyx",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trembita",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that's metal on the outside",
+      "clue": "…that you buzz your lips into",
       "pool": [
+        {
+          "canonical": "didgeridoo",
+          "aliases": ["didjeridu"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vuvuzela",
+          "aliases": [],
+          "commonness": "rare"
+        },
         {
           "canonical": "trumpet",
           "aliases": ["trumpets"],
@@ -1540,33 +1925,8 @@
           "commonness": "rare"
         },
         {
-          "canonical": "saxophone",
-          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "flute",
-          "aliases": ["flutes"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "piccolo",
-          "aliases": ["piccolos"],
-          "commonness": "uncommon"
-        },
-        {
           "canonical": "trombone",
           "aliases": ["trombones"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "chromatic harmonica",
-          "aliases": ["chromatic harp"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "tin whistle",
-          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
           "commonness": "uncommon"
         },
         {
@@ -1575,9 +1935,94 @@
           "commonness": "uncommon"
         },
         {
-          "canonical": "harmonica",
-          "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "canonical": "post horn",
+          "aliases": ["posthorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "natural horn",
+          "aliases": ["hunting horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sackbut",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ophicleide",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carnyx",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trembita",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1585,19 +2030,19 @@
       "clue": "…that has no valves",
       "pool": [
         {
-          "canonical": "saxophone",
-          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "flute",
-          "aliases": ["flutes"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "piccolo",
-          "aliases": ["piccolos"],
+          "canonical": "didgeridoo",
+          "aliases": ["didjeridu"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vuvuzela",
+          "aliases": [],
+          "commonness": "rare"
         },
         {
           "canonical": "trombone",
@@ -1605,99 +2050,279 @@
           "commonness": "uncommon"
         },
         {
-          "canonical": "chromatic harmonica",
-          "aliases": ["chromatic harp"],
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "post horn",
+          "aliases": ["posthorn"],
           "commonness": "rare"
         },
         {
-          "canonical": "tin whistle",
-          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "bugle",
-          "aliases": ["bugles"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "harmonica",
-          "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
-        }
-      ]
-    },
-    {
-      "clue": "…that has no keys to press",
-      "pool": [
-        {
-          "canonical": "trombone",
-          "aliases": ["trombones"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "chromatic harmonica",
-          "aliases": ["chromatic harp"],
+          "canonical": "natural horn",
+          "aliases": ["hunting horn"],
           "commonness": "rare"
         },
         {
-          "canonical": "tin whistle",
-          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
-          "commonness": "uncommon"
+          "canonical": "sackbut",
+          "aliases": [],
+          "commonness": "rare"
         },
         {
-          "canonical": "bugle",
-          "aliases": ["bugles"],
-          "commonness": "uncommon"
+          "canonical": "ophicleide",
+          "aliases": [],
+          "commonness": "rare"
         },
         {
-          "canonical": "harmonica",
-          "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "canonical": "carnyx",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trembita",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that has no slide",
+      "clue": "…that isn't made of metal",
       "pool": [
         {
-          "canonical": "tin whistle",
-          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "canonical": "didgeridoo",
+          "aliases": ["didjeridu"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "bugle",
-          "aliases": ["bugles"],
-          "commonness": "uncommon"
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
         },
         {
-          "canonical": "harmonica",
-          "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "canonical": "vuvuzela",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trembita",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…with no holes for your fingers",
+      "clue": "…with a curved body",
       "pool": [
         {
-          "canonical": "bugle",
-          "aliases": ["bugles"],
-          "commonness": "uncommon"
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
         },
         {
-          "canonical": "harmonica",
-          "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "canonical": "shofar",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cornett",
+          "aliases": ["cornetto", "zink", "mute cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lizard",
+          "aliases": ["tenor cornett"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bukkehorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oliphant",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cow horn",
+          "aliases": ["cowhorn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pbone",
+          "aliases": ["plastic trombone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kudu horn",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that can play several notes at once",
+      "clue": "…that plays low bass notes",
       "pool": [
         {
-          "canonical": "harmonica",
-          "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bass cornett",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "russian bassoon",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…named after an animal",
+      "pool": [
+        {
+          "canonical": "serpent",
+          "aliases": ["serpents", "contrabass serpent", "anaconda"],
+          "commonness": "rare"
         }
       ]
     }

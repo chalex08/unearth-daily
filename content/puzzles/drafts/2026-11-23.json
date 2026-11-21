@@ -836,6 +836,158 @@
           "canonical": "bread roll",
           "aliases": ["rolls", "bread rolls", "bun", "buns"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "pici",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trenette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ditalini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paccheri",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "garganelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campanelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lumache",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "stelline",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "anelli",
+          "aliases": ["anelletti"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gemelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
+          "aliases": [
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rotelle",
+          "aliases": ["wagon wheels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tortiglioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mezze maniche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lorighittas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1388,6 +1540,158 @@
           "canonical": "pita",
           "aliases": ["pitta", "pita bread", "pitta bread"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "pici",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trenette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ditalini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paccheri",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "garganelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campanelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lumache",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "stelline",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "anelli",
+          "aliases": ["anelletti"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gemelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
+          "aliases": [
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rotelle",
+          "aliases": ["wagon wheels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tortiglioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mezze maniche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lorighittas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1635,6 +1939,158 @@
           "canonical": "pita",
           "aliases": ["pitta", "pita bread", "pitta bread"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "pici",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trenette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ditalini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paccheri",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "garganelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campanelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lumache",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "stelline",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "anelli",
+          "aliases": ["anelletti"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gemelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
+          "aliases": [
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rotelle",
+          "aliases": ["wagon wheels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tortiglioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mezze maniche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lorighittas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1797,6 +2253,158 @@
             "spaghettoni"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "pici",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trenette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ditalini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paccheri",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "garganelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campanelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lumache",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "stelline",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "anelli",
+          "aliases": ["anelletti"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gemelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
+          "aliases": [
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rotelle",
+          "aliases": ["wagon wheels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tortiglioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mezze maniche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lorighittas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1919,6 +2527,158 @@
             "spaghettoni"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "pici",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trenette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ditalini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paccheri",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "garganelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campanelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lumache",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "stelline",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "anelli",
+          "aliases": ["anelletti"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gemelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
+          "aliases": [
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rotelle",
+          "aliases": ["wagon wheels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tortiglioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mezze maniche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lorighittas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -2021,134 +2781,506 @@
             "spaghettoni"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "pici",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trenette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ditalini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paccheri",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "garganelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campanelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lumache",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "stelline",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "anelli",
+          "aliases": ["anelletti"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gemelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
+          "aliases": [
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rotelle",
+          "aliases": ["wagon wheels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tortiglioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mezze maniche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lorighittas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that comes in long strands",
+      "clue": "…that's a short pasta shape",
       "pool": [
         {
-          "canonical": "linguine",
-          "aliases": ["linguini"],
+          "canonical": "penne",
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
-          "canonical": "fettuccine",
-          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "tagliatelle",
+          "canonical": "macaroni",
           "aliases": [],
           "commonness": "uncommon"
         },
         {
-          "canonical": "pappardelle",
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rigatoni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "bucatini",
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ziti",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "vermicelli",
+          "canonical": "orecchiette",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "angel hair",
-          "aliases": ["angel hair pasta", "capellini"],
+          "canonical": "cavatappi",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "spaghetti",
+          "canonical": "ditalini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paccheri",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "garganelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campanelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lumache",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "stelline",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "anelli",
+          "aliases": ["anelletti"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gemelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
           "aliases": [
-            "spagetti",
-            "spaghetti bolognese",
-            "spag bol",
-            "spaghetti and meatballs",
-            "spaghettini",
-            "spaghettoni"
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
           ],
-          "commonness": "common"
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rotelle",
+          "aliases": ["wagon wheels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tortiglioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mezze maniche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lorighittas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…whose strands are round",
+      "clue": "…with no hole through it",
       "pool": [
         {
-          "canonical": "bucatini",
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "vermicelli",
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orecchiette",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "angel hair",
-          "aliases": ["angel hair pasta", "capellini"],
+          "canonical": "gemelli",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "spaghetti",
+          "canonical": "trofie",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "casarecce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radiatori",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "malloreddus",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadrucci",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "maltagliati",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "corzetti",
           "aliases": [
-            "spagetti",
-            "spaghetti bolognese",
-            "spag bol",
-            "spaghetti and meatballs",
-            "spaghettini",
-            "spaghettoni"
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
           ],
-          "commonness": "common"
+          "commonness": "rare"
+        },
+        {
+          "canonical": "acini di pepe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cencioni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fregola",
+          "aliases": ["fregula"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pastina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that isn't hollow inside",
+      "clue": "…shaped like a coin",
       "pool": [
         {
-          "canonical": "vermicelli",
+          "canonical": "orecchiette",
           "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "angel hair",
-          "aliases": ["angel hair pasta", "capellini"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "spaghetti",
+          "canonical": "corzetti",
           "aliases": [
-            "spagetti",
-            "spaghetti bolognese",
-            "spag bol",
-            "spaghetti and meatballs",
-            "spaghettini",
-            "spaghettoni"
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
           ],
-          "commonness": "common"
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…often served with meatballs",
+      "clue": "…stamped with a pattern",
       "pool": [
         {
-          "canonical": "spaghetti",
+          "canonical": "corzetti",
           "aliases": [
-            "spagetti",
-            "spaghetti bolognese",
-            "spag bol",
-            "spaghetti and meatballs",
-            "spaghettini",
-            "spaghettoni"
+            "croxetti",
+            "corzetto",
+            "curzetti",
+            "corsetti",
+            "corzetti stampati",
+            "stamped pasta"
           ],
-          "commonness": "common"
+          "commonness": "rare"
         }
       ]
     }

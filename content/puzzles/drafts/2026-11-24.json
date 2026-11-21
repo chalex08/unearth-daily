@@ -566,6 +566,74 @@
           "canonical": "electric unicycle",
           "aliases": ["onewheel"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "velocipede",
+          "aliases": ["boneshaker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "waveboard",
+          "aliases": ["caster board", "casterboard", "ripstik"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snakeboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freeline skates",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trikke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mountainboard",
+          "aliases": ["mountain board"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skikes",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plasma car",
+          "aliases": ["wiggle car"],
+          "commonness": "rare"
         }
       ]
     },
@@ -988,6 +1056,74 @@
           "canonical": "electric unicycle",
           "aliases": ["onewheel"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "velocipede",
+          "aliases": ["boneshaker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "waveboard",
+          "aliases": ["caster board", "casterboard", "ripstik"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snakeboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freeline skates",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trikke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mountainboard",
+          "aliases": ["mountain board"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skikes",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plasma car",
+          "aliases": ["wiggle car"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1205,6 +1341,74 @@
           "canonical": "electric unicycle",
           "aliases": ["onewheel"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "velocipede",
+          "aliases": ["boneshaker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "waveboard",
+          "aliases": ["caster board", "casterboard", "ripstik"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snakeboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freeline skates",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trikke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mountainboard",
+          "aliases": ["mountain board"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skikes",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plasma car",
+          "aliases": ["wiggle car"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1332,6 +1536,74 @@
             "ultimate wheel"
           ],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "velocipede",
+          "aliases": ["boneshaker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "waveboard",
+          "aliases": ["caster board", "casterboard", "ripstik"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snakeboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freeline skates",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trikke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mountainboard",
+          "aliases": ["mountain board"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skikes",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plasma car",
+          "aliases": ["wiggle car"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1423,191 +1695,309 @@
             "ultimate wheel"
           ],
           "commonness": "uncommon"
-        }
-      ]
-    },
-    {
-      "clue": "…that has pedals",
-      "pool": [
-        {
-          "canonical": "tricycle",
-          "aliases": ["trike", "tricycles"],
-          "commonness": "uncommon"
         },
         {
-          "canonical": "pedal car",
-          "aliases": ["pedal cars"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "pedicab",
-          "aliases": ["cycle rickshaw", "bike taxi"],
+          "canonical": "velocipede",
+          "aliases": ["boneshaker"],
           "commonness": "rare"
         },
         {
-          "canonical": "quadricycle",
-          "aliases": ["pedal quad"],
+          "canonical": "waveboard",
+          "aliases": ["caster board", "casterboard", "ripstik"],
           "commonness": "rare"
         },
         {
-          "canonical": "tandem",
-          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
-          "commonness": "uncommon"
+          "canonical": "snakeboard",
+          "aliases": [],
+          "commonness": "rare"
         },
         {
-          "canonical": "penny-farthing",
-          "aliases": ["penny farthing", "high wheeler"],
-          "commonness": "uncommon"
+          "canonical": "freeline skates",
+          "aliases": [],
+          "commonness": "rare"
         },
         {
-          "canonical": "bike",
+          "canonical": "trikke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
           "aliases": [
-            "bicycle",
-            "bikes",
-            "bicycles",
-            "push bike",
-            "pushbike",
-            "bmx",
-            "mountain bike",
-            "road bike",
-            "racing bike"
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
           ],
-          "commonness": "common"
+          "commonness": "rare"
         },
         {
-          "canonical": "unicycle",
-          "aliases": [
-            "unicycles",
-            "uni cycle",
-            "giraffe unicycle",
-            "muni",
-            "ultimate wheel"
-          ],
-          "commonness": "uncommon"
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mountainboard",
+          "aliases": ["mountain board"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skikes",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plasma car",
+          "aliases": ["wiggle car"],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that has fewer than three wheels",
+      "clue": "…that has no pedals",
       "pool": [
         {
-          "canonical": "tandem",
-          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "penny-farthing",
-          "aliases": ["penny farthing", "high wheeler"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "bike",
-          "aliases": [
-            "bicycle",
-            "bikes",
-            "bicycles",
-            "push bike",
-            "pushbike",
-            "bmx",
-            "mountain bike",
-            "road bike",
-            "racing bike"
-          ],
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
           "commonness": "common"
         },
         {
-          "canonical": "unicycle",
-          "aliases": [
-            "unicycles",
-            "uni cycle",
-            "giraffe unicycle",
-            "muni",
-            "ultimate wheel"
-          ],
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "waveboard",
+          "aliases": ["caster board", "casterboard", "ripstik"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snakeboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freeline skates",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trikke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mountainboard",
+          "aliases": ["mountain board"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skikes",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plasma car",
+          "aliases": ["wiggle car"],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…built for one rider",
+      "clue": "…that has handlebars",
       "pool": [
         {
-          "canonical": "penny-farthing",
-          "aliases": ["penny farthing", "high wheeler"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "bike",
-          "aliases": [
-            "bicycle",
-            "bikes",
-            "bicycles",
-            "push bike",
-            "pushbike",
-            "bmx",
-            "mountain bike",
-            "road bike",
-            "racing bike"
-          ],
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
           "commonness": "common"
         },
         {
-          "canonical": "unicycle",
-          "aliases": [
-            "unicycles",
-            "uni cycle",
-            "giraffe unicycle",
-            "muni",
-            "ultimate wheel"
-          ],
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "trikke",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…with no giant front wheel",
+      "clue": "…that has exactly two wheels",
       "pool": [
         {
-          "canonical": "bike",
-          "aliases": [
-            "bicycle",
-            "bikes",
-            "bicycles",
-            "push bike",
-            "pushbike",
-            "bmx",
-            "mountain bike",
-            "road bike",
-            "racing bike"
-          ],
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
           "commonness": "common"
         },
         {
-          "canonical": "unicycle",
-          "aliases": [
-            "unicycles",
-            "uni cycle",
-            "giraffe unicycle",
-            "muni",
-            "ultimate wheel"
-          ],
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "kickbike",
+          "aliases": ["footbike"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dog scooter",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that has no handlebars",
+      "clue": "…that you sit on",
       "pool": [
         {
-          "canonical": "unicycle",
-          "aliases": [
-            "unicycles",
-            "uni cycle",
-            "giraffe unicycle",
-            "muni",
-            "ultimate wheel"
-          ],
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
           "commonness": "uncommon"
+        },
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seated kick scooter",
+          "aliases": ["sit-down scooter"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…invented before pedal bikes",
+      "pool": [
+        {
+          "canonical": "dandy horse",
+          "aliases": [
+            "draisine",
+            "draisienne",
+            "laufmaschine",
+            "running machine",
+            "hobby horse",
+            "pedestrian curricle",
+            "swiftwalker"
+          ],
+          "commonness": "rare"
         }
       ]
     }
