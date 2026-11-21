@@ -6,186 +6,53 @@
       "clue": "Name an animal",
       "pool": [
         {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "ocelot",
-          "aliases": ["ocelots", "dwarf leopard"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "serval",
-          "aliases": ["servals"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "clouded leopard",
-          "aliases": ["clouded leopards"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "bobcat",
-          "aliases": ["bobcats", "red lynx", "bay lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lynx",
-          "aliases": ["lynxes", "canada lynx", "eurasian lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lion",
-          "aliases": ["lions", "african lion", "lioness"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "tiger",
-          "aliases": ["tigers", "bengal tiger", "siberian tiger", "tigress"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cougar",
-          "aliases": [
-            "cougars",
-            "mountain lion",
-            "mountain lions",
-            "puma",
-            "pumas",
-            "panther",
-            "panthers",
-            "catamount"
-          ],
+          "canonical": "dog",
+          "aliases": ["dogs", "puppy", "puppies", "doggy"],
           "commonness": "common"
         },
         {
           "canonical": "cat",
-          "aliases": [
-            "cats",
-            "domestic cat",
-            "house cat",
-            "housecat",
-            "housecats",
-            "feline",
-            "kitty",
-            "kitten",
-            "kittens"
-          ],
+          "aliases": ["cats", "kitten", "kittens", "kitty"],
           "commonness": "common"
         },
         {
-          "canonical": "wolf",
-          "aliases": ["wolves", "gray wolf", "grey wolf", "timber wolf"],
+          "canonical": "horse",
+          "aliases": ["horses", "pony", "ponies", "foal"],
           "commonness": "common"
         },
         {
-          "canonical": "coyote",
-          "aliases": ["coyotes", "prairie wolf"],
+          "canonical": "cow",
+          "aliases": ["cows", "cattle", "bull", "calf", "ox"],
           "commonness": "common"
         },
         {
-          "canonical": "fox",
-          "aliases": ["foxes", "red fox", "vixen"],
+          "canonical": "pig",
+          "aliases": ["pigs", "piglet", "hog"],
           "commonness": "common"
         },
         {
-          "canonical": "dog",
-          "aliases": [
-            "dogs",
-            "domestic dog",
-            "canine",
-            "puppy",
-            "puppies",
-            "hound",
-            "pooch"
-          ],
+          "canonical": "sheep",
+          "aliases": ["lamb", "lambs", "ram"],
           "commonness": "common"
         },
         {
-          "canonical": "polar bear",
-          "aliases": ["polar bears", "white bear"],
+          "canonical": "goat",
+          "aliases": ["goats"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lion",
+          "aliases": ["lions", "lioness"],
           "commonness": "common"
         },
         {
-          "canonical": "bear",
-          "aliases": [
-            "bears",
-            "grizzly bear",
-            "grizzly",
-            "brown bear",
-            "black bear"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "otter",
-          "aliases": ["otters", "sea otter", "river otter"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "badger",
-          "aliases": ["badgers", "honey badger"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "skunk",
-          "aliases": ["skunks", "striped skunk"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "ferret",
-          "aliases": ["ferrets", "weasel", "weasels"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "hyena",
-          "aliases": ["hyenas", "spotted hyena"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "walrus",
-          "aliases": ["walruses"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "seal",
-          "aliases": ["seals", "harbor seal", "fur seal"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "sea lion",
-          "aliases": ["sea lions"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "killer whale",
-          "aliases": ["killer whales", "orca", "orcas"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "raccoon",
-          "aliases": ["raccoons", "racoon", "racoons"],
+          "canonical": "tiger",
+          "aliases": ["tigers"],
           "commonness": "common"
         },
         {
           "canonical": "elephant",
-          "aliases": ["elephants", "african elephant", "asian elephant"],
+          "aliases": ["elephants"],
           "commonness": "common"
         },
         {
@@ -199,1049 +66,2254 @@
           "commonness": "common"
         },
         {
-          "canonical": "hippopotamus",
-          "aliases": ["hippo", "hippos", "hippopotamuses"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rhinoceros",
-          "aliases": ["rhino", "rhinos", "rhinoceroses"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "horse",
-          "aliases": ["horses", "stallion", "mare", "equine", "pony", "ponies"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cow",
-          "aliases": ["cows", "cattle", "bull", "ox", "bovine", "calf"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "sheep",
-          "aliases": ["lamb", "lambs", "ram", "ewe"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "goat",
-          "aliases": ["goats", "billy goat"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "pig",
-          "aliases": ["pigs", "swine", "hog", "hogs", "boar", "piglet"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "deer",
-          "aliases": ["deers", "white-tailed deer", "stag", "doe", "buck"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "moose",
-          "aliases": ["bull moose"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "elk",
-          "aliases": ["elks", "wapiti"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "kangaroo",
-          "aliases": ["kangaroos", "red kangaroo", "joey"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "koala",
-          "aliases": ["koalas", "koala bear"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rabbit",
-          "aliases": ["rabbits", "bunny", "bunnies", "hare", "hares"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "beaver",
-          "aliases": ["beavers"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "squirrel",
-          "aliases": ["squirrels", "gray squirrel", "grey squirrel"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "mouse",
-          "aliases": ["mice", "house mouse"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rat",
-          "aliases": ["rats", "brown rat"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "blue whale",
-          "aliases": ["blue whales"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "dolphin",
-          "aliases": ["dolphins", "bottlenose dolphin"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "chimpanzee",
-          "aliases": ["chimp", "chimps", "chimpanzees"],
+          "canonical": "monkey",
+          "aliases": ["monkeys"],
           "commonness": "common"
         },
         {
           "canonical": "gorilla",
           "aliases": ["gorillas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chimpanzee",
+          "aliases": ["chimp", "chimps", "chimpanzees"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bear",
+          "aliases": [
+            "bears",
+            "brown bear",
+            "grizzly",
+            "grizzly bear",
+            "black bear"
+          ],
           "commonness": "common"
+        },
+        {
+          "canonical": "polar bear",
+          "aliases": ["polar bears"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "panda",
+          "aliases": ["pandas", "giant panda", "panda bear"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "koala",
+          "aliases": ["koalas", "koala bear"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kangaroo",
+          "aliases": ["kangaroos", "roo"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rabbit",
+          "aliases": ["rabbits", "bunny", "bunnies", "hare"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mouse",
+          "aliases": ["mice"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rat",
+          "aliases": ["rats"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hamster",
+          "aliases": ["hamsters"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "guinea pig",
+          "aliases": ["guinea pigs"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "squirrel",
+          "aliases": ["squirrels"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fox",
+          "aliases": ["foxes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wolf",
+          "aliases": ["wolves"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "deer",
+          "aliases": ["stag", "fawn", "doe"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "reindeer",
+          "aliases": ["caribou"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moose",
+          "aliases": ["elk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bat",
+          "aliases": ["bats"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "whale",
+          "aliases": ["whales", "blue whale", "humpback whale"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "orca",
+          "aliases": ["killer whale", "orcas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dolphin",
+          "aliases": ["dolphins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hippo",
+          "aliases": ["hippopotamus", "hippos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhino",
+          "aliases": ["rhinoceros", "rhinos"],
+          "commonness": "uncommon"
         },
         {
           "canonical": "camel",
-          "aliases": ["camels", "dromedary", "bactrian camel"],
-          "commonness": "common"
+          "aliases": ["camels"],
+          "commonness": "uncommon"
         },
         {
-          "canonical": "giant panda",
-          "aliases": ["panda", "pandas", "panda bear"],
-          "commonness": "common"
+          "canonical": "leopard",
+          "aliases": ["leopards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cheetah",
+          "aliases": ["cheetahs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jaguar",
+          "aliases": ["jaguars"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "otter",
+          "aliases": ["otters"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beaver",
+          "aliases": ["beavers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "raccoon",
+          "aliases": ["raccoons", "racoon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "skunk",
+          "aliases": ["skunks"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hedgehog",
+          "aliases": ["hedgehogs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sloth",
+          "aliases": ["sloths"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "llama",
+          "aliases": ["llamas", "alpaca"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "donkey",
+          "aliases": ["donkeys"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seal",
+          "aliases": ["seals", "sea lion"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "walrus",
+          "aliases": ["walruses"],
+          "commonness": "uncommon"
         },
         {
           "canonical": "human",
-          "aliases": ["humans", "person", "people", "man", "woman"],
+          "aliases": ["humans", "person", "people"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hyena",
+          "aliases": ["hyenas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "badger",
+          "aliases": ["badgers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meerkat",
+          "aliases": ["meerkats"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mole",
+          "aliases": ["moles"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ferret",
+          "aliases": ["ferrets", "weasel", "stoat"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "antelope",
+          "aliases": ["antelopes", "gazelle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buffalo",
+          "aliases": ["bison"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orangutan",
+          "aliases": ["orangutans"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lemur",
+          "aliases": ["lemurs"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "armadillo",
+          "aliases": ["armadillos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "porcupine",
+          "aliases": ["porcupines"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mammal",
+          "aliases": ["mammals"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shark",
+          "aliases": ["sharks", "great white", "great white shark"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jellyfish",
+          "aliases": ["jelly fish"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "starfish",
+          "aliases": ["sea star"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["worms", "earthworm"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "caterpillar",
+          "aliases": ["caterpillars"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "scorpion",
+          "aliases": ["scorpions"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snake",
+          "aliases": ["snakes", "python", "cobra"],
           "commonness": "common"
         },
         {
-          "canonical": "eagle",
-          "aliases": ["eagles", "bald eagle", "golden eagle"],
+          "canonical": "lizard",
+          "aliases": ["lizards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crocodile",
+          "aliases": ["crocodiles", "croc"],
           "commonness": "common"
+        },
+        {
+          "canonical": "alligator",
+          "aliases": ["alligators", "gator"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "turtle",
+          "aliases": ["turtles", "sea turtle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tortoise",
+          "aliases": ["tortoises"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "frog",
+          "aliases": ["frogs"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "toad",
+          "aliases": ["toads"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "salamander",
+          "aliases": ["salamanders"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newt",
+          "aliases": ["newts"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fish",
+          "aliases": ["fishes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "goldfish",
+          "aliases": ["gold fish"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "salmon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "clownfish",
+          "aliases": ["clown fish"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tuna",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eel",
+          "aliases": ["eels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seahorse",
+          "aliases": ["sea horse", "seahorses"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "octopus",
+          "aliases": ["octopuses", "octopi"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "squid",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spider",
+          "aliases": ["spiders", "tarantula"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ant",
+          "aliases": ["ants"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bee",
+          "aliases": ["bees", "bumblebee", "honeybee", "honey bee"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "butterfly",
+          "aliases": ["butterflies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ladybug",
+          "aliases": ["ladybird", "ladybugs", "ladybirds"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mosquito",
+          "aliases": ["mosquitoes", "mosquitos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fly",
+          "aliases": ["flies", "housefly"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beetle",
+          "aliases": ["beetles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "snail",
+          "aliases": ["snails", "slug"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chameleon",
+          "aliases": ["chameleons"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gecko",
+          "aliases": ["geckos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "iguana",
+          "aliases": ["iguanas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "komodo dragon",
+          "aliases": ["komodo dragons"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "platypus",
+          "aliases": ["platypuses", "duck-billed platypus"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "echidna",
+          "aliases": ["echidnas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "crab",
+          "aliases": ["crabs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lobster",
+          "aliases": ["lobsters"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shrimp",
+          "aliases": ["prawn", "prawns"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cockroach",
+          "aliases": ["cockroaches", "roach"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "grasshopper",
+          "aliases": ["grasshoppers", "cricket"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dragonfly",
+          "aliases": ["dragonflies"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moth",
+          "aliases": ["moths"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wasp",
+          "aliases": ["wasps", "hornet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dinosaur",
+          "aliases": ["dinosaurs", "t rex", "tyrannosaurus"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "insect",
+          "aliases": ["insects", "bug", "bugs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "reptile",
+          "aliases": ["reptiles"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "piranha",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "termite",
+          "aliases": ["termites"],
+          "commonness": "rare"
         },
         {
           "canonical": "penguin",
-          "aliases": ["penguins", "emperor penguin"],
+          "aliases": ["penguins"],
           "commonness": "common"
         },
         {
           "canonical": "ostrich",
           "aliases": ["ostriches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "emu",
+          "aliases": ["emus"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodo",
+          "aliases": ["dodos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chicken",
+          "aliases": ["chickens", "hen", "rooster", "chick", "cockerel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "turkey",
+          "aliases": ["turkeys"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cassowary",
+          "aliases": ["cassowaries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roadrunner",
+          "aliases": ["road runner"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "parrot",
+          "aliases": ["parrots"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pigeon",
+          "aliases": ["pigeons"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "duck",
+          "aliases": ["ducks", "mallard", "duckling"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "goose",
+          "aliases": ["geese"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swan",
+          "aliases": ["swans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crow",
+          "aliases": ["crows"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "raven",
+          "aliases": ["ravens"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "robin",
+          "aliases": ["robins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sparrow",
+          "aliases": ["sparrows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seagull",
+          "aliases": ["gull", "gulls", "seagulls"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hummingbird",
+          "aliases": ["hummingbirds", "humming bird"],
           "commonness": "common"
         },
         {
           "canonical": "flamingo",
           "aliases": ["flamingos", "flamingoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pelican",
+          "aliases": ["pelicans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peacock",
+          "aliases": ["peacocks", "peafowl", "peahen"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stork",
+          "aliases": ["storks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heron",
+          "aliases": ["herons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "woodpecker",
+          "aliases": ["woodpeckers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kingfisher",
+          "aliases": ["kingfishers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toucan",
+          "aliases": ["toucans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "magpie",
+          "aliases": ["magpies"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "starling",
+          "aliases": ["starlings"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swallow",
+          "aliases": ["swallows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "puffin",
+          "aliases": ["puffins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "albatross",
+          "aliases": ["albatrosses"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canary",
+          "aliases": ["canaries"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "budgie",
+          "aliases": ["budgerigar", "budgies", "parakeet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "finch",
+          "aliases": ["finches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wren",
+          "aliases": ["wrens"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blackbird",
+          "aliases": ["blackbirds"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cockatoo",
+          "aliases": ["cockatoos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaw",
+          "aliases": ["macaws"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "crane",
+          "aliases": ["cranes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dove",
+          "aliases": ["doves"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "blue jay",
+          "aliases": ["bluejay", "jay"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cardinal",
+          "aliases": ["cardinals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bluebird",
+          "aliases": ["bluebirds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nightingale",
+          "aliases": ["nightingales"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cuckoo",
+          "aliases": ["cuckoos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lark",
+          "aliases": ["skylark"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bird",
+          "aliases": ["birds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vulture",
+          "aliases": ["vultures"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "condor",
+          "aliases": ["condors"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "falcon",
+          "aliases": ["falcons", "peregrine", "peregrine falcon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "osprey",
+          "aliases": ["ospreys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kestrel",
+          "aliases": ["kestrels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "harrier",
+          "aliases": ["harriers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buzzard",
+          "aliases": ["buzzards"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kite",
+          "aliases": ["kites", "red kite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
           "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
         },
         {
           "canonical": "owl",
-          "aliases": ["owls", "barn owl", "great horned owl"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "duck",
-          "aliases": ["ducks", "mallard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "alligator",
-          "aliases": ["alligators", "american alligator", "gator", "gators"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "crocodile",
-          "aliases": ["crocodiles", "croc", "crocs"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "turtle",
-          "aliases": ["turtles", "sea turtle", "tortoise", "tortoises"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snake",
           "aliases": [
-            "snakes",
-            "serpent",
-            "rattlesnake",
-            "cobra",
-            "python",
-            "viper"
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "chameleon",
-          "aliases": ["chameleons"],
+          "canonical": "merlin",
+          "aliases": ["merlins"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that lays eggs",
+      "pool": [
+        {
+          "canonical": "snake",
+          "aliases": ["snakes", "python", "cobra"],
           "commonness": "common"
         },
         {
           "canonical": "lizard",
-          "aliases": ["lizards", "gecko", "iguana"],
+          "aliases": ["lizards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crocodile",
+          "aliases": ["crocodiles", "croc"],
           "commonness": "common"
+        },
+        {
+          "canonical": "alligator",
+          "aliases": ["alligators", "gator"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "turtle",
+          "aliases": ["turtles", "sea turtle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tortoise",
+          "aliases": ["tortoises"],
+          "commonness": "uncommon"
         },
         {
           "canonical": "frog",
-          "aliases": ["frogs", "toad", "toads", "bullfrog"],
+          "aliases": ["frogs"],
           "commonness": "common"
         },
         {
-          "canonical": "shark",
-          "aliases": ["sharks", "great white shark", "hammerhead"],
+          "canonical": "toad",
+          "aliases": ["toads"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "salamander",
+          "aliases": ["salamanders"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newt",
+          "aliases": ["newts"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fish",
+          "aliases": ["fishes"],
           "commonness": "common"
         },
         {
-          "canonical": "clownfish",
-          "aliases": ["clown fish", "anemonefish"],
-          "commonness": "common"
+          "canonical": "goldfish",
+          "aliases": ["gold fish"],
+          "commonness": "uncommon"
         },
         {
           "canonical": "salmon",
-          "aliases": ["salmons", "atlantic salmon"],
-          "commonness": "common"
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "clownfish",
+          "aliases": ["clown fish"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tuna",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eel",
+          "aliases": ["eels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seahorse",
+          "aliases": ["sea horse", "seahorses"],
+          "commonness": "rare"
         },
         {
           "canonical": "octopus",
           "aliases": ["octopuses", "octopi"],
-          "commonness": "common"
+          "commonness": "uncommon"
         },
         {
-          "canonical": "crab",
-          "aliases": ["crabs", "blue crab"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lobster",
-          "aliases": ["lobsters"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "bee",
-          "aliases": ["bees", "honeybee", "honeybees", "bumblebee"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "butterfly",
-          "aliases": ["butterflies", "monarch butterfly"],
-          "commonness": "common"
+          "canonical": "squid",
+          "aliases": [],
+          "commonness": "rare"
         },
         {
           "canonical": "spider",
           "aliases": ["spiders", "tarantula"],
-          "commonness": "common"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ant",
           "aliases": ["ants"],
-          "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…that is a mammal",
-      "pool": [
-        {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "ocelot",
-          "aliases": ["ocelots", "dwarf leopard"],
+          "canonical": "bee",
+          "aliases": ["bees", "bumblebee", "honeybee", "honey bee"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "butterfly",
+          "aliases": ["butterflies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ladybug",
+          "aliases": ["ladybird", "ladybugs", "ladybirds"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "serval",
-          "aliases": ["servals"],
+          "canonical": "mosquito",
+          "aliases": ["mosquitoes", "mosquitos"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "clouded leopard",
-          "aliases": ["clouded leopards"],
+          "canonical": "fly",
+          "aliases": ["flies", "housefly"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beetle",
+          "aliases": ["beetles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "snail",
+          "aliases": ["snails", "slug"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chameleon",
+          "aliases": ["chameleons"],
           "commonness": "rare"
         },
         {
-          "canonical": "bobcat",
-          "aliases": ["bobcats", "red lynx", "bay lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lynx",
-          "aliases": ["lynxes", "canada lynx", "eurasian lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lion",
-          "aliases": ["lions", "african lion", "lioness"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "tiger",
-          "aliases": ["tigers", "bengal tiger", "siberian tiger", "tigress"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cougar",
-          "aliases": [
-            "cougars",
-            "mountain lion",
-            "mountain lions",
-            "puma",
-            "pumas",
-            "panther",
-            "panthers",
-            "catamount"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cat",
-          "aliases": [
-            "cats",
-            "domestic cat",
-            "house cat",
-            "housecat",
-            "housecats",
-            "feline",
-            "kitty",
-            "kitten",
-            "kittens"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "wolf",
-          "aliases": ["wolves", "gray wolf", "grey wolf", "timber wolf"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "coyote",
-          "aliases": ["coyotes", "prairie wolf"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "fox",
-          "aliases": ["foxes", "red fox", "vixen"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "dog",
-          "aliases": [
-            "dogs",
-            "domestic dog",
-            "canine",
-            "puppy",
-            "puppies",
-            "hound",
-            "pooch"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "polar bear",
-          "aliases": ["polar bears", "white bear"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "bear",
-          "aliases": [
-            "bears",
-            "grizzly bear",
-            "grizzly",
-            "brown bear",
-            "black bear"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "otter",
-          "aliases": ["otters", "sea otter", "river otter"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "badger",
-          "aliases": ["badgers", "honey badger"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "skunk",
-          "aliases": ["skunks", "striped skunk"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "ferret",
-          "aliases": ["ferrets", "weasel", "weasels"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "hyena",
-          "aliases": ["hyenas", "spotted hyena"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "walrus",
-          "aliases": ["walruses"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "seal",
-          "aliases": ["seals", "harbor seal", "fur seal"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "sea lion",
-          "aliases": ["sea lions"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "killer whale",
-          "aliases": ["killer whales", "orca", "orcas"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "raccoon",
-          "aliases": ["raccoons", "racoon", "racoons"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "elephant",
-          "aliases": ["elephants", "african elephant", "asian elephant"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "giraffe",
-          "aliases": ["giraffes"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "zebra",
-          "aliases": ["zebras"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "hippopotamus",
-          "aliases": ["hippo", "hippos", "hippopotamuses"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rhinoceros",
-          "aliases": ["rhino", "rhinos", "rhinoceroses"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "horse",
-          "aliases": ["horses", "stallion", "mare", "equine", "pony", "ponies"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cow",
-          "aliases": ["cows", "cattle", "bull", "ox", "bovine", "calf"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "sheep",
-          "aliases": ["lamb", "lambs", "ram", "ewe"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "goat",
-          "aliases": ["goats", "billy goat"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "pig",
-          "aliases": ["pigs", "swine", "hog", "hogs", "boar", "piglet"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "deer",
-          "aliases": ["deers", "white-tailed deer", "stag", "doe", "buck"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "moose",
-          "aliases": ["bull moose"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "elk",
-          "aliases": ["elks", "wapiti"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "kangaroo",
-          "aliases": ["kangaroos", "red kangaroo", "joey"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "koala",
-          "aliases": ["koalas", "koala bear"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rabbit",
-          "aliases": ["rabbits", "bunny", "bunnies", "hare", "hares"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "beaver",
-          "aliases": ["beavers"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "squirrel",
-          "aliases": ["squirrels", "gray squirrel", "grey squirrel"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "mouse",
-          "aliases": ["mice", "house mouse"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rat",
-          "aliases": ["rats", "brown rat"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "blue whale",
-          "aliases": ["blue whales"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "dolphin",
-          "aliases": ["dolphins", "bottlenose dolphin"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "chimpanzee",
-          "aliases": ["chimp", "chimps", "chimpanzees"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "gorilla",
-          "aliases": ["gorillas"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "camel",
-          "aliases": ["camels", "dromedary", "bactrian camel"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "giant panda",
-          "aliases": ["panda", "pandas", "panda bear"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "human",
-          "aliases": ["humans", "person", "people", "man", "woman"],
-          "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…that is a carnivore that preys on other animals",
-      "pool": [
-        {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "ocelot",
-          "aliases": ["ocelots", "dwarf leopard"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "serval",
-          "aliases": ["servals"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "clouded leopard",
-          "aliases": ["clouded leopards"],
+          "canonical": "gecko",
+          "aliases": ["geckos"],
           "commonness": "rare"
         },
         {
-          "canonical": "bobcat",
-          "aliases": ["bobcats", "red lynx", "bay lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lynx",
-          "aliases": ["lynxes", "canada lynx", "eurasian lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lion",
-          "aliases": ["lions", "african lion", "lioness"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "tiger",
-          "aliases": ["tigers", "bengal tiger", "siberian tiger", "tigress"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cougar",
-          "aliases": [
-            "cougars",
-            "mountain lion",
-            "mountain lions",
-            "puma",
-            "pumas",
-            "panther",
-            "panthers",
-            "catamount"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cat",
-          "aliases": [
-            "cats",
-            "domestic cat",
-            "house cat",
-            "housecat",
-            "housecats",
-            "feline",
-            "kitty",
-            "kitten",
-            "kittens"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "wolf",
-          "aliases": ["wolves", "gray wolf", "grey wolf", "timber wolf"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "coyote",
-          "aliases": ["coyotes", "prairie wolf"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "fox",
-          "aliases": ["foxes", "red fox", "vixen"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "dog",
-          "aliases": [
-            "dogs",
-            "domestic dog",
-            "canine",
-            "puppy",
-            "puppies",
-            "hound",
-            "pooch"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "polar bear",
-          "aliases": ["polar bears", "white bear"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "bear",
-          "aliases": [
-            "bears",
-            "grizzly bear",
-            "grizzly",
-            "brown bear",
-            "black bear"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "otter",
-          "aliases": ["otters", "sea otter", "river otter"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "badger",
-          "aliases": ["badgers", "honey badger"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "skunk",
-          "aliases": ["skunks", "striped skunk"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "ferret",
-          "aliases": ["ferrets", "weasel", "weasels"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "hyena",
-          "aliases": ["hyenas", "spotted hyena"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "walrus",
-          "aliases": ["walruses"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "seal",
-          "aliases": ["seals", "harbor seal", "fur seal"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "sea lion",
-          "aliases": ["sea lions"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "killer whale",
-          "aliases": ["killer whales", "orca", "orcas"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "raccoon",
-          "aliases": ["raccoons", "racoon", "racoons"],
-          "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…that belongs to the cat family (feline)",
-      "pool": [
-        {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "ocelot",
-          "aliases": ["ocelots", "dwarf leopard"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "serval",
-          "aliases": ["servals"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "clouded leopard",
-          "aliases": ["clouded leopards"],
+          "canonical": "iguana",
+          "aliases": ["iguanas"],
           "commonness": "rare"
         },
         {
-          "canonical": "bobcat",
-          "aliases": ["bobcats", "red lynx", "bay lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lynx",
-          "aliases": ["lynxes", "canada lynx", "eurasian lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lion",
-          "aliases": ["lions", "african lion", "lioness"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "tiger",
-          "aliases": ["tigers", "bengal tiger", "siberian tiger", "tigress"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cougar",
-          "aliases": [
-            "cougars",
-            "mountain lion",
-            "mountain lions",
-            "puma",
-            "pumas",
-            "panther",
-            "panthers",
-            "catamount"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cat",
-          "aliases": [
-            "cats",
-            "domestic cat",
-            "house cat",
-            "housecat",
-            "housecats",
-            "feline",
-            "kitty",
-            "kitten",
-            "kittens"
-          ],
-          "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…that lives in the wild and is not kept as a domestic house pet",
-      "pool": [
-        {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "ocelot",
-          "aliases": ["ocelots", "dwarf leopard"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "serval",
-          "aliases": ["servals"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "clouded leopard",
-          "aliases": ["clouded leopards"],
+          "canonical": "komodo dragon",
+          "aliases": ["komodo dragons"],
           "commonness": "rare"
         },
         {
-          "canonical": "bobcat",
-          "aliases": ["bobcats", "red lynx", "bay lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lynx",
-          "aliases": ["lynxes", "canada lynx", "eurasian lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lion",
-          "aliases": ["lions", "african lion", "lioness"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "tiger",
-          "aliases": ["tigers", "bengal tiger", "siberian tiger", "tigress"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cougar",
-          "aliases": [
-            "cougars",
-            "mountain lion",
-            "mountain lions",
-            "puma",
-            "pumas",
-            "panther",
-            "panthers",
-            "catamount"
-          ],
-          "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…that has a coat patterned with spots or rosettes rather than stripes or solid color",
-      "pool": [
-        {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
+          "canonical": "platypus",
+          "aliases": ["platypuses", "duck-billed platypus"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "ocelot",
-          "aliases": ["ocelots", "dwarf leopard"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "serval",
-          "aliases": ["servals"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "clouded leopard",
-          "aliases": ["clouded leopards"],
+          "canonical": "echidna",
+          "aliases": ["echidnas"],
           "commonness": "rare"
         },
         {
-          "canonical": "bobcat",
-          "aliases": ["bobcats", "red lynx", "bay lynx"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lynx",
-          "aliases": ["lynxes", "canada lynx", "eurasian lynx"],
-          "commonness": "common"
-        }
-      ]
-    },
-    {
-      "clue": "…that has a long tail rather than a short, bobbed tail",
-      "pool": [
-        {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
+          "canonical": "crab",
+          "aliases": ["crabs"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "ocelot",
-          "aliases": ["ocelots", "dwarf leopard"],
+          "canonical": "lobster",
+          "aliases": ["lobsters"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shrimp",
+          "aliases": ["prawn", "prawns"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cockroach",
+          "aliases": ["cockroaches", "roach"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "grasshopper",
+          "aliases": ["grasshoppers", "cricket"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "serval",
-          "aliases": ["servals"],
+          "canonical": "dragonfly",
+          "aliases": ["dragonflies"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "clouded leopard",
-          "aliases": ["clouded leopards"],
+          "canonical": "moth",
+          "aliases": ["moths"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wasp",
+          "aliases": ["wasps", "hornet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dinosaur",
+          "aliases": ["dinosaurs", "t rex", "tyrannosaurus"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "insect",
+          "aliases": ["insects", "bug", "bugs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "reptile",
+          "aliases": ["reptiles"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "piranha",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "termite",
+          "aliases": ["termites"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "penguin",
+          "aliases": ["penguins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ostrich",
+          "aliases": ["ostriches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "emu",
+          "aliases": ["emus"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodo",
+          "aliases": ["dodos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chicken",
+          "aliases": ["chickens", "hen", "rooster", "chick", "cockerel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "turkey",
+          "aliases": ["turkeys"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cassowary",
+          "aliases": ["cassowaries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roadrunner",
+          "aliases": ["road runner"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "parrot",
+          "aliases": ["parrots"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pigeon",
+          "aliases": ["pigeons"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "duck",
+          "aliases": ["ducks", "mallard", "duckling"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "goose",
+          "aliases": ["geese"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swan",
+          "aliases": ["swans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crow",
+          "aliases": ["crows"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "raven",
+          "aliases": ["ravens"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "robin",
+          "aliases": ["robins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sparrow",
+          "aliases": ["sparrows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seagull",
+          "aliases": ["gull", "gulls", "seagulls"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hummingbird",
+          "aliases": ["hummingbirds", "humming bird"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flamingo",
+          "aliases": ["flamingos", "flamingoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pelican",
+          "aliases": ["pelicans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peacock",
+          "aliases": ["peacocks", "peafowl", "peahen"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stork",
+          "aliases": ["storks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heron",
+          "aliases": ["herons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "woodpecker",
+          "aliases": ["woodpeckers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kingfisher",
+          "aliases": ["kingfishers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toucan",
+          "aliases": ["toucans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "magpie",
+          "aliases": ["magpies"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "starling",
+          "aliases": ["starlings"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swallow",
+          "aliases": ["swallows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "puffin",
+          "aliases": ["puffins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "albatross",
+          "aliases": ["albatrosses"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canary",
+          "aliases": ["canaries"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "budgie",
+          "aliases": ["budgerigar", "budgies", "parakeet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "finch",
+          "aliases": ["finches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wren",
+          "aliases": ["wrens"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blackbird",
+          "aliases": ["blackbirds"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cockatoo",
+          "aliases": ["cockatoos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaw",
+          "aliases": ["macaws"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "crane",
+          "aliases": ["cranes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dove",
+          "aliases": ["doves"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "blue jay",
+          "aliases": ["bluejay", "jay"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cardinal",
+          "aliases": ["cardinals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bluebird",
+          "aliases": ["bluebirds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nightingale",
+          "aliases": ["nightingales"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cuckoo",
+          "aliases": ["cuckoos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lark",
+          "aliases": ["skylark"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bird",
+          "aliases": ["birds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vulture",
+          "aliases": ["vultures"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "condor",
+          "aliases": ["condors"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "falcon",
+          "aliases": ["falcons", "peregrine", "peregrine falcon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "osprey",
+          "aliases": ["ospreys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kestrel",
+          "aliases": ["kestrels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "harrier",
+          "aliases": ["harriers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buzzard",
+          "aliases": ["buzzards"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kite",
+          "aliases": ["kites", "red kite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "merlin",
+          "aliases": ["merlins"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…that is a large cat weighing over 60 pounds as a full-grown adult",
+      "clue": "…that has feathers",
       "pool": [
         {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
+          "canonical": "penguin",
+          "aliases": ["penguins"],
           "commonness": "common"
         },
         {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "jaguar",
-          "aliases": ["jaguars"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "snow leopard",
-          "aliases": ["snow leopards", "ounce"],
+          "canonical": "ostrich",
+          "aliases": ["ostriches"],
           "commonness": "uncommon"
-        }
-      ]
-    },
-    {
-      "clue": "…that is native to the grasslands and savannas of Africa",
-      "pool": [
+        },
         {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
+          "canonical": "emu",
+          "aliases": ["emus"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kiwi",
+          "aliases": ["kiwis", "kiwi bird"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodo",
+          "aliases": ["dodos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chicken",
+          "aliases": ["chickens", "hen", "rooster", "chick", "cockerel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "turkey",
+          "aliases": ["turkeys"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cassowary",
+          "aliases": ["cassowaries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roadrunner",
+          "aliases": ["road runner"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "parrot",
+          "aliases": ["parrots"],
           "commonness": "common"
         },
         {
-          "canonical": "leopard",
-          "aliases": ["leopards", "african leopard"],
+          "canonical": "pigeon",
+          "aliases": ["pigeons"],
           "commonness": "common"
+        },
+        {
+          "canonical": "duck",
+          "aliases": ["ducks", "mallard", "duckling"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "goose",
+          "aliases": ["geese"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swan",
+          "aliases": ["swans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crow",
+          "aliases": ["crows"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "raven",
+          "aliases": ["ravens"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "robin",
+          "aliases": ["robins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sparrow",
+          "aliases": ["sparrows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seagull",
+          "aliases": ["gull", "gulls", "seagulls"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hummingbird",
+          "aliases": ["hummingbirds", "humming bird"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flamingo",
+          "aliases": ["flamingos", "flamingoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pelican",
+          "aliases": ["pelicans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peacock",
+          "aliases": ["peacocks", "peafowl", "peahen"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stork",
+          "aliases": ["storks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heron",
+          "aliases": ["herons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "woodpecker",
+          "aliases": ["woodpeckers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kingfisher",
+          "aliases": ["kingfishers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toucan",
+          "aliases": ["toucans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "magpie",
+          "aliases": ["magpies"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "starling",
+          "aliases": ["starlings"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swallow",
+          "aliases": ["swallows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "puffin",
+          "aliases": ["puffins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "albatross",
+          "aliases": ["albatrosses"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canary",
+          "aliases": ["canaries"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "budgie",
+          "aliases": ["budgerigar", "budgies", "parakeet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "finch",
+          "aliases": ["finches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wren",
+          "aliases": ["wrens"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blackbird",
+          "aliases": ["blackbirds"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cockatoo",
+          "aliases": ["cockatoos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaw",
+          "aliases": ["macaws"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "crane",
+          "aliases": ["cranes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dove",
+          "aliases": ["doves"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "blue jay",
+          "aliases": ["bluejay", "jay"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cardinal",
+          "aliases": ["cardinals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bluebird",
+          "aliases": ["bluebirds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nightingale",
+          "aliases": ["nightingales"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cuckoo",
+          "aliases": ["cuckoos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lark",
+          "aliases": ["skylark"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bird",
+          "aliases": ["birds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vulture",
+          "aliases": ["vultures"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "condor",
+          "aliases": ["condors"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "falcon",
+          "aliases": ["falcons", "peregrine", "peregrine falcon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "osprey",
+          "aliases": ["ospreys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kestrel",
+          "aliases": ["kestrels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "harrier",
+          "aliases": ["harriers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buzzard",
+          "aliases": ["buzzards"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kite",
+          "aliases": ["kites", "red kite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "merlin",
+          "aliases": ["merlins"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…celebrated as the fastest land mammal on Earth, with black tear stripes running down its face",
+      "clue": "…that can fly",
       "pool": [
         {
-          "canonical": "cheetah",
-          "aliases": ["cheetahs", "hunting leopard"],
+          "canonical": "parrot",
+          "aliases": ["parrots"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pigeon",
+          "aliases": ["pigeons"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "duck",
+          "aliases": ["ducks", "mallard", "duckling"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "goose",
+          "aliases": ["geese"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swan",
+          "aliases": ["swans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crow",
+          "aliases": ["crows"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "raven",
+          "aliases": ["ravens"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "robin",
+          "aliases": ["robins"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sparrow",
+          "aliases": ["sparrows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seagull",
+          "aliases": ["gull", "gulls", "seagulls"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hummingbird",
+          "aliases": ["hummingbirds", "humming bird"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flamingo",
+          "aliases": ["flamingos", "flamingoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pelican",
+          "aliases": ["pelicans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peacock",
+          "aliases": ["peacocks", "peafowl", "peahen"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stork",
+          "aliases": ["storks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heron",
+          "aliases": ["herons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "woodpecker",
+          "aliases": ["woodpeckers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kingfisher",
+          "aliases": ["kingfishers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toucan",
+          "aliases": ["toucans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "magpie",
+          "aliases": ["magpies"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "starling",
+          "aliases": ["starlings"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "swallow",
+          "aliases": ["swallows"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "puffin",
+          "aliases": ["puffins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "albatross",
+          "aliases": ["albatrosses"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "canary",
+          "aliases": ["canaries"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "budgie",
+          "aliases": ["budgerigar", "budgies", "parakeet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "finch",
+          "aliases": ["finches"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wren",
+          "aliases": ["wrens"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blackbird",
+          "aliases": ["blackbirds"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cockatoo",
+          "aliases": ["cockatoos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaw",
+          "aliases": ["macaws"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "crane",
+          "aliases": ["cranes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dove",
+          "aliases": ["doves"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "blue jay",
+          "aliases": ["bluejay", "jay"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cardinal",
+          "aliases": ["cardinals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bluebird",
+          "aliases": ["bluebirds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nightingale",
+          "aliases": ["nightingales"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cuckoo",
+          "aliases": ["cuckoos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lark",
+          "aliases": ["skylark"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bird",
+          "aliases": ["birds"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vulture",
+          "aliases": ["vultures"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "condor",
+          "aliases": ["condors"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "falcon",
+          "aliases": ["falcons", "peregrine", "peregrine falcon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "osprey",
+          "aliases": ["ospreys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kestrel",
+          "aliases": ["kestrels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "harrier",
+          "aliases": ["harriers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buzzard",
+          "aliases": ["buzzards"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kite",
+          "aliases": ["kites", "red kite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "merlin",
+          "aliases": ["merlins"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's a bird of prey",
+      "pool": [
+        {
+          "canonical": "vulture",
+          "aliases": ["vultures"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "condor",
+          "aliases": ["condors"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "falcon",
+          "aliases": ["falcons", "peregrine", "peregrine falcon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "osprey",
+          "aliases": ["ospreys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kestrel",
+          "aliases": ["kestrels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "harrier",
+          "aliases": ["harriers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buzzard",
+          "aliases": ["buzzards"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kite",
+          "aliases": ["kites", "red kite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "merlin",
+          "aliases": ["merlins"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that hunts live animals",
+      "pool": [
+        {
+          "canonical": "falcon",
+          "aliases": ["falcons", "peregrine", "peregrine falcon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "osprey",
+          "aliases": ["ospreys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kestrel",
+          "aliases": ["kestrels"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "harrier",
+          "aliases": ["harriers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buzzard",
+          "aliases": ["buzzards"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kite",
+          "aliases": ["kites", "red kite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "merlin",
+          "aliases": ["merlins"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…whose name has five letters or fewer",
+      "pool": [
+        {
+          "canonical": "kite",
+          "aliases": ["kites", "red kite"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…whose name isn't also a toy",
+      "pool": [
+        {
+          "canonical": "eagle",
+          "aliases": ["eagles", "bald eagle", "golden eagle", "sea eagle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's smaller than an eagle",
+      "pool": [
+        {
+          "canonical": "hawk",
+          "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hobby",
+          "aliases": ["hobbies", "hobby falcon"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's awake at night",
+      "pool": [
+        {
+          "canonical": "owl",
+          "aliases": [
+            "owls",
+            "barn owl",
+            "snowy owl",
+            "eagle owl",
+            "tawny owl"
+          ],
           "commonness": "common"
         }
       ]

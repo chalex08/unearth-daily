@@ -53,8 +53,7 @@ describe('toPuzzle', () => {
     expect(noOpLayers(toPuzzle(draft, 15, '2026-11-22'))).toEqual([
       3, 4, 5, 6, 8, 9, 10,
     ]);
-    // Clue 8 ('doesn't contain "orange"') rules out nothing: clue 7 already removed the oranges.
-    expect(noOpLayers(puzzle14)).toEqual([8]);
+    expect(noOpLayers(puzzle14)).toEqual([]);
   });
   it('lets the validator catch a final layer with two answers', () => {
     const two = {

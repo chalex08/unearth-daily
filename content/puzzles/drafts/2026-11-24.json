@@ -3,1132 +3,1611 @@
   "date": "2026-11-24",
   "layers": [
     {
-      "clue": "Name a sport",
+      "clue": "Name something with wheels",
       "pool": [
         {
-          "canonical": "basketball",
+          "canonical": "suitcase",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "suitcases",
+            "luggage",
+            "wheelie suitcase",
+            "rolling suitcase"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "3x3 basketball",
+          "canonical": "shopping trolley",
+          "aliases": ["shopping cart", "shopping trolleys", "shopping carts"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "wheelbarrow",
+          "aliases": ["wheel barrow", "barrow"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "office chair",
+          "aliases": ["desk chair", "swivel chair"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lawnmower",
+          "aliases": ["lawn mower", "mower"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "vacuum cleaner",
+          "aliases": ["vacuum", "hoover"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "robot vacuum",
+          "aliases": ["roomba"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pizza cutter",
+          "aliases": ["pizza wheel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toy car",
+          "aliases": ["toy cars", "toy truck", "matchbox car"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "remote control car",
+          "aliases": ["rc car", "remote controlled car"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "toy train",
+          "aliases": ["train set"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelie bin",
+          "aliases": ["bin", "rubbish bin", "trash can", "garbage can"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hand truck",
+          "aliases": ["dolly", "sack truck"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cannon",
+          "aliases": ["cannons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trailer",
+          "aliases": ["trailers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "caravan",
+          "aliases": ["caravans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "horsebox",
+          "aliases": ["horse box", "horse trailer"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf trolley",
+          "aliases": ["golf trolly"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hose reel",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "car",
           "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
-          ],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "korfball",
-          "aliases": ["korf ball", "korf"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "handball",
-          "aliases": ["team handball", "olympic handball", "european handball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "goalball",
-          "aliases": ["goal ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair rugby",
-          "aliases": ["quad rugby", "murderball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "dodgeball",
-          "aliases": ["dodge ball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "futsal",
-          "aliases": ["indoor soccer", "futsall"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "floorball",
-          "aliases": ["floor ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "soccer",
-          "aliases": ["association football", "football", "european football"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "american football",
-          "aliases": ["gridiron", "nfl football"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "baseball",
-          "aliases": ["hardball"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cricket",
-          "aliases": ["test cricket"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rugby union",
-          "aliases": ["rugby", "union"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rugby league",
-          "aliases": ["league"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "canadian football",
-          "aliases": ["cfl", "cfl football"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "australian rules football",
-          "aliases": ["afl", "aussie rules", "footy", "australian football"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "gaelic football",
-          "aliases": ["gaa football"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "hurling",
-          "aliases": ["camogie"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "field hockey",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lacrosse",
-          "aliases": ["lax"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "softball",
-          "aliases": ["slowpitch", "fastpitch"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "water polo",
-          "aliases": ["waterpolo"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "polo",
-          "aliases": ["horse polo"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "kickball",
-          "aliases": ["kick ball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "tennis",
-          "aliases": ["lawn tennis"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "table tennis",
-          "aliases": ["ping pong", "ping-pong"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "volleyball",
-          "aliases": ["beach volleyball", "sand volleyball"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "golf",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "bowling",
-          "aliases": ["ten-pin bowling", "tenpin bowling", "ten pin bowling"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "squash",
-          "aliases": ["squash racquets"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "racquetball",
-          "aliases": ["racketball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "pickleball",
-          "aliases": ["pickle ball", "pickle-ball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "padel",
-          "aliases": ["padel tennis"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "snooker",
-          "aliases": [
-            "billiards",
-            "pool",
-            "cue sports",
-            "eight-ball",
-            "nine-ball"
-          ],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "bocce",
-          "aliases": ["bocce ball", "boules", "petanque"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "croquet",
-          "aliases": [],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "sepaktakraw",
-          "aliases": ["sepak takraw", "kick volleyball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "ice hockey",
-          "aliases": ["hockey"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "badminton",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "curling",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "swimming",
-          "aliases": ["freestyle swimming"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "track and field",
-          "aliases": ["athletics", "track", "running"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "boxing",
-          "aliases": ["pugilism"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cycling",
-          "aliases": ["biking", "bicycle racing", "road cycling"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "gymnastics",
-          "aliases": ["artistic gymnastics", "rhythmic gymnastics"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "skiing",
-          "aliases": [
-            "alpine skiing",
-            "downhill skiing",
-            "cross-country skiing"
+            "cars",
+            "automobile",
+            "sports car",
+            "convertible",
+            "hatchback"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "snowboarding",
-          "aliases": ["snow board"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "wrestling",
-          "aliases": ["freestyle wrestling", "greco-roman wrestling"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "karate",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "judo",
-          "aliases": [],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "taekwondo",
-          "aliases": ["tae kwon do"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "archery",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "fencing",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rowing",
-          "aliases": ["crew"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "sailing",
-          "aliases": ["yachting"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "surfing",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "skateboarding",
-          "aliases": ["skate board"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "weightlifting",
-          "aliases": ["olympic weightlifting", "powerlifting"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "figure skating",
-          "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "speed skating",
-          "aliases": [],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "bobsleigh",
-          "aliases": ["bobsled"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "luge",
-          "aliases": [],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "skeleton",
-          "aliases": [],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "equestrian",
-          "aliases": ["horse riding", "show jumping", "dressage"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "motor racing",
-          "aliases": ["auto racing", "motorsport", "formula 1", "f1", "nascar"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "darts",
-          "aliases": ["dart"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "ultimate frisbee",
-          "aliases": ["ultimate"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "diving",
-          "aliases": ["springboard diving", "platform diving"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "biathlon",
-          "aliases": [],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "triathlon",
-          "aliases": [],
-          "commonness": "uncommon"
-        }
-      ]
-    },
-    {
-      "clue": "…played with a ball",
-      "pool": [
-        {
-          "canonical": "basketball",
+          "canonical": "bus",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "buses",
+            "double decker",
+            "double-decker",
+            "coach",
+            "minibus",
+            "school bus"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "3x3 basketball",
+          "canonical": "truck",
+          "aliases": ["trucks", "lorry", "lorries", "pickup truck", "pickup"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "train",
           "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
+            "trains",
+            "steam train",
+            "bullet train",
+            "subway",
+            "underground",
+            "metro"
           ],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "korfball",
-          "aliases": ["korf ball", "korf"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "handball",
-          "aliases": ["team handball", "olympic handball", "european handball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "goalball",
-          "aliases": ["goal ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair rugby",
-          "aliases": ["quad rugby", "murderball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "dodgeball",
-          "aliases": ["dodge ball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "futsal",
-          "aliases": ["indoor soccer", "futsall"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "floorball",
-          "aliases": ["floor ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "soccer",
-          "aliases": ["association football", "football", "european football"],
           "commonness": "common"
         },
         {
-          "canonical": "american football",
-          "aliases": ["gridiron", "nfl football"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "baseball",
-          "aliases": ["hardball"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "cricket",
-          "aliases": ["test cricket"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rugby union",
-          "aliases": ["rugby", "union"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rugby league",
-          "aliases": ["league"],
+          "canonical": "tram",
+          "aliases": ["trams", "streetcar"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "canadian football",
-          "aliases": ["cfl", "cfl football"],
+          "canonical": "airplane",
+          "aliases": ["aeroplane", "plane", "planes", "jet", "aircraft"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "australian rules football",
-          "aliases": ["afl", "aussie rules", "footy", "australian football"],
+          "canonical": "taxi",
+          "aliases": ["cab", "taxis", "taxicab"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "gaelic football",
-          "aliases": ["gaa football"],
+          "canonical": "ambulance",
+          "aliases": ["ambulances"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fire engine",
+          "aliases": ["fire truck", "fire engines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "police car",
+          "aliases": ["cop car", "police cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "limousine",
+          "aliases": ["limo", "limos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "van",
+          "aliases": ["vans", "minivan", "ice cream van"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "suv",
+          "aliases": ["jeep", "4x4"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tractor",
+          "aliases": ["tractors"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "monster truck",
+          "aliases": ["monster trucks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "race car",
+          "aliases": ["racing car", "f1 car", "formula 1 car", "racecar"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "camper van",
+          "aliases": ["campervan", "motorhome", "rv"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollercoaster",
+          "aliases": ["roller coaster"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ferris wheel",
+          "aliases": ["big wheel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garbage truck",
+          "aliases": ["bin lorry", "dustcart", "rubbish truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tow truck",
+          "aliases": ["breakdown truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dump truck",
+          "aliases": ["dumper truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cement mixer",
+          "aliases": ["concrete mixer"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "digger",
+          "aliases": ["excavator"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bulldozer",
+          "aliases": ["bulldozers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "steamroller",
+          "aliases": ["steam roller", "road roller"],
           "commonness": "rare"
         },
         {
-          "canonical": "hurling",
-          "aliases": ["camogie"],
+          "canonical": "combine harvester",
+          "aliases": ["combine"],
           "commonness": "rare"
         },
         {
-          "canonical": "field hockey",
+          "canonical": "horse-drawn carriage",
+          "aliases": ["carriage", "horse and carriage", "horse and cart"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stagecoach",
+          "aliases": ["stage coach"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wagon",
+          "aliases": ["covered wagon", "wagons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hearse",
           "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "lacrosse",
-          "aliases": ["lax"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "softball",
-          "aliases": ["slowpitch", "fastpitch"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "water polo",
-          "aliases": ["waterpolo"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "polo",
-          "aliases": ["horse polo"],
           "commonness": "rare"
         },
         {
-          "canonical": "kickball",
-          "aliases": ["kick ball"],
+          "canonical": "dune buggy",
+          "aliases": ["beach buggy"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snowplough",
+          "aliases": ["snowplow"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "motorbike",
+          "aliases": ["motorcycle", "motorbikes", "motorcycles", "dirt bike"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "moped",
+          "aliases": ["mopeds", "vespa", "motor scooter"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "tennis",
-          "aliases": ["lawn tennis"],
-          "commonness": "common"
+          "canonical": "electric scooter",
+          "aliases": ["e-scooter", "escooter"],
+          "commonness": "uncommon"
         },
         {
-          "canonical": "table tennis",
-          "aliases": ["ping pong", "ping-pong"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "volleyball",
-          "aliases": ["beach volleyball", "sand volleyball"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "golf",
+          "canonical": "mobility scooter",
           "aliases": [],
-          "commonness": "common"
-        },
-        {
-          "canonical": "bowling",
-          "aliases": ["ten-pin bowling", "tenpin bowling", "ten pin bowling"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "squash",
-          "aliases": ["squash racquets"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "racquetball",
-          "aliases": ["racketball"],
+          "canonical": "segway",
+          "aliases": ["segways"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "pickleball",
-          "aliases": ["pickle ball", "pickle-ball"],
+          "canonical": "hoverboard",
+          "aliases": ["hoverboards"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "padel",
-          "aliases": ["padel tennis"],
+          "canonical": "go-kart",
+          "aliases": ["go kart", "gokart", "karting", "go-karts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quad bike",
+          "aliases": ["quad", "atv", "four wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf cart",
+          "aliases": ["golf buggy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ride-on mower",
+          "aliases": ["ride on mower", "ride-on lawnmower", "lawn tractor"],
           "commonness": "rare"
         },
         {
-          "canonical": "snooker",
+          "canonical": "bumper car",
+          "aliases": ["bumper cars", "dodgem", "dodgems"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric bike",
+          "aliases": ["e-bike", "ebike"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tuk-tuk",
+          "aliases": ["tuk tuk", "auto rickshaw"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rickshaw",
+          "aliases": ["rickshaws"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "forklift",
+          "aliases": ["fork lift"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric wheelchair",
+          "aliases": ["powered wheelchair"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
           "aliases": [
-            "billiards",
-            "pool",
-            "cue sports",
-            "eight-ball",
-            "nine-ball"
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chariot",
+          "aliases": ["chariots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
           ],
           "commonness": "uncommon"
         },
         {
-          "canonical": "bocce",
-          "aliases": ["bocce ball", "boules", "petanque"],
+          "canonical": "piano",
+          "aliases": ["pianos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "barbecue",
+          "aliases": ["bbq", "grill"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baby walker",
+          "aliases": ["walker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pushcart",
+          "aliases": ["cart", "handcart", "hand cart"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "croquet",
+          "canonical": "tea trolley",
+          "aliases": ["drinks trolley", "serving cart"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "toolbox",
+          "aliases": ["tool box"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cooler",
+          "aliases": ["cool box", "coolbox", "esky"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "airport trolley",
+          "aliases": ["luggage trolley", "luggage cart"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "helicopter",
+          "aliases": ["helicopters"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ice resurfacer",
+          "aliases": ["zamboni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cable car",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "rare"
         },
         {
-          "canonical": "sepaktakraw",
-          "aliases": ["sepak takraw", "kick volleyball"],
+          "canonical": "monorail",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kids' electric car",
+          "aliases": ["power wheels", "electric toy car"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trolley",
+          "aliases": ["trolleys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "electric unicycle",
+          "aliases": ["onewheel"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…where two opposing teams share the same playing area without a dividing net",
+      "clue": "…that carries a person",
       "pool": [
         {
-          "canonical": "basketball",
+          "canonical": "car",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "cars",
+            "automobile",
+            "sports car",
+            "convertible",
+            "hatchback"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "3x3 basketball",
+          "canonical": "bus",
           "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
+            "buses",
+            "double decker",
+            "double-decker",
+            "coach",
+            "minibus",
+            "school bus"
           ],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "korfball",
-          "aliases": ["korf ball", "korf"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "handball",
-          "aliases": ["team handball", "olympic handball", "european handball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "goalball",
-          "aliases": ["goal ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair rugby",
-          "aliases": ["quad rugby", "murderball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "dodgeball",
-          "aliases": ["dodge ball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "futsal",
-          "aliases": ["indoor soccer", "futsall"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "floorball",
-          "aliases": ["floor ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "soccer",
-          "aliases": ["association football", "football", "european football"],
           "commonness": "common"
         },
         {
-          "canonical": "american football",
-          "aliases": ["gridiron", "nfl football"],
+          "canonical": "truck",
+          "aliases": ["trucks", "lorry", "lorries", "pickup truck", "pickup"],
           "commonness": "common"
         },
         {
-          "canonical": "baseball",
-          "aliases": ["hardball"],
+          "canonical": "train",
+          "aliases": [
+            "trains",
+            "steam train",
+            "bullet train",
+            "subway",
+            "underground",
+            "metro"
+          ],
           "commonness": "common"
         },
         {
-          "canonical": "cricket",
-          "aliases": ["test cricket"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rugby union",
-          "aliases": ["rugby", "union"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "rugby league",
-          "aliases": ["league"],
+          "canonical": "tram",
+          "aliases": ["trams", "streetcar"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "canadian football",
-          "aliases": ["cfl", "cfl football"],
+          "canonical": "airplane",
+          "aliases": ["aeroplane", "plane", "planes", "jet", "aircraft"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "australian rules football",
-          "aliases": ["afl", "aussie rules", "footy", "australian football"],
+          "canonical": "taxi",
+          "aliases": ["cab", "taxis", "taxicab"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "gaelic football",
-          "aliases": ["gaa football"],
+          "canonical": "ambulance",
+          "aliases": ["ambulances"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fire engine",
+          "aliases": ["fire truck", "fire engines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "police car",
+          "aliases": ["cop car", "police cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "limousine",
+          "aliases": ["limo", "limos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "van",
+          "aliases": ["vans", "minivan", "ice cream van"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "suv",
+          "aliases": ["jeep", "4x4"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tractor",
+          "aliases": ["tractors"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "monster truck",
+          "aliases": ["monster trucks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "race car",
+          "aliases": ["racing car", "f1 car", "formula 1 car", "racecar"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "camper van",
+          "aliases": ["campervan", "motorhome", "rv"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollercoaster",
+          "aliases": ["roller coaster"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ferris wheel",
+          "aliases": ["big wheel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garbage truck",
+          "aliases": ["bin lorry", "dustcart", "rubbish truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tow truck",
+          "aliases": ["breakdown truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dump truck",
+          "aliases": ["dumper truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cement mixer",
+          "aliases": ["concrete mixer"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "digger",
+          "aliases": ["excavator"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bulldozer",
+          "aliases": ["bulldozers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "steamroller",
+          "aliases": ["steam roller", "road roller"],
           "commonness": "rare"
         },
         {
-          "canonical": "hurling",
-          "aliases": ["camogie"],
+          "canonical": "combine harvester",
+          "aliases": ["combine"],
           "commonness": "rare"
         },
         {
-          "canonical": "field hockey",
+          "canonical": "horse-drawn carriage",
+          "aliases": ["carriage", "horse and carriage", "horse and cart"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stagecoach",
+          "aliases": ["stage coach"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wagon",
+          "aliases": ["covered wagon", "wagons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hearse",
           "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dune buggy",
+          "aliases": ["beach buggy"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snowplough",
+          "aliases": ["snowplow"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "motorbike",
+          "aliases": ["motorcycle", "motorbikes", "motorcycles", "dirt bike"],
           "commonness": "common"
         },
         {
-          "canonical": "lacrosse",
-          "aliases": ["lax"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "softball",
-          "aliases": ["slowpitch", "fastpitch"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "water polo",
-          "aliases": ["waterpolo"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "polo",
-          "aliases": ["horse polo"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "kickball",
-          "aliases": ["kick ball"],
-          "commonness": "uncommon"
-        }
-      ]
-    },
-    {
-      "clue": "…played on an indoor or outdoor court rather than an open grass pitch, dirt field, or in water",
-      "pool": [
-        {
-          "canonical": "basketball",
-          "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "3x3 basketball",
-          "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
-          ],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "korfball",
-          "aliases": ["korf ball", "korf"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "handball",
-          "aliases": ["team handball", "olympic handball", "european handball"],
+          "canonical": "moped",
+          "aliases": ["mopeds", "vespa", "motor scooter"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "goalball",
-          "aliases": ["goal ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair rugby",
-          "aliases": ["quad rugby", "murderball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "dodgeball",
-          "aliases": ["dodge ball"],
+          "canonical": "electric scooter",
+          "aliases": ["e-scooter", "escooter"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "futsal",
-          "aliases": ["indoor soccer", "futsall"],
+          "canonical": "mobility scooter",
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
-          "canonical": "floorball",
-          "aliases": ["floor ball"],
-          "commonness": "rare"
-        }
-      ]
-    },
-    {
-      "clue": "…where players primarily use their hands to throw, catch, and shoot the ball",
-      "pool": [
+          "canonical": "segway",
+          "aliases": ["segways"],
+          "commonness": "uncommon"
+        },
         {
-          "canonical": "basketball",
+          "canonical": "hoverboard",
+          "aliases": ["hoverboards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "go-kart",
+          "aliases": ["go kart", "gokart", "karting", "go-karts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quad bike",
+          "aliases": ["quad", "atv", "four wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf cart",
+          "aliases": ["golf buggy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ride-on mower",
+          "aliases": ["ride on mower", "ride-on lawnmower", "lawn tractor"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bumper car",
+          "aliases": ["bumper cars", "dodgem", "dodgems"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric bike",
+          "aliases": ["e-bike", "ebike"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tuk-tuk",
+          "aliases": ["tuk tuk", "auto rickshaw"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rickshaw",
+          "aliases": ["rickshaws"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "forklift",
+          "aliases": ["fork lift"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric wheelchair",
+          "aliases": ["powered wheelchair"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "3x3 basketball",
-          "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
-          ],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "korfball",
-          "aliases": ["korf ball", "korf"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "handball",
-          "aliases": ["team handball", "olympic handball", "european handball"],
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "goalball",
-          "aliases": ["goal ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair rugby",
-          "aliases": ["quad rugby", "murderball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "dodgeball",
-          "aliases": ["dodge ball"],
+          "canonical": "chariot",
+          "aliases": ["chariots"],
           "commonness": "uncommon"
-        }
-      ]
-    },
-    {
-      "clue": "…where the object of scoring is to put the ball into a goal or hoop, rather than hitting opposing players to eliminate them",
-      "pool": [
+        },
         {
-          "canonical": "basketball",
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "3x3 basketball",
+          "canonical": "unicycle",
           "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
           ],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "korfball",
-          "aliases": ["korf ball", "korf"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "handball",
-          "aliases": ["team handball", "olympic handball", "european handball"],
           "commonness": "uncommon"
         },
         {
-          "canonical": "goalball",
-          "aliases": ["goal ball"],
+          "canonical": "helicopter",
+          "aliases": ["helicopters"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ice resurfacer",
+          "aliases": ["zamboni"],
           "commonness": "rare"
         },
         {
-          "canonical": "wheelchair rugby",
-          "aliases": ["quad rugby", "murderball"],
-          "commonness": "rare"
-        }
-      ]
-    },
-    {
-      "clue": "…where players score by putting the ball into an elevated horizontal hoop or basket rather than a goal on the floor",
-      "pool": [
-        {
-          "canonical": "basketball",
-          "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
-          ],
-          "commonness": "common"
-        },
-        {
-          "canonical": "3x3 basketball",
-          "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
-          ],
+          "canonical": "cable car",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
+          "canonical": "monorail",
+          "aliases": [],
           "commonness": "rare"
         },
         {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
+          "canonical": "kids' electric car",
+          "aliases": ["power wheels", "electric toy car"],
           "commonness": "rare"
         },
         {
-          "canonical": "netball",
-          "aliases": ["net ball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "korfball",
-          "aliases": ["korf ball", "korf"],
+          "canonical": "electric unicycle",
+          "aliases": ["onewheel"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…where each hoop is mounted against a vertical backboard rather than freestanding on an open pole",
+      "clue": "…that's smaller than a car",
       "pool": [
         {
-          "canonical": "basketball",
+          "canonical": "motorbike",
+          "aliases": ["motorcycle", "motorbikes", "motorcycles", "dirt bike"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "moped",
+          "aliases": ["mopeds", "vespa", "motor scooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric scooter",
+          "aliases": ["e-scooter", "escooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mobility scooter",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "segway",
+          "aliases": ["segways"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hoverboard",
+          "aliases": ["hoverboards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "go-kart",
+          "aliases": ["go kart", "gokart", "karting", "go-karts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quad bike",
+          "aliases": ["quad", "atv", "four wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf cart",
+          "aliases": ["golf buggy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ride-on mower",
+          "aliases": ["ride on mower", "ride-on lawnmower", "lawn tractor"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bumper car",
+          "aliases": ["bumper cars", "dodgem", "dodgems"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric bike",
+          "aliases": ["e-bike", "ebike"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tuk-tuk",
+          "aliases": ["tuk tuk", "auto rickshaw"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rickshaw",
+          "aliases": ["rickshaws"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "forklift",
+          "aliases": ["fork lift"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric wheelchair",
+          "aliases": ["powered wheelchair"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "3x3 basketball",
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chariot",
+          "aliases": ["chariots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
           "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
           ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' electric car",
+          "aliases": ["power wheels", "electric toy car"],
           "commonness": "rare"
         },
         {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "wheelchair basketball",
-          "aliases": ["wheelchair hoops", "para basketball"],
+          "canonical": "electric unicycle",
+          "aliases": ["onewheel"],
           "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…where players run on foot rather than competing in wheelchairs",
+      "clue": "…that has no motor",
       "pool": [
         {
-          "canonical": "basketball",
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
           ],
           "commonness": "common"
         },
         {
-          "canonical": "3x3 basketball",
-          "aliases": [
-            "3x3",
-            "3 on 3 basketball",
-            "three on three basketball",
-            "3-on-3 basketball",
-            "3x3 hoop"
-          ],
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chariot",
+          "aliases": ["chariots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
           "commonness": "rare"
         },
         {
-          "canonical": "streetball",
-          "aliases": ["street basketball"],
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
         }
       ]
     },
     {
-      "clue": "…played on a full court with two opposing hoops and five active players per team at a time",
+      "clue": "…that its rider powers with their legs",
       "pool": [
         {
-          "canonical": "basketball",
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
           "aliases": [
-            "b-ball",
-            "bball",
-            "hoops",
-            "college basketball",
-            "mens basketball",
-            "womens basketball"
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
           ],
           "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has pedals",
+      "pool": [
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has fewer than three wheels",
+      "pool": [
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…built for one rider",
+      "pool": [
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…with no giant front wheel",
+      "pool": [
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has no handlebars",
+      "pool": [
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
         }
       ]
     }

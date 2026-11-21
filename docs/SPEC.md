@@ -219,15 +219,15 @@ Confirmed or changed in [DECISIONS.md](DECISIONS.md).
 
 Used in tests and seed data.
 
-| Layer | Clue                                 |
-| ----: | ------------------------------------ |
-|     1 | Name something orange                |
-|     2 | …that you can eat                    |
-|     3 | …that grows on a plant               |
-|     4 | …that's a fruit                      |
-|     5 | …that grows on a tree                |
-|     6 | …that's a citrus fruit               |
-|     7 | …smaller than a tennis ball          |
-|     8 | …whose name doesn't contain "orange" |
-|     9 | …usually eaten peel and all          |
-|    10 | single answer: **kumquat**           |
+| Layer | Clue                        |
+| ----: | --------------------------- |
+|     1 | Name something orange       |
+|     2 | …that you can eat           |
+|     3 | …that grows on a plant      |
+|     4 | …that's a fruit             |
+|     5 | …that grows on a tree       |
+|     6 | …that's a citrus fruit      |
+|     7 | …smaller than a tennis ball |
+|     8 | …whose name has no letter E |
+|     9 | …usually eaten peel and all |
+|    10 | single answer: **kumquat**  |

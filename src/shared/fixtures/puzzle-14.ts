@@ -16,11 +16,13 @@ const l9 = [...l10, a('calamondin', 'rare', 'calamansi')];
 const l8 = [
   ...l9,
   a('satsuma', 'uncommon'),
-  a('clementine', 'common', 'clemmie'),
   a('mandarin', 'common', 'mandarin orange'),
+];
+const l7 = [
+  ...l8,
+  a('clementine', 'common', 'clemmie'),
   a('tangerine', 'common'),
 ];
-const l7 = [...l8];
 const l6 = [
   ...l7,
   a('navel orange', 'common', 'naval orange', 'orange'),
@@ -60,7 +62,7 @@ const clues = [
   '…that grows on a tree',
   "…that's a citrus fruit",
   '…smaller than a tennis ball',
-  '…whose name doesn\'t contain "orange"',
+  '…whose name has no letter E',
   '…usually eaten peel and all',
   "…that's oval rather than round",
 ];

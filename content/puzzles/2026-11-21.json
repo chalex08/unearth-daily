@@ -1313,21 +1313,11 @@
       ]
     },
     {
-      "clue": "…whose name doesn't contain \"orange\"",
+      "clue": "…whose name has no letter E",
       "pool": [
-        {
-          "canonical": "clementine",
-          "aliases": ["clementines", "clemmie", "cutie", "cuties"],
-          "commonness": "common"
-        },
         {
           "canonical": "mandarin",
           "aliases": ["mandarins", "mandarin orange", "mandarine"],
-          "commonness": "common"
-        },
-        {
-          "canonical": "tangerine",
-          "aliases": ["tangerines"],
           "commonness": "common"
         },
         {
