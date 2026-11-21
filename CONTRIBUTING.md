@@ -71,9 +71,9 @@ You need Node.js 24.18+ (`.nvmrc`), git, access to the GitHub repo, and a Reddit
    npx devvit settings set geminiApiKey
    ```
 
-   This targets the app named in `DEVVIT_APP_NAME`. Use your own Gemini API key; don't share keys.
+   This targets the app named in `DEVVIT_APP_NAME`. Use your own **paid-tier** Gemini API key (a Google project with billing enabled, never a free-tier key); don't share keys.
 
-8. Optional: put `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` in `.env` if you run the offline puzzle tools in `tools/`.
+8. Optional: put `GEMINI_FREE_API_KEY` (a separate Google project with no billing) and `GEMINI_FREE_MODEL` in `.env` if you run the offline puzzle tools in `tools/`. Never send Reddit data to the free-tier key (SPEC §5.3).
 
 ## Branch workflow
 

@@ -86,6 +86,7 @@ Pipeline, in order, stopping at the first decision:
 Failure handling:
 
 - AI error or timeout (~**8s**): show **"Couldn't check that, try again"**, break **no** pickaxe, cache nothing.
+- **AI not available** (Devvit LLM approval not granted yet, or no runtime key set, §5.3): an answer that misses the pool and the verdict cache gets the same **"Couldn't check that, try again"**, breaks **no** pickaxe and caches nothing. The game must be fully playable this way: pool answers validate with no AI at all.
 - **Offensive** answers are rejected (pickaxe breaks as for any invalid answer) and are **never displayed to other players** (not in fossils, stats or graveyard).
 - The client never receives future clues or answer pools; all validation runs on the server.
 
@@ -94,28 +95,38 @@ Failure handling:
 - Only **hand-reviewed pool answers** (their canonical form) are ever displayed as other players' fossils or named in public stats (fossil %, graveyard, any community counts). A valid answer that only the AI accepted is shown to others as "something else".
 - **All valid answers** (pool and AI-approved) still count toward rarity percentages, the graveyard and totals. Only the displayed text is restricted.
 - A player always sees **their own answer** in their own run, end screen and core sample, even if it isn't in the pool.
-- **Non-pool valid answers are logged** per puzzle and layer with how often they were given, most frequent first, so they can be reviewed by hand and added to the pool later.
+- **Non-pool valid answers are logged** per puzzle and layer with how often they were given, most frequent first, so they can be reviewed by hand and added to the pool later. Reviewing this log is manual or uses the paid key only (§5.3).
 
 ## 5. AI
 
-There are two separate AI paths.
+There are two separate AI paths, on two separate Google projects. Both use the Gemini API.
 
-### 5.1 Offline content pipeline (OpenRouter)
+### 5.1 Offline content pipeline (Gemini free tier)
 
-- Runs on the developer's machine, using `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` from `.env` (gitignored).
+- Runs on the developer's machine, using `GEMINI_FREE_API_KEY` and `GEMINI_FREE_MODEL` from `.env` (gitignored). The key comes from a Google project with **no billing** (Gemini API free tier).
+- **Input is only hand-written seed themes and our own puzzle files.** Never Reddit data (§5.3).
 - Drafts clue chains and per-layer answer pools, with **aliases** and a **commonness label** (`common` / `uncommon` / `rare`) for each answer.
 - **Every puzzle is reviewed by hand** before it is committed to `content/puzzles/`.
 
-### 5.2 Runtime judge (inside Devvit)
+### 5.2 Runtime judge (inside Devvit, Gemini paid tier)
 
-- Devvit only allows **OpenAI** and **Google Gemini** as AI providers, so OpenRouter cannot be called at runtime.
-- Use a cheap **Gemini Flash / Flash-Lite-class** model via its allowlisted domain. The key is a **Devvit secret setting** (`geminiApiKey`).
+- Devvit only allows **OpenAI** and **Google Gemini** as AI providers.
+- Use a cheap **Gemini Flash / Flash-Lite-class** model via its allowlisted domain. The key comes from a **separate Google project with billing enabled** (Gemini API paid tier) and is stored only as a **Devvit secret setting** (`geminiApiKey`).
 - Behind an `AnswerJudge` interface so OpenAI can be swapped in.
 - **Input:** all clues up to and including the current layer, plus the normalised answer.
 - **Output:** strict JSON `{ valid, canonical, offensive, reason }`.
   - `canonical`: the canonical form of the answer (used for rarity grouping and reuse checks).
   - `reason`: under 8 words, player-facing and playful.
 - Low temperature. The answer is treated strictly as **data** (prompt-injection safe): delimited, never interpreted as instructions; malformed output counts as an AI failure.
+
+### 5.3 Data rules (hard rules)
+
+Devvit Rules forbid using Reddit data to train or improve AI models, or letting third parties do so. Gemini's free tier may use submitted content to improve Google's products; the paid tier does not. So Reddit-derived data only ever reaches the paid tier.
+
+- The **free-tier key must never receive Reddit data of any kind**: player answers, the §4.1 non-pool answer log, answer counts, usernames, or anything read from Redis or the Reddit API. Free-tier scripts may only read hand-written seed themes and our own puzzle files.
+- The **paid-tier key is the only key the Devvit server may use.** It must come from a billed Google project, never the free one.
+- Reviewing the §4.1 non-pool answer log and adding answers to pools is **manual, or uses the paid key only**.
+- Devvit requires **prior approval for LLM use**. Until it is granted, the game must fully work: pool answers validate without AI, and unknown answers get "Couldn't check that, try again" with no pickaxe lost (§4).
 
 ## 6. Experience flow
 

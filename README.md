@@ -10,7 +10,7 @@ UNEARTH is a daily word game that runs inside a Reddit post: one new puzzle a da
 - **Server** (`src/server/`): Hono API routes, game logic, Redis access, AI answer validator
 - **Shared** (`src/shared/`): types and scoring logic used by both client and server
 - **Content** (`content/puzzles/`): daily puzzle JSON files
-- **Tools** (`tools/`): offline Node scripts (puzzle authoring with OpenRouter, validators, release guards) and the TypeScript project configs
+- **Tools** (`tools/`): offline Node scripts (puzzle authoring with the Gemini free tier, validators, release guards) and the TypeScript project configs
 - **Docs** (`docs/`): briefing, plan, terms, privacy
 
 ## Local setup
@@ -56,12 +56,12 @@ Uploading puts a private version in the App Directory; only you can see it, and 
 
 ## Secrets
 
-- **Runtime (Gemini):** the key is a Devvit secret app setting (`geminiApiKey` in `devvit.json`, `isSecret: true`). It is never stored in code or in `.env`. Secrets belong to one app, so each dev app needs its own key:
+- **Runtime (Gemini paid tier):** the key comes from a Google project with billing enabled and is a Devvit secret app setting (`geminiApiKey` in `devvit.json`, `isSecret: true`). It is never stored in code or in `.env`. Secrets belong to one app, so each dev app needs its own key:
   ```sh
   npm run dev                               # the app must be installed at least once first
   npx devvit settings set geminiApiKey      # targets the app named by DEVVIT_APP_NAME
   ```
   The app owner sets the key for `unearth-daily` with `DEVVIT_APP_NAME=unearth-daily` set in their shell.
-- **Offline tools (OpenRouter):** `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` go in your gitignored `.env`. Only the scripts in `tools/` use them.
+- **Offline tools (Gemini free tier):** `GEMINI_FREE_API_KEY` (from a separate Google project with no billing) and `GEMINI_FREE_MODEL` go in your gitignored `.env`. Only the scripts in `tools/` use them, and they must never send Reddit data to it (SPEC §5.3).
 
 Never commit `.env` or any key.
