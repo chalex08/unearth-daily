@@ -23,7 +23,7 @@
         {
           "canonical": "wheelbarrow",
           "aliases": ["wheel barrow", "barrow"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "office chair",
@@ -148,32 +148,32 @@
         {
           "canonical": "tram",
           "aliases": ["trams", "streetcar"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "airplane",
           "aliases": ["aeroplane", "plane", "planes", "jet", "aircraft"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "taxi",
           "aliases": ["cab", "taxis", "taxicab"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ambulance",
           "aliases": ["ambulances"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fire engine",
           "aliases": ["fire truck", "fire engines"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "police car",
           "aliases": ["cop car", "police cars"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "limousine",
@@ -183,7 +183,7 @@
         {
           "canonical": "van",
           "aliases": ["vans", "minivan", "ice cream van"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "suv",
@@ -193,7 +193,7 @@
         {
           "canonical": "tractor",
           "aliases": ["tractors"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "monster truck",
@@ -298,7 +298,7 @@
         {
           "canonical": "moped",
           "aliases": ["mopeds", "vespa", "motor scooter"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "electric scooter",
@@ -313,17 +313,17 @@
         {
           "canonical": "segway",
           "aliases": ["segways"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hoverboard",
           "aliases": ["hoverboards"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "go-kart",
           "aliases": ["go kart", "gokart", "karting", "go-karts"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "quad bike",
@@ -419,12 +419,12 @@
         {
           "canonical": "roller skates",
           "aliases": ["roller skate", "rollerskates", "skates"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rollerblades",
           "aliases": ["rollerblade", "inline skates", "roller blades"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "heelys",
@@ -439,7 +439,7 @@
         {
           "canonical": "tricycle",
           "aliases": ["trike", "tricycles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pedal car",
@@ -490,7 +490,7 @@
             "muni",
             "ultimate wheel"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "piano",
@@ -634,6 +634,21 @@
           "canonical": "plasma car",
           "aliases": ["wiggle car"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "three-wheeled scooter",
+          "aliases": [
+            "three wheeled scooter",
+            "3 wheel scooter",
+            "kids scooter",
+            "mini micro"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "knee scooter",
+          "aliases": ["knee walker"],
+          "commonness": "rare"
         }
       ]
     },
@@ -683,32 +698,32 @@
         {
           "canonical": "tram",
           "aliases": ["trams", "streetcar"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "airplane",
           "aliases": ["aeroplane", "plane", "planes", "jet", "aircraft"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "taxi",
           "aliases": ["cab", "taxis", "taxicab"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ambulance",
           "aliases": ["ambulances"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fire engine",
           "aliases": ["fire truck", "fire engines"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "police car",
           "aliases": ["cop car", "police cars"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "limousine",
@@ -718,7 +733,7 @@
         {
           "canonical": "van",
           "aliases": ["vans", "minivan", "ice cream van"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "suv",
@@ -728,7 +743,7 @@
         {
           "canonical": "tractor",
           "aliases": ["tractors"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "monster truck",
@@ -833,7 +848,7 @@
         {
           "canonical": "moped",
           "aliases": ["mopeds", "vespa", "motor scooter"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "electric scooter",
@@ -848,17 +863,17 @@
         {
           "canonical": "segway",
           "aliases": ["segways"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hoverboard",
           "aliases": ["hoverboards"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "go-kart",
           "aliases": ["go kart", "gokart", "karting", "go-karts"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "quad bike",
@@ -954,12 +969,12 @@
         {
           "canonical": "roller skates",
           "aliases": ["roller skate", "rollerskates", "skates"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rollerblades",
           "aliases": ["rollerblade", "inline skates", "roller blades"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "heelys",
@@ -974,7 +989,7 @@
         {
           "canonical": "tricycle",
           "aliases": ["trike", "tricycles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pedal car",
@@ -1025,7 +1040,7 @@
             "muni",
             "ultimate wheel"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "helicopter",
@@ -1124,6 +1139,21 @@
           "canonical": "plasma car",
           "aliases": ["wiggle car"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "three-wheeled scooter",
+          "aliases": [
+            "three wheeled scooter",
+            "3 wheel scooter",
+            "kids scooter",
+            "mini micro"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "knee scooter",
+          "aliases": ["knee walker"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1138,7 +1168,7 @@
         {
           "canonical": "moped",
           "aliases": ["mopeds", "vespa", "motor scooter"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "electric scooter",
@@ -1153,17 +1183,17 @@
         {
           "canonical": "segway",
           "aliases": ["segways"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hoverboard",
           "aliases": ["hoverboards"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "go-kart",
           "aliases": ["go kart", "gokart", "karting", "go-karts"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "quad bike",
@@ -1259,12 +1289,12 @@
         {
           "canonical": "roller skates",
           "aliases": ["roller skate", "rollerskates", "skates"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rollerblades",
           "aliases": ["rollerblade", "inline skates", "roller blades"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "heelys",
@@ -1279,7 +1309,7 @@
         {
           "canonical": "tricycle",
           "aliases": ["trike", "tricycles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pedal car",
@@ -1330,7 +1360,7 @@
             "muni",
             "ultimate wheel"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "kids' electric car",
@@ -1409,6 +1439,21 @@
           "canonical": "plasma car",
           "aliases": ["wiggle car"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "three-wheeled scooter",
+          "aliases": [
+            "three wheeled scooter",
+            "3 wheel scooter",
+            "kids scooter",
+            "mini micro"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "knee scooter",
+          "aliases": ["knee walker"],
+          "commonness": "rare"
         }
       ]
     },
@@ -1464,12 +1509,12 @@
         {
           "canonical": "roller skates",
           "aliases": ["roller skate", "rollerskates", "skates"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rollerblades",
           "aliases": ["rollerblade", "inline skates", "roller blades"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "heelys",
@@ -1484,7 +1529,7 @@
         {
           "canonical": "tricycle",
           "aliases": ["trike", "tricycles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pedal car",
@@ -1535,7 +1580,7 @@
             "muni",
             "ultimate wheel"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "velocipede",
@@ -1603,6 +1648,21 @@
         {
           "canonical": "plasma car",
           "aliases": ["wiggle car"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "three-wheeled scooter",
+          "aliases": [
+            "three wheeled scooter",
+            "3 wheel scooter",
+            "kids scooter",
+            "mini micro"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "knee scooter",
+          "aliases": ["knee walker"],
           "commonness": "rare"
         }
       ]
@@ -1623,12 +1683,12 @@
         {
           "canonical": "roller skates",
           "aliases": ["roller skate", "rollerskates", "skates"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rollerblades",
           "aliases": ["rollerblade", "inline skates", "roller blades"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "heelys",
@@ -1643,7 +1703,7 @@
         {
           "canonical": "tricycle",
           "aliases": ["trike", "tricycles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pedal car",
@@ -1694,7 +1754,7 @@
             "muni",
             "ultimate wheel"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "velocipede",
@@ -1713,11 +1773,6 @@
         },
         {
           "canonical": "freeline skates",
-          "aliases": [],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "trikke",
           "aliases": [],
           "commonness": "rare"
         },
@@ -1745,11 +1800,6 @@
           "commonness": "rare"
         },
         {
-          "canonical": "dog scooter",
-          "aliases": [],
-          "commonness": "rare"
-        },
-        {
           "canonical": "mountainboard",
           "aliases": ["mountain board"],
           "commonness": "rare"
@@ -1760,8 +1810,18 @@
           "commonness": "rare"
         },
         {
-          "canonical": "plasma car",
-          "aliases": ["wiggle car"],
+          "canonical": "three-wheeled scooter",
+          "aliases": [
+            "three wheeled scooter",
+            "3 wheel scooter",
+            "kids scooter",
+            "mini micro"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "knee scooter",
+          "aliases": ["knee walker"],
           "commonness": "rare"
         }
       ]
@@ -1782,12 +1842,12 @@
         {
           "canonical": "roller skates",
           "aliases": ["roller skate", "rollerskates", "skates"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rollerblades",
           "aliases": ["rollerblade", "inline skates", "roller blades"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "heelys",
@@ -1815,11 +1875,6 @@
           "commonness": "rare"
         },
         {
-          "canonical": "trikke",
-          "aliases": [],
-          "commonness": "rare"
-        },
-        {
           "canonical": "kickbike",
           "aliases": ["footbike"],
           "commonness": "rare"
@@ -1843,11 +1898,6 @@
           "commonness": "rare"
         },
         {
-          "canonical": "dog scooter",
-          "aliases": [],
-          "commonness": "rare"
-        },
-        {
           "canonical": "mountainboard",
           "aliases": ["mountain board"],
           "commonness": "rare"
@@ -1858,8 +1908,18 @@
           "commonness": "rare"
         },
         {
-          "canonical": "plasma car",
-          "aliases": ["wiggle car"],
+          "canonical": "three-wheeled scooter",
+          "aliases": [
+            "three wheeled scooter",
+            "3 wheel scooter",
+            "kids scooter",
+            "mini micro"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "knee scooter",
+          "aliases": ["knee walker"],
           "commonness": "rare"
         }
       ]
@@ -1878,11 +1938,6 @@
           "commonness": "uncommon"
         },
         {
-          "canonical": "trikke",
-          "aliases": [],
-          "commonness": "rare"
-        },
-        {
           "canonical": "kickbike",
           "aliases": ["footbike"],
           "commonness": "rare"
@@ -1906,8 +1961,18 @@
           "commonness": "rare"
         },
         {
-          "canonical": "dog scooter",
-          "aliases": [],
+          "canonical": "three-wheeled scooter",
+          "aliases": [
+            "three wheeled scooter",
+            "3 wheel scooter",
+            "kids scooter",
+            "mini micro"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "knee scooter",
+          "aliases": ["knee walker"],
           "commonness": "rare"
         }
       ]
@@ -1946,11 +2011,6 @@
         {
           "canonical": "seated kick scooter",
           "aliases": ["sit-down scooter"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "dog scooter",
-          "aliases": [],
           "commonness": "rare"
         }
       ]

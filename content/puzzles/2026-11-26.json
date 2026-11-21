@@ -18,7 +18,7 @@
         {
           "canonical": "record player",
           "aliases": ["turntable", "gramophone", "phonograph"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "jukebox",
@@ -58,7 +58,7 @@
         {
           "canonical": "choir",
           "aliases": ["choirs", "chorus"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "band",
@@ -73,7 +73,7 @@
         {
           "canonical": "dj",
           "aliases": ["disc jockey"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "wind chimes",
@@ -133,7 +133,7 @@
         {
           "canonical": "organ",
           "aliases": ["organs", "pipe organ", "church organ"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "drums",
@@ -150,7 +150,7 @@
         {
           "canonical": "harp",
           "aliases": ["harps"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "double bass",
@@ -160,12 +160,12 @@
         {
           "canonical": "cello",
           "aliases": ["cellos", "violoncello"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "xylophone",
           "aliases": ["xylophones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "timpani",
@@ -185,7 +185,7 @@
         {
           "canonical": "keyboard",
           "aliases": ["keyboards", "electric keyboard"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "synthesizer",
@@ -290,7 +290,7 @@
         {
           "canonical": "bass guitar",
           "aliases": ["bass", "electric bass"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "violin",
@@ -310,7 +310,7 @@
         {
           "canonical": "banjo",
           "aliases": ["banjos"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "mandolin",
@@ -320,12 +320,12 @@
         {
           "canonical": "accordion",
           "aliases": ["accordions", "squeezebox"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "tambourine",
           "aliases": ["tambourines"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "maracas",
@@ -335,7 +335,7 @@
         {
           "canonical": "triangle",
           "aliases": ["triangles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "lute",
@@ -435,12 +435,12 @@
         {
           "canonical": "recorder",
           "aliases": ["recorders"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "oboe",
           "aliases": ["oboes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bassoon",
@@ -450,7 +450,7 @@
         {
           "canonical": "bagpipes",
           "aliases": ["bagpipe", "pipes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ocarina",
@@ -505,12 +505,12 @@
         {
           "canonical": "tuba",
           "aliases": ["tubas"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "french horn",
           "aliases": ["horn", "french horns"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cornet",
@@ -519,7 +519,7 @@
         },
         {
           "canonical": "euphonium",
-          "aliases": ["baritone horn", "baritone"],
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
@@ -555,7 +555,7 @@
         {
           "canonical": "trombone",
           "aliases": ["trombones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "chromatic harmonica",
@@ -575,7 +575,7 @@
         {
           "canonical": "harmonica",
           "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "whistle",
@@ -594,7 +594,7 @@
         },
         {
           "canonical": "natural horn",
-          "aliases": ["hunting horn"],
+          "aliases": [],
           "commonness": "rare"
         },
         {
@@ -676,6 +676,21 @@
           "canonical": "trembita",
           "aliases": [],
           "commonness": "rare"
+        },
+        {
+          "canonical": "baritone horn",
+          "aliases": ["baritone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hunting horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
+          "commonness": "rare"
         }
       ]
     },
@@ -690,7 +705,7 @@
         {
           "canonical": "organ",
           "aliases": ["organs", "pipe organ", "church organ"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "drums",
@@ -707,7 +722,7 @@
         {
           "canonical": "harp",
           "aliases": ["harps"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "double bass",
@@ -717,12 +732,12 @@
         {
           "canonical": "cello",
           "aliases": ["cellos", "violoncello"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "xylophone",
           "aliases": ["xylophones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "timpani",
@@ -742,7 +757,7 @@
         {
           "canonical": "keyboard",
           "aliases": ["keyboards", "electric keyboard"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "synthesizer",
@@ -847,7 +862,7 @@
         {
           "canonical": "bass guitar",
           "aliases": ["bass", "electric bass"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "violin",
@@ -867,7 +882,7 @@
         {
           "canonical": "banjo",
           "aliases": ["banjos"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "mandolin",
@@ -877,12 +892,12 @@
         {
           "canonical": "accordion",
           "aliases": ["accordions", "squeezebox"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "tambourine",
           "aliases": ["tambourines"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "maracas",
@@ -892,7 +907,7 @@
         {
           "canonical": "triangle",
           "aliases": ["triangles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "lute",
@@ -992,12 +1007,12 @@
         {
           "canonical": "recorder",
           "aliases": ["recorders"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "oboe",
           "aliases": ["oboes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bassoon",
@@ -1007,7 +1022,7 @@
         {
           "canonical": "bagpipes",
           "aliases": ["bagpipe", "pipes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ocarina",
@@ -1062,12 +1077,12 @@
         {
           "canonical": "tuba",
           "aliases": ["tubas"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "french horn",
           "aliases": ["horn", "french horns"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cornet",
@@ -1076,7 +1091,7 @@
         },
         {
           "canonical": "euphonium",
-          "aliases": ["baritone horn", "baritone"],
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
@@ -1112,7 +1127,7 @@
         {
           "canonical": "trombone",
           "aliases": ["trombones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "chromatic harmonica",
@@ -1132,7 +1147,7 @@
         {
           "canonical": "harmonica",
           "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "alphorn",
@@ -1146,7 +1161,7 @@
         },
         {
           "canonical": "natural horn",
-          "aliases": ["hunting horn"],
+          "aliases": [],
           "commonness": "rare"
         },
         {
@@ -1227,6 +1242,21 @@
         {
           "canonical": "trembita",
           "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baritone horn",
+          "aliases": ["baritone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hunting horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
           "commonness": "rare"
         }
       ]
@@ -1242,7 +1272,7 @@
         {
           "canonical": "bass guitar",
           "aliases": ["bass", "electric bass"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "violin",
@@ -1262,7 +1292,7 @@
         {
           "canonical": "banjo",
           "aliases": ["banjos"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "mandolin",
@@ -1272,12 +1302,12 @@
         {
           "canonical": "accordion",
           "aliases": ["accordions", "squeezebox"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "tambourine",
           "aliases": ["tambourines"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "maracas",
@@ -1287,7 +1317,7 @@
         {
           "canonical": "triangle",
           "aliases": ["triangles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "lute",
@@ -1387,12 +1417,12 @@
         {
           "canonical": "recorder",
           "aliases": ["recorders"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "oboe",
           "aliases": ["oboes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bassoon",
@@ -1402,7 +1432,7 @@
         {
           "canonical": "bagpipes",
           "aliases": ["bagpipe", "pipes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ocarina",
@@ -1457,12 +1487,12 @@
         {
           "canonical": "tuba",
           "aliases": ["tubas"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "french horn",
           "aliases": ["horn", "french horns"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cornet",
@@ -1471,7 +1501,7 @@
         },
         {
           "canonical": "euphonium",
-          "aliases": ["baritone horn", "baritone"],
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
@@ -1507,7 +1537,7 @@
         {
           "canonical": "trombone",
           "aliases": ["trombones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "chromatic harmonica",
@@ -1527,7 +1557,7 @@
         {
           "canonical": "harmonica",
           "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "post horn",
@@ -1536,7 +1566,7 @@
         },
         {
           "canonical": "natural horn",
-          "aliases": ["hunting horn"],
+          "aliases": [],
           "commonness": "rare"
         },
         {
@@ -1617,6 +1647,21 @@
         {
           "canonical": "trembita",
           "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baritone horn",
+          "aliases": ["baritone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hunting horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
           "commonness": "rare"
         }
       ]
@@ -1632,12 +1677,12 @@
         {
           "canonical": "recorder",
           "aliases": ["recorders"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "oboe",
           "aliases": ["oboes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bassoon",
@@ -1647,7 +1692,7 @@
         {
           "canonical": "bagpipes",
           "aliases": ["bagpipe", "pipes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ocarina",
@@ -1702,12 +1747,12 @@
         {
           "canonical": "tuba",
           "aliases": ["tubas"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "french horn",
           "aliases": ["horn", "french horns"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cornet",
@@ -1716,7 +1761,7 @@
         },
         {
           "canonical": "euphonium",
-          "aliases": ["baritone horn", "baritone"],
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
@@ -1752,7 +1797,7 @@
         {
           "canonical": "trombone",
           "aliases": ["trombones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "chromatic harmonica",
@@ -1772,7 +1817,7 @@
         {
           "canonical": "harmonica",
           "aliases": ["harmonicas", "mouth organ", "blues harp"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "post horn",
@@ -1781,7 +1826,7 @@
         },
         {
           "canonical": "natural horn",
-          "aliases": ["hunting horn"],
+          "aliases": [],
           "commonness": "rare"
         },
         {
@@ -1862,6 +1907,21 @@
         {
           "canonical": "trembita",
           "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baritone horn",
+          "aliases": ["baritone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hunting horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
           "commonness": "rare"
         }
       ]
@@ -1892,12 +1952,12 @@
         {
           "canonical": "tuba",
           "aliases": ["tubas"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "french horn",
           "aliases": ["horn", "french horns"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cornet",
@@ -1906,7 +1966,7 @@
         },
         {
           "canonical": "euphonium",
-          "aliases": ["baritone horn", "baritone"],
+          "aliases": [],
           "commonness": "uncommon"
         },
         {
@@ -1927,7 +1987,7 @@
         {
           "canonical": "trombone",
           "aliases": ["trombones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bugle",
@@ -1941,7 +2001,7 @@
         },
         {
           "canonical": "natural horn",
-          "aliases": ["hunting horn"],
+          "aliases": [],
           "commonness": "rare"
         },
         {
@@ -2022,6 +2082,21 @@
         {
           "canonical": "trembita",
           "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baritone horn",
+          "aliases": ["baritone"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hunting horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
           "commonness": "rare"
         }
       ]
@@ -2047,7 +2122,7 @@
         {
           "canonical": "trombone",
           "aliases": ["trombones"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bugle",
@@ -2061,7 +2136,7 @@
         },
         {
           "canonical": "natural horn",
-          "aliases": ["hunting horn"],
+          "aliases": [],
           "commonness": "rare"
         },
         {
@@ -2142,6 +2217,16 @@
         {
           "canonical": "trembita",
           "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hunting horn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
           "commonness": "rare"
         }
       ]
@@ -2228,6 +2313,11 @@
           "canonical": "trembita",
           "aliases": [],
           "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
+          "commonness": "rare"
         }
       ]
     },
@@ -2265,11 +2355,6 @@
           "commonness": "rare"
         },
         {
-          "canonical": "russian bassoon",
-          "aliases": [],
-          "commonness": "rare"
-        },
-        {
           "canonical": "bukkehorn",
           "aliases": [],
           "commonness": "rare"
@@ -2293,6 +2378,11 @@
           "canonical": "kudu horn",
           "aliases": [],
           "commonness": "rare"
+        },
+        {
+          "canonical": "worm",
+          "aliases": ["soprano serpent"],
+          "commonness": "rare"
         }
       ]
     },
@@ -2306,11 +2396,6 @@
         },
         {
           "canonical": "bass cornett",
-          "aliases": [],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "russian bassoon",
           "aliases": [],
           "commonness": "rare"
         }

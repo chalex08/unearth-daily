@@ -18,22 +18,22 @@
         {
           "canonical": "orange",
           "aliases": ["oranges"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "strawberry",
           "aliases": ["strawberries"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "grapes",
           "aliases": ["grape"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "watermelon",
           "aliases": ["watermelons"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "mango",
@@ -48,27 +48,27 @@
         {
           "canonical": "peach",
           "aliases": ["peaches"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "pear",
           "aliases": ["pears"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cherry",
           "aliases": ["cherries"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "blueberry",
           "aliases": ["blueberries"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "avocado",
           "aliases": ["avocados"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "salad",
@@ -83,7 +83,7 @@
         {
           "canonical": "sushi",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ice cream",
@@ -108,12 +108,12 @@
         {
           "canonical": "cake",
           "aliases": ["cakes", "birthday cake", "chocolate cake"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cookie",
           "aliases": ["cookies", "biscuit", "biscuits"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cereal",
@@ -143,12 +143,12 @@
         {
           "canonical": "peanut butter",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "crackers",
           "aliases": ["cracker"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "pretzel",
@@ -163,7 +163,7 @@
         {
           "canonical": "donut",
           "aliases": ["doughnut", "donuts", "doughnuts"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "croissant",
@@ -183,7 +183,7 @@
         {
           "canonical": "cheesecake",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "granola",
@@ -193,12 +193,12 @@
         {
           "canonical": "honey",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "jam",
           "aliases": ["jelly"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ham",
@@ -228,12 +228,12 @@
         {
           "canonical": "pickles",
           "aliases": ["pickle", "gherkin"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "olives",
           "aliases": ["olive"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "tomato",
@@ -243,7 +243,7 @@
         {
           "canonical": "cucumber",
           "aliases": ["cucumbers"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "carrot",
@@ -253,7 +253,7 @@
         {
           "canonical": "lettuce",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "sausage roll",
@@ -308,7 +308,7 @@
         {
           "canonical": "hot dog",
           "aliases": ["hotdog", "hot dogs"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fries",
@@ -328,7 +328,7 @@
         {
           "canonical": "stew",
           "aliases": ["beef stew"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "chicken",
@@ -338,12 +338,12 @@
         {
           "canonical": "fried chicken",
           "aliases": ["chicken nuggets", "nuggets"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "eggs",
           "aliases": ["egg", "scrambled eggs", "fried egg", "boiled egg"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "omelette",
@@ -353,12 +353,12 @@
         {
           "canonical": "bacon",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "sausage",
           "aliases": ["sausages", "bangers"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "mashed potatoes",
@@ -378,7 +378,7 @@
         {
           "canonical": "roast beef",
           "aliases": ["roast", "roast dinner", "sunday roast"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "lamb",
@@ -418,7 +418,7 @@
         {
           "canonical": "burrito",
           "aliases": ["burritos"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "nachos",
@@ -528,22 +528,22 @@
         {
           "canonical": "tofu",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "broccoli",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "peas",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "potato",
           "aliases": ["potatoes", "roast potatoes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hash browns",
@@ -583,17 +583,17 @@
         {
           "canonical": "couscous",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "pancakes",
           "aliases": ["pancake", "flapjacks"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "waffles",
           "aliases": ["waffle"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crepes",
@@ -603,7 +603,7 @@
         {
           "canonical": "toast",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "naan",
@@ -623,7 +623,7 @@
         {
           "canonical": "lasagna",
           "aliases": ["lasagne"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cannelloni",
@@ -668,17 +668,17 @@
             "rice noodles",
             "rice vermicelli"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ramen",
           "aliases": ["ramen noodles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "udon",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "soba",
@@ -693,7 +693,7 @@
             "mac & cheese",
             "macaroni cheese"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "spaetzle",
@@ -713,7 +713,7 @@
         {
           "canonical": "tortellini",
           "aliases": ["tortelloni"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "agnolotti",
@@ -723,12 +723,12 @@
         {
           "canonical": "penne",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "macaroni",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fusilli",
@@ -748,22 +748,22 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ziti",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cavatappi",
@@ -933,9 +933,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -988,6 +989,11 @@
           "canonical": "creste di gallo",
           "aliases": [],
           "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1022,7 +1028,7 @@
         {
           "canonical": "hot dog",
           "aliases": ["hotdog", "hot dogs"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fries",
@@ -1042,7 +1048,7 @@
         {
           "canonical": "stew",
           "aliases": ["beef stew"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "chicken",
@@ -1052,12 +1058,12 @@
         {
           "canonical": "fried chicken",
           "aliases": ["chicken nuggets", "nuggets"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "eggs",
           "aliases": ["egg", "scrambled eggs", "fried egg", "boiled egg"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "omelette",
@@ -1067,12 +1073,12 @@
         {
           "canonical": "bacon",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "sausage",
           "aliases": ["sausages", "bangers"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "mashed potatoes",
@@ -1092,7 +1098,7 @@
         {
           "canonical": "roast beef",
           "aliases": ["roast", "roast dinner", "sunday roast"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "lamb",
@@ -1132,7 +1138,7 @@
         {
           "canonical": "burrito",
           "aliases": ["burritos"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "nachos",
@@ -1242,22 +1248,22 @@
         {
           "canonical": "tofu",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "broccoli",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "peas",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "potato",
           "aliases": ["potatoes", "roast potatoes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hash browns",
@@ -1297,17 +1303,17 @@
         {
           "canonical": "couscous",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "pancakes",
           "aliases": ["pancake", "flapjacks"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "waffles",
           "aliases": ["waffle"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crepes",
@@ -1317,7 +1323,7 @@
         {
           "canonical": "toast",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "naan",
@@ -1337,7 +1343,7 @@
         {
           "canonical": "lasagna",
           "aliases": ["lasagne"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cannelloni",
@@ -1382,17 +1388,17 @@
             "rice noodles",
             "rice vermicelli"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ramen",
           "aliases": ["ramen noodles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "udon",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "soba",
@@ -1407,7 +1413,7 @@
             "mac & cheese",
             "macaroni cheese"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "spaetzle",
@@ -1427,7 +1433,7 @@
         {
           "canonical": "tortellini",
           "aliases": ["tortelloni"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "agnolotti",
@@ -1437,12 +1443,12 @@
         {
           "canonical": "penne",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "macaroni",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fusilli",
@@ -1462,22 +1468,22 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ziti",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cavatappi",
@@ -1637,9 +1643,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -1690,6 +1697,11 @@
         },
         {
           "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
           "aliases": [],
           "commonness": "rare"
         }
@@ -1701,12 +1713,12 @@
         {
           "canonical": "pancakes",
           "aliases": ["pancake", "flapjacks"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "waffles",
           "aliases": ["waffle"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crepes",
@@ -1716,7 +1728,7 @@
         {
           "canonical": "toast",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "naan",
@@ -1736,7 +1748,7 @@
         {
           "canonical": "lasagna",
           "aliases": ["lasagne"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cannelloni",
@@ -1781,17 +1793,17 @@
             "rice noodles",
             "rice vermicelli"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ramen",
           "aliases": ["ramen noodles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "udon",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "soba",
@@ -1806,7 +1818,7 @@
             "mac & cheese",
             "macaroni cheese"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "spaetzle",
@@ -1826,7 +1838,7 @@
         {
           "canonical": "tortellini",
           "aliases": ["tortelloni"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "agnolotti",
@@ -1836,12 +1848,12 @@
         {
           "canonical": "penne",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "macaroni",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fusilli",
@@ -1861,22 +1873,22 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ziti",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cavatappi",
@@ -2036,9 +2048,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -2089,6 +2102,11 @@
         },
         {
           "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
           "aliases": [],
           "commonness": "rare"
         }
@@ -2105,17 +2123,17 @@
             "rice noodles",
             "rice vermicelli"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ramen",
           "aliases": ["ramen noodles"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "udon",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "soba",
@@ -2130,7 +2148,7 @@
             "mac & cheese",
             "macaroni cheese"
           ],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "spaetzle",
@@ -2150,7 +2168,7 @@
         {
           "canonical": "tortellini",
           "aliases": ["tortelloni"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "agnolotti",
@@ -2160,12 +2178,12 @@
         {
           "canonical": "penne",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "macaroni",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fusilli",
@@ -2185,22 +2203,22 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ziti",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cavatappi",
@@ -2350,9 +2368,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -2403,6 +2422,11 @@
         },
         {
           "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
           "aliases": [],
           "commonness": "rare"
         }
@@ -2424,7 +2448,7 @@
         {
           "canonical": "tortellini",
           "aliases": ["tortelloni"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "agnolotti",
@@ -2434,12 +2458,12 @@
         {
           "canonical": "penne",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "macaroni",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fusilli",
@@ -2459,22 +2483,22 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ziti",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cavatappi",
@@ -2624,9 +2648,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -2677,6 +2702,11 @@
         },
         {
           "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
           "aliases": [],
           "commonness": "rare"
         }
@@ -2688,12 +2718,12 @@
         {
           "canonical": "penne",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "macaroni",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fusilli",
@@ -2713,22 +2743,22 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ziti",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cavatappi",
@@ -2878,9 +2908,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -2933,6 +2964,11 @@
           "canonical": "creste di gallo",
           "aliases": [],
           "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -2942,12 +2978,12 @@
         {
           "canonical": "penne",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "macaroni",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "fusilli",
@@ -2967,22 +3003,22 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "ziti",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cavatappi",
@@ -3075,9 +3111,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -3128,6 +3165,11 @@
         },
         {
           "canonical": "creste di gallo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
           "aliases": [],
           "commonness": "rare"
         }
@@ -3149,17 +3191,17 @@
         {
           "canonical": "orzo",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "conchiglie",
           "aliases": ["pasta shells", "shells"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "gemelli",
@@ -3207,9 +3249,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         },
@@ -3242,16 +3285,26 @@
           "canonical": "creste di gallo",
           "aliases": [],
           "commonness": "rare"
+        },
+        {
+          "canonical": "strozzapreti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
     {
-      "clue": "…shaped like a coin",
+      "clue": "…shaped like a disc",
       "pool": [
         {
           "canonical": "orecchiette",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "corzetti",
@@ -3259,10 +3312,21 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dischi volanti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "strascinati",
+          "aliases": [],
           "commonness": "rare"
         }
       ]
@@ -3276,9 +3340,10 @@
             "croxetti",
             "corzetto",
             "curzetti",
-            "corsetti",
             "corzetti stampati",
-            "stamped pasta"
+            "stamped pasta",
+            "crosetti",
+            "croset"
           ],
           "commonness": "rare"
         }

@@ -38,7 +38,7 @@
         {
           "canonical": "goat",
           "aliases": ["goats"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "lion",
@@ -73,7 +73,7 @@
         {
           "canonical": "gorilla",
           "aliases": ["gorillas"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "chimpanzee",
@@ -94,7 +94,7 @@
         {
           "canonical": "polar bear",
           "aliases": ["polar bears"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "panda",
@@ -104,7 +104,7 @@
         {
           "canonical": "koala",
           "aliases": ["koalas", "koala bear"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "kangaroo",
@@ -134,7 +134,7 @@
         {
           "canonical": "guinea pig",
           "aliases": ["guinea pigs"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "squirrel",
@@ -144,7 +144,7 @@
         {
           "canonical": "fox",
           "aliases": ["foxes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "wolf",
@@ -154,7 +154,7 @@
         {
           "canonical": "deer",
           "aliases": ["stag", "fawn", "doe"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "reindeer",
@@ -169,7 +169,7 @@
         {
           "canonical": "bat",
           "aliases": ["bats"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "whale",
@@ -189,7 +189,7 @@
         {
           "canonical": "hippo",
           "aliases": ["hippopotamus", "hippos"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rhino",
@@ -199,22 +199,22 @@
         {
           "canonical": "camel",
           "aliases": ["camels"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "leopard",
           "aliases": ["leopards"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cheetah",
           "aliases": ["cheetahs"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "jaguar",
           "aliases": ["jaguars"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "otter",
@@ -224,7 +224,7 @@
         {
           "canonical": "beaver",
           "aliases": ["beavers"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "raccoon",
@@ -234,7 +234,7 @@
         {
           "canonical": "skunk",
           "aliases": ["skunks"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "hedgehog",
@@ -309,7 +309,7 @@
         {
           "canonical": "orangutan",
           "aliases": ["orangutans"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "lemur",
@@ -334,32 +334,32 @@
         {
           "canonical": "shark",
           "aliases": ["sharks", "great white", "great white shark"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "jellyfish",
           "aliases": ["jelly fish"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "starfish",
           "aliases": ["sea star"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "worm",
           "aliases": ["worms", "earthworm"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "caterpillar",
           "aliases": ["caterpillars"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "scorpion",
           "aliases": ["scorpions"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "snake",
@@ -369,7 +369,7 @@
         {
           "canonical": "lizard",
           "aliases": ["lizards"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crocodile",
@@ -444,27 +444,27 @@
         {
           "canonical": "seahorse",
           "aliases": ["sea horse", "seahorses"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "octopus",
           "aliases": ["octopuses", "octopi"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "squid",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "spider",
           "aliases": ["spiders", "tarantula"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ant",
           "aliases": ["ants"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bee",
@@ -504,22 +504,22 @@
         {
           "canonical": "chameleon",
           "aliases": ["chameleons"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "gecko",
           "aliases": ["geckos"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "iguana",
           "aliases": ["iguanas"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "komodo dragon",
           "aliases": ["komodo dragons"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "platypus",
@@ -539,17 +539,17 @@
         {
           "canonical": "lobster",
           "aliases": ["lobsters"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "shrimp",
           "aliases": ["prawn", "prawns"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cockroach",
           "aliases": ["cockroaches", "roach"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "grasshopper",
@@ -604,7 +604,7 @@
         {
           "canonical": "ostrich",
           "aliases": ["ostriches"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "emu",
@@ -619,17 +619,17 @@
         {
           "canonical": "dodo",
           "aliases": ["dodos"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "chicken",
           "aliases": ["chickens", "hen", "rooster", "chick", "cockerel"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "turkey",
           "aliases": ["turkeys"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cassowary",
@@ -659,12 +659,12 @@
         {
           "canonical": "goose",
           "aliases": ["geese"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "swan",
           "aliases": ["swans"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crow",
@@ -689,7 +689,7 @@
         {
           "canonical": "seagull",
           "aliases": ["gull", "gulls", "seagulls"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hummingbird",
@@ -699,7 +699,7 @@
         {
           "canonical": "flamingo",
           "aliases": ["flamingos", "flamingoes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pelican",
@@ -709,7 +709,7 @@
         {
           "canonical": "peacock",
           "aliases": ["peacocks", "peafowl", "peahen"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "stork",
@@ -759,7 +759,7 @@
         {
           "canonical": "albatross",
           "aliases": ["albatrosses"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "canary",
@@ -794,7 +794,7 @@
         {
           "canonical": "macaw",
           "aliases": ["macaws"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "crane",
@@ -809,7 +809,7 @@
         {
           "canonical": "blue jay",
           "aliases": ["bluejay", "jay"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cardinal",
@@ -839,7 +839,7 @@
         {
           "canonical": "bird",
           "aliases": ["birds"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "vulture",
@@ -889,7 +889,7 @@
         {
           "canonical": "hawk",
           "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "owl",
@@ -1030,6 +1030,16 @@
         {
           "canonical": "kaka",
           "aliases": ["kākā"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "okinawa rail",
+          "aliases": ["yanbaru kuina"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "guam rail",
+          "aliases": ["koko"],
           "commonness": "rare"
         }
       ]
@@ -1045,7 +1055,7 @@
         {
           "canonical": "lizard",
           "aliases": ["lizards"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crocodile",
@@ -1120,27 +1130,27 @@
         {
           "canonical": "seahorse",
           "aliases": ["sea horse", "seahorses"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "octopus",
           "aliases": ["octopuses", "octopi"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "squid",
           "aliases": [],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "spider",
           "aliases": ["spiders", "tarantula"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ant",
           "aliases": ["ants"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bee",
@@ -1180,22 +1190,22 @@
         {
           "canonical": "chameleon",
           "aliases": ["chameleons"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "gecko",
           "aliases": ["geckos"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "iguana",
           "aliases": ["iguanas"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "komodo dragon",
           "aliases": ["komodo dragons"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "platypus",
@@ -1215,17 +1225,17 @@
         {
           "canonical": "lobster",
           "aliases": ["lobsters"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "shrimp",
           "aliases": ["prawn", "prawns"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cockroach",
           "aliases": ["cockroaches", "roach"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "grasshopper",
@@ -1280,7 +1290,7 @@
         {
           "canonical": "ostrich",
           "aliases": ["ostriches"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "emu",
@@ -1295,17 +1305,17 @@
         {
           "canonical": "dodo",
           "aliases": ["dodos"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "chicken",
           "aliases": ["chickens", "hen", "rooster", "chick", "cockerel"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "turkey",
           "aliases": ["turkeys"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cassowary",
@@ -1335,12 +1345,12 @@
         {
           "canonical": "goose",
           "aliases": ["geese"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "swan",
           "aliases": ["swans"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crow",
@@ -1365,7 +1375,7 @@
         {
           "canonical": "seagull",
           "aliases": ["gull", "gulls", "seagulls"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hummingbird",
@@ -1375,7 +1385,7 @@
         {
           "canonical": "flamingo",
           "aliases": ["flamingos", "flamingoes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pelican",
@@ -1385,7 +1395,7 @@
         {
           "canonical": "peacock",
           "aliases": ["peacocks", "peafowl", "peahen"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "stork",
@@ -1435,7 +1445,7 @@
         {
           "canonical": "albatross",
           "aliases": ["albatrosses"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "canary",
@@ -1470,7 +1480,7 @@
         {
           "canonical": "macaw",
           "aliases": ["macaws"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "crane",
@@ -1485,7 +1495,7 @@
         {
           "canonical": "blue jay",
           "aliases": ["bluejay", "jay"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cardinal",
@@ -1515,7 +1525,7 @@
         {
           "canonical": "bird",
           "aliases": ["birds"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "vulture",
@@ -1565,7 +1575,7 @@
         {
           "canonical": "hawk",
           "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "owl",
@@ -1706,6 +1716,16 @@
         {
           "canonical": "kaka",
           "aliases": ["kākā"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "okinawa rail",
+          "aliases": ["yanbaru kuina"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "guam rail",
+          "aliases": ["koko"],
           "commonness": "rare"
         }
       ]
@@ -1721,7 +1741,7 @@
         {
           "canonical": "ostrich",
           "aliases": ["ostriches"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "emu",
@@ -1736,17 +1756,17 @@
         {
           "canonical": "dodo",
           "aliases": ["dodos"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "chicken",
           "aliases": ["chickens", "hen", "rooster", "chick", "cockerel"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "turkey",
           "aliases": ["turkeys"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cassowary",
@@ -1776,12 +1796,12 @@
         {
           "canonical": "goose",
           "aliases": ["geese"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "swan",
           "aliases": ["swans"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "crow",
@@ -1806,7 +1826,7 @@
         {
           "canonical": "seagull",
           "aliases": ["gull", "gulls", "seagulls"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "hummingbird",
@@ -1816,7 +1836,7 @@
         {
           "canonical": "flamingo",
           "aliases": ["flamingos", "flamingoes"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pelican",
@@ -1826,7 +1846,7 @@
         {
           "canonical": "peacock",
           "aliases": ["peacocks", "peafowl", "peahen"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "stork",
@@ -1876,7 +1896,7 @@
         {
           "canonical": "albatross",
           "aliases": ["albatrosses"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "canary",
@@ -1911,7 +1931,7 @@
         {
           "canonical": "macaw",
           "aliases": ["macaws"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "crane",
@@ -1926,7 +1946,7 @@
         {
           "canonical": "blue jay",
           "aliases": ["bluejay", "jay"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cardinal",
@@ -1956,7 +1976,7 @@
         {
           "canonical": "bird",
           "aliases": ["birds"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "vulture",
@@ -2006,7 +2026,7 @@
         {
           "canonical": "hawk",
           "aliases": ["hawks", "sparrowhawk", "red-tailed hawk"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "owl",
@@ -2148,6 +2168,16 @@
           "canonical": "kaka",
           "aliases": ["kākā"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "okinawa rail",
+          "aliases": ["yanbaru kuina"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "guam rail",
+          "aliases": ["koko"],
+          "commonness": "rare"
         }
       ]
     },
@@ -2162,7 +2192,7 @@
         {
           "canonical": "ostrich",
           "aliases": ["ostriches"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "emu",
@@ -2177,7 +2207,7 @@
         {
           "canonical": "dodo",
           "aliases": ["dodos"],
-          "commonness": "rare"
+          "commonness": "uncommon"
         },
         {
           "canonical": "cassowary",
@@ -2283,6 +2313,16 @@
           "canonical": "little penguin",
           "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "okinawa rail",
+          "aliases": ["yanbaru kuina"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "guam rail",
+          "aliases": ["koko"],
+          "commonness": "rare"
         }
       ]
     },
@@ -2297,7 +2337,7 @@
         {
           "canonical": "ostrich",
           "aliases": ["ostriches"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "emu",
@@ -2397,6 +2437,16 @@
         {
           "canonical": "little penguin",
           "aliases": ["little blue penguin", "fairy penguin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "okinawa rail",
+          "aliases": ["yanbaru kuina"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "guam rail",
+          "aliases": ["koko"],
           "commonness": "rare"
         }
       ]
@@ -2503,6 +2553,16 @@
           "canonical": "little penguin",
           "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "ostrich",
+          "aliases": ["ostriches"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flightless cormorant",
+          "aliases": ["galapagos cormorant"],
+          "commonness": "rare"
         }
       ]
     },
@@ -2593,6 +2653,16 @@
           "canonical": "little penguin",
           "aliases": ["little blue penguin", "fairy penguin"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "flightless cormorant",
+          "aliases": ["galapagos cormorant"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhea",
+          "aliases": ["rheas"],
+          "commonness": "rare"
         }
       ]
     },
@@ -2662,6 +2732,21 @@
         {
           "canonical": "kakapo",
           "aliases": ["kākāpō", "kakapō", "owl parrot"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "auckland teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "campbell teal",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "weka",
+          "aliases": [],
           "commonness": "rare"
         }
       ]

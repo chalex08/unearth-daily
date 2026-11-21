@@ -23,7 +23,7 @@
         {
           "canonical": "wrestling",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "cycling",
@@ -38,17 +38,17 @@
         {
           "canonical": "snowboarding",
           "aliases": ["snowboard"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "surfing",
           "aliases": ["surf"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "skateboarding",
           "aliases": ["skateboard", "skating"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "gymnastics",
@@ -98,7 +98,7 @@
         {
           "canonical": "darts",
           "aliases": ["dart"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "ice hockey",
@@ -358,12 +358,12 @@
         {
           "canonical": "table tennis",
           "aliases": ["ping pong", "ping-pong"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bowling",
           "aliases": ["ten pin bowling", "tenpin bowling", "ten-pin bowling"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pool",
@@ -378,7 +378,7 @@
         {
           "canonical": "squash",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "croquet",
@@ -453,22 +453,22 @@
         {
           "canonical": "cricket",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "softball",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "field hockey",
           "aliases": ["hockey"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "lacrosse",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rounders",
@@ -548,12 +548,12 @@
         {
           "canonical": "handball",
           "aliases": ["team handball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "water polo",
           "aliases": ["waterpolo"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "futsal",
@@ -593,7 +593,7 @@
         {
           "canonical": "netball",
           "aliases": ["net ball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "volleyball",
@@ -659,12 +659,12 @@
         {
           "canonical": "table tennis",
           "aliases": ["ping pong", "ping-pong"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "bowling",
           "aliases": ["ten pin bowling", "tenpin bowling", "ten-pin bowling"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "pool",
@@ -679,7 +679,7 @@
         {
           "canonical": "squash",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "croquet",
@@ -754,22 +754,22 @@
         {
           "canonical": "cricket",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "softball",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "field hockey",
           "aliases": ["hockey"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "lacrosse",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rounders",
@@ -849,12 +849,12 @@
         {
           "canonical": "handball",
           "aliases": ["team handball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "water polo",
           "aliases": ["waterpolo"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "futsal",
@@ -894,7 +894,7 @@
         {
           "canonical": "netball",
           "aliases": ["net ball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "volleyball",
@@ -955,22 +955,22 @@
         {
           "canonical": "cricket",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "softball",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "field hockey",
           "aliases": ["hockey"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "lacrosse",
           "aliases": [],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "rounders",
@@ -1050,12 +1050,12 @@
         {
           "canonical": "handball",
           "aliases": ["team handball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "water polo",
           "aliases": ["waterpolo"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "futsal",
@@ -1095,7 +1095,7 @@
         {
           "canonical": "netball",
           "aliases": ["net ball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "volleyball",
@@ -1136,6 +1136,16 @@
         {
           "canonical": "kin-ball",
           "aliases": ["kinball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sepak takraw",
+          "aliases": [],
           "commonness": "rare"
         }
       ]
@@ -1191,12 +1201,12 @@
         {
           "canonical": "handball",
           "aliases": ["team handball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "water polo",
           "aliases": ["waterpolo"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "futsal",
@@ -1236,7 +1246,7 @@
         {
           "canonical": "netball",
           "aliases": ["net ball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "volleyball",
@@ -1277,6 +1287,16 @@
         {
           "canonical": "kin-ball",
           "aliases": ["kinball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sepak takraw",
+          "aliases": [],
           "commonness": "rare"
         }
       ]
@@ -1312,12 +1332,12 @@
         {
           "canonical": "handball",
           "aliases": ["team handball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "water polo",
           "aliases": ["waterpolo"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "futsal",
@@ -1357,7 +1377,7 @@
         {
           "canonical": "netball",
           "aliases": ["net ball"],
-          "commonness": "uncommon"
+          "commonness": "common"
         },
         {
           "canonical": "volleyball",
@@ -1399,6 +1419,16 @@
           "canonical": "kin-ball",
           "aliases": ["kinball"],
           "commonness": "rare"
+        },
+        {
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sepak takraw",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1419,16 +1449,6 @@
           "canonical": "fistball",
           "aliases": ["faustball"],
           "commonness": "rare"
-        },
-        {
-          "canonical": "handball",
-          "aliases": ["team handball"],
-          "commonness": "uncommon"
-        },
-        {
-          "canonical": "futsal",
-          "aliases": ["indoor soccer", "five-a-side"],
-          "commonness": "uncommon"
         },
         {
           "canonical": "basketball",
@@ -1489,6 +1509,16 @@
         {
           "canonical": "kin-ball",
           "aliases": ["kinball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sepak takraw",
+          "aliases": [],
           "commonness": "rare"
         }
       ]
@@ -1541,6 +1571,16 @@
           "canonical": "cachibol",
           "aliases": [],
           "commonness": "rare"
+        },
+        {
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sepak takraw",
+          "aliases": [],
+          "commonness": "rare"
         }
       ]
     },
@@ -1574,7 +1614,12 @@
           "commonness": "rare"
         },
         {
-          "canonical": "prellball",
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sepak takraw",
           "aliases": [],
           "commonness": "rare"
         }
@@ -1591,11 +1636,6 @@
         {
           "canonical": "jokgu",
           "aliases": ["foot volleyball", "footvolleyball"],
-          "commonness": "rare"
-        },
-        {
-          "canonical": "prellball",
-          "aliases": [],
           "commonness": "rare"
         }
       ]
