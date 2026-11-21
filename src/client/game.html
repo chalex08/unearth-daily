@@ -6,28 +6,48 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content"
     />
+    <meta
+      name="description"
+      content="Unearth: ten chained clues, one answer each, and rarer answers dig deeper."
+    />
     <link rel="stylesheet" href="game.css" />
     <title>Unearth</title>
   </head>
 
   <body>
     <div id="world" aria-hidden="true"></div>
+    <div id="flash" class="keep-motion" aria-hidden="true"></div>
     <div id="app">
       <header id="hud" hidden>
-        <span id="puzzle"></span>
-        <span id="pickaxes"></span>
-        <span id="score"></span>
-        <span id="mineral"></span>
+        <span id="pickaxes" role="img"></span>
+        <ol id="pips"></ol>
+        <span id="score" class="num"></span>
       </header>
 
-      <p id="status" role="status">Loading…</p>
-      <button id="retry" type="button" hidden>Try again</button>
+      <div id="status" class="recess" hidden>
+        <p id="status-text" role="status">Loading…</p>
+        <button id="retry" type="button" hidden>Try again</button>
+      </div>
 
-      <main id="play" hidden>
-        <p id="layer"></p>
-        <p id="clue" aria-live="polite"></p>
+      <main id="play" class="recess" hidden>
+        <ol id="chain" aria-label="Your core sample so far"></ol>
+        <div id="current">
+          <p id="layer"></p>
+          <p id="clue" aria-live="polite"></p>
+          <p id="helper">Every clue above still applies.</p>
+        </div>
+        <div id="reveal" aria-live="polite" hidden>
+          <p id="reveal-band"></p>
+          <p id="reveal-answer"></p>
+          <p id="reveal-points">
+            <span id="reveal-base" class="block num"></span>
+            <span id="reveal-bonus" class="block num"></span>
+          </p>
+          <p id="reveal-flavour"></p>
+        </div>
         <form id="answer-form" autocomplete="off">
-          <label for="answer" class="sr-only">Your answer</label>
+          <p id="result" role="status"></p>
+          <label for="answer" class="visually-hidden">Your answer</label>
           <input
             id="answer"
             name="answer"
@@ -37,20 +57,21 @@
             autocorrect="off"
             spellcheck="false"
             enterkeyhint="go"
+            placeholder="One answer"
           />
           <button id="dig" type="submit">Dig</button>
         </form>
-        <p id="result" role="status"></p>
       </main>
 
-      <main id="end" hidden>
+      <main id="end" class="recess" hidden>
         <h1 id="end-title"></h1>
-        <p id="end-summary"></p>
+        <p id="end-total" class="num"></p>
+        <dl id="end-stats"></dl>
         <ol id="end-chain"></ol>
         <p id="final-answer"></p>
-        <label for="share">Share</label>
+        <label for="share">Your result, spoiler-free</label>
         <textarea id="share" rows="3" readonly></textarea>
-        <button id="copy" type="button">Copy</button>
+        <button id="copy" type="button">Copy result</button>
         <p id="next"></p>
       </main>
     </div>

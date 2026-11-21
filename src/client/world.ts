@@ -1,21 +1,30 @@
-// The Phaser world: one placeholder rectangle per stratum (Surface + 10 layers) stacked down a
-// vertical cross-section, and a camera that descends one layer at a time. Plain on purpose (PLAN
-// step 5); step 7 replaces the rectangles with the real rock.
+// The Phaser world: one tinted, patterned stratum per mineral (Surface + 10) stacked down a vertical
+// cross-section, a camera that descends one layer at a time, chiselled answers and other players'
+// fossils. Look from docs/DESIGN.md; lighting, narrowing walls and the Uranium glow come in step 7.
 import * as Phaser from 'phaser';
+import type { Fossil } from '../shared/api';
 import { MINERALS } from '../shared/game';
+import { drawStratum, STRATA } from './strata';
 
 const STRATUM = 220;
-// Placeholder greys, lighter at the surface and darker with depth.
-const fill = (i: number) =>
-  Phaser.Display.Color.GetColor(150 - i * 12, 140 - i * 12, 125 - i * 11);
+const TILE = 512;
+export const DISPLAY = '"EB Garamond Variable", Georgia, serif';
+// Where fossils sit: the sides of each stratum, clear of the chiselled answer in the middle.
+const SPOTS = [
+  [0.06, 0.27],
+  [0.94, 0.27],
+  [0.06, 0.8],
+  [0.94, 0.8],
+] as const;
 
 const reducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export class World extends Phaser.Scene {
-  private strata: Phaser.GameObjects.Rectangle[] = [];
-  private labels: Phaser.GameObjects.Text[] = [];
+  private strata: Phaser.GameObjects.TileSprite[] = [];
   private answers: Phaser.GameObjects.Text[] = [];
+  private fossilTexts: Phaser.GameObjects.Text[] = [];
+  private fossils: Fossil[][] = [];
   private layer = 0;
   private whole = false;
   private ready = false;
@@ -26,26 +35,39 @@ export class World extends Phaser.Scene {
 
   create() {
     MINERALS.forEach((m, i) => {
+      const tex = this.textures.createCanvas(`stratum-${i}`, TILE, STRATUM);
+      if (tex) {
+        drawStratum(tex.getContext(), i, TILE, STRATUM);
+        tex.refresh();
+      }
+      const y = i * STRATUM;
       this.strata.push(
-        this.add.rectangle(0, i * STRATUM, 1, STRATUM, fill(i)).setOrigin(0)
+        this.add.tileSprite(0, y, 1, STRATUM, `stratum-${i}`).setOrigin(0)
       );
-      this.labels.push(
-        this.add.text(12, i * STRATUM + 10, m.name, {
-          fontSize: '14px',
-          color: '#ffffffaa',
-        })
-      );
+      // Smith-style lettering along the layer: number, then the name in italic.
+      this.add.text(12, y + 12, `${i}  ${m.name}`, {
+        fontFamily: DISPLAY,
+        fontStyle: 'italic',
+        fontSize: '17px',
+        color: STRATA[i]!.letter,
+      });
       this.answers.push(
         this.add
-          .text(0, i * STRATUM + STRATUM / 2, '', {
-            fontSize: '22px',
-            color: '#ffffff',
+          .text(0, y + STRATUM / 2, '', {
+            fontFamily: DISPLAY,
+            fontSize: '26px',
+            color: STRATA[i]!.letter,
           })
           .setOrigin(0.5)
       );
     });
+    // A tap on empty rock closes an open fossil label.
+    this.input.on('pointerdown', (_p: unknown, hit: unknown[]) => {
+      if (hit.length === 0) this.drawFossils();
+    });
     this.scale.on('resize', () => this.layout(false));
     this.ready = true;
+    this.drawFossils();
     this.layout(false);
   }
 
@@ -66,10 +88,49 @@ export class World extends Phaser.Scene {
     if (this.ready) this.layout(true);
   }
 
+  /** Other players' answers at cleared layers, most found first (GET /api/stats). */
+  setFossils(fossils: Fossil[][]) {
+    this.fossils = fossils;
+    if (this.ready) this.drawFossils();
+  }
+
+  private drawFossils(open?: Fossil) {
+    this.fossilTexts.forEach((t) => t.destroy());
+    this.fossilTexts = [];
+    const { width } = this.scale;
+    this.fossils.forEach((layer, i) =>
+      layer.slice(0, SPOTS.length).forEach((f, j) => {
+        const [sx, sy] = SPOTS[j]!;
+        const unnamed = f.answer === 'something else';
+        const shown = f === open;
+        const t = this.add
+          .text(
+            sx * width,
+            (i + 1) * STRATUM + sy * STRATUM,
+            shown ? `${f.answer}  ${f.percent}%` : f.answer,
+            {
+              fontFamily: DISPLAY,
+              fontStyle: unnamed ? 'normal' : 'italic',
+              // Sized by popularity: 15px for a rare one up to 28px for the answer everyone gave.
+              fontSize: `${Math.round(Math.min(28, 13 + Math.sqrt(f.percent) * 2.2))}px`,
+              color: STRATA[i + 1]!.letter,
+              padding: { x: 8, y: 10 },
+            }
+          )
+          .setOrigin(sx < 0.5 ? 0 : 1, 0.5)
+          .setAlpha(shown ? 1 : unnamed ? 0.4 : 0.6)
+          .setInteractive({ useHandCursor: true });
+        t.on('pointerdown', () => this.drawFossils(shown ? undefined : f));
+        this.fossilTexts.push(t);
+      })
+    );
+  }
+
   private layout(animate: boolean) {
     const { width, height } = this.scale;
     this.strata.forEach((r) => r.setSize(width, STRATUM));
     this.answers.forEach((t) => t.setX(width / 2));
+    this.drawFossils();
     // RESIZE mode resizes the canvas but not the camera viewport.
     this.cameras.resize(width, height);
     const cam = this.cameras.main;

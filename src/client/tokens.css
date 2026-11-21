@@ -1,0 +1,60 @@
+/* Bundled with the app (DECISIONS: Assets). EB Garamond: lettering on the rock, band names, titles.
+   Atkinson Hyperlegible Next: clues, input, HUD, everything you must read fast. */
+@import '@fontsource-variable/eb-garamond/wght.css';
+@import '@fontsource-variable/eb-garamond/wght-italic.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-400.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-700.css';
+
+:root {
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.2rem;
+  --text-xl: 1.44rem;
+  --text-2xl: 1.728rem;
+  --text-3xl: 2.488rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 200;
+  --z-toast: 500;
+
+  /* The shaft in the dark: recess, HUD and end log. */
+  --color-paper: oklch(17% 0.012 60);
+  --color-paper-2: oklch(22% 0.014 60);
+  --color-paper-3: oklch(28% 0.015 62);
+  --color-ink: oklch(93% 0.012 85);
+  --color-ink-2: oklch(80% 0.014 80);
+  --color-muted: oklch(68% 0.014 75);
+  --color-rule: oklch(34% 0.014 65);
+  /* Dark ink for text set on an ore colour (every ore passes 5.8:1 or more). */
+  --color-ore-ink: oklch(22% 0.02 60);
+  /* Survey red, the painted catalogue number: the Dig button, focus, the wrong-answer line. */
+  --color-accent: oklch(52% 0.19 28);
+  --color-accent-ink: oklch(98% 0.01 28);
+  --color-accent-text: oklch(68% 0.17 28);
+  --color-focus: oklch(68% 0.17 28);
+
+  /* Set per element from strata.ts: the current stratum's ore. */
+  --ore: oklch(68% 0.014 75);
+
+  --font-display: 'EB Garamond Variable', Georgia, serif;
+  --font-body:
+    'Atkinson Hyperlegible Next', ui-sans-serif, system-ui, sans-serif;
+
+  --radius: 3px;
+  --rule-hair: 1px;
+}
