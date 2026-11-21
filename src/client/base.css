@@ -7,6 +7,9 @@ html,
 body {
   overflow-x: clip;
 }
+html {
+  scrollbar-color: var(--color-rule) var(--color-paper);
+}
 body {
   margin: 0;
   background: var(--color-paper);
@@ -71,6 +74,7 @@ textarea {
   *:not(.keep-motion)::before,
   *:not(.keep-motion)::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;

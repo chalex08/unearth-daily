@@ -57,10 +57,11 @@ Every ore colour is at least 6.4:1 on paper, so ore-coloured band names read on 
 
 From top to bottom: HUD, the world, the recess.
 
-- **HUD** (Krillion ref 02): pickaxes top-left (drawn as line icons; a broken one dims), ten pips top-centre (empty, outlined for the current layer, filled with the ore colour once cleared), score top-right. It sits on its own dark strip.
+- **HUD** (Krillion ref 02): pickaxes top-left (drawn as line icons; a broken one dims), ten pips top-centre (empty, outlined for the current layer, filled with the ore colour once cleared), score top-right. It sits on its own dark strip running edge to edge, with its contents lined up with the 40rem recess on wide screens.
+- **Camera:** the current stratum is centred in the rock actually left showing between the HUD and the recess (the recess grows as the chain does), not at a fixed screen height.
 - **The recess** is an opaque dark panel cut into the rock, lit along its top edge in the current stratum's ore. _(Adjustment 2.)_ It's opaque so the clue reads at the same contrast on every stratum, Coal, Iron and Uranium included. The clue is never set straight on textured rock.
-- **The core sample stays visible** _(adjustment 1)_. Above the current clue, every cleared layer is a row in the recess: its clue, your answer, and "+points band". Each row carries a 6px bar in its stratum's ore, and the bars join into one column that runs down into the current clue's bar (outlined, because it isn't cleared yet). Fragment clues ("…that can't fly") always read with the chain above them, and the helper line says "Every clue above still applies." The chain holds up to 26% of the screen height, scrolls for the rest, and always keeps the newest links (the ones the current clue builds on) in view, including when the mobile keyboard opens.
-- **Answer form:** one line of feedback above the input, a 48px input, and one red Dig button. The input keeps focus the whole run.
+- **The core sample stays visible** _(adjustment 1)_. Above the current clue, every cleared layer is a row in the recess: its clue, your answer, and "+points band". Each row carries a 6px bar in its stratum's ore, and the bars join into one column that runs down into the current clue's bar (outlined, because it isn't cleared yet). Fragment clues ("…that can't fly") always read with the chain above them, and the helper line says "Every clue above still applies." The chain holds up to 35% of the screen height (all nine links fit at 390×780, one line each where they fit), scrolls for the rest. When it scrolls (short screens, keyboard open), the first clue stays pinned at the top and the newest links stay in view next to the current clue.
+- **Answer form:** one line of feedback above the input, a 48px input, and one red Dig button. The input keeps focus the whole run, and is disabled (with Dig) once the final answer or the last pickaxe ends it.
 
 ## 5. Strike reveal and pacing
 
@@ -69,8 +70,13 @@ The reveal replaces the clue in the recess (in place, never a modal), in Krillio
 - **Points** (Balatro, ref 15): a base block, then a band block in the ore colour that slams in. The rarer the band, the harder it lands (scale 1.3 Seam, 1.6 Vein, 2 Mother Lode). The HUD score counts up over 600ms.
 - **Common is modest on purpose** (ref 05): a small muted band name, the base block only, no slam, no tint.
 - **Vein and Mother Lode** tint the whole screen in the ore colour for about 220ms (ref 07).
-- **Flavour lines** are our own: Common "The answer most diggers hit first.", Seam "A thin line of something better.", Vein "Few swung their pick this way.", Mother Lode "Almost nobody dug here." Then "N% of diggers found it." when the server sends a percent. "estimated" follows the band name during cold start.
-- **Pacing** _(adjustment 3)_: there's no Dig tap between layers. Common strikes (and layer 10, which has no band) move on after about 1s. Seam, Vein and Mother Lode hold for about 2.5s, or until the player taps the reveal or presses Enter. The camera descends and the next clue appears once the reveal ends. The keyboard stays up throughout, so the player can type the next answer during a reveal.
+- **The Uranium finish** (layer 10, which has no band) gets the full treatment: the mineral name at full size in Uranium green, the tint, a 2.5s hold, and "You hit the core."
+- **Flavour lines** are our own: Common "The answer most diggers hit first.", Seam "A thin line of something better.", Vein "Few swung their pick this way.", Mother Lode "Almost nobody dug here." Then "N% of diggers found it." once the band is measured (not during cold start, where a small-sample percent would contradict the estimated band, and not at layer 10). During cold start the head stays the band name alone and the flavour line adds "Estimated until 50 diggers answer this layer."
+- **Pacing** _(adjustment 3)_: there's no Dig tap between layers. Common strikes move on after about 1s. Seam, Vein, Mother Lode and the Uranium finish hold for about 2.5s, or until the player taps the reveal or presses Enter. The camera descends and the next clue appears once the reveal ends. The keyboard stays up throughout, so the player can type the next answer during a reveal, and Dig stays live (it skips the reveal).
+
+### Mineral icons
+
+Eleven SVGs in [`public/icons/`](../public/icons/), 32×32, flat fills with a darker edge line like the strata, recognisable at 20px. Shapes follow REFERENCES §7: Surface a grass tuft on soil, Dirt a speckled clod, Clay a banded slab, Stone a faceted rock, Coal a dark lump with violet, blue and gold sheen strokes, Copper salmon dendrites with green patina spots, Iron botryoidal haematite, Silver curling wires, Gold flat hexagonal plates with dark reflections, Diamond a rough octahedron (not the brilliant cut), Uranium stacked tabular plates in emerald green. Used above the band name in the strike reveal and beside the end-screen title; candidates for the share card and app icon later.
 
 ## 6. Wrong answer
 
@@ -83,12 +89,16 @@ _(Adjustment 4.)_ Other players' answers at layers this player has cleared, from
 - **Placement:** up to four per stratum, at its sides (top-left, top-right, bottom-left, bottom-right), clear of the chiselled answer in the middle. Most found first.
 - **Size by popularity:** EB Garamond italic, 13px + 2.2 × √percent, capped at 28px (about 15px for a 1% answer, 24px at 25%). Opacity 0.6.
 - **Tap state:** a tap shows the percent beside the name ("kiwi 12.5%") at full opacity. Tapping again, or tapping empty rock, closes it. Only one is open at a time, and the tap target is padded past the letters.
-- **SPEC §4.1:** the server names only hand-reviewed pool answers. Anything only the AI accepted comes back as "something else", which is set in roman (not italic) at opacity 0.4, so it reads as unnamed. During a run, the server also turns any fossil that answers the current layer into "something else". After the run ends, every pool fossil is named. The player's own answer is always their own text in their chain.
+- **SPEC §4.1:** the server names only hand-reviewed pool answers. Anything only the AI accepted comes back as "something else", which is always set smallest (13px, roman, opacity 0.35) whatever its share, so it reads as a bucket rather than an answer. Its percent still shows on tap. During a run, the server also turns any fossil that answers the current layer into "something else". After the run ends, every pool fossil is named. The player's own answer is always their own text in their chain.
 - If stats fail to load, the rock simply has no fossils. Play never waits on them.
 
 ## 8. End screen
 
-A catalogued specimen in the recess, under the pulled-back core sample: the title in the hero mineral's ore colour ("Struck Gold", "Caved in at Copper"), the total, a row of rare finds, pickaxes left and streak, then the full chain. Each layer gets a painted number tag (red on a pale oval, ref 28), the clue, your answer and "+points band"; unreached layers are muted. Then the final answer, the share text and Copy result, the one primary action.
+A catalogued specimen in the recess, under the pulled-back core sample (the whole column, Surface to Uranium, fitted into the rock left showing above the panel): the mineral icon and title in the hero mineral's ore colour ("Struck Gold", "Caved in at Copper"), the total, then the share text and **Copy result**, the one primary action, high enough to be on screen without scrolling. Below: rare finds, pickaxes left and streak, then the finished core sample, drawn the same way as in play: one joined ore bar per cleared layer, an empty outlined slot for each layer not reached, the layer number in muted text, the clue, your answer and "+points band". If any band was estimated, one note under the list says so. Then the final answer.
+
+### Feed card (holding version)
+
+The inline view (`splash.html`) uses the same tokens and fonts: the strata column drawn by `drawStratum` filling the card, then the italic Unearth wordmark, one line and a red Play button. PLAN step 10 replaces the line with the first clue, number, date and player count.
 
 ## 9. Motion
 
@@ -97,6 +107,19 @@ A catalogued specimen in the recess, under the pulled-back core sample: the titl
 
 ## 10. Still to build
 
-- **Step 7 (world):** the headlamp cone and darkness with depth, shaft walls narrowing one notch per layer, the Uranium glow lighting the lowest strata, clues carved on the rock face, keyboard and screen-reader access to fossils.
-- **Step 8 (juice):** pickaxe impact, shake and debris, ore by band in the rock (rubble, seam, cracked vein, glowing lode that lights the walls), the bright horizontal seam line on a rare strike, mineral icons, sound.
+- **Step 7 (world):** the headlamp cone and darkness with depth, shaft walls narrowing one notch per layer, the Uranium glow lighting the lowest strata, clues carved on the rock face, keyboard and screen-reader access to fossils. Also: render the canvas at the device pixel ratio (it's 1× now, so rock patterns look soft on phones; lettering is already sharp), a warm daylight band above Surface, and make the end-screen pull-back pan and zoom move together (the pan currently aims at the final zoom, so the 600ms zoom-out briefly shows bedrock).
+- **Step 8 (juice):** pickaxe impact, shake and debris, ore by band in the rock (rubble, seam, cracked vein, glowing lode that lights the walls), the bright horizontal seam line on a rare strike, sound.
 - **Step 9 (end):** the graveyard as a distribution with a "YOU" marker (ref 09), "deeper than X% of redditors", the band legend, string-tied tags.
+
+## 11. Step 7 asset list
+
+Nothing here needs commissioned art. Everything is drawn in code from the palette in `strata.ts`, so it stays consistent, costs nothing to ship, and changes with the tokens.
+
+| Asset               | How                | Notes                                                                                                                                                                                                                                                             |
+| ------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Strata textures** | Code (done)        | Canvas tile per stratum: tint, edge line, lithology pattern, ore flecks (`drawStratum`). Step 7 adds the shaft walls as darker carved edges stepping in one notch per layer, drawn the same way.                                                                  |
+| **Fossils**         | Code (done)        | EB Garamond lettering sized by popularity (§7). Optional later: a small string-tied tag drawn behind an opened fossil (REFERENCES ref 27).                                                                                                                        |
+| **Debris**          | Code               | Phaser particles from a few generated chip textures (2–5px polygons) in the stratum's tint and edge colours, plus ore-coloured chips on Seam and above. No particles under reduced motion.                                                                        |
+| **Ore glow**        | Code               | A radial-gradient texture generated at runtime, tinted per ore and drawn with additive blending; Mother Lode adds a short-lived light that brightens nearby wall edges. Reduced motion: shown at its final strength, no pulse.                                    |
+| **Headlamp**        | Code               | A darkness layer over the world with a soft radial cut-out around the shaft (render texture or mask). Darkness grows with depth; the cone stays still under reduced motion.                                                                                       |
+| **Uranium core**    | Code; art optional | Stacked tabular plates built from the Uranium icon's geometry at large scale, with the ore-glow texture lighting the lowest strata green. If we want one hero image for Devpost, a hand-painted core sprite is the only place art would add something code can't. |

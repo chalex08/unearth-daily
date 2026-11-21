@@ -35,3 +35,7 @@ It writes 600 made-up runs for today's puzzle (or the latest bundled one): `answ
 ## Replaying today's puzzle on a dev install
 
 One run per account per UTC day also applies in playtest. To play again, choose **Reset my run (dev)** in the playtest subreddit's mod menu, then reopen the post. It deletes only your own `run:{date}:{userId}` and its lock; answer counts, the graveyard and your streak stay as they were. It refuses on the canonical app (`unearth-daily`).
+
+## Jumping to any layer on a dev install
+
+To check deep layers or the end screen without playing through, choose **Jump to a layer (dev)** in the playtest subreddit's mod menu, pick a layer (or "End screen, Uranium finish"), then reopen the post. It rewrites only your own run for today with pool answers. In the local preview, open `game.html?jump=6` (or `?jump=11` for the end screen). Both refuse on the canonical app (`unearth-daily`).
