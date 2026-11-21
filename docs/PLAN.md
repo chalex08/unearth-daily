@@ -6,10 +6,10 @@ Each step is one prompt / one feature branch, merged to `main` when typecheck, l
 
 ## Start now (lead time, not code)
 
-- [ ] Ask the Devvit team to allowlist Journeys for the app (DECISIONS open item 2). **By Mon 23 Nov.**
+- [x] ~~Ask the Devvit team to allowlist Journeys~~ No request now (22 Nov): build it in step 10, then read the receipt on the uploaded canonical app; reach out only if it says `DENIED_NOT_ALLOWLISTED` (DECISIONS open item 2).
 - [ ] Confirm r/UnearthDaily is public, has fewer than 200 members, and you moderate it.
 - [ ] Draft Terms and Privacy pages (needed for fetch + LLM approval). **By step 4.**
-- [ ] Request LLM approval and Journeys approval from Devvit. _LLM approval granted 22 Nov 2026; Journeys still to request._
+- [ ] Request LLM approval and Journeys approval from Devvit. _LLM approval granted 22 Nov 2026 for both apps; Journeys: see above._
 
 ## Steps
 
@@ -85,14 +85,14 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 - [ ] Scheduler job at 00:00 UTC creates "Unearth #N — <first clue>"; idempotent; verified to fire at UTC midnight.
 - [ ] In-world first-run hints (SPEC §6.2).
-- [ ] Journeys: run started, layer progress (layer/10), finished or caved in; no per-input events; receipts checked.
+- [ ] Journeys: run started, layer progress (layer/10), finished or caved in; no per-input events; receipts checked. Setup notes in DECISIONS "Journeys setup": the package's telemetry router is Express, our server is Hono; playtest versions always get `DENIED_PLAYTEST`, so check receipts on an uploaded version.
 - [ ] Inline feed view: strata teaser, number, date, player count, first clue, Play. Under 1s, Lighthouse mobile above 80. Optional `_direct_launch`.
 - **Done when:** a new post appears on its own at midnight UTC and the feed view meets the inline rules.
 
 ### 11. Polish, audits, compliance, submission — Sat 5 – Sun 6 Dec
 
 - [ ] Accessibility, performance and Devvit-rules audits; data deletion on account deletion; README rewritten (non-template).
-- [ ] Terms and Privacy published and linked in the app details form (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app. _Domain and LLM approval granted 22 Nov for the dev app; confirm they also cover the canonical `unearth-daily` app, and set its `geminiApiKey`._
+- [ ] Terms and Privacy published and linked in the app details form (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app. _Domain and LLM approval granted 22 Nov for both the dev and canonical apps. Still to do: the app owner sets the canonical app's `geminiApiKey`._
 - [ ] AI data audit (SPEC §5.3): the canonical app's `geminiApiKey` is from the billed project; no free-tier key exists in the project; no Reddit data reached any content-authoring AI session.
 - [ ] Enough reviewed puzzles (written with `/write-puzzle`, reviewed by hand) queued to cover every day through judging (the judging window isn't in the briefing; aim for 31 Dec).
 - [ ] Canonical app uploaded with `npm run deploy:prod` (upload only, **never publish**); public demo post live in r/UnearthDaily; demo video if required.

@@ -54,7 +54,7 @@ _Authoring part superseded on 21 Nov 2026 (see "Puzzle authoring moved to Claude
 ## Open questions and risks
 
 1. **Free-text input and showing other players' answers. Resolved 21 Nov:** the Devvit rules say in-app content should limit free expression and that user text should be published with attribution that can be reported. Agreed rule, now SPEC §4.1: others only ever see hand-reviewed pool answers; AI-approved answers still count everywhere but show as "something else"; players always see their own answers; non-pool answers are logged for review.
-2. **Journeys need approval and don't fire in playtest.** Receipts return `DENIED_NOT_ALLOWLISTED` until the app is allowlisted, and `DENIED_PLAYTEST` for playtest versions. No request form is documented, so ask the Devvit team (Discord / r/Devvit) now.
+2. **Journeys allowlisting.** Researched 22 Nov (see "Journeys setup" below): no manual request now. Build it in step 10, upload the canonical app, and read the receipts. Reach out to the Devvit team only if they say `DENIED_NOT_ALLOWLISTED`.
 3. **HTTP domain approval. Resolved 22 Nov:** `generativelanguage.googleapis.com` approved. (It took 1–2 business days and is triggered by the first upload that lists the domain. The README also needs a "Fetch Domains" section. Add the domain on day 1 of step 4.)
 4. **Terms and Privacy** links go in the app details form in the Developer Portal (there's no `devvit.json` key); they're required because we use fetch and an LLM. Reddit's own policies can't be used.
 5. **Data deletion:** the rules require removing a user's data when they delete their account, and recommend expiring user data after 30 days. Per-day run data gets a 30-day TTL; the streak record keeps only the count and last day.
@@ -63,7 +63,7 @@ _Authoring part superseded on 21 Nov 2026 (see "Puzzle authoring moved to Claude
 8. **Gemini model ID and JSON mode** (exact model name, `responseMimeType`/schema support): check against Google's docs in step 4.
 9. **Direct launch:** a reserved `_direct_launch` entrypoint lets Reddit's Daily Games surfaces open the game straight into expanded mode. It's a nice-to-have for step 10.
 10. **LLM approval. Resolved 22 Nov:** Devvit granted LLM approval. The no-AI fallback stays: a missing key, timeout or error still gives "Couldn't check that, try again" with no pickaxe lost (SPEC §4).
-11. **Gemini age terms.** The Gemini API terms require users to be 18+ and bar use in an app "likely to be accessed by individuals under the age of 18". Reddit allows users from 13. This applies to both tiers; raise it with the Devvit team in the LLM approval request.
+11. **Gemini age terms.** The Gemini API terms require users to be 18+ and bar use in an app "likely to be accessed by individuals under the age of 18". Reddit allows users from 13. This applies to both tiers; raise it with the Devvit team in the LLM approval request. **Resolved 22 Nov:** approved by the Devvit team along with LLM approval.
 
 ## Repo housekeeping noticed
 
@@ -110,4 +110,19 @@ _Authoring part superseded on 21 Nov 2026 (see "Puzzle authoring moved to Claude
 - **Fetch domain:** `generativelanguage.googleapis.com` approved by Devvit.
 - **LLM use:** Devvit LLM approval granted. The runtime judge (Gemini paid tier) may now run on Reddit.
 - **Key:** the paid-tier `geminiApiKey` (billed Google project) is set as a secret on the dev app with `npx devvit settings set geminiApiKey`.
-- **Still to check:** a real Gemini verdict in playtest (PLAN step 4 "Done when"); that both approvals cover the canonical `unearth-daily` app, whose own key must be set by the app owner before step 11; Journeys allowlisting (open item 2); Gemini age terms (open item 11).
+- **Both apps:** the domain and LLM approvals cover both the dev app and the canonical `unearth-daily` app (confirmed by the developer, 22 Nov).
+- **Gemini age terms:** approved (open item 11).
+- **Still to check:** a real Gemini verdict in playtest (PLAN step 4 "Done when"); the app owner sets the canonical app's `geminiApiKey` before step 11; Journeys receipts (open item 2).
+
+## Journeys setup (researched 22 Nov 2026)
+
+Sources: the docs repo `reddit/devvit-docs` (`docs/capabilities/analytics/devvit-journeys.md`, `journeys-receipts.md`, `journeys-dashboard.md`; developers.reddit.com refused automated fetches), the published `@devvit/analytics@0.15.4` package, and the installed `@devvit/protos` telemetry types.
+
+- **Eligibility:** the docs say telemetry is Devvit Web only and "restricted by a server-side allowlist. Your app will only emit journey events after it has been approved in the review process." No page, package code or proto says it's enabled automatically for an app type or category (the Direct Launch / Daily Games page doesn't mention Journeys). The developer understands it's enabled for certain kinds of apps, so we don't request it now; the receipts on the uploaded canonical app will tell us.
+- **Receipts** (proto `JourneyReceiptStatus`, the source of truth for whether an event was recorded): `VALID`, `DENIED_NOT_ALLOWLISTED` ("the app is not allowlisted"), `DENIED_RATE_LIMITED`, `DENIED_DUPLICATE`, `INVALID`, `DENIED_DISABLED` ("Journey telemetry is disabled"), `DENIED_PLAYTEST` ("the app version is a playtest version"), `UNSPECIFIED`, all prefixed `JOURNEY_RECEIPT_`. So **events never record in playtest**; test receipts on an uploaded version.
+- **Config:** `"permissions": { "journeys": true }` in `devvit.json`.
+- **Package:** `@devvit/analytics` 0.15.4 (matches our other `@devvit/*` packages). Its README says "Intended for internal use only", but the docs tell apps to import it. Peer dependencies: `@devvit/server` and **`express`**.
+- **Client API** (`@devvit/analytics/client/reddit`, `telemetry`): `startJourney()`, `progress({ progress, action?, actionDetails? })` with `progress` 0.0–1.0, `interaction({ action, actionDetails? })`, `endJourney({ complete?, game?: { win, score } })`, `appReady()`, plus `getActiveJourneyId` / `setJourneyId` / `clearJourneyId`. The journey ID is managed by the client. Client events go to `/api/telemetry/journey/...`.
+- **Server API** (`@devvit/analytics/server/reddit`): `telemetry` and `createTelemetryRouter()`, which returns an **Express** router for `/api/telemetry`. Our server is Hono, so step 10 either adds a small Hono route at `/api/telemetry/...` that calls the exported `journeyProgressForClient` / `endJourneyForClient`, or ends journeys from our own server routes with `telemetry.endJourney({ journeyId, complete, game })`, using the `x-devvit-journey-id` header the client sends.
+- **Rules:** fire on committed user actions (on release, not press); `startJourney` must not record page or app views; no PII in `action` / `actionDetails` (so no usernames or answers). The platform may validate this and delay approval for apps that break it. No numeric rate limit is documented.
+- **Plan for UNEARTH:** start the journey on the Play tap, progress `layer/10` on each cleared layer, end with `{ complete, game: { win: cleared, score } }`, and `appReady()` once the game is interactive. No events per answer typed.
