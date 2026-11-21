@@ -128,7 +128,7 @@ Devvit Rules forbid using Reddit data to train or improve AI models, or letting 
 - **No AI tool or session used for content may ever receive Reddit data of any kind**: player answers, the §4.1 non-pool answer log, answer counts, usernames, or anything read from Redis or the Reddit API. Content sessions may only read hand-written seed themes and our own puzzle files.
 - The **paid-tier key is the only key the Devvit server may use.** It must come from a billed Google project, never a free-tier one. No free-tier Gemini key is used anywhere in the project.
 - Reviewing the §4.1 non-pool answer log and adding answers to pools is **manual only**.
-- Devvit requires **prior approval for LLM use**. Until it is granted, the game must fully work: pool answers validate without AI, and unknown answers get "Couldn't check that, try again" with no pickaxe lost (§4).
+- Devvit requires **prior approval for LLM use** (granted 22 Nov 2026). Play must still never depend on AI: when the judge can't be reached, the game must fully work: pool answers validate without AI, and unknown answers get "Couldn't check that, try again" with no pickaxe lost (§4).
 
 ## 6. Experience flow
 
