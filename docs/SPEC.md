@@ -89,6 +89,13 @@ Failure handling:
 - **Offensive** answers are rejected (pickaxe breaks as for any invalid answer) and are **never displayed to other players** (not in fossils, stats or graveyard).
 - The client never receives future clues or answer pools; all validation runs on the server.
 
+### 4.1 Displaying answers
+
+- Only **hand-reviewed pool answers** (their canonical form) are ever displayed as other players' fossils or named in public stats (fossil %, graveyard, any community counts). A valid answer that only the AI accepted is shown to others as "something else".
+- **All valid answers** (pool and AI-approved) still count toward rarity percentages, the graveyard and totals. Only the displayed text is restricted.
+- A player always sees **their own answer** in their own run, end screen and core sample, even if it isn't in the pool.
+- **Non-pool valid answers are logged** per puzzle and layer with how often they were given, most frequent first, so they can be reviewed by hand and added to the pool later.
+
 ## 5. AI
 
 There are two separate AI paths.

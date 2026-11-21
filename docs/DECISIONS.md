@@ -37,7 +37,7 @@ Tech choices, confirmed or changed against the Devvit docs (https://developers.r
 
 ## Open questions and risks
 
-1. **Free-text input and showing other players' answers.** The Devvit rules say in-app content should limit free expression and avoid free-form text, and that user text should be published with attribution that can be reported. Proposal: fossils, % stats and the graveyard only ever show **canonical answers from the hand-reviewed pool**; answers that only the AI accepted are counted but shown as "something else". This needs your OK before it goes into SPEC.md.
+1. **Free-text input and showing other players' answers. Resolved 21 Nov:** the Devvit rules say in-app content should limit free expression and that user text should be published with attribution that can be reported. Agreed rule, now SPEC §4.1: others only ever see hand-reviewed pool answers; AI-approved answers still count everywhere but show as "something else"; players always see their own answers; non-pool answers are logged for review.
 2. **Journeys need approval and don't fire in playtest.** Receipts return `DENIED_NOT_ALLOWLISTED` until the app is allowlisted, and `DENIED_PLAYTEST` for playtest versions. No request form is documented, so ask the Devvit team (Discord / r/Devvit) now.
 3. **HTTP domain approval** takes 1–2 business days and is triggered by the first upload that lists the domain. The README also needs a "Fetch Domains" section. Add the domain on day 1 of step 4.
 4. **Terms and Privacy** links go in the app details form in the Developer Portal (there's no `devvit.json` key); they're required because we use fetch and an LLM. Reddit's own policies can't be used.

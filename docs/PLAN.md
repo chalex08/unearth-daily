@@ -42,7 +42,8 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 - [ ] Validation pipeline in order: pool → Redis verdict cache → Gemini judge (`AnswerJudge`), 8s timeout, strict JSON, answer handled as data.
 - [ ] Rarity counts per layer in Redis, locked when the answer is given; one run per user per UTC day; 30-day TTL on per-day user data.
 - [ ] The client only ever receives cleared and current clues.
-- **Done when:** route and judge tests pass with a fake judge; an AI timeout breaks no pickaxe; the real judge works in playtest.
+- [ ] Display rules (SPEC §4.1): public answer text is pool-only, AI-approved answers count but show as "something else", the player's own answers are always returned to them; non-pool answers logged per puzzle and layer with counts, readable by a moderator-only menu item.
+- **Done when:** route and judge tests pass with a fake judge; an AI timeout breaks no pickaxe; a test shows an AI-approved answer counted in rarity but never named in another player's response; the real judge works in playtest.
 
 ### 5. Minimal playable client on Reddit — Thu 26 Nov (checkpoint)
 
@@ -58,7 +59,7 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 ### 7. Dynamic world (Phaser) — Sat 28 – Sun 29 Nov
 
 - [ ] One continuous vertical cross-section; camera descends per layer; walls narrow; lighting darkens to a headlamp cone; Uranium glow at the bottom.
-- [ ] Clues carved into the rock; earlier clues and answers stay above as a core sample; fossils of other players' answers (tap for %).
+- [ ] Clues carved into the rock; earlier clues and answers stay above as a core sample; fossils of other players' pool answers (tap for %).
 - [ ] DOM input stays over the canvas; no scroll traps.
 - **Done when:** a run plays fully in the world at 60fps on a mid-range phone, and it's usable with a keyboard and screen reader.
 
