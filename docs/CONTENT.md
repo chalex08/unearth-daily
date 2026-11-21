@@ -20,7 +20,7 @@ GEMINI_FREE_API_KEY=...   # from a Google project with NO billing
 GEMINI_FREE_MODEL=gemini-3.8-flash
 ```
 
-`gemini-3.8-flash` is on the free tier (pricing page, checked 21 Nov 2026). Free-tier rate limits are per project and are only shown in AI Studio (aistudio.google.com/rate-limit); daily quotas reset at midnight Pacific. A draft takes several minutes. The script streams the response (a plain call hits Node's 300s fetch timeout while the model thinks) and retries network errors, 429 and 5xx up to 6 times with exponential backoff, using the server's `retryDelay` when it gives one. If a date still fails, run it again.
+`gemini-3.8-flash` is on the free tier (pricing page, checked 21 Nov 2026). Free-tier rate limits are per project and are only shown in AI Studio (aistudio.google.com/rate-limit); daily quotas reset at midnight Pacific. **Budget:** the free tier allows 20 `gemini-3.8-flash` requests per day (per project, per model; seen in a 429 on 21 Nov 2026). A draft plus its critique is at least 2 requests, up to 6 with validator fixes, and failed attempts may count. Run one call at a time: parallel calls mostly earn 503s. When the daily quota is gone the script stops with "quota exhausted, retry in about Nh" instead of sleeping. A draft takes several minutes. The script streams the response (a plain call hits Node's 300s fetch timeout while the model thinks) and retries network errors, 429 and 5xx up to 6 times with exponential backoff, using the server's `retryDelay` when it gives one. If a date still fails, run it again.
 
 ## Workflow
 
@@ -28,9 +28,11 @@ GEMINI_FREE_MODEL=gemini-3.8-flash
    - `--seed` is optional (a theme or first clue). The puzzle number comes from the date, counting from the committed puzzles.
    - The model returns 10 clues and every answer with its depth (the deepest layer it survives); the script expands that into one pool per layer and runs the shared validator. If validation fails, it sends the errors back and asks for a fix, up to 2 times.
    - Output: `content/puzzles/drafts/YYYY-MM-DD.json`. It is written even when still invalid (the script exits non-zero), so you can fix it by hand.
-2. **Review:** `npm run review -- 2026-11-22` prints each layer's clue, answers by commonness (with aliases) and what the clue ruled out. Answer `y` to move it to `content/puzzles/`. Edit the JSON first if anything is off: an unfair clue, a missing common answer, a wrong commonness label.
-3. **Validate:** `npm run validate:puzzles` checks every file in `content/puzzles/` (not drafts): the shared validator, file name = date, unique numbers. CI runs it on every push.
-4. Commit the approved puzzle.
+   - The prompt lists the final answers of every other puzzle and draft (and their themes when there is no seed) so they are not repeated.
+2. **Critique** (runs automatically after each valid draft; rerun with `npm run puzzle:critique -- 2026-11-22`): a second free-tier call acts as a strict editor. It looks for clues with more than one constraint or relying on trivia, clues that remove nothing (also computed locally), a second answer that fits all 10 clues, obvious missing answers, wrong depths and duplicates that should be aliases. It fixes clear-cut issues in the draft, reruns the validator (up to 2 fixes) and writes `drafts/YYYY-MM-DD.review.md` listing only the judgement calls it left for you. The draft must pass the validator before the critic runs.
+3. **Review:** `npm run review -- 2026-11-22` prints each layer's clue, answers by commonness (with aliases) and what the clue ruled out. Answer `y` to move it to `content/puzzles/`. Edit the JSON first if anything is off: an unfair clue, a missing common answer, a wrong commonness label.
+4. **Validate:** `npm run validate:puzzles` checks every file in `content/puzzles/` (not drafts): the shared validator, file name = date, unique numbers. CI runs it on every push.
+5. Commit the approved puzzle. Delete its `.review.md` once you have settled it.
 
 What reviewers check: early clues are generous; each clue adds one yes/no constraint; no trivia; nothing subjective; layer 10 leaves exactly one answer; common answers are in the pool (pool hits need no AI, and until LLM approval anything else gets "Couldn't check that").
 

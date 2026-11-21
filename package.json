@@ -18,7 +18,8 @@
     "launch:after-hackathon": "node tools/release/cli.ts launch-after-hackathon",
     "puzzle:generate": "node tools/generate-puzzle.ts",
     "validate:puzzles": "node tools/validate-puzzles.ts",
-    "review": "node tools/review.ts"
+    "review": "node tools/review.ts",
+    "puzzle:critique": "node tools/critique-puzzle.ts"
   },
   "engines": {
     "node": ">=24.0.0"

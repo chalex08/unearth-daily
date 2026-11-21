@@ -1,7 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { validatePuzzle } from '../src/shared/puzzle.ts';
 import { puzzle14 } from '../src/shared/fixtures/puzzle-14.ts';
-import { numberFor, toPuzzle, type Draft } from './puzzle-files.ts';
+import {
+  noOpLayers,
+  numberFor,
+  toDraft,
+  toPuzzle,
+  type Draft,
+} from './puzzle-files.ts';
 
 describe('numberFor', () => {
   it('counts days from a known puzzle', () => {
@@ -37,6 +43,18 @@ describe('toPuzzle', () => {
       { canonical: 'kumquat', aliases: ['cumquat'], commonness: 'rare' },
     ]);
     expect(validatePuzzle(p)).toEqual([]);
+  });
+  it('round-trips through toDraft', () => {
+    const p = toPuzzle(draft, 15, '2026-11-22');
+    expect(toDraft(p)).toEqual(draft);
+    expect(toPuzzle(toDraft(puzzle14), 14, puzzle14.date)).toEqual(puzzle14);
+  });
+  it('finds clues that remove nothing', () => {
+    expect(noOpLayers(toPuzzle(draft, 15, '2026-11-22'))).toEqual([
+      3, 4, 5, 6, 8, 9, 10,
+    ]);
+    // Clue 8 ('doesn't contain "orange"') rules out nothing: clue 7 already removed the oranges.
+    expect(noOpLayers(puzzle14)).toEqual([8]);
   });
   it('lets the validator catch a final layer with two answers', () => {
     const two = {
