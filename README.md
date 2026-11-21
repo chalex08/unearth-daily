@@ -1,30 +1,67 @@
-## Devvit Phaser Starter
+# UNEARTH
 
-A starter to build web applications on Reddit's developer platform
+UNEARTH is a daily word game that runs inside a Reddit post: one new puzzle a day, the same for everyone, with scores players can compare. <!-- TODO: replace with the real one-paragraph pitch from docs/briefing. --> It is built with [Devvit Web](https://developers.reddit.com/docs) and Phaser for Reddit's Game of the Day Hackathon.
 
-- [Devvit](https://developers.reddit.com/): A way to build and deploy immersive games on Reddit
-- [Vite](https://vite.dev/): For compiling the webView
-- [Phaser](https://phaser.io/): 2D game engine
-- [Hono](https://hono.dev/): For backend logic
-- [TypeScript](https://www.typescriptlang.org/): For type safety
+> **Do not publish until after the hackathon.** For the hackathon we only **upload** and **playtest**. Nobody runs `devvit publish`. The publish script is renamed to `launch:after-hackathon` and refuses to run unless you confirm explicitly.
 
-## Getting Started
+## Stack
 
-> Make sure you have Node 22 downloaded on your machine before running!
+- **Client** (`src/client/`): Phaser scenes plus a DOM overlay, built with Vite
+- **Server** (`src/server/`): Hono API routes, game logic, Redis access, AI answer validator
+- **Shared** (`src/shared/`): types and scoring logic used by both client and server
+- **Content** (`content/puzzles/`): daily puzzle JSON files
+- **Tools** (`tools/`): offline Node scripts (puzzle authoring with OpenRouter, validators, release guards) and the TypeScript project configs
+- **Docs** (`docs/`): briefing, plan, terms, privacy
 
-1. Run `npm create devvit@latest --template=phaser`
-2. Go through the installation wizard. You will need to create a Reddit account and connect it to Reddit developers
-3. Copy the command on the success page into your terminal
+## Local setup
+
+Requires Node.js 24.18+ (see `.nvmrc`) and a Reddit account that is connected to [Reddit for Developers](https://developers.reddit.com).
+
+```sh
+git clone git@github.com:chalex08/unearth-daily.git
+cd unearth-daily
+npm install
+npx devvit login
+cp .env.example .env   # then set DEVVIT_APP_NAME and DEVVIT_SUBREDDIT to your own dev lane
+```
+
+Teammates should follow the full first-time steps in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Canonical app vs. dev lanes
+
+`devvit.json` is committed and is the single source of truth: app **`unearth-daily`**, dev subreddit **r/UnearthDaily** (the public demo subreddit). Following Devvit's [Multiple Developers](https://developers.reddit.com/docs/guides/tools/multiple_developers) guide, each developer overrides the CLI target locally in a gitignored `.env`:
+
+| Variable           | Purpose                                   | Example            |
+| ------------------ | ----------------------------------------- | ------------------ |
+| `DEVVIT_APP_NAME`  | the app the CLI uploads and playtests     | `unearth-dev-alex` |
+| `DEVVIT_SUBREDDIT` | where `npm run dev` installs the playtest | `unearth_dev_alex` |
+
+Every `devvit` command reads `.env`. Precedence, highest first: real environment variables, then `.env`, then `devvit.json`. Never edit `devvit.json` to point at your own lane.
 
 ## Commands
 
-- `npm run dev`: Starts a development server where you can develop your application live on Reddit.
-- `npm run build`: Builds your client and server projects
-- `npm run deploy`: Uploads a new version of your app
-- `npm run launch`: Publishes your app for review
-- `npm run login`: Logs your CLI into Reddit
-- `npm run type-check`: Type checks, lints, and prettifies your app
+| Command                          | What it does                                                                                                                    |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run dev`                    | Playtest (`devvit playtest`) on your dev app and subreddit, with live reload. Prints the playtest URL.                          |
+| `npm run build`                  | Build client and server into `dist/`                                                                                            |
+| `npm run typecheck`              | TypeScript (strict) across all projects                                                                                         |
+| `npm run lint`                   | ESLint                                                                                                                          |
+| `npm run test`                   | Vitest unit tests                                                                                                               |
+| `npm run format`                 | Prettier                                                                                                                        |
+| `npm run upload:dev`             | Upload your **dev** app. Refuses if the target would be `unearth-daily`.                                                        |
+| `npm run deploy:prod`            | Upload the **canonical** `unearth-daily` app (app owner only). Refuses if `DEVVIT_APP_NAME` is anything else. Does not publish. |
+| `npm run launch:after-hackathon` | Publishes for review. **Not before the hackathon ends.** Refuses unless you pass `-- --confirm-hackathon-is-over`.              |
 
-## Credits
+Uploading puts a private version in the App Directory; only you can see it, and it can only be installed on subreddits with fewer than 200 members. Publishing is what submits the app for Reddit review. We don't publish during the hackathon.
 
-Thanks to the Phaser team for [providing a great template](https://github.com/phaserjs/template-vite-ts)!
+## Secrets
+
+- **Runtime (Gemini):** the key is a Devvit secret app setting (`geminiApiKey` in `devvit.json`, `isSecret: true`). It is never stored in code or in `.env`. Secrets belong to one app, so each dev app needs its own key:
+  ```sh
+  npm run dev                               # the app must be installed at least once first
+  npx devvit settings set geminiApiKey      # targets the app named by DEVVIT_APP_NAME
+  ```
+  The app owner sets the key for `unearth-daily` with `DEVVIT_APP_NAME=unearth-daily` set in their shell.
+- **Offline tools (OpenRouter):** `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` go in your gitignored `.env`. Only the scripts in `tools/` use them.
+
+Never commit `.env` or any key.
