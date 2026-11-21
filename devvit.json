@@ -45,6 +45,13 @@
         "location": "subreddit",
         "forUserType": "moderator",
         "endpoint": "/internal/menu/seed-fake-counts"
+      },
+      {
+        "label": "Reset my run (dev)",
+        "description": "Deletes your own run for today so you can play again. Refuses on the canonical app.",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/reset-my-run"
       }
     ]
   },
