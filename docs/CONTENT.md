@@ -1,40 +1,27 @@
 # Content pipeline
 
-Daily puzzles live in `content/puzzles/YYYY-MM-DD.json` (format: `Puzzle` in [src/shared/puzzle.ts](../src/shared/puzzle.ts)). They are drafted offline with the Gemini free tier, reviewed by hand, then committed. The server bundles them at build time; the client never sees them.
+Daily puzzles live in `content/puzzles/YYYY-MM-DD.json` (format: `Puzzle` in [src/shared/puzzle.ts](../src/shared/puzzle.ts)). Claude writes them in a Claude Code session with the `/write-puzzle` project skill; you review them by hand, then commit. The server bundles them at build time; the client never sees them. No API key is involved: Gemini (paid tier) is used only for in-game answer checking.
 
 ## The data rule (SPEC §5.3)
 
-The scripts in `tools/` use the **Gemini free tier**, which lets Google use what we send to improve its products. So:
+No AI tool or session used for content may ever receive Reddit data:
 
-- Their **only inputs** are seed themes you write and our own puzzle files.
-- They **never** read Redis, the Reddit API, player answers, the non-pool answer log, answer counts, usernames or anything else that came from Reddit. Don't paste any of that into a seed either.
-- Each script starts with a guard comment saying so. Keep it there.
-- The Devvit server never uses the free key; its only key is the paid `geminiApiKey` secret.
+- Its **only inputs** are seed themes you write and our own puzzle files.
+- Never paste or point it at Redis, the Reddit API, player answers, the non-pool answer log, answer counts, usernames or anything else that came from Reddit. Not in a seed theme either.
+- Adding answers to pools from the non-pool answer log is **manual only**.
+- The scripts in `tools/` start with a guard comment saying so. Keep it there.
 
-## Setup
+## How to write puzzles
 
-Put these in `.env` (gitignored; never commit or print it):
+1. **Write:** in Claude Code, run `/write-puzzle 2026-11-27` (optionally add a seed theme: `/write-puzzle 2026-11-27 Name something round`). It writes `content/puzzles/drafts/2026-11-27.json`, which passes the validator, and `drafts/2026-11-27.review.md` with the judgement calls for you to check.
+2. **Review:** `npm run review -- 2026-11-27` prints each layer's clue, answers by commonness (with aliases) and what each clue ruled out. Settle the points in the `.review.md`, editing the JSON if needed.
+3. **Approve:** answer `y` to move the draft to `content/puzzles/`, run `npm run validate:puzzles`, delete the `.review.md` and commit.
 
-```
-GEMINI_FREE_API_KEY=...   # from a Google project with NO billing
-GEMINI_FREE_MODEL=gemini-3.8-flash
-```
-
-`gemini-3.8-flash` is on the free tier (pricing page, checked 21 Nov 2026). Free-tier rate limits are per project and are only shown in AI Studio (aistudio.google.com/rate-limit); daily quotas reset at midnight Pacific. **Budget:** the free tier allows 20 `gemini-3.8-flash` requests per day (per project, per model; seen in a 429 on 21 Nov 2026). A draft plus its critique is at least 2 requests, up to 6 with validator fixes, and failed attempts may count. Run one call at a time: parallel calls mostly earn 503s. When the daily quota is gone the script stops with "quota exhausted, retry in about Nh" instead of sleeping. A draft takes several minutes. The script streams the response (a plain call hits Node's 300s fetch timeout while the model thinks) and retries network errors, 429 and 5xx up to 6 times with exponential backoff, using the server's `retryDelay` when it gives one. If a date still fails, run it again.
-
-## Workflow
-
-1. **Draft:** `npm run puzzle:generate -- --date 2026-11-22 --seed "Name something round"`
-   - `--seed` is optional (a theme or first clue). The puzzle number comes from the date, counting from the committed puzzles.
-   - The model returns 10 clues and every answer with its depth (the deepest layer it survives); the script expands that into one pool per layer and runs the shared validator. If validation fails, it sends the errors back and asks for a fix, up to 2 times.
-   - Output: `content/puzzles/drafts/YYYY-MM-DD.json`. It is written even when still invalid (the script exits non-zero), so you can fix it by hand.
-   - The prompt lists the final answers of every other puzzle and draft (and their themes when there is no seed) so they are not repeated.
-2. **Critique** (runs automatically after each valid draft; rerun with `npm run puzzle:critique -- 2026-11-22`): a second free-tier call acts as a strict editor. It looks for clues with more than one constraint or relying on trivia, clues that remove nothing (also computed locally), a second answer that fits all 10 clues, obvious missing answers, wrong depths and duplicates that should be aliases. It fixes clear-cut issues in the draft, reruns the validator (up to 2 fixes) and writes `drafts/YYYY-MM-DD.review.md` listing only the judgement calls it left for you. The draft must pass the validator before the critic runs.
-3. **Review:** `npm run review -- 2026-11-22` prints each layer's clue, answers by commonness (with aliases) and what the clue ruled out. Answer `y` to move it to `content/puzzles/`. Edit the JSON first if anything is off: an unfair clue, a missing common answer, a wrong commonness label.
-4. **Validate:** `npm run validate:puzzles` checks every file in `content/puzzles/` (not drafts): the shared validator, file name = date, unique numbers. CI runs it on every push.
-5. Commit the approved puzzle. Delete its `.review.md` once you have settled it.
+What the skill does: reads the existing puzzles so it doesn't repeat a final answer, theme or first clue (`npm run puzzle:taken`); picks the final answer first and builds the 10 clues backwards, broad to narrow, one testable constraint each; writes generous pools (100+ answers at layer 1) as a depth list (`drafts/<date>.ladder.json`, gitignored) that `npm run puzzle:build -- <date>` expands into per-layer pools and checks (validator, clues that remove nothing, pool sizes); then a fresh-context critic subagent sees only the clues and looks for a second final answer and obvious answers missing from the pools.
 
 What reviewers check: early clues are generous; each clue adds one yes/no constraint; no trivia; nothing subjective; layer 10 leaves exactly one answer; common answers are in the pool (pool hits need no AI, and until LLM approval anything else gets "Couldn't check that").
+
+`npm run validate:puzzles` checks every file in `content/puzzles/` (not drafts): the shared validator, file name = date, unique numbers. CI runs it on every push.
 
 ## Fake answer counts for dev installs
 

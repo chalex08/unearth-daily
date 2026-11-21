@@ -12,10 +12,10 @@ Every session follows these rules. Repo layout, commands and Devvit client limit
 
 - Never run `devvit publish`, `npm run launch:after-hackathon`, or anything else that submits the app for review. Upload and playtest only (`npm run dev`, `npm run upload:dev`; `npm run deploy:prod` uploads the canonical app and does not publish).
 - Never print, cat, grep or read the contents of `.env` or any other secret. When searching the repo, exclude `.env*` files.
-- Never commit secrets. Offline keys (`GEMINI_FREE_API_KEY`, `GEMINI_FREE_MODEL`) live in `.env`, which is gitignored. The runtime AI key is the Devvit secret setting `geminiApiKey`.
-- Never send Reddit data of any kind to the free-tier Gemini key (`GEMINI_FREE_API_KEY`): no player answers, no SPEC §4.1 non-pool answer log, no answer counts, no usernames, nothing read from Redis or the Reddit API. Free-tier scripts read only hand-written seed themes and our own puzzle files. (SPEC §5.3)
-- Never let the Devvit server use any key but the paid-tier one (`geminiApiKey`, from a billed Google project, never the free one).
-- Never send the non-pool answer log to AI except with the paid key; reviewing it and adding answers to pools is otherwise manual.
+- Never commit secrets. The only AI key is the runtime Devvit secret setting `geminiApiKey` (Gemini paid tier, used only for in-game answer checking).
+- Never give Reddit data of any kind to an AI tool or session used for content, including this one and `/write-puzzle`: no player answers, no SPEC §4.1 non-pool answer log, no answer counts, no usernames, nothing read from Redis or the Reddit API. Content work reads only hand-written seed themes and our own puzzle files. (SPEC §5.3)
+- Never let the Devvit server use any key but the paid-tier one (`geminiApiKey`, from a billed Google project, never a free-tier one).
+- Never send the non-pool answer log to any AI; reviewing it and adding answers to pools is manual only.
 - Never make play depend on AI: until Devvit grants LLM approval, pool answers validate without AI and unknown answers get "Couldn't check that, try again" with no pickaxe lost.
 - Never send future clues or answer pools to the client.
 
@@ -28,6 +28,7 @@ Every session follows these rules. Repo layout, commands and Devvit client limit
 
 - Game logic and server code: use the **ponytail** skill. The simplest thing that works, no speculative abstractions, unused options or extra layers.
 - Any DOM UI, visuals or animation: use the **Hallmark** skill plus the **frontend-design** skill. Do not use ponytail on visual or animation work. Hallmark decides visual and UX choices.
+- Writing a daily puzzle: use the **write-puzzle** project skill (`/write-puzzle <YYYY-MM-DD> [seed theme]`).
 - Ponytail never removes accessibility, focus styles, loading/empty/error states, responsive layout or motion.
 
 ## End of every session

@@ -31,11 +31,11 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 3. Content pipeline + seed data — Mon 23 Nov
 
-- [x] `tools/` script that drafts a puzzle with the Gemini free tier (`GEMINI_FREE_API_KEY`, `GEMINI_FREE_MODEL` from `.env`) from a hand-written seed theme into `content/puzzles/` as a draft for review. Its only inputs are seed themes and our own puzzle files: no Reddit data (SPEC §5.3).
+- [x] Puzzle drafting: the `/write-puzzle` Claude Code skill (replaced the Gemini free-tier script on 21 Nov) writes a puzzle from an optional hand-written seed theme into `content/puzzles/drafts/` for review, checked by an independent critic subagent. Its only inputs are seed themes and our own puzzle files: no Reddit data (SPEC §5.3).
 - [x] Validator: 10 clues, a pool for each layer with aliases and commonness, exactly one answer at layer 10, and every answer at layer N also valid for layers 1..N−1.
-- [ ] Puzzle #14 seeded by hand (done: `content/puzzles/2026-11-21.json`), plus at least 6 more reviewed puzzles.
+- [ ] Puzzle #14 seeded by hand (done: `content/puzzles/2026-11-21.json`), plus at least 6 more reviewed puzzles written with `/write-puzzle`. The five Gemini drafts (22–26 Nov) have long, multi-constraint clues; rewrite them with the skill.
 - [x] Dev-only fake answer counts (mod menu item), see [CONTENT.md](CONTENT.md).
-- **Done when:** the validator passes on every committed puzzle in CI, nothing in `src/` reads `GEMINI_FREE_*`, and no `tools/` script reads Redis, the Reddit API or the answer log.
+- **Done when:** the validator passes on every committed puzzle in CI, nothing in `src/` references a free-tier key (the `GEMINI_FREE` check in CI), and no `tools/` script or content skill reads Redis, the Reddit API or the answer log.
 
 ### 4. Server + AI judge — Tue 24 – Wed 25 Nov
 
@@ -92,7 +92,7 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 - [ ] Accessibility, performance and Devvit-rules audits; data deletion on account deletion; README rewritten (non-template).
 - [ ] Terms and Privacy published and linked in the app details form (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app.
-- [ ] AI data audit (SPEC §5.3): the canonical app's `geminiApiKey` is from the billed project; `GEMINI_FREE_*` is used only by `tools/` scripts that read seed themes and puzzle files; no Reddit data reached the free tier.
-- [ ] Enough reviewed puzzles (drafted with the free tier from seed themes, reviewed by hand) queued to cover every day through judging (the judging window isn't in the briefing; aim for 31 Dec).
+- [ ] AI data audit (SPEC §5.3): the canonical app's `geminiApiKey` is from the billed project; no free-tier key exists in the project; no Reddit data reached any content-authoring AI session.
+- [ ] Enough reviewed puzzles (written with `/write-puzzle`, reviewed by hand) queued to cover every day through judging (the judging window isn't in the briefing; aim for 31 Dec).
 - [ ] Canonical app uploaded with `npm run deploy:prod` (upload only, **never publish**); public demo post live in r/UnearthDaily; demo video if required.
 - **Done when:** a stranger can open the demo post on mobile, play, share and come back tomorrow, and every item in SPEC §1 is satisfied.
