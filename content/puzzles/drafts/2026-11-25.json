@@ -1,0 +1,1436 @@
+{
+  "number": 18,
+  "date": "2026-11-25",
+  "layers": [
+    {
+      "clue": "Name a sport",
+      "pool": [
+        {
+          "canonical": "swimming",
+          "aliases": ["swim"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "running",
+          "aliases": ["jogging", "track"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "boxing",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "wrestling",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cycling",
+          "aliases": ["road cycling", "track cycling"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "skiing",
+          "aliases": ["ski", "downhill skiing", "cross-country skiing"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "snowboarding",
+          "aliases": ["snowboard"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "surfing",
+          "aliases": ["surf"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "skateboarding",
+          "aliases": ["skateboard", "skating"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "gymnastics",
+          "aliases": ["gym"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "diving",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rowing",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sailing",
+          "aliases": ["yachting"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "archery",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fencing",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "judo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "karate",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taekwondo",
+          "aliases": ["tae kwon do"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "darts",
+          "aliases": ["dart"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ice hockey",
+          "aliases": ["hockey on ice"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "badminton",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "curling",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "figure skating",
+          "aliases": ["ice skating"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "speed skating",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bobsleigh",
+          "aliases": ["bobsled"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "luge",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "skeleton",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "triathlon",
+          "aliases": ["ironman"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "marathon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "horse racing",
+          "aliases": ["horseracing"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "show jumping",
+          "aliases": ["showjumping", "equestrian", "dressage"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "motor racing",
+          "aliases": ["formula 1", "f1", "formula one", "motorsport", "nascar"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bmx",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rock climbing",
+          "aliases": ["climbing", "bouldering"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kayaking",
+          "aliases": ["canoeing", "canoe", "kayak"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "weightlifting",
+          "aliases": ["powerlifting", "bodybuilding"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "javelin",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "shot put",
+          "aliases": ["shotput"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "discus",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hammer throw",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "long jump",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "high jump",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pole vault",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hurdles",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sprinting",
+          "aliases": ["sprint", "100m"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "decathlon",
+          "aliases": ["heptathlon"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "athletics",
+          "aliases": ["track and field"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ultimate frisbee",
+          "aliases": ["ultimate", "frisbee"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sumo",
+          "aliases": ["sumo wrestling"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mma",
+          "aliases": ["mixed martial arts", "ufc"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kickboxing",
+          "aliases": ["muay thai"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "skydiving",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mountain biking",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water skiing",
+          "aliases": ["waterskiing", "wakeboarding"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "windsurfing",
+          "aliases": ["kitesurfing"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trampolining",
+          "aliases": ["trampoline"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "parkour",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fishing",
+          "aliases": ["angling"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chess",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "esports",
+          "aliases": ["e-sports", "gaming"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cheerleading",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "artistic swimming",
+          "aliases": ["synchronised swimming", "synchronized swimming"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "karting",
+          "aliases": ["go karting"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roller derby",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kabaddi",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "paddleboarding",
+          "aliases": ["paddle boarding", "sup"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orienteering",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snooker",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tennis",
+          "aliases": ["lawn tennis"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "golf",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "table tennis",
+          "aliases": ["ping pong", "ping-pong"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bowling",
+          "aliases": ["ten pin bowling", "tenpin bowling", "ten-pin bowling"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pool",
+          "aliases": ["eight ball", "8 ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "billiards",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "squash",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "croquet",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bocce",
+          "aliases": ["boules", "petanque", "pétanque"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lawn bowls",
+          "aliases": ["bowls"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pickleball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "padel",
+          "aliases": ["padel tennis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "racquetball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mini golf",
+          "aliases": ["minigolf", "crazy golf", "putt putt"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beach volleyball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "polo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sepak takraw",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jai alai",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "footvolley",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baseball",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cricket",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "softball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "field hockey",
+          "aliases": ["hockey"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lacrosse",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rounders",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hurling",
+          "aliases": ["camogie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bandy",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shinty",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "floorball",
+          "aliases": ["unihockey"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roller hockey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rugby",
+          "aliases": ["rugby union", "rugby league", "rugger", "rugby sevens"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "canadian football",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "american football",
+          "aliases": ["gridiron", "nfl"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "australian rules football",
+          "aliases": ["aussie rules", "afl", "footy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "soccer",
+          "aliases": ["football", "association football"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gaelic football",
+          "aliases": ["gaelic"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kickball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "handball",
+          "aliases": ["team handball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water polo",
+          "aliases": ["waterpolo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "futsal",
+          "aliases": ["indoor soccer", "five-a-side"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beach soccer",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "netball",
+          "aliases": ["net ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…played with a ball",
+      "pool": [
+        {
+          "canonical": "tennis",
+          "aliases": ["lawn tennis"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "golf",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "table tennis",
+          "aliases": ["ping pong", "ping-pong"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bowling",
+          "aliases": ["ten pin bowling", "tenpin bowling", "ten-pin bowling"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pool",
+          "aliases": ["eight ball", "8 ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "billiards",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "squash",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "croquet",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bocce",
+          "aliases": ["boules", "petanque", "pétanque"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lawn bowls",
+          "aliases": ["bowls"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pickleball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "padel",
+          "aliases": ["padel tennis"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "racquetball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mini golf",
+          "aliases": ["minigolf", "crazy golf", "putt putt"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beach volleyball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "polo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sepak takraw",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jai alai",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "footvolley",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wallyball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baseball",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cricket",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "softball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "field hockey",
+          "aliases": ["hockey"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lacrosse",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rounders",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hurling",
+          "aliases": ["camogie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bandy",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shinty",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "floorball",
+          "aliases": ["unihockey"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roller hockey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rugby",
+          "aliases": ["rugby union", "rugby league", "rugger", "rugby sevens"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "canadian football",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "american football",
+          "aliases": ["gridiron", "nfl"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "australian rules football",
+          "aliases": ["aussie rules", "afl", "footy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "soccer",
+          "aliases": ["football", "association football"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gaelic football",
+          "aliases": ["gaelic"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kickball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "handball",
+          "aliases": ["team handball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water polo",
+          "aliases": ["waterpolo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "futsal",
+          "aliases": ["indoor soccer", "five-a-side"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beach soccer",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "netball",
+          "aliases": ["net ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…with five or more players per side",
+      "pool": [
+        {
+          "canonical": "baseball",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cricket",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "softball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "field hockey",
+          "aliases": ["hockey"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lacrosse",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rounders",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hurling",
+          "aliases": ["camogie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bandy",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "shinty",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "floorball",
+          "aliases": ["unihockey"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roller hockey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rugby",
+          "aliases": ["rugby union", "rugby league", "rugger", "rugby sevens"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "canadian football",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "american football",
+          "aliases": ["gridiron", "nfl"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "australian rules football",
+          "aliases": ["aussie rules", "afl", "footy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "soccer",
+          "aliases": ["football", "association football"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gaelic football",
+          "aliases": ["gaelic"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kickball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "handball",
+          "aliases": ["team handball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water polo",
+          "aliases": ["waterpolo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "futsal",
+          "aliases": ["indoor soccer", "five-a-side"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beach soccer",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "netball",
+          "aliases": ["net ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…played without a stick or bat",
+      "pool": [
+        {
+          "canonical": "rugby",
+          "aliases": ["rugby union", "rugby league", "rugger", "rugby sevens"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "canadian football",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "american football",
+          "aliases": ["gridiron", "nfl"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "australian rules football",
+          "aliases": ["aussie rules", "afl", "footy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "soccer",
+          "aliases": ["football", "association football"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gaelic football",
+          "aliases": ["gaelic"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kickball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "handball",
+          "aliases": ["team handball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water polo",
+          "aliases": ["waterpolo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "futsal",
+          "aliases": ["indoor soccer", "five-a-side"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beach soccer",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "netball",
+          "aliases": ["net ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…played with a round ball",
+      "pool": [
+        {
+          "canonical": "soccer",
+          "aliases": ["football", "association football"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gaelic football",
+          "aliases": ["gaelic"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kickball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fistball",
+          "aliases": ["faustball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "handball",
+          "aliases": ["team handball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "water polo",
+          "aliases": ["waterpolo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "futsal",
+          "aliases": ["indoor soccer", "five-a-side"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beach soccer",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "netball",
+          "aliases": ["net ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…played on a court",
+      "pool": [
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "handball",
+          "aliases": ["team handball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "futsal",
+          "aliases": ["indoor soccer", "five-a-side"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "netball",
+          "aliases": ["net ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…played without a goalkeeper",
+      "pool": [
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "basketball",
+          "aliases": ["basket ball", "hoops", "wheelchair basketball"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…with six or more players per side",
+      "pool": [
+        {
+          "canonical": "korfball",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodgeball",
+          "aliases": ["dodge ball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tchoukball",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…played over a net",
+      "pool": [
+        {
+          "canonical": "throwball",
+          "aliases": ["throw ball"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "newcomb ball",
+          "aliases": ["newcomb"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…where you can't catch the ball",
+      "pool": [
+        {
+          "canonical": "volleyball",
+          "aliases": [
+            "volley ball",
+            "indoor volleyball",
+            "sitting volleyball",
+            "nine-man volleyball",
+            "water volleyball"
+          ],
+          "commonness": "common"
+        }
+      ]
+    }
+  ]
+}

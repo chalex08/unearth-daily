@@ -1,0 +1,1615 @@
+{
+  "number": 17,
+  "date": "2026-11-24",
+  "layers": [
+    {
+      "clue": "Name something with wheels",
+      "pool": [
+        {
+          "canonical": "suitcase",
+          "aliases": [
+            "suitcases",
+            "luggage",
+            "wheelie suitcase",
+            "rolling suitcase"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "shopping trolley",
+          "aliases": ["shopping cart", "shopping trolleys", "shopping carts"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "wheelbarrow",
+          "aliases": ["wheel barrow", "barrow"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "office chair",
+          "aliases": ["desk chair", "swivel chair"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lawnmower",
+          "aliases": ["lawn mower", "mower"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "vacuum cleaner",
+          "aliases": ["vacuum", "hoover"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "robot vacuum",
+          "aliases": ["roomba"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pizza cutter",
+          "aliases": ["pizza wheel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toy car",
+          "aliases": ["toy cars", "toy truck", "matchbox car"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "remote control car",
+          "aliases": ["rc car", "remote controlled car"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "toy train",
+          "aliases": ["train set"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelie bin",
+          "aliases": ["bin", "rubbish bin", "trash can", "garbage can"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hand truck",
+          "aliases": ["dolly", "sack truck"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cannon",
+          "aliases": ["cannons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trailer",
+          "aliases": ["trailers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "caravan",
+          "aliases": ["caravans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "horsebox",
+          "aliases": ["horse box", "horse trailer"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf trolley",
+          "aliases": ["golf trolly"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hose reel",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "car",
+          "aliases": [
+            "cars",
+            "automobile",
+            "sports car",
+            "convertible",
+            "hatchback"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bus",
+          "aliases": [
+            "buses",
+            "double decker",
+            "double-decker",
+            "coach",
+            "minibus",
+            "school bus"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "truck",
+          "aliases": ["trucks", "lorry", "lorries", "pickup truck", "pickup"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "train",
+          "aliases": [
+            "trains",
+            "steam train",
+            "bullet train",
+            "subway",
+            "underground",
+            "metro"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tram",
+          "aliases": ["trams", "streetcar"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "airplane",
+          "aliases": ["aeroplane", "plane", "planes", "jet", "aircraft"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taxi",
+          "aliases": ["cab", "taxis", "taxicab"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ambulance",
+          "aliases": ["ambulances"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fire engine",
+          "aliases": ["fire truck", "fire engines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "police car",
+          "aliases": ["cop car", "police cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "limousine",
+          "aliases": ["limo", "limos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "van",
+          "aliases": ["vans", "minivan", "ice cream van"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "suv",
+          "aliases": ["jeep", "4x4"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tractor",
+          "aliases": ["tractors"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "monster truck",
+          "aliases": ["monster trucks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "race car",
+          "aliases": ["racing car", "f1 car", "formula 1 car", "racecar"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "camper van",
+          "aliases": ["campervan", "motorhome", "rv"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollercoaster",
+          "aliases": ["roller coaster"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ferris wheel",
+          "aliases": ["big wheel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garbage truck",
+          "aliases": ["bin lorry", "dustcart", "rubbish truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tow truck",
+          "aliases": ["breakdown truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dump truck",
+          "aliases": ["dumper truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cement mixer",
+          "aliases": ["concrete mixer"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "digger",
+          "aliases": ["excavator"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bulldozer",
+          "aliases": ["bulldozers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "steamroller",
+          "aliases": ["steam roller", "road roller"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "combine harvester",
+          "aliases": ["combine"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "horse-drawn carriage",
+          "aliases": ["carriage", "horse and carriage", "horse and cart"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stagecoach",
+          "aliases": ["stage coach"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wagon",
+          "aliases": ["covered wagon", "wagons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hearse",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dune buggy",
+          "aliases": ["beach buggy"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snowplough",
+          "aliases": ["snowplow"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "motorbike",
+          "aliases": ["motorcycle", "motorbikes", "motorcycles", "dirt bike"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "moped",
+          "aliases": ["mopeds", "vespa", "motor scooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric scooter",
+          "aliases": ["e-scooter", "escooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mobility scooter",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "segway",
+          "aliases": ["segways"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hoverboard",
+          "aliases": ["hoverboards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "go-kart",
+          "aliases": ["go kart", "gokart", "karting", "go-karts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quad bike",
+          "aliases": ["quad", "atv", "four wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf cart",
+          "aliases": ["golf buggy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ride-on mower",
+          "aliases": ["ride on mower", "ride-on lawnmower", "lawn tractor"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bumper car",
+          "aliases": ["bumper cars", "dodgem", "dodgems"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric bike",
+          "aliases": ["e-bike", "ebike"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tuk-tuk",
+          "aliases": ["tuk tuk", "auto rickshaw"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rickshaw",
+          "aliases": ["rickshaws"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "forklift",
+          "aliases": ["fork lift"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric wheelchair",
+          "aliases": ["powered wheelchair"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
+          "aliases": [
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chariot",
+          "aliases": ["chariots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "piano",
+          "aliases": ["pianos"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "barbecue",
+          "aliases": ["bbq", "grill"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "baby walker",
+          "aliases": ["walker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pushcart",
+          "aliases": ["cart", "handcart", "hand cart"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tea trolley",
+          "aliases": ["drinks trolley", "serving cart"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "toolbox",
+          "aliases": ["tool box"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cooler",
+          "aliases": ["cool box", "coolbox", "esky"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "airport trolley",
+          "aliases": ["luggage trolley", "luggage cart"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "helicopter",
+          "aliases": ["helicopters"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ice resurfacer",
+          "aliases": ["zamboni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cable car",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "monorail",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kids' electric car",
+          "aliases": ["power wheels", "electric toy car"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trolley",
+          "aliases": ["trolleys"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "electric unicycle",
+          "aliases": ["onewheel"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that carries a person",
+      "pool": [
+        {
+          "canonical": "car",
+          "aliases": [
+            "cars",
+            "automobile",
+            "sports car",
+            "convertible",
+            "hatchback"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bus",
+          "aliases": [
+            "buses",
+            "double decker",
+            "double-decker",
+            "coach",
+            "minibus",
+            "school bus"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "truck",
+          "aliases": ["trucks", "lorry", "lorries", "pickup truck", "pickup"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "train",
+          "aliases": [
+            "trains",
+            "steam train",
+            "bullet train",
+            "subway",
+            "underground",
+            "metro"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tram",
+          "aliases": ["trams", "streetcar"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "airplane",
+          "aliases": ["aeroplane", "plane", "planes", "jet", "aircraft"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taxi",
+          "aliases": ["cab", "taxis", "taxicab"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ambulance",
+          "aliases": ["ambulances"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fire engine",
+          "aliases": ["fire truck", "fire engines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "police car",
+          "aliases": ["cop car", "police cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "limousine",
+          "aliases": ["limo", "limos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "van",
+          "aliases": ["vans", "minivan", "ice cream van"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "suv",
+          "aliases": ["jeep", "4x4"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tractor",
+          "aliases": ["tractors"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "monster truck",
+          "aliases": ["monster trucks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "race car",
+          "aliases": ["racing car", "f1 car", "formula 1 car", "racecar"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "camper van",
+          "aliases": ["campervan", "motorhome", "rv"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollercoaster",
+          "aliases": ["roller coaster"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ferris wheel",
+          "aliases": ["big wheel"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garbage truck",
+          "aliases": ["bin lorry", "dustcart", "rubbish truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tow truck",
+          "aliases": ["breakdown truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dump truck",
+          "aliases": ["dumper truck"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cement mixer",
+          "aliases": ["concrete mixer"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "digger",
+          "aliases": ["excavator"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bulldozer",
+          "aliases": ["bulldozers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "steamroller",
+          "aliases": ["steam roller", "road roller"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "combine harvester",
+          "aliases": ["combine"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "horse-drawn carriage",
+          "aliases": ["carriage", "horse and carriage", "horse and cart"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stagecoach",
+          "aliases": ["stage coach"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wagon",
+          "aliases": ["covered wagon", "wagons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hearse",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dune buggy",
+          "aliases": ["beach buggy"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "snowplough",
+          "aliases": ["snowplow"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "motorbike",
+          "aliases": ["motorcycle", "motorbikes", "motorcycles", "dirt bike"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "moped",
+          "aliases": ["mopeds", "vespa", "motor scooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric scooter",
+          "aliases": ["e-scooter", "escooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mobility scooter",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "segway",
+          "aliases": ["segways"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hoverboard",
+          "aliases": ["hoverboards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "go-kart",
+          "aliases": ["go kart", "gokart", "karting", "go-karts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quad bike",
+          "aliases": ["quad", "atv", "four wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf cart",
+          "aliases": ["golf buggy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ride-on mower",
+          "aliases": ["ride on mower", "ride-on lawnmower", "lawn tractor"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bumper car",
+          "aliases": ["bumper cars", "dodgem", "dodgems"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric bike",
+          "aliases": ["e-bike", "ebike"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tuk-tuk",
+          "aliases": ["tuk tuk", "auto rickshaw"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rickshaw",
+          "aliases": ["rickshaws"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "forklift",
+          "aliases": ["fork lift"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric wheelchair",
+          "aliases": ["powered wheelchair"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
+          "aliases": [
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chariot",
+          "aliases": ["chariots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "helicopter",
+          "aliases": ["helicopters"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ice resurfacer",
+          "aliases": ["zamboni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cable car",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "monorail",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kids' electric car",
+          "aliases": ["power wheels", "electric toy car"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "electric unicycle",
+          "aliases": ["onewheel"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's smaller than a car",
+      "pool": [
+        {
+          "canonical": "motorbike",
+          "aliases": ["motorcycle", "motorbikes", "motorcycles", "dirt bike"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "moped",
+          "aliases": ["mopeds", "vespa", "motor scooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric scooter",
+          "aliases": ["e-scooter", "escooter"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mobility scooter",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "segway",
+          "aliases": ["segways"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hoverboard",
+          "aliases": ["hoverboards"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "go-kart",
+          "aliases": ["go kart", "gokart", "karting", "go-karts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quad bike",
+          "aliases": ["quad", "atv", "four wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "golf cart",
+          "aliases": ["golf buggy"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ride-on mower",
+          "aliases": ["ride on mower", "ride-on lawnmower", "lawn tractor"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bumper car",
+          "aliases": ["bumper cars", "dodgem", "dodgems"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric bike",
+          "aliases": ["e-bike", "ebike"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tuk-tuk",
+          "aliases": ["tuk tuk", "auto rickshaw"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rickshaw",
+          "aliases": ["rickshaws"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "forklift",
+          "aliases": ["fork lift"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "electric wheelchair",
+          "aliases": ["powered wheelchair"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
+          "aliases": [
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chariot",
+          "aliases": ["chariots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' electric car",
+          "aliases": ["power wheels", "electric toy car"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "electric unicycle",
+          "aliases": ["onewheel"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that has no motor",
+      "pool": [
+        {
+          "canonical": "wheelchair",
+          "aliases": ["wheelchairs", "wheel chair"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pram",
+          "aliases": [
+            "stroller",
+            "pushchair",
+            "buggy",
+            "baby carriage",
+            "prams"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hospital bed",
+          "aliases": ["gurney", "stretcher"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chariot",
+          "aliases": ["chariots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kids' wagon",
+          "aliases": ["red wagon", "toy wagon", "radio flyer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soapbox car",
+          "aliases": ["soapbox", "billy cart", "gravity racer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that its rider powers with their legs",
+      "pool": [
+        {
+          "canonical": "skateboard",
+          "aliases": ["skateboards", "longboard", "skate board"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scooter",
+          "aliases": ["kick scooter", "scooters", "razor scooter"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "roller skates",
+          "aliases": ["roller skate", "rollerskates", "skates"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rollerblades",
+          "aliases": ["rollerblade", "inline skates", "roller blades"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "heelys",
+          "aliases": ["heelies", "wheelie shoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balance bike",
+          "aliases": ["balance bikes", "strider"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has pedals",
+      "pool": [
+        {
+          "canonical": "tricycle",
+          "aliases": ["trike", "tricycles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedal car",
+          "aliases": ["pedal cars"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pedicab",
+          "aliases": ["cycle rickshaw", "bike taxi"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "quadricycle",
+          "aliases": ["pedal quad"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has fewer than three wheels",
+      "pool": [
+        {
+          "canonical": "tandem",
+          "aliases": ["tandem bike", "tandem bicycle", "bicycle built for two"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…built for one rider",
+      "pool": [
+        {
+          "canonical": "penny-farthing",
+          "aliases": ["penny farthing", "high wheeler"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…with no giant front wheel",
+      "pool": [
+        {
+          "canonical": "bike",
+          "aliases": [
+            "bicycle",
+            "bikes",
+            "bicycles",
+            "push bike",
+            "pushbike",
+            "bmx",
+            "mountain bike",
+            "road bike",
+            "racing bike"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has no handlebars",
+      "pool": [
+        {
+          "canonical": "unicycle",
+          "aliases": [
+            "unicycles",
+            "uni cycle",
+            "giraffe unicycle",
+            "muni",
+            "ultimate wheel"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    }
+  ]
+}

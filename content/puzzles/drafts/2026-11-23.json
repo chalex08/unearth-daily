@@ -1,0 +1,2156 @@
+{
+  "number": 16,
+  "date": "2026-11-23",
+  "layers": [
+    {
+      "clue": "Name a food",
+      "pool": [
+        {
+          "canonical": "apple",
+          "aliases": ["apples"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "banana",
+          "aliases": ["bananas"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "orange",
+          "aliases": ["oranges"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "strawberry",
+          "aliases": ["strawberries"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "grapes",
+          "aliases": ["grape"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "watermelon",
+          "aliases": ["watermelons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mango",
+          "aliases": ["mangoes", "mangos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pineapple",
+          "aliases": ["pineapples"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peach",
+          "aliases": ["peaches"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pear",
+          "aliases": ["pears"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cherry",
+          "aliases": ["cherries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "blueberry",
+          "aliases": ["blueberries"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "avocado",
+          "aliases": ["avocados"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "salad",
+          "aliases": ["salads", "caesar salad"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sandwich",
+          "aliases": ["sandwiches", "sarnie"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sushi",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ice cream",
+          "aliases": ["icecream", "gelato"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "yogurt",
+          "aliases": ["yoghurt", "yogurts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cheese",
+          "aliases": ["cheddar"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "chocolate",
+          "aliases": ["chocolates"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cake",
+          "aliases": ["cakes", "birthday cake", "chocolate cake"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cookie",
+          "aliases": ["cookies", "biscuit", "biscuits"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cereal",
+          "aliases": ["cornflakes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bread",
+          "aliases": ["loaf", "sliced bread"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "potato chips",
+          "aliases": ["crisps", "potato crisps"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "popcorn",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nuts",
+          "aliases": ["peanuts", "almonds"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "peanut butter",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "crackers",
+          "aliases": ["cracker"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pretzel",
+          "aliases": ["pretzels"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "muffin",
+          "aliases": ["muffins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "donut",
+          "aliases": ["doughnut", "donuts", "doughnuts"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "croissant",
+          "aliases": ["croissants"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bagel",
+          "aliases": ["bagels"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "candy",
+          "aliases": ["sweets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cheesecake",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "granola",
+          "aliases": ["muesli"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "honey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jam",
+          "aliases": ["jelly"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ham",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "salami",
+          "aliases": ["pepperoni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hummus",
+          "aliases": ["houmous"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "guacamole",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "coleslaw",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pickles",
+          "aliases": ["pickle", "gherkin"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "olives",
+          "aliases": ["olive"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tomato",
+          "aliases": ["tomatoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cucumber",
+          "aliases": ["cucumbers"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "carrot",
+          "aliases": ["carrots"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lettuce",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sausage roll",
+          "aliases": ["sausage rolls"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "scone",
+          "aliases": ["scones"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "brownie",
+          "aliases": ["brownies"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cupcake",
+          "aliases": ["cupcakes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "coconut",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pizza",
+          "aliases": ["pizzas"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "calzone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "soup",
+          "aliases": ["soups", "tomato soup", "chicken soup"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "steak",
+          "aliases": ["steaks"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "burger",
+          "aliases": ["burgers", "hamburger", "cheeseburger"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hot dog",
+          "aliases": ["hotdog", "hot dogs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fries",
+          "aliases": ["french fries", "chips", "chippies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rice",
+          "aliases": ["fried rice", "white rice"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "curry",
+          "aliases": ["curries"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "stew",
+          "aliases": ["beef stew"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chicken",
+          "aliases": ["roast chicken", "chicken breast"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "fried chicken",
+          "aliases": ["chicken nuggets", "nuggets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "eggs",
+          "aliases": ["egg", "scrambled eggs", "fried egg", "boiled egg"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "omelette",
+          "aliases": ["omelet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bacon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sausage",
+          "aliases": ["sausages", "bangers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mashed potatoes",
+          "aliases": ["mash", "mashed potato"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "baked potato",
+          "aliases": ["jacket potato"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chili",
+          "aliases": ["chilli", "chili con carne"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "roast beef",
+          "aliases": ["roast", "roast dinner", "sunday roast"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lamb",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pork",
+          "aliases": ["pork chop"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fish and chips",
+          "aliases": ["fish n chips"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "risotto",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "paella",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stir fry",
+          "aliases": ["stir-fry"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taco",
+          "aliases": ["tacos"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "burrito",
+          "aliases": ["burritos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nachos",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "enchiladas",
+          "aliases": ["enchilada"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fajitas",
+          "aliases": ["fajita"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meatballs",
+          "aliases": ["meatball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meatloaf",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "casserole",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "shepherd's pie",
+          "aliases": ["shepherds pie", "cottage pie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ribs",
+          "aliases": ["spare ribs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chicken wings",
+          "aliases": ["wings", "buffalo wings"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kebab",
+          "aliases": ["kebabs", "kabob"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "falafel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "corn on the cob",
+          "aliases": ["corn"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "porridge",
+          "aliases": ["oatmeal", "oats"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "baked beans",
+          "aliases": ["beans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "grilled cheese",
+          "aliases": ["cheese toastie", "toastie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dumplings",
+          "aliases": ["dumpling", "potstickers", "gyoza", "pierogi"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "gnocchi",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pie",
+          "aliases": ["pies", "pot pie", "meat pie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quiche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "salmon",
+          "aliases": ["fish"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "shrimp",
+          "aliases": ["prawns", "prawn"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tofu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "broccoli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "peas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "potato",
+          "aliases": ["potatoes", "roast potatoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hash browns",
+          "aliases": ["hash brown"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "samosa",
+          "aliases": ["samosas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spring roll",
+          "aliases": ["spring rolls", "egg roll"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pasty",
+          "aliases": ["pasties", "cornish pasty"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "empanada",
+          "aliases": ["empanadas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pho",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turkey",
+          "aliases": ["roast turkey"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "couscous",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pancakes",
+          "aliases": ["pancake", "flapjacks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "waffles",
+          "aliases": ["waffle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crepes",
+          "aliases": ["crepe", "crêpes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toast",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "naan",
+          "aliases": ["naan bread", "nan bread"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garlic bread",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french toast",
+          "aliases": ["eggy bread"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lasagna",
+          "aliases": ["lasagne"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cannelloni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yorkshire pudding",
+          "aliases": ["yorkshire puddings"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "biscuits and gravy",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "churros",
+          "aliases": ["churro"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crumpets",
+          "aliases": ["crumpet"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bao",
+          "aliases": ["bao buns", "steamed buns"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flatbread",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "noodles",
+          "aliases": [
+            "noodle",
+            "egg noodles",
+            "rice noodles",
+            "rice vermicelli"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ramen",
+          "aliases": ["ramen noodles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "udon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mac and cheese",
+          "aliases": [
+            "macaroni and cheese",
+            "mac n cheese",
+            "mac & cheese",
+            "macaroni cheese"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spaetzle",
+          "aliases": ["spätzle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pasta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ravioli",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tortellini",
+          "aliases": ["tortelloni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "agnolotti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "penne",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaroni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rigatoni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ziti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orecchiette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatappi",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "linguine",
+          "aliases": ["linguini"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fettuccine",
+          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tagliatelle",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pappardelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tortilla",
+          "aliases": ["tortillas", "flour tortilla", "wrap"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pita",
+          "aliases": ["pitta", "pita bread", "pitta bread"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "focaccia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bread roll",
+          "aliases": ["rolls", "bread rolls", "bun", "buns"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's served hot",
+      "pool": [
+        {
+          "canonical": "pizza",
+          "aliases": ["pizzas"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "calzone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "soup",
+          "aliases": ["soups", "tomato soup", "chicken soup"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "steak",
+          "aliases": ["steaks"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "burger",
+          "aliases": ["burgers", "hamburger", "cheeseburger"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "hot dog",
+          "aliases": ["hotdog", "hot dogs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fries",
+          "aliases": ["french fries", "chips", "chippies"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rice",
+          "aliases": ["fried rice", "white rice"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "curry",
+          "aliases": ["curries"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "stew",
+          "aliases": ["beef stew"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chicken",
+          "aliases": ["roast chicken", "chicken breast"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "fried chicken",
+          "aliases": ["chicken nuggets", "nuggets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "eggs",
+          "aliases": ["egg", "scrambled eggs", "fried egg", "boiled egg"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "omelette",
+          "aliases": ["omelet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bacon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sausage",
+          "aliases": ["sausages", "bangers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mashed potatoes",
+          "aliases": ["mash", "mashed potato"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "baked potato",
+          "aliases": ["jacket potato"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chili",
+          "aliases": ["chilli", "chili con carne"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "roast beef",
+          "aliases": ["roast", "roast dinner", "sunday roast"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lamb",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pork",
+          "aliases": ["pork chop"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fish and chips",
+          "aliases": ["fish n chips"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "risotto",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "paella",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "stir fry",
+          "aliases": ["stir-fry"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taco",
+          "aliases": ["tacos"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "burrito",
+          "aliases": ["burritos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nachos",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "enchiladas",
+          "aliases": ["enchilada"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fajitas",
+          "aliases": ["fajita"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meatballs",
+          "aliases": ["meatball"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "meatloaf",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "casserole",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "shepherd's pie",
+          "aliases": ["shepherds pie", "cottage pie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ribs",
+          "aliases": ["spare ribs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chicken wings",
+          "aliases": ["wings", "buffalo wings"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kebab",
+          "aliases": ["kebabs", "kabob"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "falafel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "corn on the cob",
+          "aliases": ["corn"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "porridge",
+          "aliases": ["oatmeal", "oats"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "baked beans",
+          "aliases": ["beans"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "grilled cheese",
+          "aliases": ["cheese toastie", "toastie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dumplings",
+          "aliases": ["dumpling", "potstickers", "gyoza", "pierogi"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "gnocchi",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pie",
+          "aliases": ["pies", "pot pie", "meat pie"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "quiche",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "salmon",
+          "aliases": ["fish"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "shrimp",
+          "aliases": ["prawns", "prawn"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tofu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "broccoli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "peas",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "potato",
+          "aliases": ["potatoes", "roast potatoes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hash browns",
+          "aliases": ["hash brown"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "samosa",
+          "aliases": ["samosas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spring roll",
+          "aliases": ["spring rolls", "egg roll"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pasty",
+          "aliases": ["pasties", "cornish pasty"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "empanada",
+          "aliases": ["empanadas"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pho",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "turkey",
+          "aliases": ["roast turkey"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "couscous",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pancakes",
+          "aliases": ["pancake", "flapjacks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "waffles",
+          "aliases": ["waffle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crepes",
+          "aliases": ["crepe", "crêpes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toast",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "naan",
+          "aliases": ["naan bread", "nan bread"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garlic bread",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french toast",
+          "aliases": ["eggy bread"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lasagna",
+          "aliases": ["lasagne"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cannelloni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yorkshire pudding",
+          "aliases": ["yorkshire puddings"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "biscuits and gravy",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "churros",
+          "aliases": ["churro"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crumpets",
+          "aliases": ["crumpet"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bao",
+          "aliases": ["bao buns", "steamed buns"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flatbread",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "noodles",
+          "aliases": [
+            "noodle",
+            "egg noodles",
+            "rice noodles",
+            "rice vermicelli"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ramen",
+          "aliases": ["ramen noodles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "udon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mac and cheese",
+          "aliases": [
+            "macaroni and cheese",
+            "mac n cheese",
+            "mac & cheese",
+            "macaroni cheese"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spaetzle",
+          "aliases": ["spätzle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pasta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ravioli",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tortellini",
+          "aliases": ["tortelloni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "agnolotti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "penne",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaroni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rigatoni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ziti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orecchiette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatappi",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "linguine",
+          "aliases": ["linguini"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fettuccine",
+          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tagliatelle",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pappardelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tortilla",
+          "aliases": ["tortillas", "flour tortilla", "wrap"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pita",
+          "aliases": ["pitta", "pita bread", "pitta bread"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's mostly made of flour",
+      "pool": [
+        {
+          "canonical": "pancakes",
+          "aliases": ["pancake", "flapjacks"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "waffles",
+          "aliases": ["waffle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crepes",
+          "aliases": ["crepe", "crêpes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "toast",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "naan",
+          "aliases": ["naan bread", "nan bread"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "garlic bread",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french toast",
+          "aliases": ["eggy bread"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lasagna",
+          "aliases": ["lasagne"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cannelloni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yorkshire pudding",
+          "aliases": ["yorkshire puddings"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "biscuits and gravy",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "churros",
+          "aliases": ["churro"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "crumpets",
+          "aliases": ["crumpet"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bao",
+          "aliases": ["bao buns", "steamed buns"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flatbread",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "noodles",
+          "aliases": [
+            "noodle",
+            "egg noodles",
+            "rice noodles",
+            "rice vermicelli"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ramen",
+          "aliases": ["ramen noodles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "udon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mac and cheese",
+          "aliases": [
+            "macaroni and cheese",
+            "mac n cheese",
+            "mac & cheese",
+            "macaroni cheese"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spaetzle",
+          "aliases": ["spätzle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pasta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ravioli",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tortellini",
+          "aliases": ["tortelloni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "agnolotti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "penne",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaroni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rigatoni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ziti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orecchiette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatappi",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "linguine",
+          "aliases": ["linguini"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fettuccine",
+          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tagliatelle",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pappardelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tortilla",
+          "aliases": ["tortillas", "flour tortilla", "wrap"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pita",
+          "aliases": ["pitta", "pita bread", "pitta bread"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's boiled in water",
+      "pool": [
+        {
+          "canonical": "noodles",
+          "aliases": [
+            "noodle",
+            "egg noodles",
+            "rice noodles",
+            "rice vermicelli"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ramen",
+          "aliases": ["ramen noodles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "udon",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "soba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mac and cheese",
+          "aliases": [
+            "macaroni and cheese",
+            "mac n cheese",
+            "mac & cheese",
+            "macaroni cheese"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spaetzle",
+          "aliases": ["spätzle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "pasta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ravioli",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tortellini",
+          "aliases": ["tortelloni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "agnolotti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "penne",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaroni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rigatoni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ziti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orecchiette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatappi",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "linguine",
+          "aliases": ["linguini"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fettuccine",
+          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tagliatelle",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pappardelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…that comes from Italy",
+      "pool": [
+        {
+          "canonical": "pasta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ravioli",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tortellini",
+          "aliases": ["tortelloni"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "agnolotti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "penne",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaroni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rigatoni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ziti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orecchiette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatappi",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "linguine",
+          "aliases": ["linguini"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fettuccine",
+          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tagliatelle",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pappardelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…that isn't stuffed",
+      "pool": [
+        {
+          "canonical": "penne",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "macaroni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fusilli",
+          "aliases": ["rotini", "spirals"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rigatoni",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "farfalle",
+          "aliases": ["bow tie pasta", "bowtie pasta", "bow ties"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "orzo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "conchiglie",
+          "aliases": ["pasta shells", "shells"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ziti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "orecchiette",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cavatappi",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "linguine",
+          "aliases": ["linguini"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fettuccine",
+          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tagliatelle",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pappardelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…that comes in long strands",
+      "pool": [
+        {
+          "canonical": "linguine",
+          "aliases": ["linguini"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fettuccine",
+          "aliases": ["fettucine", "fettuccini", "fettuccine alfredo"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tagliatelle",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pappardelle",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…whose strands are round",
+      "pool": [
+        {
+          "canonical": "bucatini",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…that isn't hollow inside",
+      "pool": [
+        {
+          "canonical": "vermicelli",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "angel hair",
+          "aliases": ["angel hair pasta", "capellini"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        }
+      ]
+    },
+    {
+      "clue": "…often served with meatballs",
+      "pool": [
+        {
+          "canonical": "spaghetti",
+          "aliases": [
+            "spagetti",
+            "spaghetti bolognese",
+            "spag bol",
+            "spaghetti and meatballs",
+            "spaghettini",
+            "spaghettoni"
+          ],
+          "commonness": "common"
+        }
+      ]
+    }
+  ]
+}

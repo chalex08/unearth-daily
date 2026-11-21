@@ -1,0 +1,1705 @@
+{
+  "number": 19,
+  "date": "2026-11-26",
+  "layers": [
+    {
+      "clue": "Name something that makes music",
+      "pool": [
+        {
+          "canonical": "radio",
+          "aliases": ["radios"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "speaker",
+          "aliases": ["speakers", "bluetooth speaker"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "record player",
+          "aliases": ["turntable", "gramophone", "phonograph"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "jukebox",
+          "aliases": ["juke box"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "music box",
+          "aliases": ["musical box"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "phone",
+          "aliases": ["mobile phone", "smartphone", "cell phone", "iphone"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "singer",
+          "aliases": ["singers", "vocalist"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "voice",
+          "aliases": ["singing", "humming"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bird",
+          "aliases": ["birds", "songbird"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "whale",
+          "aliases": ["whales", "humpback whale"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "choir",
+          "aliases": ["choirs", "chorus"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "band",
+          "aliases": ["bands"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "orchestra",
+          "aliases": ["orchestras", "symphony orchestra"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dj",
+          "aliases": ["disc jockey"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "wind chimes",
+          "aliases": ["wind chime", "chimes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cricket",
+          "aliases": ["crickets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mp3 player",
+          "aliases": ["ipod"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cd player",
+          "aliases": ["cd", "stereo", "hi-fi", "hifi"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "boombox",
+          "aliases": ["ghetto blaster"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "headphones",
+          "aliases": ["earphones", "earbuds"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ice cream van",
+          "aliases": ["ice cream truck"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "musician",
+          "aliases": ["musicians"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "busker",
+          "aliases": ["buskers", "street performer"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "computer",
+          "aliases": ["laptop"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "piano",
+          "aliases": ["pianos", "grand piano", "upright piano"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "organ",
+          "aliases": ["organs", "pipe organ", "church organ"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "drums",
+          "aliases": [
+            "drum",
+            "drum kit",
+            "drumkit",
+            "drum set",
+            "snare drum",
+            "bass drum"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "harp",
+          "aliases": ["harps"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "double bass",
+          "aliases": ["upright bass", "contrabass"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cello",
+          "aliases": ["cellos", "violoncello"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "xylophone",
+          "aliases": ["xylophones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "timpani",
+          "aliases": ["kettle drum", "kettledrum"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "marimba",
+          "aliases": ["marimbas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "gong",
+          "aliases": ["gongs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "keyboard",
+          "aliases": ["keyboards", "electric keyboard"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "synthesizer",
+          "aliases": ["synth", "synthesiser"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harpsichord",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "steel drum",
+          "aliases": ["steel drums", "steelpan", "steel pan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "glockenspiel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "vibraphone",
+          "aliases": ["vibes"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celesta",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bongos",
+          "aliases": ["bongo", "bongo drums"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "congas",
+          "aliases": ["conga", "conga drum"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "djembe",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cajon",
+          "aliases": ["cajón"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tabla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sitar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "theremin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cymbals",
+          "aliases": ["cymbal", "hi-hat"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tubular bells",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "koto",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "zither",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bells",
+          "aliases": ["church bells", "handbells"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "guitar",
+          "aliases": ["guitars", "acoustic guitar", "electric guitar"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bass guitar",
+          "aliases": ["bass", "electric bass"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "violin",
+          "aliases": ["violins", "fiddle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "viola",
+          "aliases": ["violas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ukulele",
+          "aliases": ["uke", "ukelele", "ukuleles"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "banjo",
+          "aliases": ["banjos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mandolin",
+          "aliases": ["mandolins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "accordion",
+          "aliases": ["accordions", "squeezebox"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tambourine",
+          "aliases": ["tambourines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "maracas",
+          "aliases": ["maraca", "shaker", "shakers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "triangle",
+          "aliases": ["triangles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lute",
+          "aliases": ["lutes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balalaika",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "castanets",
+          "aliases": ["castanet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cowbell",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spoons",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "washboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kalimba",
+          "aliases": ["thumb piano", "mbira"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bodhran",
+          "aliases": ["bodhrán", "frame drum"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "keytar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lyre",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "autoharp",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "concertina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erhu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hurdy-gurdy",
+          "aliases": ["hurdy gurdy"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jaw harp",
+          "aliases": ["jew's harp", "jews harp", "mouth harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kazoo",
+          "aliases": ["kazoos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "claves",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rain stick",
+          "aliases": ["rainstick"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clarinet",
+          "aliases": ["clarinets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "recorder",
+          "aliases": ["recorders"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "oboe",
+          "aliases": ["oboes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bassoon",
+          "aliases": ["bassoons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bagpipes",
+          "aliases": ["bagpipe", "pipes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ocarina",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pan pipes",
+          "aliases": ["panpipes", "pan flute", "panflute"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "didgeridoo",
+          "aliases": ["didjeridu"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "melodica",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fife",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cor anglais",
+          "aliases": ["english horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "slide whistle",
+          "aliases": ["swanee whistle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vuvuzela",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trumpet",
+          "aliases": ["trumpets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tuba",
+          "aliases": ["tubas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french horn",
+          "aliases": ["horn", "french horns"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cornet",
+          "aliases": ["cornets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "euphonium",
+          "aliases": ["baritone horn", "baritone"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sousaphone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flugelhorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mellophone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saxophone",
+          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flute",
+          "aliases": ["flutes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "piccolo",
+          "aliases": ["piccolos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trombone",
+          "aliases": ["trombones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromatic harmonica",
+          "aliases": ["chromatic harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "whistle",
+          "aliases": ["train whistle", "sports whistle"],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that's a musical instrument",
+      "pool": [
+        {
+          "canonical": "piano",
+          "aliases": ["pianos", "grand piano", "upright piano"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "organ",
+          "aliases": ["organs", "pipe organ", "church organ"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "drums",
+          "aliases": [
+            "drum",
+            "drum kit",
+            "drumkit",
+            "drum set",
+            "snare drum",
+            "bass drum"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "harp",
+          "aliases": ["harps"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "double bass",
+          "aliases": ["upright bass", "contrabass"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cello",
+          "aliases": ["cellos", "violoncello"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "xylophone",
+          "aliases": ["xylophones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "timpani",
+          "aliases": ["kettle drum", "kettledrum"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "marimba",
+          "aliases": ["marimbas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "gong",
+          "aliases": ["gongs"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "keyboard",
+          "aliases": ["keyboards", "electric keyboard"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "synthesizer",
+          "aliases": ["synth", "synthesiser"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harpsichord",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "steel drum",
+          "aliases": ["steel drums", "steelpan", "steel pan"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "glockenspiel",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "vibraphone",
+          "aliases": ["vibes"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "celesta",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bongos",
+          "aliases": ["bongo", "bongo drums"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "congas",
+          "aliases": ["conga", "conga drum"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "djembe",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cajon",
+          "aliases": ["cajón"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tabla",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "sitar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "theremin",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cymbals",
+          "aliases": ["cymbal", "hi-hat"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tubular bells",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "koto",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "zither",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bells",
+          "aliases": ["church bells", "handbells"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "guitar",
+          "aliases": ["guitars", "acoustic guitar", "electric guitar"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bass guitar",
+          "aliases": ["bass", "electric bass"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "violin",
+          "aliases": ["violins", "fiddle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "viola",
+          "aliases": ["violas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ukulele",
+          "aliases": ["uke", "ukelele", "ukuleles"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "banjo",
+          "aliases": ["banjos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mandolin",
+          "aliases": ["mandolins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "accordion",
+          "aliases": ["accordions", "squeezebox"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tambourine",
+          "aliases": ["tambourines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "maracas",
+          "aliases": ["maraca", "shaker", "shakers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "triangle",
+          "aliases": ["triangles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lute",
+          "aliases": ["lutes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balalaika",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "castanets",
+          "aliases": ["castanet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cowbell",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spoons",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "washboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kalimba",
+          "aliases": ["thumb piano", "mbira"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bodhran",
+          "aliases": ["bodhrán", "frame drum"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "keytar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lyre",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "autoharp",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "concertina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erhu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hurdy-gurdy",
+          "aliases": ["hurdy gurdy"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jaw harp",
+          "aliases": ["jew's harp", "jews harp", "mouth harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kazoo",
+          "aliases": ["kazoos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "claves",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rain stick",
+          "aliases": ["rainstick"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clarinet",
+          "aliases": ["clarinets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "recorder",
+          "aliases": ["recorders"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "oboe",
+          "aliases": ["oboes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bassoon",
+          "aliases": ["bassoons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bagpipes",
+          "aliases": ["bagpipe", "pipes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ocarina",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pan pipes",
+          "aliases": ["panpipes", "pan flute", "panflute"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "didgeridoo",
+          "aliases": ["didjeridu"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "melodica",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fife",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cor anglais",
+          "aliases": ["english horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "slide whistle",
+          "aliases": ["swanee whistle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vuvuzela",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trumpet",
+          "aliases": ["trumpets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tuba",
+          "aliases": ["tubas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french horn",
+          "aliases": ["horn", "french horns"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cornet",
+          "aliases": ["cornets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "euphonium",
+          "aliases": ["baritone horn", "baritone"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sousaphone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flugelhorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mellophone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saxophone",
+          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flute",
+          "aliases": ["flutes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "piccolo",
+          "aliases": ["piccolos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trombone",
+          "aliases": ["trombones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromatic harmonica",
+          "aliases": ["chromatic harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that you hold while playing",
+      "pool": [
+        {
+          "canonical": "guitar",
+          "aliases": ["guitars", "acoustic guitar", "electric guitar"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bass guitar",
+          "aliases": ["bass", "electric bass"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "violin",
+          "aliases": ["violins", "fiddle"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "viola",
+          "aliases": ["violas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ukulele",
+          "aliases": ["uke", "ukelele", "ukuleles"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "banjo",
+          "aliases": ["banjos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mandolin",
+          "aliases": ["mandolins"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "accordion",
+          "aliases": ["accordions", "squeezebox"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tambourine",
+          "aliases": ["tambourines"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "maracas",
+          "aliases": ["maraca", "shaker", "shakers"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "triangle",
+          "aliases": ["triangles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lute",
+          "aliases": ["lutes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "balalaika",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "castanets",
+          "aliases": ["castanet"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cowbell",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "spoons",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "washboard",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kalimba",
+          "aliases": ["thumb piano", "mbira"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bodhran",
+          "aliases": ["bodhrán", "frame drum"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "keytar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lyre",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "autoharp",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "concertina",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erhu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hurdy-gurdy",
+          "aliases": ["hurdy gurdy"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "jaw harp",
+          "aliases": ["jew's harp", "jews harp", "mouth harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kazoo",
+          "aliases": ["kazoos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "claves",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rain stick",
+          "aliases": ["rainstick"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "clarinet",
+          "aliases": ["clarinets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "recorder",
+          "aliases": ["recorders"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "oboe",
+          "aliases": ["oboes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bassoon",
+          "aliases": ["bassoons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bagpipes",
+          "aliases": ["bagpipe", "pipes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ocarina",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pan pipes",
+          "aliases": ["panpipes", "pan flute", "panflute"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "didgeridoo",
+          "aliases": ["didjeridu"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "melodica",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fife",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cor anglais",
+          "aliases": ["english horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "slide whistle",
+          "aliases": ["swanee whistle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vuvuzela",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trumpet",
+          "aliases": ["trumpets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tuba",
+          "aliases": ["tubas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french horn",
+          "aliases": ["horn", "french horns"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cornet",
+          "aliases": ["cornets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "euphonium",
+          "aliases": ["baritone horn", "baritone"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sousaphone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flugelhorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mellophone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saxophone",
+          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flute",
+          "aliases": ["flutes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "piccolo",
+          "aliases": ["piccolos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trombone",
+          "aliases": ["trombones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromatic harmonica",
+          "aliases": ["chromatic harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that you blow into",
+      "pool": [
+        {
+          "canonical": "clarinet",
+          "aliases": ["clarinets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "recorder",
+          "aliases": ["recorders"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "oboe",
+          "aliases": ["oboes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bassoon",
+          "aliases": ["bassoons"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bagpipes",
+          "aliases": ["bagpipe", "pipes"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ocarina",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pan pipes",
+          "aliases": ["panpipes", "pan flute", "panflute"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "didgeridoo",
+          "aliases": ["didjeridu"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "melodica",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "fife",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conch shell",
+          "aliases": ["conch"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "cor anglais",
+          "aliases": ["english horn"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "slide whistle",
+          "aliases": ["swanee whistle"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vuvuzela",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "trumpet",
+          "aliases": ["trumpets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tuba",
+          "aliases": ["tubas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french horn",
+          "aliases": ["horn", "french horns"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cornet",
+          "aliases": ["cornets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "euphonium",
+          "aliases": ["baritone horn", "baritone"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sousaphone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flugelhorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mellophone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saxophone",
+          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flute",
+          "aliases": ["flutes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "piccolo",
+          "aliases": ["piccolos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trombone",
+          "aliases": ["trombones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromatic harmonica",
+          "aliases": ["chromatic harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that's metal on the outside",
+      "pool": [
+        {
+          "canonical": "trumpet",
+          "aliases": ["trumpets"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tuba",
+          "aliases": ["tubas"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "french horn",
+          "aliases": ["horn", "french horns"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cornet",
+          "aliases": ["cornets"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "euphonium",
+          "aliases": ["baritone horn", "baritone"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sousaphone",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "flugelhorn",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mellophone",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "saxophone",
+          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flute",
+          "aliases": ["flutes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "piccolo",
+          "aliases": ["piccolos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trombone",
+          "aliases": ["trombones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromatic harmonica",
+          "aliases": ["chromatic harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has no valves",
+      "pool": [
+        {
+          "canonical": "saxophone",
+          "aliases": ["sax", "saxophones", "alto sax", "tenor sax"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "flute",
+          "aliases": ["flutes"],
+          "commonness": "common"
+        },
+        {
+          "canonical": "piccolo",
+          "aliases": ["piccolos"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "trombone",
+          "aliases": ["trombones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromatic harmonica",
+          "aliases": ["chromatic harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has no keys to press",
+      "pool": [
+        {
+          "canonical": "trombone",
+          "aliases": ["trombones"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromatic harmonica",
+          "aliases": ["chromatic harp"],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that has no slide",
+      "pool": [
+        {
+          "canonical": "tin whistle",
+          "aliases": ["penny whistle", "irish whistle", "tinwhistle"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…with no holes for your fingers",
+      "pool": [
+        {
+          "canonical": "bugle",
+          "aliases": ["bugles"],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that can play several notes at once",
+      "pool": [
+        {
+          "canonical": "harmonica",
+          "aliases": ["harmonicas", "mouth organ", "blues harp"],
+          "commonness": "uncommon"
+        }
+      ]
+    }
+  ]
+}
