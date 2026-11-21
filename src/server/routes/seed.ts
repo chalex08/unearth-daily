@@ -3,7 +3,8 @@
 import { Hono } from 'hono';
 import type { UiResponse } from '@devvit/web/shared';
 import { context, redis } from '@devvit/web/server';
-import { fakeCounts, keys } from '../core/fakeCounts';
+import { fakeCounts } from '../core/fakeCounts';
+import { keys } from '../core/keys';
 import { puzzleFor, puzzles } from '../core/puzzles';
 
 // devvit.json "name". Dev installs run under DEVVIT_APP_NAME (a personal app), never this one.
@@ -26,7 +27,12 @@ seed.post('/seed-fake-counts', async (c) => {
 
   const { answers, ends } = fakeCounts(puzzle, PLAYERS, Math.random);
   const answerKeys = answers.map((_, i) => keys.answers(puzzle.date, i + 1));
-  await redis.del(...answerKeys, keys.ends(puzzle.date));
+  await redis.del(
+    ...answerKeys,
+    keys.ends(puzzle.date),
+    keys.totals(puzzle.date),
+    keys.reached(puzzle.date)
+  );
   for (const [i, layer] of answers.entries()) {
     const members = Object.entries(layer).map(([member, score]) => ({
       member,
@@ -37,6 +43,22 @@ seed.post('/seed-fake-counts', async (c) => {
   await redis.hSet(
     keys.ends(puzzle.date),
     Object.fromEntries(ends.map((n, l) => [String(l), String(n)]))
+  );
+  const sum = (ns: number[]) => ns.reduce((a, b) => a + b, 0);
+  await redis.hSet(
+    keys.totals(puzzle.date),
+    Object.fromEntries(
+      answers.map((layer, i) => [
+        String(i + 1),
+        String(sum(Object.values(layer))),
+      ])
+    )
+  );
+  await redis.hSet(
+    keys.reached(puzzle.date),
+    Object.fromEntries(
+      ends.map((_, l) => [String(l), String(sum(ends.slice(l)))])
+    )
   );
 
   return c.json<UiResponse>(

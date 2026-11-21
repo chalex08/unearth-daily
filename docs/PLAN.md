@@ -39,13 +39,13 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 4. Server + AI judge — Tue 24 – Wed 25 Nov
 
-- [ ] Add `generativelanguage.googleapis.com` to `permissions.http`, plus a "Fetch Domains" section in README; upload the same day to start domain approval.
-- [ ] `/api/` routes: start/resume a run, submit an answer, get today's state. Remove the template's counter routes.
-- [ ] Validation pipeline in order: pool → Redis verdict cache → Gemini paid-tier judge (`AnswerJudge`, key only from the `geminiApiKey` secret), 8s timeout, strict JSON, answer handled as data.
-- [ ] No-AI mode (SPEC §4, §5.3): with no LLM approval or no key, pool answers still validate and unknown answers get "Couldn't check that, try again" with no pickaxe lost.
-- [ ] Rarity counts per layer in Redis, locked when the answer is given; one run per user per UTC day; 30-day TTL on per-day user data.
-- [ ] The client only ever receives cleared and current clues.
-- [ ] Display rules (SPEC §4.1): public answer text is pool-only, AI-approved answers count but show as "something else", the player's own answers are always returned to them; non-pool answers logged per puzzle and layer with counts, readable by a moderator-only menu item.
+- [x] Add `generativelanguage.googleapis.com` to `permissions.http`, plus a "Fetch Domains" section in README; upload the same day to start domain approval.
+- [x] `/api/` routes: start/resume a run, submit an answer, get today's state. Remove the template's counter routes.
+- [x] Validation pipeline in order: pool → Redis verdict cache → Gemini paid-tier judge (`AnswerJudge`, key only from the `geminiApiKey` secret), 8s timeout, strict JSON, answer handled as data.
+- [x] No-AI mode (SPEC §4, §5.3): with no LLM approval or no key, pool answers still validate and unknown answers get "Couldn't check that, try again" with no pickaxe lost.
+- [x] Rarity counts per layer in Redis, locked when the answer is given; one run per user per UTC day; 30-day TTL on per-day user data.
+- [x] The client only ever receives cleared and current clues.
+- [ ] Display rules (SPEC §4.1): public answer text is pool-only, AI-approved answers count but show as "something else", the player's own answers are always returned to them; non-pool answers logged per puzzle and layer with counts, readable by a moderator-only menu item. _Done except the menu item: the log is the non-pool members of `answers:{day}:{layer}`._
 - **Done when:** route and judge tests pass with a fake judge; an AI timeout breaks no pickaxe; a full run plays with no judge at all; a test shows an AI-approved answer counted in rarity but never named in another player's response; the real judge works in playtest.
 
 ### 5. Minimal playable client on Reddit — Thu 26 Nov (checkpoint)

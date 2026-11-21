@@ -22,6 +22,7 @@ Platform facts referenced here were checked against the Devvit docs on 21 Nov 20
 - Clue 10 has **exactly one** valid answer.
 - **Answers get nicher with depth.** Early layers are full of everyday answers; by layers 7–9 most survivors are things only enthusiasts know; the layer-10 answer is **niche**: real and checkable, but unknown to most adults.
 - Each answer may be used **once per run**.
+- **Puzzle number** = UTC days since the launch day **2026-11-08** + 1 (2026-11-21 is #14). Each puzzle file's `number` must match; a test checks every bundled file.
 - **3 pickaxes** (lives). An invalid answer breaks one. Repeated or empty input does not.
 - The run ends when layer 10 is cleared or all pickaxes are broken.
 - **One run per Reddit user per UTC day**, resumable mid-run.
@@ -96,7 +97,7 @@ Failure handling:
 - Only **hand-reviewed pool answers** (their canonical form) are ever displayed as other players' fossils or named in public stats (fossil %, graveyard, any community counts). A valid answer that only the AI accepted is shown to others as "something else".
 - **All valid answers** (pool and AI-approved) still count toward rarity percentages, the graveyard and totals. Only the displayed text is restricted.
 - A player always sees **their own answer** in their own run, end screen and core sample, even if it isn't in the pool.
-- **Non-pool valid answers are logged** per puzzle and layer with how often they were given, most frequent first, so they can be reviewed by hand and added to the pool later. Reviewing this log is manual or uses the paid key only (§5.3).
+- **Non-pool valid answers are logged** per puzzle and layer with how often they were given, most frequent first (the members of `answers:{day}:{layer}` that aren't pool canonicals, §8.1), so they can be reviewed by hand and added to the pool later. Reviewing this log is manual or uses the paid key only (§5.3).
 
 ## 5. AI
 
@@ -215,6 +216,30 @@ Confirmed or changed in [DECISIONS.md](DECISIONS.md).
 - The template's server framework (Hono), routes under `/api/*`.
 - Devvit Redis; Vitest.
 - **The client never receives future clues or answer pools.**
+
+### 8.1 Server API and Redis
+
+Routes (types in `src/shared/api.ts`; all need a logged-in user and a puzzle for today's UTC date):
+
+| Route              | Returns                                                                                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /api/start`  | Starts or resumes today's run: current clue, chain so far, lives, score, onboarding flag (true until the player's first finished run).                   |
+| `POST /api/answer` | `{ answer, layer }` → `AnswerResult`. A `layer` that isn't the current one, or a second submit while one is being checked, gets 409 and changes nothing. |
+| `GET /api/result`  | End-screen payload with the full chain and final answer. 409 until the run has ended.                                                                    |
+| `GET /api/stats`   | Players, graveyard, players reaching each mineral, and fossils only for layers this player has cleared (§4.1 display rules).                             |
+
+Redis keys (`src/server/core/keys.ts`). `{day}` is the UTC day key, `{userId}` the Reddit `t2_` id (never the username). Every key gets a **30-day** TTL, refreshed on write, except the lock.
+
+| Key                      | Type       | Holds                                                                           |
+| ------------------------ | ---------- | ------------------------------------------------------------------------------- |
+| `run:{day}:{userId}`     | hash       | `state`: the RunState JSON. Created with `HSETNX`, so one run per user per day. |
+| `lock:{day}:{userId}`    | counter    | Submit lock, 15s TTL, deleted when the submit finishes.                         |
+| `answers:{day}:{layer}`  | sorted set | Canonical answer → valid answers at that layer (pool and AI-approved).          |
+| `totals:{day}`           | hash       | Layer → all valid answers at that layer (the rarity denominator).               |
+| `ends:{day}`             | hash       | Mineral (deepest layer cleared, 0–10) → runs that ended there (graveyard).      |
+| `reached:{day}`          | hash       | Mineral → players who reached it; `0` = runs started (the player count).        |
+| `verdicts:{day}:{layer}` | hash       | Normalised answer → cached judge verdict JSON. Failures are never cached.       |
+| `user:{userId}`          | hash       | `count`, `lastDay`: the streak.                                                 |
 
 ## 9. Sample puzzle #14
 
