@@ -1,0 +1,3244 @@
+{
+  "number": 21,
+  "date": "2026-11-28",
+  "layers": [
+    {
+      "clue": "Name a capital city",
+      "pool": [
+        {
+          "canonical": "tirana",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "andorra la vella",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vienna",
+          "aliases": [
+            "wien"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "minsk",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "brussels",
+          "aliases": [
+            "bruxelles"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sarajevo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sofia",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zagreb",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nicosia",
+          "aliases": [
+            "lefkosia"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "prague",
+          "aliases": [
+            "praha"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copenhagen",
+          "aliases": [
+            "kobenhavn",
+            "københavn"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tallinn",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "helsinki",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "paris",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "berlin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "athens",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "budapest",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "reykjavik",
+          "aliases": [
+            "reykjavík"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dublin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rome",
+          "aliases": [
+            "roma"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pristina",
+          "aliases": [
+            "prishtina",
+            "priština"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "riga",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "vaduz",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vilnius",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "luxembourg",
+          "aliases": [
+            "luxembourg city"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "valletta",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chisinau",
+          "aliases": [
+            "chișinău",
+            "kishinev"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "monaco",
+          "aliases": [
+            "monaco ville"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "podgorica",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "amsterdam",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "skopje",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oslo",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "warsaw",
+          "aliases": [
+            "warszawa"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "lisbon",
+          "aliases": [
+            "lisboa"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bucharest",
+          "aliases": [
+            "bucuresti",
+            "bucurești"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moscow",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "san marino",
+          "aliases": [
+            "city of san marino"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "belgrade",
+          "aliases": [
+            "beograd"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bratislava",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ljubljana",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "madrid",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "stockholm",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bern",
+          "aliases": [
+            "berne"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kyiv",
+          "aliases": [
+            "kiev"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "london",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "vatican city",
+          "aliases": [
+            "vatican"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "edinburgh",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cardiff",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "belfast",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "torshavn",
+          "aliases": [
+            "tórshavn"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nuuk",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kabul",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yerevan",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "baku",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "manama",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dhaka",
+          "aliases": [
+            "dacca"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "thimphu",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bandar seri begawan",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "phnom penh",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beijing",
+          "aliases": [
+            "peking"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tbilisi",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "new delhi",
+          "aliases": [
+            "delhi"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jakarta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tehran",
+          "aliases": [
+            "teheran"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "baghdad",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jerusalem",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tokyo",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "amman",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "astana",
+          "aliases": [
+            "nur-sultan",
+            "nur sultan"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kuwait city",
+          "aliases": [
+            "kuwait"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bishkek",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vientiane",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "beirut",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kuala lumpur",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "male",
+          "aliases": [
+            "malé"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ulaanbaatar",
+          "aliases": [
+            "ulan bator",
+            "ulaan baatar",
+            "ulanbator"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "naypyidaw",
+          "aliases": [
+            "nay pyi taw",
+            "naypyitaw",
+            "nay pyi daw"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kathmandu",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "muscat",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "islamabad",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "manila",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "doha",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "riyadh",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "singapore",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seoul",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sri jayawardenepura kotte",
+          "aliases": [
+            "kotte",
+            "sri jayawardenapura kotte"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "colombo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "damascus",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taipei",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dushanbe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bangkok",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "dili",
+          "aliases": [
+            "dili timor"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ankara",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ashgabat",
+          "aliases": [
+            "ashkhabad",
+            "ashkabat"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "abu dhabi",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tashkent",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hanoi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sanaa",
+          "aliases": [
+            "sana'a",
+            "sana"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pyongyang",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "algiers",
+          "aliases": [
+            "alger"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "luanda",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "porto-novo",
+          "aliases": [
+            "porto novo",
+            "portonovo"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gaborone",
+          "aliases": [
+            "gabarone"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ouagadougou",
+          "aliases": [
+            "ouaga"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "praia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaounde",
+          "aliases": [
+            "yaoundé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bangui",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "n'djamena",
+          "aliases": [
+            "ndjamena",
+            "n djamena",
+            "njamena"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "moroni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kinshasa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "brazzaville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yamoussoukro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "djibouti",
+          "aliases": [
+            "djibouti city"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cairo",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "malabo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "asmara",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mbabane",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lobamba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "addis ababa",
+          "aliases": [
+            "addis abeba",
+            "addis"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "libreville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "banjul",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "accra",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conakry",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bissau",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nairobi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "maseru",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "monrovia",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tripoli",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "antananarivo",
+          "aliases": [
+            "tana",
+            "tananarive"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bamako",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nouakchott",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port louis",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rabat",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "maputo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "windhoek",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niamey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "abuja",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sao tome",
+          "aliases": [
+            "são tomé",
+            "sao tome and principe"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dakar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "victoria",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freetown",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mogadishu",
+          "aliases": [
+            "mogadiscio"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pretoria",
+          "aliases": [
+            "tshwane"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cape town",
+          "aliases": [
+            "capetown"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bloemfontein",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "juba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "khartoum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodoma",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lome",
+          "aliases": [
+            "lomé"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tunis",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kampala",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ottawa",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "washington dc",
+          "aliases": [
+            "washington",
+            "washington d c",
+            "washington d.c.",
+            "washington, dc",
+            "dc"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mexico city",
+          "aliases": [
+            "mexico",
+            "ciudad de mexico",
+            "mexico df",
+            "cdmx"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "havana",
+          "aliases": [
+            "la habana"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "kingston",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nassau",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "port-au-prince",
+          "aliases": [
+            "port au prince"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "santo domingo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bridgetown",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "belmopan",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "san jose",
+          "aliases": [
+            "san josé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "san salvador",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "guatemala city",
+          "aliases": [
+            "guatemala",
+            "ciudad de guatemala"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tegucigalpa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "managua",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "panama city",
+          "aliases": [
+            "panama",
+            "panama city panama"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "st john's",
+          "aliases": [
+            "saint johns",
+            "st johns",
+            "saint john's"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roseau",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "st george's",
+          "aliases": [
+            "saint georges",
+            "st georges",
+            "saint george's"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "basseterre",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "castries",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kingstown",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port of spain",
+          "aliases": [
+            "port-of-spain"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buenos aires",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "la paz",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sucre",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "brasilia",
+          "aliases": [
+            "brasília"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "santiago",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bogota",
+          "aliases": [
+            "bogotá"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "quito",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "georgetown",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "asuncion",
+          "aliases": [
+            "asunción"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lima",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "paramaribo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "montevideo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "caracas",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "canberra",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "suva",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tarawa",
+          "aliases": [
+            "south tarawa"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "majuro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "palikir",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaren",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "wellington",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "ngerulmud",
+          "aliases": [
+            "melekeok"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port moresby",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "apia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "honiara",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nuku'alofa",
+          "aliases": [
+            "nukualofa",
+            "nuku alofa"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "funafuti",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port vila",
+          "aliases": [
+            "port-vila"
+          ],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…whose country is a republic",
+      "pool": [
+        {
+          "canonical": "tirana",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "vienna",
+          "aliases": [
+            "wien"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "minsk",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sarajevo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sofia",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zagreb",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nicosia",
+          "aliases": [
+            "lefkosia"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "prague",
+          "aliases": [
+            "praha"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tallinn",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "helsinki",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "paris",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "berlin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "athens",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "budapest",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "reykjavik",
+          "aliases": [
+            "reykjavík"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dublin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "rome",
+          "aliases": [
+            "roma"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "pristina",
+          "aliases": [
+            "prishtina",
+            "priština"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "riga",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "vilnius",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "valletta",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "chisinau",
+          "aliases": [
+            "chișinău",
+            "kishinev"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "podgorica",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "skopje",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "warsaw",
+          "aliases": [
+            "warszawa"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "lisbon",
+          "aliases": [
+            "lisboa"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bucharest",
+          "aliases": [
+            "bucuresti",
+            "bucurești"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "moscow",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "san marino",
+          "aliases": [
+            "city of san marino"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "belgrade",
+          "aliases": [
+            "beograd"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bratislava",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ljubljana",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bern",
+          "aliases": [
+            "berne"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kyiv",
+          "aliases": [
+            "kiev"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "kabul",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yerevan",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "baku",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dhaka",
+          "aliases": [
+            "dacca"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "beijing",
+          "aliases": [
+            "peking"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tbilisi",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "new delhi",
+          "aliases": [
+            "delhi"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jakarta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "tehran",
+          "aliases": [
+            "teheran"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "baghdad",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "jerusalem",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "astana",
+          "aliases": [
+            "nur-sultan",
+            "nur sultan"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bishkek",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "vientiane",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "beirut",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "male",
+          "aliases": [
+            "malé"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ulaanbaatar",
+          "aliases": [
+            "ulan bator",
+            "ulaan baatar",
+            "ulanbator"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "naypyidaw",
+          "aliases": [
+            "nay pyi taw",
+            "naypyitaw",
+            "nay pyi daw"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kathmandu",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "islamabad",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "manila",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "singapore",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "seoul",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sri jayawardenepura kotte",
+          "aliases": [
+            "kotte",
+            "sri jayawardenapura kotte"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "colombo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "damascus",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "taipei",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dushanbe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dili",
+          "aliases": [
+            "dili timor"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ankara",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ashgabat",
+          "aliases": [
+            "ashkhabad",
+            "ashkabat"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tashkent",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "hanoi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sanaa",
+          "aliases": [
+            "sana'a",
+            "sana"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pyongyang",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "algiers",
+          "aliases": [
+            "alger"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "luanda",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "porto-novo",
+          "aliases": [
+            "porto novo",
+            "portonovo"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gaborone",
+          "aliases": [
+            "gabarone"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ouagadougou",
+          "aliases": [
+            "ouaga"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "praia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaounde",
+          "aliases": [
+            "yaoundé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bangui",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "n'djamena",
+          "aliases": [
+            "ndjamena",
+            "n djamena",
+            "njamena"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "moroni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kinshasa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "brazzaville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yamoussoukro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "djibouti",
+          "aliases": [
+            "djibouti city"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cairo",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "malabo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "asmara",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "addis ababa",
+          "aliases": [
+            "addis abeba",
+            "addis"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "libreville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "banjul",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "accra",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conakry",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bissau",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nairobi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "monrovia",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tripoli",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "antananarivo",
+          "aliases": [
+            "tana",
+            "tananarive"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bamako",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nouakchott",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port louis",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "maputo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "windhoek",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niamey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "abuja",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sao tome",
+          "aliases": [
+            "são tomé",
+            "sao tome and principe"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dakar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "victoria",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freetown",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mogadishu",
+          "aliases": [
+            "mogadiscio"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "pretoria",
+          "aliases": [
+            "tshwane"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cape town",
+          "aliases": [
+            "capetown"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bloemfontein",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "juba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "khartoum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodoma",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lome",
+          "aliases": [
+            "lomé"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tunis",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kampala",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "washington dc",
+          "aliases": [
+            "washington",
+            "washington d c",
+            "washington d.c.",
+            "washington, dc",
+            "dc"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mexico city",
+          "aliases": [
+            "mexico",
+            "ciudad de mexico",
+            "mexico df",
+            "cdmx"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "havana",
+          "aliases": [
+            "la habana"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "port-au-prince",
+          "aliases": [
+            "port au prince"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "santo domingo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bridgetown",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "san jose",
+          "aliases": [
+            "san josé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "san salvador",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "guatemala city",
+          "aliases": [
+            "guatemala",
+            "ciudad de guatemala"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tegucigalpa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "managua",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "panama city",
+          "aliases": [
+            "panama",
+            "panama city panama"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "roseau",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port of spain",
+          "aliases": [
+            "port-of-spain"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "buenos aires",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "la paz",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sucre",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "brasilia",
+          "aliases": [
+            "brasília"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "santiago",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bogota",
+          "aliases": [
+            "bogotá"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "quito",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "georgetown",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "asuncion",
+          "aliases": [
+            "asunción"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lima",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "paramaribo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "montevideo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "caracas",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "suva",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tarawa",
+          "aliases": [
+            "south tarawa"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "majuro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "palikir",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaren",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ngerulmud",
+          "aliases": [
+            "melekeok"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "apia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port vila",
+          "aliases": [
+            "port-vila"
+          ],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that is in the tropics",
+      "pool": [
+        {
+          "canonical": "jakarta",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "vientiane",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "male",
+          "aliases": [
+            "malé"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "naypyidaw",
+          "aliases": [
+            "nay pyi taw",
+            "naypyitaw",
+            "nay pyi daw"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "manila",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "singapore",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sri jayawardenepura kotte",
+          "aliases": [
+            "kotte",
+            "sri jayawardenapura kotte"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "colombo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dili",
+          "aliases": [
+            "dili timor"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hanoi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sanaa",
+          "aliases": [
+            "sana'a",
+            "sana"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "luanda",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "porto-novo",
+          "aliases": [
+            "porto novo",
+            "portonovo"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ouagadougou",
+          "aliases": [
+            "ouaga"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "praia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaounde",
+          "aliases": [
+            "yaoundé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bangui",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "n'djamena",
+          "aliases": [
+            "ndjamena",
+            "n djamena",
+            "njamena"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "moroni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kinshasa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "brazzaville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yamoussoukro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "djibouti",
+          "aliases": [
+            "djibouti city"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "malabo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "asmara",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "addis ababa",
+          "aliases": [
+            "addis abeba",
+            "addis"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "libreville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "banjul",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "accra",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conakry",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bissau",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nairobi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "monrovia",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "antananarivo",
+          "aliases": [
+            "tana",
+            "tananarive"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bamako",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nouakchott",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port louis",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "windhoek",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niamey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "abuja",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sao tome",
+          "aliases": [
+            "são tomé",
+            "sao tome and principe"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dakar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "victoria",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freetown",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mogadishu",
+          "aliases": [
+            "mogadiscio"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "juba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "khartoum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodoma",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lome",
+          "aliases": [
+            "lomé"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kampala",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mexico city",
+          "aliases": [
+            "mexico",
+            "ciudad de mexico",
+            "mexico df",
+            "cdmx"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "havana",
+          "aliases": [
+            "la habana"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "port-au-prince",
+          "aliases": [
+            "port au prince"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "santo domingo",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bridgetown",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "san jose",
+          "aliases": [
+            "san josé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "san salvador",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "guatemala city",
+          "aliases": [
+            "guatemala",
+            "ciudad de guatemala"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tegucigalpa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "managua",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "panama city",
+          "aliases": [
+            "panama",
+            "panama city panama"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "roseau",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port of spain",
+          "aliases": [
+            "port-of-spain"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "la paz",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sucre",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "brasilia",
+          "aliases": [
+            "brasília"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bogota",
+          "aliases": [
+            "bogotá"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "quito",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "georgetown",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lima",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "paramaribo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "caracas",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "suva",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tarawa",
+          "aliases": [
+            "south tarawa"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "majuro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "palikir",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaren",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ngerulmud",
+          "aliases": [
+            "melekeok"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "apia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port vila",
+          "aliases": [
+            "port-vila"
+          ],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that is in Africa",
+      "pool": [
+        {
+          "canonical": "luanda",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "porto-novo",
+          "aliases": [
+            "porto novo",
+            "portonovo"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ouagadougou",
+          "aliases": [
+            "ouaga"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "praia",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaounde",
+          "aliases": [
+            "yaoundé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bangui",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "n'djamena",
+          "aliases": [
+            "ndjamena",
+            "n djamena",
+            "njamena"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "moroni",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kinshasa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "brazzaville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yamoussoukro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "djibouti",
+          "aliases": [
+            "djibouti city"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "malabo",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "asmara",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "addis ababa",
+          "aliases": [
+            "addis abeba",
+            "addis"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "libreville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "banjul",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "accra",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "conakry",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bissau",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nairobi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "monrovia",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "antananarivo",
+          "aliases": [
+            "tana",
+            "tananarive"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bamako",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nouakchott",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "port louis",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "windhoek",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niamey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "abuja",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sao tome",
+          "aliases": [
+            "são tomé",
+            "sao tome and principe"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dakar",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "victoria",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "freetown",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "mogadishu",
+          "aliases": [
+            "mogadiscio"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "juba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "khartoum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodoma",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lome",
+          "aliases": [
+            "lomé"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kampala",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that is inland, not on the coast",
+      "pool": [
+        {
+          "canonical": "ouagadougou",
+          "aliases": [
+            "ouaga"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaounde",
+          "aliases": [
+            "yaoundé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bangui",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "n'djamena",
+          "aliases": [
+            "ndjamena",
+            "n djamena",
+            "njamena"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kinshasa",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "brazzaville",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yamoussoukro",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "asmara",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "addis ababa",
+          "aliases": [
+            "addis abeba",
+            "addis"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nairobi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "antananarivo",
+          "aliases": [
+            "tana",
+            "tananarive"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bamako",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "windhoek",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niamey",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "abuja",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "juba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "khartoum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodoma",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kampala",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…where English is an official language",
+      "pool": [
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "yaounde",
+          "aliases": [
+            "yaoundé"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nairobi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "windhoek",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "abuja",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "juba",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dodoma",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kampala",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that is south of the Equator",
+      "pool": [
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nairobi",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "windhoek",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "dodoma",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…whose country is landlocked",
+      "pool": [
+        {
+          "canonical": "gitega",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bujumbura",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "kigali",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…where traffic drives on the left",
+      "pool": [
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lusaka",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "harare",
+          "aliases": [
+            "salisbury"
+          ],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…whose country's name is also a lake",
+      "pool": [
+        {
+          "canonical": "lilongwe",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    }
+  ]
+}
