@@ -1,0 +1,2145 @@
+{
+  "number": 22,
+  "date": "2026-11-29",
+  "layers": [
+    {
+      "clue": "Name a chemical element",
+      "pool": [
+        {
+          "canonical": "hydrogen",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "helium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryllium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "boron",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "carbon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "nitrogen",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "oxygen",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "fluorine",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "neon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sodium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "magnesium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aluminium",
+          "aliases": [
+            "aluminum"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "silicon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "phosphorus",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sulfur",
+          "aliases": [
+            "sulphur"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "chlorine",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "argon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "potassium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "calcium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scandium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "titanium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "vanadium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "manganese",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iron",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cobalt",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nickel",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "zinc",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "germanium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "arsenic",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "selenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "bromine",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "krypton",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rubidium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "strontium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zirconium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niobium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "molybdenum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "technetium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ruthenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhodium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "palladium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "silver",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cadmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "indium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "antimony",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tellurium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iodine",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "xenon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "caesium",
+          "aliases": [
+            "cesium"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "barium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lanthanum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cerium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "praseodymium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "neodymium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "promethium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "samarium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "europium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gadolinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dysprosium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "thulium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lutetium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hafnium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tantalum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tungsten",
+          "aliases": [
+            "wolfram"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhenium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "osmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iridium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "platinum",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gold",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "mercury",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "thallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lead",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bismuth",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "polonium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "astatine",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "radon",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "francium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "radium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "actinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "thorium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "protactinium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "uranium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "neptunium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plutonium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "americium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "curium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "berkelium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "californium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "einsteinium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fermium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mendelevium",
+          "aliases": [
+            "mendeleevium"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nobelium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lawrencium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rutherfordium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dubnium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "seaborgium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "bohrium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hassium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "meitnerium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "darmstadtium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "roentgenium",
+          "aliases": [
+            "röntgenium",
+            "rontgenium"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "copernicium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nihonium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "flerovium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "moscovium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "livermorium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tennessine",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "oganesson",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that is solid at room temperature",
+      "pool": [
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryllium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "boron",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "carbon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sodium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "magnesium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aluminium",
+          "aliases": [
+            "aluminum"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "silicon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "phosphorus",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sulfur",
+          "aliases": [
+            "sulphur"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "potassium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "calcium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scandium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "titanium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "vanadium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "manganese",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iron",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cobalt",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nickel",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "zinc",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "germanium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "arsenic",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "selenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rubidium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "strontium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zirconium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niobium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "molybdenum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "technetium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ruthenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhodium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "palladium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "silver",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cadmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "indium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "antimony",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tellurium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iodine",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "caesium",
+          "aliases": [
+            "cesium"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "barium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lanthanum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cerium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "praseodymium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "neodymium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "promethium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "samarium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "europium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gadolinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dysprosium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "thulium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lutetium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hafnium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tantalum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tungsten",
+          "aliases": [
+            "wolfram"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhenium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "osmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iridium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "platinum",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gold",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "thallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lead",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bismuth",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "polonium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "astatine",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "francium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "radium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "actinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "thorium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "protactinium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "uranium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "neptunium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "plutonium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "americium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "curium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "berkelium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "californium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "einsteinium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "fermium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "mendelevium",
+          "aliases": [
+            "mendeleevium"
+          ],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "nobelium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lawrencium",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that has at least one stable isotope",
+      "pool": [
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryllium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "boron",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "carbon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sodium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "magnesium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aluminium",
+          "aliases": [
+            "aluminum"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "silicon",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "phosphorus",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "sulfur",
+          "aliases": [
+            "sulphur"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "potassium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "calcium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scandium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "titanium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "vanadium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "manganese",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iron",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cobalt",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nickel",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "zinc",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "germanium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "arsenic",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "selenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rubidium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "strontium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zirconium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niobium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "molybdenum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ruthenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhodium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "palladium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "silver",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cadmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "indium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "antimony",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tellurium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iodine",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "caesium",
+          "aliases": [
+            "cesium"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "barium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lanthanum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cerium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "praseodymium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "neodymium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "samarium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "europium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gadolinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dysprosium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "thulium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lutetium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hafnium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tantalum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tungsten",
+          "aliases": [
+            "wolfram"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhenium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "osmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iridium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "platinum",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gold",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "thallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lead",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bismuth",
+          "aliases": [],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that is a metal",
+      "pool": [
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryllium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "magnesium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "aluminium",
+          "aliases": [
+            "aluminum"
+          ],
+          "commonness": "common"
+        },
+        {
+          "canonical": "potassium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "calcium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scandium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "titanium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "vanadium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "manganese",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iron",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cobalt",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "nickel",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "copper",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "zinc",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rubidium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "strontium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zirconium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niobium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "molybdenum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ruthenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhodium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "palladium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "silver",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "cadmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "indium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tin",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "caesium",
+          "aliases": [
+            "cesium"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "barium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lanthanum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cerium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "praseodymium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "neodymium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "samarium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "europium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gadolinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dysprosium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "thulium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lutetium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hafnium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "tantalum",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "tungsten",
+          "aliases": [
+            "wolfram"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhenium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "osmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iridium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "platinum",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "gold",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "thallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "lead",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "bismuth",
+          "aliases": [],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…whose name ends in -ium",
+      "pool": [
+        {
+          "canonical": "lithium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "beryllium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "sodium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "magnesium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "potassium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "calcium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "scandium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "titanium",
+          "aliases": [],
+          "commonness": "common"
+        },
+        {
+          "canonical": "vanadium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "chromium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "gallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rubidium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "strontium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "zirconium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "niobium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "ruthenium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "rhodium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "palladium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cadmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "indium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "caesium",
+          "aliases": [
+            "cesium"
+          ],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "barium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cerium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "praseodymium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "neodymium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "samarium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "europium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gadolinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dysprosium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "thulium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lutetium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "hafnium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "rhenium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "osmium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "iridium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "thallium",
+          "aliases": [],
+          "commonness": "uncommon"
+        }
+      ]
+    },
+    {
+      "clue": "…that is a rare earth metal",
+      "pool": [
+        {
+          "canonical": "scandium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "cerium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "praseodymium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "neodymium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "samarium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "europium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "gadolinium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "dysprosium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "thulium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lutetium",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that is named after a place",
+      "pool": [
+        {
+          "canonical": "scandium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "europium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "thulium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "lutetium",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…named after a place in Sweden",
+      "pool": [
+        {
+          "canonical": "yttrium",
+          "aliases": [],
+          "commonness": "uncommon"
+        },
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…that is a lanthanide",
+      "pool": [
+        {
+          "canonical": "terbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "erbium",
+          "aliases": [],
+          "commonness": "rare"
+        },
+        {
+          "canonical": "ytterbium",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    },
+    {
+      "clue": "…named after a capital city",
+      "pool": [
+        {
+          "canonical": "holmium",
+          "aliases": [],
+          "commonness": "rare"
+        }
+      ]
+    }
+  ]
+}
