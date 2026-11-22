@@ -163,3 +163,24 @@ Sources: the docs repo `reddit/devvit-docs` (`docs/capabilities/analytics/devvit
 - **Textures** for strata not yet reached are drawn one every 250ms while the camera is still, so the end-of-run pull-back no longer draws up to seven in one frame (all 11 at K=2 is ~20 MB of texture).
 - **First descent:** the "first placement cuts" counter now counts a `dig` made before the scene exists, so the first strike after a slow font load still slides.
 - **Surface opening:** a fresh run (layer 1, nothing cleared) starts on the Surface and sinks to layer 1 (1.6s); resumed runs and reduced motion don't.
+
+## Step 7 second review: correctness, mobile performance, accessibility (22 Nov 2026)
+
+Three focused reviews of the step 7 world. Each claim was checked against the installed Phaser 4.2.1 source before acting. Fixed:
+
+- **Fossil tap area** is in the frame's own pixels (`InputManager.pointWithinHitArea` adds `displayOriginX/Y`), and canvas textures are K× (`canvas()`), so the hit circle is `Circle(32K, 32K, …)`. It was a quarter-size circle off-centre on every K=2 phone.
+- **Resizes keep animations running.** Phaser fires its scale `resize` from its own window listener too (and `ScaleManager.refresh` emits even at the same size), so the handler now retargets a running move (`layout(this.animating())`) instead of snapping it. The Surface opening is held by `layout()` itself while its timer waits, so a resize can't cut it, and the timer reads the current size when it fires.
+- **Panels re-measure the gap:** a ResizeObserver on `#hud`, `#play` and `#end` calls `world.relayout()`, which re-aims only if the gap changed.
+- **Opening only for fresh runs:** `game.ts` passes it (nothing cleared and no pickaxe broken), not inferred from layer 1.
+- **Frame rate:** `fps: { limit: 60 }` in the game config, and `game.loop.setFPSLimit(30)` whenever no camera or light tween runs (`TimeStep.setFPSLimit`, Phaser 4.2.0+). `render.antialiasGL: false`.
+- **Load:** only layers ±1 draw before first paint; idle prefetch does the rest. Text re-renders once for a text-only or style-only change. `setFossils` skips identical stats.
+- **Fossils above the darkness**, fainter (DESIGN §7). Computed contrast under the darkness had been 1.0–2.9:1.
+- **Screen readers:** `#clue` and `#reveal` lost `aria-live` (changes inside `display:none` aren't announced); one always-rendered `#announce` (`role="status"`) says each strike and each new clue. `#answer` is described by the layer line and clue. `#chain` and `#fossil-list` are focusable scroll boxes (Safari doesn't make scroll containers focusable).
+- **Short screens:** `#play` is a flex column with `min-height: 0` and the chain shrinks, so the input stays above the keyboard on small and landscape phones.
+- **Clue placement** also checks the clue's own height and scale (DESIGN §12); forced colours / more contrast always use the DOM clue; `visualViewport` `scroll` also runs `fit()` (iOS keyboard panning).
+
+Not changed, on purpose:
+
+- **Texture memory** is estimated at ~80 MB on a K=2 phone once every stratum is drawn: Phaser's `CanvasTexture` keeps an `imageData` copy of each canvas besides the canvas and the GL texture. Avoiding it means registering a plain canvas through `textures.addImage`, whose type only takes `HTMLImageElement`, i.e. a type cast, which AGENTS.md forbids. Revisit if the Reddit app's webview is seen being killed (profile first).
+- **K = min(DPR, 1.5)** would cut GPU fill ~44% at some loss of sharpness, and dropping the warm lamp glow ~0.7 screen of fill: both design calls, left until a profile on a real mid-range Android phone says they're needed.
+- **Dust motes run continuously** (WCAG 2.2.2 pause control): decorative, faint, and off under reduced motion; no pause control added.

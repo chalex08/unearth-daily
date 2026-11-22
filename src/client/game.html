@@ -30,13 +30,13 @@
       </div>
 
       <main id="play" class="recess" hidden>
-        <ol id="chain" aria-label="Your core sample so far"></ol>
+        <ol id="chain" aria-label="Your core sample so far" tabindex="0"></ol>
         <div id="current">
           <p id="layer"></p>
-          <p id="clue" aria-live="polite"></p>
+          <p id="clue"></p>
           <p id="helper">Every clue above still applies.</p>
         </div>
-        <div id="reveal" aria-live="polite" hidden>
+        <div id="reveal" hidden>
           <img
             id="reveal-icon"
             src="icons/00-surface.svg"
@@ -57,6 +57,7 @@
           <label for="answer" class="visually-hidden">Your answer</label>
           <input
             id="answer"
+            aria-describedby="layer clue"
             name="answer"
             type="text"
             maxlength="40"
@@ -91,10 +92,16 @@
         <p id="end-note" hidden></p>
         <p id="final-answer"></p>
       </main>
+
+      <!-- The fossils in the rock, as text: shown in the desktop side panel, for screen readers only
+           on phones (the canvas can't be reached by keyboard). -->
+      <section id="fossils" aria-labelledby="fossils-title" hidden>
+        <h2 id="fossils-title">Other diggers' answers</h2>
+        <ul id="fossil-list" tabindex="0"></ul>
+      </section>
     </div>
-    <section class="visually-hidden" aria-label="Other diggers' answers">
-      <ul id="fossil-list"></ul>
-    </section>
+    <!-- One live region, always rendered: changes inside hidden elements aren't announced. -->
+    <p id="announce" class="visually-hidden" role="status"></p>
     <script type="module" src="game.ts"></script>
   </body>
 </html>

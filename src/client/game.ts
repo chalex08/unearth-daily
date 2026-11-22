@@ -18,7 +18,7 @@ import {
   MINERALS,
   PICKAXES,
 } from '../shared/game';
-import { BODY, DISPLAY, K, World } from './world';
+import { BODY, DISPLAY, FOSSILS_SHOWN, K, World } from './world';
 import { STRATA } from './strata';
 
 function el<T extends HTMLElement>(id: string, type: { new (): T }): T {
@@ -65,7 +65,9 @@ const ui = {
   share: el('share', HTMLTextAreaElement),
   copy: el('copy', HTMLButtonElement),
   next: $('next'),
+  fossils: $('fossils'),
   fossilList: $('fossil-list'),
+  announce: $('announce'),
 };
 
 const world = new World();
@@ -101,8 +103,16 @@ void Promise.allSettled([
       height: Math.round(box.clientHeight * K),
     },
     scene: [world],
+    // 90/120Hz phones would otherwise render up to twice the frames; World drops to 30 when idle.
+    fps: { limit: 60 },
+    // Everything is axis-aligned quads or alpha-edged textures: multisampling buys nothing visible.
+    render: { antialiasGL: false },
   });
 });
+// The world only re-measures on its own resize; the panels change height on their own too (a wrong
+// answer line wrapping, the strike reveal, the end screen), which changes how much rock shows.
+const panels = new ResizeObserver(() => world.relayout());
+for (const panel of [ui.hud, ui.play, ui.end]) panels.observe(panel);
 
 const reducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -225,7 +235,8 @@ async function start() {
       chain: r.chain,
     };
     showStatus('');
-    showLayer();
+    // A run with nothing cleared and nothing broken opens on the Surface (World.startIntro).
+    showLayer(r.chain.length === 0 && r.lives === PICKAXES);
     if (r.chain.length) void loadFossils();
   } catch (e) {
     showStatus(
@@ -240,13 +251,17 @@ async function loadFossils() {
   try {
     const { fossils } = await api<StatsResponse>('GET', 'stats');
     world.setFossils(fossils);
+    ui.fossils.hidden = fossils.every((layer) => layer.length === 0);
     // The canvas is decoration for a screen reader; this list carries the same fossils, with percents.
     ui.fossilList.replaceChildren(
       ...fossils.flatMap((layer, i) =>
         layer.length
           ? [
               Object.assign(document.createElement('li'), {
-                textContent: `Layer ${i + 1}, ${mineral(i + 1).name}: ${layer.map((f) => `${f.answer} ${f.percent}%`).join(', ')}.`,
+                textContent: `Layer ${i + 1}, ${mineral(i + 1).name}: ${layer
+                  .slice(0, FOSSILS_SHOWN)
+                  .map((f) => `${f.answer} ${f.percent}%`)
+                  .join(', ')}.`,
               }),
             ]
           : []
@@ -262,7 +277,7 @@ function bandNote(points: number, band: RarityBand | null, estimated: boolean) {
   return `+${points}${named}${estimated && named ? ', estimated' : ''}`;
 }
 
-function showLayer() {
+function showLayer(opening = false) {
   if (!run) return;
   ui.play.hidden = false;
   setOre(ui.play, run.layer);
@@ -296,8 +311,16 @@ function showLayer() {
   world.dig(
     run.layer,
     run.chain.map((c) => ({ clue: c.clue, answer: c.answer })),
-    run.clue
+    run.clue,
+    true,
+    opening
   );
+  announce(`${ui.layer.textContent}. ${run.clue}`);
+}
+
+/** Says something once to screen readers, through the one always-rendered live region. */
+function announce(text: string) {
+  ui.announce.textContent = text;
 }
 
 const IGNORED: Record<string, string> = {
@@ -356,6 +379,14 @@ async function reveal(r: AnswerResult, layer: number) {
     ? ` Estimated until ${COLD_START_THRESHOLD} diggers answer this layer.`
     : '';
   ui.revealFlavour.textContent = `${band ? FLAVOUR[band] : 'You hit the core.'}${pct}${est}`;
+  announce(
+    [
+      ui.revealBand.textContent,
+      ui.revealAnswer.textContent,
+      `${ui.revealBase.textContent} ${ui.revealBonus.textContent}`.trim(),
+      ui.revealFlavour.textContent,
+    ].join('. ')
+  );
   ui.current.hidden = true;
   ui.reveal.hidden = false;
   if (rare) {
@@ -557,6 +588,8 @@ if (vv) {
     ui.chain.scrollTop = ui.chain.scrollHeight;
   };
   vv.addEventListener('resize', fit);
+  // iOS can pan the visual viewport when the keyboard opens; keep the fixed layers in view.
+  vv.addEventListener('scroll', fit);
   fit();
 }
 
