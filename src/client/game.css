@@ -164,9 +164,13 @@ body {
   justify-items: start;
 }
 
+/* A column, so the chain (a scroll box) is what gives way when the screen is short (keyboard up on
+   a small phone, landscape): the input never ends up under the keyboard. */
 #play {
   margin-top: auto;
-  display: grid;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-sm);
 }
 
@@ -174,6 +178,8 @@ body {
    runs down into the current clue. Every clue above still applies, so it never scrolls away for
    good: it keeps the newest links in view and scrolls for the rest. */
 #chain {
+  flex: 0 1 auto;
+  min-height: 0;
   list-style: none;
   max-height: calc(var(--vh, 100dvh) * 0.35);
   overflow-y: auto;
@@ -560,8 +566,9 @@ label[for='share'] {
   color: var(--color-muted);
 }
 
-/* The clue is carved on the rock face once the world is up (world.ts). The text stays for screen
-   readers, and if the canvas never starts it simply stays visible. */
+/* The clue is carved on the rock face when enough rock is showing to read it (world.ts sets
+   data-carved). The text stays for screen readers; with the keyboard up on a phone, or if the canvas
+   never starts, it shows in the recess as before. */
 body[data-carved] #clue {
   position: absolute;
   width: 1px;
@@ -569,6 +576,46 @@ body[data-carved] #clue {
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+/* Forced colours or more contrast asked for: the clue is real text in the recess, which follows the
+   user's colours and text settings (the canvas can't). */
+@media (forced-colors: active), (prefers-contrast: more) {
+  body[data-carved] #clue {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+  }
+}
+
+/* Other diggers' answers as text: for screen readers only on phones, where the rock shows them. */
+@media (max-width: 55.99rem) {
+  #fossils {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+#fossils h2 {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-muted);
+}
+
+#fossil-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
 }
 
 /* Wide screens: HUD, answer and chain move to a side column and the whole canvas is rock. */
@@ -596,7 +643,7 @@ body[data-carved] #clue {
   #play {
     flex: 1;
     margin-top: 0;
-    align-content: end;
+    justify-content: flex-end;
   }
 
   #chain {
@@ -607,6 +654,18 @@ body[data-carved] #clue {
     flex: 1;
     max-height: none;
     margin-top: 0;
+  }
+
+  #fossils {
+    flex: none;
+    padding: var(--space-sm) var(--space-md);
+    border-top: var(--rule-hair) solid var(--color-rule);
+  }
+
+  #fossil-list {
+    max-height: calc(var(--vh, 100dvh) * 0.25);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }
 
