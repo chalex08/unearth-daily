@@ -1,7 +1,8 @@
 import { Hono } from 'hono';
 import type { Context } from 'hono';
-import { context, redis, settings } from '@devvit/web/server';
+import { context, reddit, redis, settings } from '@devvit/web/server';
 import type {
+  ActionResponse,
   AnswerResult,
   ChainLink,
   ErrorResponse,
@@ -16,6 +17,7 @@ import {
   currentStreak,
   dayKey,
   mineral,
+  MINERALS,
   puzzleNumber,
   rarityBand,
   runStatus,
@@ -268,9 +270,11 @@ async function settle(
     await redis.hIncrBy(keys.ends(day), String(next.cleared.length), 1);
     await redis.expire(keys.ends(day), TTL_SECONDS);
     const streak = updateStreak(await loadStreak(userId), day);
+    const best = Number((await redis.hGet(keys.user(userId), 'best')) ?? 0);
     await redis.hSet(keys.user(userId), {
       count: String(streak.count),
       lastDay: streak.lastDay,
+      best: String(Math.max(best, next.cleared.length)),
     });
     await redis.expire(keys.user(userId), TTL_SECONDS);
   }
@@ -303,6 +307,14 @@ api.get('/result', async (c) => {
   const status = run ? runStatus(run) : 'playing';
   if (!run || status === 'playing') return fail(c, 409, 'Finish the run first');
   const { total, rareFinds, hero } = scoreRun(run);
+  // The join prompt is shown once per player, after their first finished run (SPEC §6.6).
+  const userKey = keys.user(userId);
+  const joinPrompt = !(await redis.hGet(userKey, 'prompted'));
+  if (joinPrompt) {
+    await redis.hSet(userKey, { prompted: '1' });
+    await redis.expire(userKey, TTL_SECONDS);
+  }
+  const postId = context.postId;
   return c.json<ResultResponse>({
     puzzleNumber: run.puzzleNumber,
     date: day,
@@ -319,9 +331,19 @@ api.get('/result', async (c) => {
         layer: i + 1,
         clue: l.clue,
         cleared: cl ? link(puzzle, cl) : null,
+        missed: (run.misses ?? [])
+          .filter((m) => m.layer === i + 1)
+          .map(({ answer, reason }) => ({ answer, reason })),
       };
     }),
     finalAnswer: puzzle.layers[LAYER_COUNT - 1]!.pool[0]!.canonical,
+    username: (await reddit.getCurrentUsername()) ?? null,
+    subreddit: context.subredditName ?? null,
+    postUrl: postId
+      ? `https://www.reddit.com/comments/${postId.slice(3)}`
+      : null,
+    commented: (await redis.hGet(keys.run(day, userId), 'commented')) === '1',
+    joinPrompt,
   });
 });
 
@@ -369,10 +391,115 @@ api.get('/stats', async (c) => {
     })
   );
   const reachedCounts = minerals(reached);
+  const ended = minerals(ends);
+  const others = ended.reduce((a, b) => a + b, 0) - 1;
+  const finished = run && runStatus(run) !== 'playing';
+  const deeperThan =
+    finished && others > 0
+      ? Math.floor(
+          (ended.slice(0, cleared).reduce((a, b) => a + b, 0) * 100) / others
+        )
+      : null;
   return c.json<StatsResponse>({
+    deeperThan,
     players: reachedCounts[0]!,
-    graveyard: minerals(ends),
+    graveyard: ended,
     reached: reachedCounts,
     fossils,
   });
+});
+
+const isId = <P extends 't1' | 't3'>(
+  p: P,
+  id: string | undefined
+): id is `${P}_${string}` => !!id?.startsWith(`${p}_`);
+
+/** The stickied app comment that shared results reply to (Devvit rules: score comments go under a sticky). */
+async function stickyId(postId: `t3_${string}`): Promise<`t1_${string}`> {
+  const known = await redis.hGet(keys.sticky(postId), 'id');
+  if (isId('t1', known)) return known;
+  // shortcut: two first sharers at once could each create one; the daily post job (step 10) should make it.
+  const sticky = await reddit.submitComment({
+    id: postId,
+    text: 'Share your result below. Replies here are yours alone: delete yours any time.',
+    runAs: 'APP',
+  });
+  await sticky.distinguish(true);
+  await redis.hSet(keys.sticky(postId), { id: sticky.id });
+  await redis.expire(keys.sticky(postId), TTL_SECONDS);
+  return sticky.id;
+}
+
+/** The player's finished run, or the error to send. Every action below needs one. */
+async function finished(c: Context) {
+  const w = who(c);
+  if (w.error) return { error: w.error };
+  const run = await loadRun(w.day, w.userId);
+  if (!run || runStatus(run) === 'playing')
+    return { error: fail(c, 409, 'Finish the run first') };
+  return { ...w, run };
+}
+
+// The three actions below act as the player, so each runs only from its own button press.
+api.post('/comment', async (c) => {
+  const f = await finished(c);
+  if (f.error) return f.error;
+  const postId = context.postId;
+  if (!isId('t3', postId))
+    return fail(c, 400, 'Open the daily post to comment');
+  const runKey = keys.run(f.day, f.userId);
+  if ((await redis.hGet(runKey, 'commented')) === '1')
+    return fail(c, 409, 'Already posted');
+  try {
+    const comment = await reddit.submitComment({
+      id: await stickyId(postId),
+      // Two trailing spaces keep the share text's line breaks in Reddit markdown.
+      text: shareText(f.run).replaceAll('\n', '  \n'),
+      runAs: 'USER',
+    });
+    await redis.hSet(runKey, { commented: '1' });
+    return c.json<ActionResponse>({ ok: true, url: comment.url });
+  } catch (e) {
+    console.error(`comment failed: ${e}`);
+    return fail(c, 409, 'Couldn’t post your comment');
+  }
+});
+
+api.post('/subscribe', async (c) => {
+  const f = await finished(c);
+  if (f.error) return f.error;
+  try {
+    await reddit.subscribeToCurrentSubreddit();
+    return c.json<ActionResponse>({ ok: true });
+  } catch (e) {
+    console.error(`subscribe failed: ${e}`);
+    return fail(c, 409, 'Couldn’t join the subreddit');
+  }
+});
+
+api.post('/flair', async (c) => {
+  const f = await finished(c);
+  if (f.error) return f.error;
+  const [username, user] = await Promise.all([
+    reddit.getCurrentUsername(),
+    redis.hGetAll(keys.user(f.userId)),
+  ]);
+  const subredditName = context.subredditName;
+  if (!username || !subredditName) return fail(c, 400, 'Open the daily post');
+  const streak = currentStreak(
+    user.count && user.lastDay
+      ? { count: Number(user.count), lastDay: user.lastDay }
+      : null,
+    f.day
+  );
+  const best = MINERALS[Number(user.best ?? 0)] ?? MINERALS[0]!;
+  const text = `🔥 ${streak} · ${best.emoji} ${best.name}`;
+  try {
+    // Replaces any flair the player has here, which is why it only runs on their say-so.
+    await reddit.setUserFlair({ subredditName, username, text });
+    return c.json<ActionResponse>({ ok: true, flair: text });
+  } catch (e) {
+    console.error(`flair failed: ${e}`);
+    return fail(c, 409, 'Couldn’t set your flair');
+  }
 });

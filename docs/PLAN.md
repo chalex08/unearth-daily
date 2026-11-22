@@ -77,9 +77,9 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 9. End screen + community features — Wed 2 Dec
 
-- [ ] Pull-back to the full core sample; hero mineral, total, rare finds, pickaxes left; full chain revealed; graveyard stats.
-- [ ] Share text with copy button; post the result as a comment as the user; subreddit join button; streak flair.
-- [ ] Already-played view with countdown to 00:00 UTC.
+- [x] Pull-back to the full core sample; hero mineral, total, rare finds, pickaxes left; full chain revealed (with failed attempts); graveyard stats and "deeper than X%".
+- [x] Share text with copy button; post the result as a comment as the user; subreddit join button (once); streak flair. _Built 22 Nov and checked locally against a mocked Reddit client. Not yet tried on Reddit: in playtest, `runAs: USER` posts as the app account unless the app owner presses it, and user actions only work for everyone once the version is approved; flair needs the app account to have flair rights._
+- [x] Already-played view with countdown to 00:00 UTC.
 - **Done when:** SPEC §6.6 and §6.7 are complete, and flair and comments work in playtest.
 
 ### 10. Daily post, onboarding, Journeys, feed view — Thu 3 – Fri 4 Dec

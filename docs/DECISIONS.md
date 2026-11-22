@@ -196,3 +196,18 @@ Not changed, on purpose:
 - **Haptics** use `navigator.vibrate` where it exists (Android webviews, not iOS) and are skipped under reduced motion.
 - **The in-world score label duplicates the recess reveal on purpose:** the label is the brief SPEC §6.4 transient on the rock; the recess reveal stays for reading and for screen readers (DESIGN §5).
 - Ore marks stay in the rock for the run and are not re-laid out if the canvas width changes mid-run (a `shortcut:` comment in `world.ts`).
+
+## Step 9: end screen and community (22 Nov 2026)
+
+Checked against the installed `@devvit/reddit` 0.15.4 types, the config schema (`@devvit/shared-types/schemas/config-file.v1.json`) and `reddit/devvit-docs` `docs/capabilities/server/userActions.mdx` (developers.reddit.com refuses automated fetches).
+
+- **Permissions:** `"permissions": { "reddit": { "asUser": ["SUBMIT_COMMENT", "SUBSCRIBE_TO_SUBREDDIT"] } }`. Both values are in the schema's `asUser` enum. `subscribeToCurrentSubreddit()` runs as the user by default and needs `SUBSCRIBE_TO_SUBREDDIT`.
+- **Comments as the user:** `reddit.submitComment({ id, text, runAs: 'USER' })`, as a reply to one stickied app comment (`runAs: 'APP'`, then `comment.distinguish(true)`), which the docs call "the required pattern" for score comments. The sticky is made by the first sharer and its id kept in `sticky:{postId}` (a `shortcut:` comment: two first sharers at once could make two; the step 10 daily-post job should create it). Each press is its own button with the username shown beforehand; nothing is merged ("Comment & Continue" is rejected in review) and nothing gates play. One comment per run (`commented` on the run hash). Share text line breaks get two trailing spaces for Reddit markdown.
+- **Playtest caveat (docs):** `runAs: 'USER'` operates from the app account unless the app owner takes the action, and user actions are enabled for all users only once the version is approved. So test comment and join as the developer account. If posting fails, the button opens the post's comments instead (copy + link fallback).
+- **Flair:** `reddit.setUserFlair({ subredditName, username, text })`, text `🔥 <streak> · <emoji> <best mineral>`, only on its own button press, because it replaces existing flair. No permission for it is documented; it runs as the app account, which presumably needs moderator flair rights in the subreddit. **Check in playtest** (open item 7).
+- **"Deeper than X%":** finished runs today that ended at a shallower mineral ÷ all other finished runs today, floored; `null` while the run is going or when nobody else has finished ("You are the first to finish today").
+- **Join prompt:** shown once per player, on the first `/result` after their first finished run (`prompted` on `user:{userId}`); "Not now" just hides it. There's no "is subscribed" API.
+- **Best mineral** (`best` on `user:{userId}`) is the deepest layer ever cleared, for the flair.
+- **Failed attempts** are kept on the run (`misses`, optional so older runs still load) and shown under their layer in the end-screen chain.
+- **Countdown** ticks every second to the next 00:00 UTC.
+- **Hallmark audit (end screen):** 0 FAIL after fixes; typographic apostrophes in end-screen copy; two older FAILs fixed in passing (`#mute` margin through `--space-sm`, the shimmer colour lifted to `--color-shimmer`); the side-stripe warning on the join panel waived on record (it's the core-sample ore bar).

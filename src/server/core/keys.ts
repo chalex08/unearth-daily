@@ -18,6 +18,8 @@ export const keys = {
   reached: (day: string) => `reached:${day}`,
   /** Hash: normalised answer → cached JudgeVerdict JSON for this layer. */
   verdicts: (day: string, layer: number) => `verdicts:${day}:${layer}`,
-  /** Hash: `count`, `lastDay` (the Streak). */
+  /** Hash, field `id`: the app's stickied comment on this post, which shared results reply to. */
+  sticky: (postId: string) => `sticky:${postId}`,
+  /** Hash: `count`, `lastDay` (the Streak), `best` (deepest mineral ever), `prompted` (join prompt shown). */
   user: (userId: string) => `user:${userId}`,
 };

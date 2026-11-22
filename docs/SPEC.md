@@ -189,7 +189,10 @@ Two in-world hints (not modals):
   - Line 2: one emoji per layer cleared (Surface 🌱 alone if none cleared).
   - Line 3: rare finds count, then one 💥 per **broken** pickaxe.
 
-- "Discuss in comments" and a subreddit-join prompt.
+- "You dug deeper than X% of today's other diggers" (finished runs that ended shallower ÷ all other finished runs today).
+- "Discuss in comments" (posts the share text as the player under the app's stickied comment, one explicit press) and a subreddit-join prompt shown once, after the player's first finished run.
+- Streak on the end screen; an opt-in button sets streak and best-mineral flair.
+- Each failed attempt is listed under its layer in the chain.
 
 ### 6.7 Already played today
 
@@ -203,7 +206,7 @@ Show the end screen plus a **countdown to the next puzzle** (next 00:00 UTC).
 ## 7. Community and daily operations
 
 - A **Devvit scheduler** job creates the daily post at **00:00 UTC**, titled **"Unearth #N — <first clue>"**.
-- **Streak flair** on the subreddit (permissions to be verified; see DECISIONS.md).
+- **Streak flair** on the subreddit, set only when the player presses the end-screen flair button (DECISIONS "Step 9").
 - **Devvit Journeys** events: run started; layer progress (layer/10); finished or caved in. **No events for individual inputs.** Journeys are gated by Reddit's server-side allowlist; events only record on an allowlisted, non-playtest version (DECISIONS "Journeys setup").
 
 ## 8. Tech
@@ -221,25 +224,29 @@ Confirmed or changed in [DECISIONS.md](DECISIONS.md).
 
 Routes (types in `src/shared/api.ts`; all need a logged-in user and a puzzle for today's UTC date):
 
-| Route              | Returns                                                                                                                                                  |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /api/start`  | Starts or resumes today's run: current clue, chain so far, lives, score, onboarding flag (true until the player's first finished run).                   |
-| `POST /api/answer` | `{ answer, layer }` → `AnswerResult`. A `layer` that isn't the current one, or a second submit while one is being checked, gets 409 and changes nothing. |
-| `GET /api/result`  | End-screen payload with the full chain and final answer. 409 until the run has ended.                                                                    |
-| `GET /api/stats`   | Players, graveyard, players reaching each mineral, and fossils only for layers this player has cleared (§4.1 display rules; mid-run hiding in §6.3).     |
+| Route                 | Returns                                                                                                                                                  |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /api/start`     | Starts or resumes today's run: current clue, chain so far, lives, score, onboarding flag (true until the player's first finished run).                   |
+| `POST /api/answer`    | `{ answer, layer }` → `AnswerResult`. A `layer` that isn't the current one, or a second submit while one is being checked, gets 409 and changes nothing. |
+| `GET /api/result`     | End-screen payload with the full chain and final answer. 409 until the run has ended.                                                                    |
+| `GET /api/stats`      | Players, graveyard, players reaching each mineral, and fossils only for layers this player has cleared (§4.1 display rules; mid-run hiding in §6.3).     |
+| `POST /api/comment`   | Posts the share text as the player (`runAs: USER`), a reply to the app's stickied comment on the post. Once per run; 409 until the run has ended.        |
+| `POST /api/subscribe` | Joins the subreddit as the player. 409 until the run has ended.                                                                                          |
+| `POST /api/flair`     | Sets the player's flair to `🔥 <streak> · <emoji> <best mineral>`. 409 until the run has ended.                                                          |
 
 Redis keys (`src/server/core/keys.ts`). `{day}` is the UTC day key, `{userId}` the Reddit `t2_` id (never the username). Every key gets a **30-day** TTL, refreshed on write, except the lock.
 
-| Key                      | Type       | Holds                                                                           |
-| ------------------------ | ---------- | ------------------------------------------------------------------------------- |
-| `run:{day}:{userId}`     | hash       | `state`: the RunState JSON. Created with `HSETNX`, so one run per user per day. |
-| `lock:{day}:{userId}`    | counter    | Submit lock, 15s TTL, deleted when the submit finishes.                         |
-| `answers:{day}:{layer}`  | sorted set | Canonical answer → valid answers at that layer (pool and AI-approved).          |
-| `totals:{day}`           | hash       | Layer → all valid answers at that layer (the rarity denominator).               |
-| `ends:{day}`             | hash       | Mineral (deepest layer cleared, 0–10) → runs that ended there (graveyard).      |
-| `reached:{day}`          | hash       | Mineral → players who reached it; `0` = runs started (the player count).        |
-| `verdicts:{day}:{layer}` | hash       | Normalised answer → cached judge verdict JSON. Failures are never cached.       |
-| `user:{userId}`          | hash       | `count`, `lastDay`: the streak.                                                 |
+| Key                      | Type       | Holds                                                                                        |
+| ------------------------ | ---------- | -------------------------------------------------------------------------------------------- |
+| `run:{day}:{userId}`     | hash       | `state`: the RunState JSON. Created with `HSETNX`, so one run per user per day.              |
+| `lock:{day}:{userId}`    | counter    | Submit lock, 15s TTL, deleted when the submit finishes.                                      |
+| `answers:{day}:{layer}`  | sorted set | Canonical answer → valid answers at that layer (pool and AI-approved).                       |
+| `totals:{day}`           | hash       | Layer → all valid answers at that layer (the rarity denominator).                            |
+| `ends:{day}`             | hash       | Mineral (deepest layer cleared, 0–10) → runs that ended there (graveyard).                   |
+| `reached:{day}`          | hash       | Mineral → players who reached it; `0` = runs started (the player count).                     |
+| `verdicts:{day}:{layer}` | hash       | Normalised answer → cached judge verdict JSON. Failures are never cached.                    |
+| `user:{userId}`          | hash       | `count`, `lastDay`: the streak; `best`: deepest mineral ever; `prompted`: join prompt shown. |
+| `sticky:{postId}`        | hash       | `id`: the app's stickied comment that shared results reply to.                               |
 
 ## 9. Sample puzzle #14
 

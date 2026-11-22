@@ -108,14 +108,53 @@
           <h1 id="end-title"></h1>
         </div>
         <p id="end-total" class="num"></p>
+        <dl id="end-stats"></dl>
         <label for="share">Your result, spoiler-free</label>
         <textarea id="share" rows="3" readonly></textarea>
-        <button id="copy" type="button">Copy result</button>
+        <div id="end-actions">
+          <button id="copy" type="button">Copy result</button>
+          <button id="comment" type="button" class="quiet">
+            Discuss in comments
+          </button>
+        </div>
+        <p id="comment-note"></p>
         <p id="next"></p>
-        <dl id="end-stats"></dl>
-        <ol id="end-chain" aria-label="Your core sample"></ol>
+        <section id="join" hidden aria-labelledby="join-title">
+          <h2 id="join-title"></h2>
+          <p>
+            New puzzle every day at 00:00 UTC. Joining is your choice and
+            changes nothing about your run.
+          </p>
+          <div class="row">
+            <button id="join-yes" type="button" class="quiet"></button>
+            <button id="join-skip" type="button" class="quiet">Not now</button>
+          </div>
+        </section>
+        <section id="graveyard" aria-labelledby="grave-title">
+          <h2 id="grave-title">Where today’s diggers stopped</h2>
+          <p id="deeper"></p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Mineral</th>
+                <th scope="col">
+                  <span class="visually-hidden">Share of runs</span>
+                </th>
+                <th scope="col">Ended here</th>
+                <th scope="col">Reached</th>
+              </tr>
+            </thead>
+            <tbody id="grave-rows"></tbody>
+          </table>
+        </section>
+        <h2 id="chain-title">Your core sample</h2>
+        <ol id="end-chain" aria-labelledby="chain-title"></ol>
         <p id="end-note" hidden></p>
         <p id="final-answer"></p>
+        <div id="flair-box" hidden>
+          <button id="flair" type="button" class="quiet"></button>
+          <p id="flair-note"></p>
+        </div>
       </main>
 
       <!-- The fossils in the rock, as text: shown in the desktop side panel, for screen readers only

@@ -62,13 +62,31 @@ const env = vi.hoisted(() => {
     strings.clear();
     state.userId = 't2_alice';
     state.key = undefined;
+    comments.length = 0;
   };
-  return { redis, state, reset, hashes, zsets };
+  const comments: { id: string; text: string; runAs: string }[] = [];
+  const reddit = {
+    getCurrentUsername: async () => 'alice',
+    submitComment: async (o: { id: string; text: string; runAs: string }) => {
+      comments.push(o);
+      return {
+        id: `t1_c${comments.length}`,
+        url: `https://reddit.test/c${comments.length}`,
+        distinguish: async () => {},
+      };
+    },
+    subscribeToCurrentSubreddit: vi.fn(async () => {}),
+    setUserFlair: vi.fn(async () => {}),
+  };
+  return { redis, state, reset, hashes, zsets, reddit, comments };
 });
 
 vi.mock('@devvit/web/server', () => ({
   redis: env.redis,
+  reddit: env.reddit,
   context: {
+    postId: 't3_post',
+    subredditName: 'UnearthDaily',
     get userId() {
       return env.state.userId;
     },
@@ -383,6 +401,108 @@ describe('a full run', () => {
     expect(res.chain[0]).toMatchObject({
       clue: 'Name something orange',
       cleared: null,
+    });
+  });
+});
+
+describe('end screen and community', () => {
+  const finish = async () => {
+    env.state.key = 'test-key';
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => verdict(false, 'x', 'Nope'))
+    );
+    await start();
+    for (const text of ['blue whale', 'green pea', 'red brick'])
+      await answer(text, 1);
+  };
+  const post = (path: string) => api.request(path, { method: 'POST' });
+
+  it('lists the failed attempts per layer', async () => {
+    await finish();
+    const res = await json<ResultResponse>(api.request('/result'));
+    expect(res.chain[0]!.missed).toEqual([
+      { answer: 'blue whale', reason: 'Nope' },
+      { answer: 'green pea', reason: 'Nope' },
+      { answer: 'red brick', reason: 'Nope' },
+    ]);
+    expect(res.chain[1]!.missed).toEqual([]);
+  });
+
+  it('shows the join prompt once', async () => {
+    await finish();
+    const first = await json<ResultResponse>(api.request('/result'));
+    const again = await json<ResultResponse>(api.request('/result'));
+    expect([first.joinPrompt, again.joinPrompt]).toEqual([true, false]);
+  });
+
+  it('says how many other players this run out-dug', async () => {
+    // Two earlier runs ended at Dirt and Uranium; alice ends at Surface (0), so she beat nobody.
+    env.hashes.set(
+      'ends:2026-11-21',
+      new Map([
+        ['1', '1'],
+        ['10', '1'],
+      ])
+    );
+    await finish();
+    let stats = await json<StatsResponse>(api.request('/stats'));
+    expect(stats.deeperThan).toBe(0);
+    // Bob's Dirt run joins Surface, Dirt and Uranium: only the Surface run is shallower, 1 of 3 others.
+    env.hashes.set(
+      'ends:2026-11-21',
+      new Map([
+        ['0', '1'],
+        ['1', '1'],
+        ['10', '1'],
+      ])
+    );
+    env.state.userId = 't2_bob';
+    await start();
+    await answer('tiger', 1);
+    for (const text of ['x1', 'x2', 'x3']) await answer(text, 2);
+    stats = await json<StatsResponse>(api.request('/stats'));
+    expect(stats.deeperThan).toBe(33);
+  });
+
+  it('has no percentile while the run goes on', async () => {
+    await start();
+    expect(
+      (await json<StatsResponse>(api.request('/stats'))).deeperThan
+    ).toBeNull();
+  });
+
+  it('comments as the user under a sticky, once', async () => {
+    await finish();
+    expect((await post('/comment')).status).toBe(200);
+    expect(env.comments.map((c) => [c.id, c.runAs])).toEqual([
+      ['t3_post', 'APP'],
+      ['t1_c1', 'USER'],
+    ]);
+    expect(env.comments[1]!.text).toContain('Unearth #14');
+    expect((await post('/comment')).status).toBe(409);
+    expect((await json<ResultResponse>(api.request('/result'))).commented).toBe(
+      true
+    );
+  });
+
+  it('refuses the actions until the run has ended', async () => {
+    await start();
+    for (const path of ['/comment', '/subscribe', '/flair'])
+      expect((await post(path)).status).toBe(409);
+    expect(env.comments).toHaveLength(0);
+  });
+
+  it('subscribes and sets streak flair on request', async () => {
+    await finish();
+    expect((await post('/subscribe')).status).toBe(200);
+    expect(env.reddit.subscribeToCurrentSubreddit).toHaveBeenCalled();
+    const res = await json<{ flair: string }>(post('/flair'));
+    expect(res.flair).toBe('🔥 1 · 🌱 Surface');
+    expect(env.reddit.setUserFlair).toHaveBeenCalledWith({
+      subredditName: 'UnearthDaily',
+      username: 'alice',
+      text: '🔥 1 · 🌱 Surface',
     });
   });
 });

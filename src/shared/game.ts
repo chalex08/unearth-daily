@@ -100,6 +100,8 @@ export type RunState = {
   cleared: ClearedLayer[];
   /** Normalised inputs and canonicals already tried this run (valid or not). */
   used: string[];
+  /** Answers that broke a pickaxe, for the end-screen chain (SPEC §6.6). Absent on older runs. */
+  misses?: { layer: number; answer: string; reason: string }[];
 };
 
 export type RunStatus = 'playing' | 'cleared' | 'caved-in';
@@ -165,7 +167,19 @@ export function applyAnswer(
 
   if (!verdict.valid) {
     return {
-      run: { ...run, pickaxes: run.pickaxes - 1, used },
+      run: {
+        ...run,
+        pickaxes: run.pickaxes - 1,
+        used,
+        misses: [
+          ...(run.misses ?? []),
+          {
+            layer: currentLayer(run),
+            answer: verdict.answer,
+            reason: verdict.reason,
+          },
+        ],
+      },
       result: { kind: 'invalid', reason: verdict.reason },
     };
   }

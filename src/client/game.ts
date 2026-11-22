@@ -1,8 +1,9 @@
 // Expanded-mode game: start/resume → answer → strike reveal → descend → end screen → "already played".
 // The server owns every rule; this file only shows what /api/* returns. Look: docs/DESIGN.md.
 import * as Phaser from 'phaser';
-import { showToast } from '@devvit/web/client';
+import { navigateTo, showToast } from '@devvit/web/client';
 import type {
+  ActionResponse,
   AnswerResult,
   ChainLink,
   ErrorResponse,
@@ -68,6 +69,17 @@ const ui = {
   share: el('share', HTMLTextAreaElement),
   copy: el('copy', HTMLButtonElement),
   next: $('next'),
+  comment: el('comment', HTMLButtonElement),
+  commentNote: $('comment-note'),
+  join: $('join'),
+  joinTitle: $('join-title'),
+  joinYes: el('join-yes', HTMLButtonElement),
+  joinSkip: el('join-skip', HTMLButtonElement),
+  deeper: $('deeper'),
+  graveRows: $('grave-rows'),
+  flairBox: $('flair-box'),
+  flair: el('flair', HTMLButtonElement),
+  flairNote: $('flair-note'),
   fossils: $('fossils'),
   fossilList: $('fossil-list'),
   announce: $('announce'),
@@ -257,9 +269,10 @@ async function start() {
 }
 
 /** Other players' answers at the layers this player has cleared. Optional, so failures stay quiet. */
-async function loadFossils() {
+async function loadFossils(): Promise<StatsResponse | null> {
   try {
-    const { fossils } = await api<StatsResponse>('GET', 'stats');
+    const stats = await api<StatsResponse>('GET', 'stats');
+    const { fossils } = stats;
     world.setFossils(fossils);
     ui.fossils.hidden = fossils.every((layer) => layer.length === 0);
     // The canvas is decoration for a screen reader; this list carries the same fossils, with percents.
@@ -277,8 +290,10 @@ async function loadFossils() {
           : []
       )
     );
+    return stats;
   } catch {
     // The fossils are decoration on top of play; the run goes on without them.
+    return null;
   }
 }
 
@@ -537,7 +552,7 @@ async function end() {
   showStatus('');
   const cleared = r.chain.flatMap((l) => (l.cleared ? [l.cleared] : []));
   hud(r.lives, r.total, cleared.length, 0);
-  void loadFossils();
+  void loadFossils().then((stats) => paintGraveyard(stats, cleared.length));
   setOre(ui.end, cleared.length);
   ui.endIcon.src = icon(cleared.length);
   ui.end.hidden = false;
@@ -579,12 +594,26 @@ async function end() {
       } else {
         li.className = 'unreached';
         text.textContent = l.clue;
-        note.textContent = 'not reached';
+        note.textContent = l.missed.length ? 'caved in here' : 'not reached';
       }
       li.append(num, text, note);
+      for (const m of l.missed) {
+        li.classList.add('missed');
+        const miss = document.createElement('span');
+        miss.className = 'miss';
+        const word = document.createElement('s');
+        word.textContent = m.answer;
+        miss.append(
+          'Broke a pickaxe: ',
+          word,
+          ` (${m.reason.replace(/[.!]+$/, '').toLowerCase()})`
+        );
+        li.append(miss);
+      }
       return li;
     })
   );
+  paintActions(r);
   ui.endNote.hidden = !cleared.some((c) => c.estimated && c.band);
   ui.endNote.textContent = `Bands are estimated until ${COLD_START_THRESHOLD} diggers have answered a layer.`;
   ui.finalAnswer.textContent = `The last answer was “${r.finalAnswer}”.`;
@@ -596,16 +625,128 @@ async function end() {
   );
 }
 
+let copyReset: ReturnType<typeof setTimeout> | undefined;
 ui.copy.addEventListener('click', async () => {
+  let said = 'Copied';
   try {
     await navigator.clipboard.writeText(ui.share.value);
-    showToast('Copied');
   } catch {
     // Some webviews block the clipboard API; leave the text selected to copy by hand.
     ui.share.select();
-    showToast('Select and copy the text');
+    said = 'Select and copy the text';
   }
+  showToast(said);
+  // The button says it too, so the confirmation sits where the thumb is.
+  ui.copy.textContent = said === 'Copied' ? 'Copied' : 'Press and hold to copy';
+  announce(said);
+  clearTimeout(copyReset);
+  copyReset = setTimeout(() => (ui.copy.textContent = 'Copy result'), 2500);
 });
+
+/** The graveyard (SPEC §6.6): runs ended per mineral, players reaching each, and where you are. */
+function paintGraveyard(stats: StatsResponse | null, mine: number) {
+  ui.graveRows.replaceChildren();
+  ui.deeper.textContent = '';
+  if (!stats) return;
+  const top = Math.max(1, ...stats.graveyard);
+  ui.deeper.textContent =
+    stats.deeperThan === null
+      ? 'You are the first to finish today.'
+      : `You dug deeper than ${stats.deeperThan}% of today’s other diggers.`;
+  ui.graveRows.append(
+    ...stats.graveyard.map((ended, m) => {
+      const tr = document.createElement('tr');
+      setOre(tr, m);
+      if (m === mine) tr.className = 'you';
+      const bar = document.createElement('td');
+      bar.className = 'bar';
+      const fill = document.createElement('i');
+      fill.style.setProperty('--w', String(ended / top));
+      bar.append(fill);
+      const cells = [
+        mineral(m).name,
+        String(ended),
+        String(stats.reached[m]),
+      ].map((text) =>
+        Object.assign(document.createElement('td'), { textContent: text })
+      );
+      tr.append(...cells);
+      tr.firstElementChild?.after(bar);
+      return tr;
+    })
+  );
+}
+
+/** Join prompt, comment and flair: each an explicit press of its own (Devvit user-action rules). */
+function paintActions(r: ResultResponse) {
+  const who = r.username ? `u/${r.username}` : 'you';
+  const sub = r.subreddit ? `r/${r.subreddit}` : 'the subreddit';
+  const note = (b: HTMLButtonElement, text: string) => {
+    b.disabled = true;
+    b.textContent = text;
+  };
+  ui.comment.disabled = false;
+  ui.comment.textContent = 'Discuss in comments';
+  ui.commentNote.textContent = r.postUrl
+    ? `Posts the text above as ${who}, a reply to the pinned comment. Your username shows.`
+    : '';
+  if (r.commented) note(ui.comment, 'Posted. Open comments');
+  ui.comment.hidden = !r.postUrl;
+  ui.comment.onclick = async () => {
+    if (!r.postUrl) return;
+    if (r.commented || ui.comment.dataset.posted) return navigateTo(r.postUrl);
+    ui.comment.disabled = true;
+    try {
+      const done = await api<ActionResponse>('POST', 'comment');
+      ui.comment.dataset.posted = '1';
+      ui.comment.textContent = 'Posted. Open comments';
+      showToast('Posted to the comments');
+      announce('Posted to the comments');
+      if (done.url) r.postUrl = done.url;
+    } catch (e) {
+      // Posting as the player can fail (or be unavailable); the comments are still one tap away.
+      showToast(e instanceof ApiError ? e.message : 'Couldn’t post');
+      navigateTo(r.postUrl);
+      ui.comment.textContent = 'Open comments';
+    } finally {
+      ui.comment.disabled = false;
+    }
+  };
+
+  ui.join.hidden = !r.joinPrompt;
+  ui.joinTitle.textContent = `Come back to ${sub}`;
+  ui.joinYes.textContent = `Join ${sub}`;
+  ui.joinYes.disabled = false;
+  ui.joinYes.onclick = async () => {
+    ui.joinYes.disabled = true;
+    try {
+      await api<ActionResponse>('POST', 'subscribe');
+      showToast(`Joined ${sub}`);
+      ui.join.hidden = true;
+    } catch {
+      showToast('Couldn’t join. Try from the subreddit page.');
+      ui.joinYes.disabled = false;
+    }
+  };
+  ui.joinSkip.onclick = () => (ui.join.hidden = true);
+
+  ui.flairBox.hidden = !r.subreddit;
+  ui.flair.textContent = `Show my streak as my ${sub} flair`;
+  ui.flairNote.textContent = 'Replaces any flair you have there.';
+  ui.flair.disabled = false;
+  ui.flair.onclick = async () => {
+    ui.flair.disabled = true;
+    try {
+      const done = await api<ActionResponse>('POST', 'flair');
+      ui.flairNote.textContent = `Your flair now reads ${done.flair}.`;
+      announce(ui.flairNote.textContent);
+    } catch (e) {
+      ui.flairNote.textContent =
+        e instanceof ApiError ? e.message : 'Couldn’t set your flair.';
+      ui.flair.disabled = false;
+    }
+  };
+}
 
 let timer: ReturnType<typeof setInterval> | undefined;
 function countdown() {
@@ -616,12 +757,13 @@ function countdown() {
       now.getUTCMonth(),
       now.getUTCDate() + 1
     );
-    const mins = Math.ceil((next - now.getTime()) / 60000);
-    ui.next.textContent = `You've played today. Next puzzle in ${Math.floor(mins / 60)}h ${mins % 60}m.`;
+    const secs = Math.max(0, Math.ceil((next - now.getTime()) / 1000));
+    const pad = (n: number) => String(n).padStart(2, '0');
+    ui.next.textContent = `You’ve played today. Next puzzle in ${Math.floor(secs / 3600)}:${pad(Math.floor(secs / 60) % 60)}:${pad(secs % 60)}, at 00:00 UTC.`;
   };
   clearInterval(timer);
   tick();
-  timer = setInterval(tick, 30000);
+  timer = setInterval(tick, 1000);
 }
 
 ui.retry.addEventListener('click', () => void start());
