@@ -560,8 +560,9 @@ label[for='share'] {
   color: var(--color-muted);
 }
 
-/* The clue is carved on the rock face once the world is up (world.ts). The text stays for screen
-   readers, and if the canvas never starts it simply stays visible. */
+/* The clue is carved on the rock face when enough rock is showing to read it (world.ts sets
+   data-carved). The text stays for screen readers; with the keyboard up on a phone, or if the canvas
+   never starts, it shows in the recess as before. */
 body[data-carved] #clue {
   position: absolute;
   width: 1px;

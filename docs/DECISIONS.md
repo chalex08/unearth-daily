@@ -155,3 +155,11 @@ Sources: the docs repo `reddit/devvit-docs` (`docs/capabilities/analytics/devvit
 - **Clue on the rock, text in the DOM.** The carved clue is canvas text; `#clue` stays in the DOM for screen readers and is visually hidden only once the canvas sets `body[data-carved]`. If the world never starts, the DOM clue stays visible.
 - **Fossils are objects, not lettering** (SPEC §6.3 says embedded objects; DESIGN §7 updated). `#fossil-list` gives screen readers the same data.
 - **Dev tool quirk, not fixed here:** `?jump=11` (end screen) fails on the 22 Nov puzzle with "No unused answer for layer 10", because its layer-10 answer was already picked at layer 9. To reach the end locally, break all three pickaxes instead.
+
+## Step 7 review fixes (22 Nov 2026)
+
+- **Carved clue falls back to the recess** below 170px of rock showing (`MIN_CARVE` in `world.ts`), checked on every layout. Found at 390×440 (keyboard up), where the carved clue was cropped and the DOM copy hidden. Showing the DOM clue only shrinks the gap further, so the switch can't oscillate.
+- **Text:** a layout sets each Phaser `Text`'s style and content with `setText` then `TextStyle.setStyle(style, true)` (at most two renders, and `true` is needed: with `false` the font metrics aren't recomputed, so a 14px→21px change laid out with the old line height), skipped entirely when unchanged (each Text setter re-renders its canvas, and the keyboard fires a resize every frame). Fossils redraw only when the width, data, open fossil or pull-back changes. `scale.resize` is debounced 100ms.
+- **Textures** for strata not yet reached are drawn one every 250ms while the camera is still, so the end-of-run pull-back no longer draws up to seven in one frame (all 11 at K=2 is ~20 MB of texture).
+- **First descent:** the "first placement cuts" counter now counts a `dig` made before the scene exists, so the first strike after a slow font load still slides.
+- **Surface opening:** a fresh run (layer 1, nothing cleared) starts on the Surface and sinks to layer 1 (1.6s); resumed runs and reduced motion don't.

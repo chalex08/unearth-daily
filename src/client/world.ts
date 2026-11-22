@@ -40,6 +40,10 @@ const HOLE = 120;
 const PULSE_MS = 1800;
 const DEPOSIT_H = 56;
 const MAX_MOTES = 14;
+/** Rock showing (px) below which the clue moves from the rock face back into the recess. */
+const MIN_CARVE = 170;
+/** Room the core segment leaves between itself and each wall, which fossils may use. */
+const MARGIN = 14;
 const BONE = '#efe6d2';
 const URANIUM = 0x3fd08f;
 
@@ -110,6 +114,15 @@ export class World extends Phaser.Scene {
   private lastY = Number.NaN;
   private move: Phaser.Tweens.Tween | null = null;
   private liftTween: Phaser.Tweens.Tween | null = null;
+  private intro: Phaser.Time.TimerEvent | null = null;
+  private resizeTimer: ReturnType<typeof setTimeout> | undefined;
+  /** What each text last rendered, so a layout only re-renders text that actually changed. */
+  private painted = new Map<Phaser.GameObjects.Text, string>();
+  /** World width and data the fossils were last drawn for. */
+  private fossilKey = '';
+  /** Whether the current clue is carved on the rock (true) or shown in the recess (too little rock showing). */
+  private carved = false;
+  private prefetching = false;
 
   /** The rock left showing on screen, [top, bottom] in CSS px: between the HUD and the panel (game.ts). */
   gap = (): [number, number] => [0, (this.scale.height / K) * 0.4];
@@ -123,7 +136,8 @@ export class World extends Phaser.Scene {
     this.sky = this.add
       .image(0, 0, 'sky')
       .setOrigin(0.5, 1)
-      .setDepth(Z.back - 1);
+      // In front of the back wall, which runs up past the ground line because it scrolls slower.
+      .setDepth(Z.back + 1);
     this.back = this.add
       .tileSprite(0, -1200, 1, 1, 'back')
       .setOrigin(0)
@@ -177,18 +191,23 @@ export class World extends Phaser.Scene {
       if (hit.length === 0) this.drawFossils();
     });
     this.scale.on('resize', () => this.layout(false));
-    // The canvas is K times the size of its box; keep it matched to the box.
+    // The canvas is K times the size of its box; keep it matched to the box. Debounced: a mobile
+    // keyboard animates the box height for ~300ms, and reallocating the canvas every frame of that
+    // would stutter. Meanwhile the old canvas is just clipped or short by a few px.
     new ResizeObserver(() => {
-      const box = this.game.canvas.parentElement;
-      if (box && box.clientWidth > 0 && box.clientHeight > 0)
-        this.scale.resize(
-          Math.round(box.clientWidth * K),
-          Math.round(box.clientHeight * K)
-        );
+      clearTimeout(this.resizeTimer);
+      this.resizeTimer = setTimeout(() => {
+        const box = this.game.canvas.parentElement;
+        if (box && box.clientWidth > 0 && box.clientHeight > 0)
+          this.scale.resize(
+            Math.round(box.clientWidth * K),
+            Math.round(box.clientHeight * K)
+          );
+      }, 100);
     }).observe(this.game.canvas.parentElement ?? document.body);
     this.ready = true;
-    document.body.dataset.carved = 'true';
     this.layout(false);
+    if (this.digs > 0) this.startIntro();
   }
 
   /** Moves to `layer` (1 to 10): the cleared links so far, and the clue to carve on this layer. */
@@ -197,8 +216,29 @@ export class World extends Phaser.Scene {
     this.whole = false;
     this.links = links;
     this.clue = clue;
-    // The first placement (a fresh load, or a resumed run) cuts to the layer instead of sliding there.
-    if (this.ready) this.layout(animate && this.digs++ > 0);
+    this.intro?.remove();
+    this.intro = null;
+    // The first placement (a fresh load, or a resumed run) cuts to the layer instead of sliding
+    // there. Counted even before the scene exists, since /api/start can answer before Phaser starts.
+    const first = this.digs++ === 0;
+    if (!this.ready) return;
+    this.layout(animate && !first);
+    if (first) this.startIntro();
+  }
+
+  /**
+   * A fresh run opens in daylight on the Surface, then the camera sinks into layer 1, so the change
+   * from daylight to headlamp is seen once. Resumed runs and reduced motion go straight to the layer.
+   */
+  private startIntro() {
+    if (this.links.length > 0 || this.layer !== 1 || reducedMotion()) return;
+    const vw = this.scale.width / K;
+    const vh = this.scale.height / K;
+    this.moveCamera(1, -S * 0.15, vw, vh, false);
+    this.intro = this.time.delayedCall(450, () => {
+      this.intro = null;
+      this.moveCamera(1, this.layer * S + S / 2, vw, vh, true, 1600);
+    });
   }
 
   /** End of run: light up and pull back to show the whole core sample (SPEC §6.6). `links` is all ten. */
@@ -207,12 +247,15 @@ export class World extends Phaser.Scene {
     this.clue = null;
     this.layer = Math.max(1, links.filter((l) => l.answer).length);
     this.whole = true;
+    this.intro?.remove();
+    this.intro = null;
     if (this.ready) this.layout(true);
   }
 
   /** Other players' answers at cleared layers, most found first (GET /api/stats). */
   setFossils(fossils: Fossil[][]) {
     this.fossils = fossils;
+    this.fossilKey = '';
     if (this.ready) this.drawFossils();
   }
 
@@ -362,7 +405,7 @@ export class World extends Phaser.Scene {
     }
   }
 
-  /** Draws a stratum's texture the first time the camera comes near it. */
+  /** Draws a stratum's texture the first time the camera comes near it (or idle prefetch reaches it). */
   private ensure(i: number) {
     if (this.rocks[i] || i < 0 || i >= STRATA_COUNT) return;
     this.canvas(`stratum-${i}`, TILE, S, (ctx, w, h) =>
@@ -375,7 +418,50 @@ export class World extends Phaser.Scene {
         .setTileScale(1 / K)
         .setDepth(Z.rock);
     this.rocks[i] = { left: tile(), right: tile() };
-    if (i === STRATA_COUNT - 1) this.makeDeposit();
+    this.placeRock(i, this.scale.width / K);
+    if (i === STRATA_COUNT - 1) {
+      this.makeDeposit();
+      this.drawCore(this.scale.width / K);
+    }
+  }
+
+  /** Sizes stratum `i`'s two walls either side of the shaft, and shows them only near the camera. */
+  private placeRock(i: number, vw: number) {
+    const rock = this.rocks[i];
+    if (!rock) return;
+    const near = this.whole || Math.abs(i - this.layer) <= NEAR + 1;
+    const s = shaftWidth(i, vw);
+    const l = (vw - s) / 2;
+    rock.left
+      .setVisible(near)
+      .setPosition(-BLEED, i * S)
+      .setSize(l + BLEED, S)
+      .setTilePosition(-BLEED * K, 0);
+    rock.right
+      .setVisible(near)
+      .setPosition(l + s, i * S)
+      .setSize(vw - l - s + BLEED, S)
+      .setTilePosition((l + s) * K, 0);
+  }
+
+  /**
+   * Draws the strata the player hasn't reached yet, one at a time with gaps between, while the camera
+   * is still. So no descent waits on a texture, and the end-of-run pull-back doesn't draw seven at once.
+   */
+  private prefetch() {
+    if (this.move?.isPlaying() || this.intro) {
+      this.time.delayedCall(400, () => this.prefetch());
+      return;
+    }
+    // Nearest first, deeper before shallower.
+    const missing = [...Array(STRATA_COUNT).keys()]
+      .filter((i) => !this.rocks[i])
+      .sort(
+        (a, b) => Math.abs(a - this.layer) - Math.abs(b - this.layer) || b - a
+      );
+    if (missing.length === 0) return;
+    this.ensure(missing[0]!);
+    this.time.delayedCall(250, () => this.prefetch());
   }
 
   /** Stacked tabular plates of Uranium at the foot of the last shaft (REFERENCES §7, torbernite). */
@@ -418,29 +504,17 @@ export class World extends Phaser.Scene {
     const vh = this.scale.height / K;
     // RESIZE-less scaling resizes the canvas but not the camera viewport.
     this.cameras.resize(this.scale.width, this.scale.height);
-    const [top, bottom] = this.gap();
+    const [top, bottom] = this.fitClue();
     this.gapC = (top + bottom) / 2;
 
     for (let i = 0; i < STRATA_COUNT; i++) {
       if (this.whole || Math.abs(i - this.layer) <= NEAR) this.ensure(i);
-      const rock = this.rocks[i];
-      if (!rock) continue;
-      const near = this.whole || Math.abs(i - this.layer) <= NEAR + 1;
-      const s = shaftWidth(i, vw);
-      const l = (vw - s) / 2;
-      rock.left
-        .setVisible(near)
-        .setPosition(-BLEED, i * S)
-        .setSize(l + BLEED, S)
-        .setTilePosition(-BLEED * K, 0);
-      rock.right
-        .setVisible(near)
-        .setPosition(l + s, i * S)
-        .setSize(vw - l - s + BLEED, S)
-        .setTilePosition((l + s) * K, 0);
+      this.placeRock(i, vw);
     }
-    // One stratum ahead, once the camera has settled, so the next descent never stalls to draw.
-    this.time.delayedCall(700, () => this.ensure(this.layer + NEAR + 1));
+    if (!this.prefetching) {
+      this.prefetching = true;
+      this.time.delayedCall(700, () => this.prefetch());
+    }
 
     this.sky.setPosition(vw / 2, 0).setDisplaySize(BLEED * 2 + vw, SKY);
     this.back.setSize(BLEED * 2 + vw, STRATA_COUNT * S + 3600);
@@ -463,6 +537,37 @@ export class World extends Phaser.Scene {
   }
 
   /**
+   * Carves the clue on the rock only when enough rock is showing to read it (a phone with its keyboard
+   * up can leave ~100px). Otherwise the recess shows the DOM clue, as before step 7. Returns the gap,
+   * measured again if the recess changed height. Stable: showing the DOM clue only shrinks the gap.
+   */
+  private fitClue(): [number, number] {
+    let gap = this.gap();
+    const fits = gap[1] - gap[0] >= MIN_CARVE;
+    if (fits !== this.carved) {
+      this.carved = fits;
+      document.body.toggleAttribute('data-carved', fits);
+      gap = this.gap();
+    }
+    return gap;
+  }
+
+  /** Sets a text's content and style, and renders nothing at all if neither changed. */
+  private paint(
+    t: Phaser.GameObjects.Text,
+    text: string,
+    style: Phaser.Types.GameObjects.Text.TextStyle
+  ) {
+    const key = `${text}\n${JSON.stringify(style)}`;
+    if (this.painted.get(t) === key) return;
+    this.painted.set(t, key);
+    t.setText(text);
+    // With updateText on, setStyle recomputes the font metrics before it renders; with it off, a
+    // font-size change would lay out with the old size's line height.
+    t.style.setStyle(style, true);
+  }
+
+  /**
    * One tween moves zoom and centre together, so a pull-back never shows bedrock mid-way. Plain lerps of
    * (zoom, target); the screen offset to the middle of the gap is recomputed from the zoom each frame.
    */
@@ -471,7 +576,8 @@ export class World extends Phaser.Scene {
     target: number,
     vw: number,
     vh: number,
-    animate: boolean
+    animate: boolean,
+    duration = 600
   ) {
     this.move?.stop();
     const cam = this.cameras.main;
@@ -490,7 +596,7 @@ export class World extends Phaser.Scene {
     this.move = this.tweens.addCounter({
       from: 0,
       to: 1,
-      duration: 600,
+      duration,
       ease: 'Sine.easeInOut',
       onUpdate: (tw) => {
         const k = tw.getValue() ?? 1;
@@ -561,7 +667,7 @@ export class World extends Phaser.Scene {
 
       const st = STRATA[j]!;
       const s = shaftWidth(j, vw);
-      const cw = Math.min(s - 28, 380);
+      const cw = Math.min(s - MARGIN * 2, 380);
       const x = (vw - cw) / 2;
       const h = j === STRATA_COUNT - 1 ? S - DEPOSIT_H : S;
       const y = j * S;
@@ -579,28 +685,42 @@ export class World extends Phaser.Scene {
         g.lineStyle(2, 0xefe6d2, 0.3).strokeRect(x + 1, y + 1, cw - 2, h - 2);
       }
 
-      seg.label.setText(`${j}  ${MINERALS[j]!.name}`);
-      seg.clue.setText(link?.clue ?? this.clue ?? '');
-      seg.answer.setText(state === 'cleared' ? (link?.answer ?? '') : '');
       const current = state === 'current';
-      seg.clue
-        .setFontStyle(current ? 'bold' : 'normal')
-        .setFontSize(current ? 21 : 14)
-        .setColor(state === 'unreached' ? '#b8ae98' : BONE)
-        .setAlpha(state === 'cleared' ? 0.85 : 1)
-        .setWordWrapWidth(tw);
-      seg.answer.setWordWrapWidth(tw);
-      seg.clue.setShadow(0, 2, '#000000', current ? 3 : 0, false, true);
+      this.paint(seg.label, `${j}  ${MINERALS[j]!.name}`, {});
+      this.paint(seg.clue, link?.clue ?? this.clue ?? '', {
+        fontStyle: current ? 'bold' : 'normal',
+        fontSize: current ? '21px' : '14px',
+        color: state === 'unreached' ? '#b8ae98' : BONE,
+        wordWrap: { width: tw },
+        shadow: {
+          offsetX: 0,
+          offsetY: 2,
+          color: '#000000',
+          blur: current ? 3 : 0,
+          fill: current,
+        },
+      });
+      this.paint(seg.answer, state === 'cleared' ? (link?.answer ?? '') : '', {
+        wordWrap: { width: tw },
+      });
+      seg.clue.setAlpha(state === 'cleared' ? 0.85 : 1);
+      // Too little rock showing to read the carved clue: the recess shows it instead.
+      seg.clue.setVisible(!current || this.carved);
 
-      // Stack label, clue, answer; shrink the stack to fit the segment on narrow shafts.
+      // Stack label, clue, answer; shrink the stack to fit the segment's height, and its width
+      // too, since word wrap never breaks a long single word ("pomegranate" on a 320px phone).
       const parts = [
         seg.label,
-        seg.clue,
+        ...(seg.clue.visible ? [seg.clue] : []),
         ...(seg.answer.text ? [seg.answer] : []),
       ];
       const gapPx = 8;
       const stack = parts.reduce((n, t) => n + t.height + gapPx, -gapPx);
-      const f = Math.min(1, (h - 20) / stack);
+      const f = Math.min(
+        1,
+        (h - 20) / stack,
+        tw / Math.max(...parts.map((t) => t.width))
+      );
       let cy = y + (h - stack * f) / 2;
       for (const t of parts) {
         t.setScale(f).setPosition(x + 5 + (cw - 5) / 2, cy);
@@ -671,20 +791,27 @@ export class World extends Phaser.Scene {
 
   // ---- fossils: other players' answers, as small objects in the walls ----
 
+  /** Redraws the fossils only when the width, the data, the open one or the pull-back changed. */
   private drawFossils(open?: Fossil) {
+    const vw = this.scale.width / K;
+    const key = `${vw}|${this.whole}|${open ? this.fossils.flat().indexOf(open) : -1}`;
+    if (key === this.fossilKey) return;
+    this.fossilKey = key;
     this.fossilObjs.forEach((o) => o.destroy());
     this.fossilObjs = [];
-    const vw = this.scale.width / K;
     this.fossils.forEach((layer, n) => {
       const i = n + 1;
       const s = shaftWidth(i, vw);
       const wall = (vw - s) / 2;
-      // Beside the shaft where the lamp reaches, not out at the screen edge in the dark.
-      const inset = Math.min(wall / 2, 56);
+      // The rock plus the strip of shaft beside the core segment. On a phone the upper walls are
+      // only ~20px wide, so a fossil may sit half out of the wall, as if eroding from it.
+      const room = wall + MARGIN;
       layer.slice(0, 4).forEach((f, j) => {
         const unnamed = f.answer === 'something else';
         const left = j % 2 === 0;
-        const x = left ? wall - inset : vw - wall + inset;
+        // Beside the shaft where the lamp reaches, not out at the screen edge in the dark.
+        const off = Math.max(room / 2, wall - 56);
+        const x = left ? off : vw - off;
         const y = i * S + (j < 2 ? 0.3 : 0.72) * S;
         // Size by popularity; "something else" is a bucket, always the smallest pebble.
         const r = unnamed
@@ -692,7 +819,7 @@ export class World extends Phaser.Scene {
           : clamp(
               6 + Math.sqrt(f.percent) * 1.9,
               6,
-              Math.min(18, wall / 2 - 3)
+              Math.min(18, room / 2 - 2)
             );
         const kind = unnamed ? 3 : Math.abs(hash(f.answer)) % 3;
         const key = this.fossilTexture(kind);
@@ -703,6 +830,10 @@ export class World extends Phaser.Scene {
           .setRotation(((hash(f.answer) % 60) * Math.PI) / 90)
           .setAlpha(shown ? 1 : unnamed ? 0.5 : 0.78)
           .setDepth(Z.fossil);
+        this.fossilObjs.push(obj);
+        // Pulled back at the end, the column is ~0.1 scale: a name or a tag there can't be read,
+        // so the fossils are only marks in the rock (the end screen and the hidden list have the data).
+        if (this.whole) return;
         // A padded circle, 44px across at least, so a thumb can find a small fossil.
         const hit = Math.max(r + 10, 22) * (64 / (r * 2));
         obj.setInteractive(
@@ -710,10 +841,9 @@ export class World extends Phaser.Scene {
           Phaser.Geom.Circle.Contains
         );
         obj.on('pointerdown', () => this.drawFossils(shown ? undefined : f));
-        this.fossilObjs.push(obj);
 
-        const room = Math.min(wall - 10, 110);
-        if (room >= 80 && !shown) {
+        const labelW = Math.min(wall - 10, 110);
+        if (labelW >= 80 && !shown) {
           // Room in the rock: the name sits under the object, faint.
           this.fossilObjs.push(
             this.add
@@ -724,7 +854,7 @@ export class World extends Phaser.Scene {
                 fontSize: '13px',
                 color: STRATA[i]!.letter,
                 align: 'center',
-                wordWrap: { width: room },
+                wordWrap: { width: labelW },
               })
               .setOrigin(0.5, 0)
               .setAlpha(unnamed ? 0.4 : 0.65)

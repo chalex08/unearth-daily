@@ -17,9 +17,6 @@
   <body>
     <div id="world" aria-hidden="true"></div>
     <div id="flash" class="keep-motion" aria-hidden="true"></div>
-    <section class="visually-hidden" aria-label="Other diggers' answers">
-      <ul id="fossil-list"></ul>
-    </section>
     <div id="app">
       <header id="hud" hidden>
         <span id="pickaxes" role="img"></span>
@@ -95,6 +92,9 @@
         <p id="final-answer"></p>
       </main>
     </div>
+    <section class="visually-hidden" aria-label="Other diggers' answers">
+      <ul id="fossil-list"></ul>
+    </section>
     <script type="module" src="game.ts"></script>
   </body>
 </html>
