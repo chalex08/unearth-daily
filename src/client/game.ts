@@ -47,6 +47,8 @@ const ui = {
   layer: $('layer'),
   clue: $('clue'),
   helper: $('helper'),
+  hints: $('hints'),
+  hintsOk: el('hints-ok', HTMLButtonElement),
   reveal: $('reveal'),
   revealIcon: el('reveal-icon', HTMLImageElement),
   revealBand: $('reveal-band'),
@@ -243,6 +245,14 @@ function showStatus(message: string, retry = false) {
   ui.retry.hidden = !retry;
 }
 
+ui.hintsOk.addEventListener('click', () => {
+  ui.hints.hidden = true;
+  ui.helper.hidden = !run?.chain.length;
+  ui.input.focus();
+  // Remembered on the server; if this fails the hints simply show once more next time.
+  void api('POST', 'onboarded').catch(() => undefined);
+});
+
 async function start() {
   showStatus('Loading…');
   try {
@@ -258,6 +268,8 @@ async function start() {
     };
     showStatus('');
     // A run with nothing cleared and nothing broken opens on the Surface (World.startIntro).
+    // First-run hints (SPEC §6.2), lettered under the clue until dismissed; they replace the helper.
+    ui.hints.hidden = !r.onboarding;
     showLayer(r.chain.length === 0 && r.lives === PICKAXES);
     if (r.chain.length) void loadFossils();
   } catch (e) {
@@ -328,7 +340,7 @@ function showLayer(opening = false) {
   ui.chain.scrollTop = ui.chain.scrollHeight;
   ui.layer.textContent = `Layer ${run.layer} of ${LAYER_COUNT}, ${mineral(run.layer).name}`;
   ui.clue.textContent = run.clue;
-  ui.helper.hidden = run.chain.length === 0;
+  ui.helper.hidden = run.chain.length === 0 || !ui.hints.hidden;
   ui.input.disabled = false;
   ui.dig.disabled = false;
   ui.reveal.hidden = true;

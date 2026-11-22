@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type {
   AnswerResult,
+  FeedResponse,
   ResultResponse,
   RunResponse,
   StatsResponse,
@@ -52,9 +53,14 @@ const env = vi.hoisted(() => {
       }
     },
   };
-  const state: { userId: string | undefined; key: string | undefined } = {
+  const state: {
+    userId: string | undefined;
+    key: string | undefined;
+    postData: { day: string } | undefined;
+  } = {
     userId: 't2_alice',
     key: undefined,
+    postData: undefined,
   };
   const reset = () => {
     hashes.clear();
@@ -62,9 +68,29 @@ const env = vi.hoisted(() => {
     strings.clear();
     state.userId = 't2_alice';
     state.key = undefined;
+    state.postData = undefined;
     comments.length = 0;
+    posts.length = 0;
+    journeys.length = 0;
   };
   const comments: { id: string; text: string; runAs: string }[] = [];
+  const posts: { title: string; postData: unknown; stickied: boolean }[] = [];
+  const journeys: [string, unknown][] = [];
+  const receipt = { receipt: { status: 'JOURNEY_RECEIPT_VALID', message: '' } };
+  const telemetry = {
+    startJourney: async () => {
+      journeys.push(['start', null]);
+      return { journeyId: 'j1', ...receipt };
+    },
+    journeyProgress: async (r: unknown) => {
+      journeys.push(['progress', r]);
+      return receipt;
+    },
+    endJourney: async (r: unknown) => {
+      journeys.push(['end', r]);
+      return receipt;
+    },
+  };
   const reddit = {
     getCurrentUsername: async () => 'alice',
     submitComment: async (o: { id: string; text: string; runAs: string }) => {
@@ -77,8 +103,29 @@ const env = vi.hoisted(() => {
     },
     subscribeToCurrentSubreddit: vi.fn(async () => {}),
     setUserFlair: vi.fn(async () => {}),
+    submitCustomPost: async (o: { title: string; postData: unknown }) => {
+      const post = { ...o, stickied: false };
+      posts.push(post);
+      return {
+        id: `t3_p${posts.length}`,
+        sticky: async () => {
+          post.stickied = true;
+        },
+      };
+    },
   };
-  return { redis, state, reset, hashes, zsets, reddit, comments };
+  return {
+    redis,
+    state,
+    reset,
+    hashes,
+    zsets,
+    reddit,
+    comments,
+    posts,
+    journeys,
+    telemetry,
+  };
 });
 
 vi.mock('@devvit/web/server', () => ({
@@ -90,11 +137,19 @@ vi.mock('@devvit/web/server', () => ({
     get userId() {
       return env.state.userId;
     },
+    get postData() {
+      return env.state.postData;
+    },
   },
   settings: { get: async () => env.state.key },
 }));
 
+vi.mock('@devvit/analytics/server/reddit', () => ({
+  telemetry: env.telemetry,
+}));
+
 const { api } = await import('./api');
+const { dailyPost } = await import('../core/post');
 
 const json = async <T>(res: Response | Promise<Response>): Promise<T> =>
   (await res).json();
@@ -504,5 +559,129 @@ describe('end screen and community', () => {
       username: 'alice',
       text: '🔥 1 · 🌱 Surface',
     });
+  });
+});
+
+describe('daily post', () => {
+  it('makes one post per UTC day, titled with clue 1, pinned, with its day in postData', async () => {
+    const first = await dailyPost(new Date('2026-11-21T00:00:05Z'));
+    const again = await dailyPost(new Date('2026-11-21T23:59:00Z'));
+    expect(first).toEqual({ id: 't3_p1', created: true });
+    expect(again).toEqual({ id: 't3_p1', created: false });
+    expect(env.posts).toEqual([
+      {
+        title: 'Unearth #14 — Name something orange',
+        postData: { day: '2026-11-21' },
+        stickied: true,
+      },
+    ]);
+    // The sticky comment that shared results reply to is made with the post.
+    expect(env.comments).toMatchObject([{ id: 't3_p1', runAs: 'APP' }]);
+    expect((await dailyPost(new Date('2026-11-22T00:00:01Z'))).created).toBe(
+      true
+    );
+  });
+
+  it('refuses a day with no puzzle, and frees the day if posting fails', async () => {
+    await expect(dailyPost(new Date('2030-01-01T00:00:00Z'))).rejects.toThrow(
+      'No puzzle'
+    );
+    const submit = env.reddit.submitCustomPost;
+    env.reddit.submitCustomPost = async () => {
+      throw new Error('down');
+    };
+    await expect(dailyPost(new Date('2026-11-21T00:00:00Z'))).rejects.toThrow(
+      'down'
+    );
+    env.reddit.submitCustomPost = submit;
+    expect((await dailyPost(new Date('2026-11-21T00:01:00Z'))).created).toBe(
+      true
+    );
+  });
+});
+
+describe('UTC midnight', () => {
+  it('a run going at 00:00 finishes on its own post and puzzle', async () => {
+    env.state.postData = { day: '2026-11-21' };
+    vi.setSystemTime(new Date('2026-11-21T23:59:30Z'));
+    await start();
+    await answer('tiger', 1);
+    vi.setSystemTime(new Date('2026-11-22T00:00:30Z'));
+    expect(await start()).toMatchObject({ puzzleNumber: 14, layer: 2 });
+    for (const [i, a] of WIN.entries()) if (i > 0) await answer(a, i + 1);
+    const result = await json<ResultResponse>(api.request('/result'));
+    expect(result).toMatchObject({ status: 'cleared', puzzleNumber: 14 });
+    expect(env.hashes.get('ends:2026-11-21')?.get('10')).toBe('1');
+  });
+
+  it("a past day's post makes no new runs", async () => {
+    env.state.postData = { day: '2026-11-21' };
+    vi.setSystemTime(new Date('2026-11-22T08:00:00Z'));
+    expect((await api.request('/start', { method: 'POST' })).status).toBe(410);
+    expect(env.hashes.get('reached:2026-11-21')).toBeUndefined();
+    const feed = await json<FeedResponse>(api.request('/feed'));
+    expect(feed).toMatchObject({ puzzleNumber: 14, closed: true });
+  });
+});
+
+describe('feed and onboarding', () => {
+  it('the feed shows number, date, clue 1 and players, and no later clue', async () => {
+    await start();
+    const body = await (await api.request('/feed')).text();
+    expect(JSON.parse(body)).toEqual({
+      puzzleNumber: 14,
+      date: '2026-11-21',
+      clue: 'Name something orange',
+      players: 1,
+      closed: false,
+    });
+    expect(body).not.toContain('that you can eat');
+  });
+
+  it('shows the hints until they are dismissed, then never again', async () => {
+    expect((await start()).onboarding).toBe(true);
+    await api.request('/onboarded', { method: 'POST' });
+    expect((await start()).onboarding).toBe(false);
+  });
+});
+
+describe('Journeys', () => {
+  it('starts once, progresses per cleared layer, ends on cave-in; nothing for other inputs', async () => {
+    env.state.key = 'k';
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => verdict(false, 'x', 'nope'))
+    );
+    await start();
+    await start(); // a resume is not a new journey
+    await answer('tiger', 1);
+    await answer('', 2); // ignored input
+    for (const w of ['zzone', 'zztwo', 'zzthree']) await answer(w, 2);
+    expect(env.journeys).toEqual([
+      ['start', null],
+      [
+        'progress',
+        {
+          journeyId: 'j1',
+          progress: 0.1,
+          action: 'layer_cleared',
+          actionDetails: 'layer_1',
+        },
+      ],
+      [
+        'end',
+        { journeyId: 'j1', complete: false, game: { win: false, score: 10 } },
+      ],
+    ]);
+  });
+
+  it('a failing Journeys call never breaks play', async () => {
+    const startJourney = env.telemetry.startJourney;
+    env.telemetry.startJourney = async () => {
+      throw new Error('not allowlisted');
+    };
+    expect((await start()).status).toBe('playing');
+    expect((await answer('tiger', 1)).outcome).toBe('valid');
+    env.telemetry.startJourney = startJourney;
   });
 });

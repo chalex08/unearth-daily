@@ -1,9 +1,10 @@
 /* Hallmark · shape: app screen · genre: playful · theme: custom · idea: "a hand-tinted survey plate read by headlamp, ore the only colour" · vibe: "lamplit geology, dry, quiet until you strike"
  * paper: oklch(17% 0.012 60) · accent: oklch(52% 0.19 28) survey red · display: EB Garamond (italic lettering) · body: Atkinson Hyperlegible Next
- * nav: none, the feed card · signature: the strata column, drawn by the same code as the world · states: idle
+ * nav: none, the feed card · signature: clue 1 on its Dirt ore bar under the strata column, the first segment of the core sample · states: loading (tagline), loaded, closed, fetch failed (tagline, Play still works)
  * axes: dark/roman-serif/warm · posture: restrained · contrast: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V3 · weakest: V, the feed card is a holding version until PLAN step 10 adds the first clue and player count */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: V, the strata column is still decoration, not yet lit by the headlamp */
 /* Hallmark · waive 38ii · one h1, EB Garamond true italic, font-synthesis none · the Unearth wordmark is lettered like the italic strata names on Smith's survey plate and on the rock in the game */
+/* waive 3: the clue's 6px ore bar is the core-sample segment of DESIGN §12, not a decorative side stripe */
 @import url('./tokens.css');
 @import url('./base.css');
 
@@ -36,6 +37,15 @@ main {
   border-top: 2px solid var(--color-rule);
 }
 
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2xs) var(--space-md);
+  width: 100%;
+}
+
 h1 {
   font-style: italic;
   font-weight: 400;
@@ -43,8 +53,56 @@ h1 {
   line-height: 1;
 }
 
-p {
-  color: var(--color-ink-2);
+#meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-md);
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+#meta span:empty {
+  display: none;
+}
+
+/* Clue 1, the hook: the same ore bar and weight as the clue in the game. */
+#clue-label,
+#clue {
+  display: grid;
+  grid-template-columns: 6px minmax(0, 1fr);
+  column-gap: var(--space-sm);
+  margin: 0;
+  width: 100%;
+}
+
+#clue-label::before,
+#clue::before {
+  content: '';
+  background: var(--ore);
+}
+
+#clue-label[hidden] {
+  display: none;
+}
+
+#clue-label {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+#clue {
+  font-weight: 700;
+  font-size: var(--text-xl);
+  line-height: 1.25;
+  color: var(--color-ink);
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+/* Fused with the label above: one bar, as in the game's core sample. */
+#clue-label:not([hidden]) + #clue {
+  margin-top: calc(var(--space-sm) * -1);
 }
 
 button {
@@ -72,4 +130,13 @@ button:active {
 button:disabled {
   opacity: 0.55;
   cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: background-color var(--dur-micro) var(--ease-out);
+  }
+  button:active {
+    transform: none;
+  }
 }

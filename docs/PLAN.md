@@ -84,10 +84,11 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 10. Daily post, onboarding, Journeys, feed view — Thu 3 – Fri 4 Dec
 
-- [ ] Scheduler job at 00:00 UTC creates "Unearth #N — <first clue>"; idempotent; verified to fire at UTC midnight.
-- [ ] In-world first-run hints (SPEC §6.2).
-- [ ] Journeys: run started, layer progress (layer/10), finished or caved in; no per-input events; receipts checked. Setup notes in DECISIONS "Journeys setup": the package's telemetry router is Express, our server is Hono; playtest versions always get `DENIED_PLAYTEST`, so check receipts on an uploaded version.
-- [ ] Inline feed view: strata teaser, number, date, player count, first clue, Play. Under 1s, Lighthouse mobile above 80. Optional `_direct_launch`.
+- [x] Scheduler job at 00:00 UTC creates "Unearth #N — <first clue>"; idempotent; mod menu fallback; pinned. _Still to verify: it fires at UTC midnight on the uploaded app._
+- [x] In-world first-run hints (SPEC §6.2), dismissable, once per player.
+- [x] Journeys: run started, layer progress (layer/10), finished or caved in; no per-input events; receipts checked. Setup notes in DECISIONS "Journeys setup": the package's telemetry router is Express, our server is Hono; playtest versions always get `DENIED_PLAYTEST`, so check receipts on an uploaded version. _Built server-side (DECISIONS "Step 10"); receipts still to read on the uploaded canonical app._
+- [x] Inline feed view: strata teaser, number, date, player count, first clue, Play. Under 1s, Lighthouse mobile above 80. Optional `_direct_launch`. _Lighthouse not run yet; `_direct_launch` skipped._
+- [x] Midnight rollover: runs are bound to their post's day (`postData`), so a run open at 00:00 UTC finishes on its puzzle.
 - **Done when:** a new post appears on its own at midnight UTC and the feed view meets the inline rules.
 
 ### 11. Polish, audits, compliance, submission — Sat 5 – Sun 6 Dec
