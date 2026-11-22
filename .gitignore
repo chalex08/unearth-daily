@@ -10,5 +10,3 @@ coverage
 
 # write-puzzle working files (the built draft is the source of truth)
 content/puzzles/drafts/*.ladder.json
-
-.claude/

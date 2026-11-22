@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "client-mock",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "--config",
+        "C:/Users/alex/AppData/Local/Temp/claude/04b8767b547b1ac1/72743202-3cf5-4f71-a88b-d98f068c475f/scratchpad/devmock/vite.config.ts"
+      ],
+      "port": 5300
+    }
+  ]
+}
