@@ -14,3 +14,6 @@ content/puzzles/drafts/*.ladder.json
 # Claude Code: share project skills, keep machine-local config out
 .claude/launch.json
 .claude/settings.local.json
+
+# Hallmark lint screenshots and cache
+.hallmark/

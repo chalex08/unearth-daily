@@ -43,7 +43,7 @@ import { isId, stickyId } from '../core/post';
 import { puzzleFor } from '../core/puzzles';
 
 const LOCK_SECONDS = 15;
-const UNCHECKED = "Couldn't check that, try again";
+const UNCHECKED = 'Couldn’t check that, try again';
 
 export const api = new Hono();
 
@@ -509,7 +509,8 @@ api.post('/comment', async (c) => {
   if (!isId('t3', postId))
     return fail(c, 400, 'Open the daily post to comment');
   const runKey = keys.run(f.day, f.userId);
-  if ((await redis.hGet(runKey, 'commented')) === '1')
+  // Claimed before posting, so two presses (two tabs, two devices) can't post twice.
+  if (!(await redis.hSetNX(runKey, 'commented', '1')))
     return fail(c, 409, 'Already posted');
   try {
     const comment = await reddit.submitComment({
@@ -518,9 +519,9 @@ api.post('/comment', async (c) => {
       text: shareText(f.run).replaceAll('\n', '  \n'),
       runAs: 'USER',
     });
-    await redis.hSet(runKey, { commented: '1' });
     return c.json<ActionResponse>({ ok: true, url: comment.url });
   } catch (e) {
+    await redis.hDel(runKey, ['commented']);
     console.error(`comment failed: ${e}`);
     return fail(c, 409, 'Couldn’t post your comment');
   }

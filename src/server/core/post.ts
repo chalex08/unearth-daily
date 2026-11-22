@@ -21,7 +21,7 @@ export async function dailyPost(
   if (!(await redis.hSetNX(key, 'post', 'creating'))) {
     const id = await redis.hGet(key, 'post');
     if (!id || id === 'creating')
-      throw new Error(`Today's post is being created`);
+      throw new Error(`Today’s post is being created`);
     return { id, created: false };
   }
   await redis.expire(key, CLAIM_SECONDS);
