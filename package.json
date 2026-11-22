@@ -32,10 +32,12 @@
     "@hono/node-server": "2.1.6",
     "devvit": "0.15.4",
     "hono": "4.13.17",
+    "howler": "2.2.4",
     "phaser": "4.2.1"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@types/howler": "2.2.13",
     "@types/node": "^24.13.3",
     "eslint": "10.14.0",
     "globals": "17.14.0",

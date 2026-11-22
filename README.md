@@ -71,3 +71,8 @@ Never commit `.env` or any key.
 The app requests permission to fetch:
 
 - `generativelanguage.googleapis.com`: the Google Gemini API (paid tier), used only to check answers that aren't in the day's hand-written answer pool. It receives the day's clues up to the current layer and the player's normalised answer. No usernames, user IDs or other Reddit data are sent.
+
+## Credits
+
+- **Sounds** (`public/sounds/`): original, synthesised by [`tools/make-sounds.ts`](tools/make-sounds.ts) and released CC0. Played with [Howler.js](https://howlerjs.com/) (MIT).
+- **Fonts:** EB Garamond and Atkinson Hyperlegible Next, SIL OFL 1.1 (bundled via Fontsource).

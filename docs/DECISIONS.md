@@ -184,3 +184,15 @@ Not changed, on purpose:
 - **Texture memory** is estimated at ~80 MB on a K=2 phone once every stratum is drawn: Phaser's `CanvasTexture` keeps an `imageData` copy of each canvas besides the canvas and the GL texture. Avoiding it means registering a plain canvas through `textures.addImage`, whose type only takes `HTMLImageElement`, i.e. a type cast, which AGENTS.md forbids. Revisit if the Reddit app's webview is seen being killed (profile first).
 - **K = min(DPR, 1.5)** would cut GPU fill ~44% at some loss of sharpness, and dropping the warm lamp glow ~0.7 screen of fill: both design calls, left until a profile on a real mid-range Android phone says they're needed.
 - **Dust motes run continuously** (WCAG 2.2.2 pause control): decorative, faint, and off under reduced motion; no pause control added.
+
+## Step 8: the feel (22 Nov 2026)
+
+- **Howler.js `2.2.4`** (the current release; last published Sep 2023, so no upstream fixes are coming) with `@types/howler@2.2.13`, both pinned. Sounds are Web Audio, fetched same-origin from `sounds/*.wav`, which the Devvit CSP should allow (only external requests are blocked). Not yet confirmed inside the Reddit webview; check in playtest.
+- **Sounds are original.** `tools/make-sounds.ts` synthesises five mono 16-bit WAVs into `public/sounds/` (strike, clink, descend, chime, hum; 118 KB in all), released CC0. Re-run `node tools/make-sounds.ts` to regenerate. Chosen over downloaded samples so nothing needs a licence check or a download.
+- **Mute** is a HUD button (`aria-pressed` = muted), remembered in `localStorage` (`unearth.muted`; storage failures fall back to session-only). `Howler.mute` is also on while the tab is hidden (PLAN step 8).
+- **Uranium hum** loops while the player is on layer 10 and fades out when the run ends. Howler queues it until the first tap unlocks audio, so a resumed run at layer 10 starts humming after the first interaction.
+- **Pacing changed from DESIGN §5:** Seam, Vein and Mother Lode no longer all hold 2.5s. Holds are now 1.0 / 1.5 / 2.0 / 2.5s (Common / Seam / Vein / Mother Lode and Uranium), counted from the strike, so rarer bands linger slightly longer. A tap or Enter still skips. Timings live in `src/client/feel.ts` (tested) and DESIGN §13.
+- **A wrong answer never blocks typing.** The input is never disabled for one, so the 420ms bounce (`WRONG_MS`, asserted under 600 in `feel.test.ts`) plays while you can already type.
+- **Haptics** use `navigator.vibrate` where it exists (Android webviews, not iOS) and are skipped under reduced motion.
+- **The in-world score label duplicates the recess reveal on purpose:** the label is the brief SPEC §6.4 transient on the rock; the recess reveal stays for reading and for screen readers (DESIGN §5).
+- Ore marks stay in the rock for the run and are not re-laid out if the canvas width changes mid-run (a `shortcut:` comment in `world.ts`).
