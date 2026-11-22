@@ -102,9 +102,13 @@ A catalogued specimen in the recess, under the pulled-back core sample (the whol
 
 Step 9 order, top to bottom: the hero (icon, title and total rise 28px into place as the pull-back ends; no motion under reduced motion), rare finds / pickaxes left / streak, the share text with **Copy result** (the button itself says "Copied" for 2.5s) and an outlined **Discuss in comments**, the countdown, the one-time join prompt (an ore-barred panel), the graveyard table (mineral in ore colour, a bar for the runs that ended there, ended and reached counts, your row bold with "(you)", and "You dug deeper than X% of today’s other diggers" above it), the core sample with each broken-pickaxe answer struck through under its layer and "caved in here" on the layer where the run stopped, the final answer, then the opt-in flair button. Every secondary action is an outlined `button.quiet`, so Copy stays the one red button.
 
-### Feed card (holding version)
+### Feed card
 
-The inline view (`splash.html`) uses the same tokens and fonts: the strata column drawn by `drawStratum` filling the card, then the italic Unearth wordmark, one line and a red Play button. PLAN step 10 replaces the line with the first clue, number, date and player count.
+The inline view (`splash.html`) uses the same tokens and fonts: the strata column drawn by `drawStratum` filling the card, then the italic wordmark with the number ("Unearth #15"), the date and player count in muted text, and clue 1 on Dirt's ore bar under a "Clue 1 of 10" label, set like the clue in the game: the first segment of the core sample. One red Play button. Until `/api/feed` answers (or if it fails) the clue line holds the tagline. A past day's post says it's closed and the button reads "See your dig".
+
+### First-run hints
+
+Two lines lettered in EB Garamond italic under the layer label, in place of the helper line, with an outlined "Got it". Not a modal; dismissing focuses the input, and the hints never return for that player.
 
 ## 9. Motion
 

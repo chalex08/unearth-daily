@@ -247,6 +247,8 @@ describe('days and streaks', () => {
       count: 1,
       lastDay: '2026-11-24',
     });
+    // Yesterday's run finished after today's (it spanned 00:00 UTC): no change.
+    expect(updateStreak(s, '2026-11-21')).toBe(s);
   });
   it('shows 0 once a day is missed', () => {
     const s = { count: 4, lastDay: '2026-11-21' };
