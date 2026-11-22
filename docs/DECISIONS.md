@@ -145,3 +145,13 @@ Sources: the docs repo `reddit/devvit-docs` (`docs/capabilities/analytics/devvit
 - **Mineral icons** live in `public/icons/` (copied to the client root by Vite, like the template's `snoo.png`) and are referenced as relative `icons/NN-name.svg`, because the client tsconfig has no `vite/client` types for `import.meta.glob`.
 - **Camera aim:** `World.gap()` returns the screen band between the HUD and the visible panel (set from `game.ts`), and both play and the end-screen pull-back centre on it, since the recess grows with the chain.
 - **Phaser text resolution:** Phaser 4's game config has no `resolution` (checked in the installed `phaser.d.ts`; only Text styles have one), so lettering sets `resolution: devicePixelRatio` per Text. Rendering the whole canvas at device pixel ratio is a step 7 job.
+
+## The world (step 7, 22 Nov 2026)
+
+- **Canvas at device pixel ratio.** Phaser 4's game config has no `resolution`, so the game uses `Scale.NONE` with `zoom: 1/K` and a size of K × the box (K = min(devicePixelRatio, 2); a DPR of 3 would be 2.25× the fill cost for no visible gain). A `ResizeObserver` on `#world` calls `scale.resize`; the camera zoom is K × the game zoom, so world units stay CSS px. Canvas textures are created at K × their size, and any sprite using one is sized with `setDisplaySize`, never `setScale` (that was the cause of a double-size lamp on K=2 screens during development).
+- **Lighting is not Phaser's lights.** One 'lamp' canvas texture (black with a soft hole) plus four solid-colour images in a container, positioned each frame the camera moves; the Uranium glow is additive images above it. Cheaper and more predictable on mobile GPUs than per-pixel lights.
+- **Particles:** one emitter of dust motes, `maxAliveParticles: 14`, off under reduced motion. Step 8's debris keeps the same kind of cap.
+- **Textures are lazy:** a stratum is drawn when the camera is within 3 layers; the one past that after the camera settles; all for the pull-back.
+- **Clue on the rock, text in the DOM.** The carved clue is canvas text; `#clue` stays in the DOM for screen readers and is visually hidden only once the canvas sets `body[data-carved]`. If the world never starts, the DOM clue stays visible.
+- **Fossils are objects, not lettering** (SPEC §6.3 says embedded objects; DESIGN §7 updated). `#fossil-list` gives screen readers the same data.
+- **Dev tool quirk, not fixed here:** `?jump=11` (end screen) fails on the 22 Nov puzzle with "No unused answer for layer 10", because its layer-10 answer was already picked at layer 9. To reach the end locally, break all three pickaxes instead.

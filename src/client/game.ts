@@ -18,7 +18,7 @@ import {
   MINERALS,
   PICKAXES,
 } from '../shared/game';
-import { DISPLAY, World } from './world';
+import { BODY, DISPLAY, K, World } from './world';
 import { STRATA } from './strata';
 
 function el<T extends HTMLElement>(id: string, type: { new (): T }): T {
@@ -65,31 +65,44 @@ const ui = {
   share: el('share', HTMLTextAreaElement),
   copy: el('copy', HTMLButtonElement),
   next: $('next'),
+  fossilList: $('fossil-list'),
 };
 
 const world = new World();
 // The recess grows with the chain, so aim the camera at whatever rock is left showing.
+// Wide screens put the HUD and the panel in a side column, so the whole canvas is rock.
+const sideColumn = window.matchMedia('(min-width: 56rem)');
 world.gap = () => {
+  const box = el('world', HTMLElement).getBoundingClientRect();
+  if (sideColumn.matches) return [0, box.height];
   const panel = ui.play.hidden ? ui.end : ui.play;
   return [
     ui.hud.hidden ? 0 : ui.hud.getBoundingClientRect().bottom,
-    panel.hidden ? window.innerHeight : panel.getBoundingClientRect().top,
+    panel.hidden ? box.height : panel.getBoundingClientRect().top,
   ];
 };
-// Phaser letters the rock in EB Garamond, so wait for the bundled face (or its failure) first.
+// Phaser letters the rock in the bundled faces, so wait for them (or their failure) first.
 void Promise.allSettled([
   document.fonts.load(`20px ${DISPLAY}`),
   document.fonts.load(`italic 20px ${DISPLAY}`),
-]).then(
-  () =>
-    new Phaser.Game({
-      type: Phaser.AUTO,
-      parent: 'world',
-      backgroundColor: '#1b1714',
-      scale: { mode: Phaser.Scale.RESIZE },
-      scene: [world],
-    })
-);
+  document.fonts.load(`400 14px ${BODY}`),
+  document.fonts.load(`700 20px ${BODY}`),
+]).then(() => {
+  const box = $('world');
+  // The canvas is K times its box and shown at 1/K, so rock and lettering are sharp on phones.
+  new Phaser.Game({
+    type: Phaser.AUTO,
+    parent: 'world',
+    backgroundColor: '#1b1714',
+    scale: {
+      mode: Phaser.Scale.NONE,
+      zoom: 1 / K,
+      width: Math.round(box.clientWidth * K),
+      height: Math.round(box.clientHeight * K),
+    },
+    scene: [world],
+  });
+});
 
 const reducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -225,7 +238,20 @@ async function start() {
 /** Other players' answers at the layers this player has cleared. Optional, so failures stay quiet. */
 async function loadFossils() {
   try {
-    world.setFossils((await api<StatsResponse>('GET', 'stats')).fossils);
+    const { fossils } = await api<StatsResponse>('GET', 'stats');
+    world.setFossils(fossils);
+    // The canvas is decoration for a screen reader; this list carries the same fossils, with percents.
+    ui.fossilList.replaceChildren(
+      ...fossils.flatMap((layer, i) =>
+        layer.length
+          ? [
+              Object.assign(document.createElement('li'), {
+                textContent: `Layer ${i + 1}, ${mineral(i + 1).name}: ${layer.map((f) => `${f.answer} ${f.percent}%`).join(', ')}.`,
+              }),
+            ]
+          : []
+      )
+    );
   } catch {
     // The fossils are decoration on top of play; the run goes on without them.
   }
@@ -269,7 +295,8 @@ function showLayer() {
   ui.current.hidden = false;
   world.dig(
     run.layer,
-    run.chain.map((c) => c.answer)
+    run.chain.map((c) => ({ clue: c.clue, answer: c.answer })),
+    run.clue
   );
 }
 
@@ -485,7 +512,9 @@ async function end() {
   ui.share.value = r.share;
   countdown();
   // After the panel is filled, so the camera fits the column into the rock left above it.
-  world.pullBack(cleared.map((c) => c.answer));
+  world.pullBack(
+    r.chain.map((l) => ({ clue: l.clue, answer: l.cleared?.answer ?? null }))
+  );
 }
 
 ui.copy.addEventListener('click', async () => {

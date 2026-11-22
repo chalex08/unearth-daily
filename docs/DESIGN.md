@@ -84,12 +84,14 @@ One line just above the input, in the accent text colour, dry in tone (ref 06): 
 
 ## 7. Fossils
 
-_(Adjustment 4.)_ Other players' answers at layers this player has cleared, from `GET /api/stats`, sit in the rock as faint lettering.
+_(Adjustment 4; reworked in step 7 from lettering to objects.)_ Other players' answers at layers this player has cleared, from `GET /api/stats`, sit in the shaft walls as small bone-coloured objects with a dark rim: an ammonite, a trilobite or a frond (picked by the answer's hash, so the same on every device), drawn in code.
 
-- **Placement:** up to four per stratum, at its sides (top-left, top-right, bottom-left, bottom-right), clear of the chiselled answer in the middle. Most found first.
-- **Size by popularity:** EB Garamond italic, 13px + 2.2 × √percent, capped at 28px (about 15px for a 1% answer, 24px at 25%). Opacity 0.6.
-- **Tap state:** a tap shows the percent beside the name ("kiwi 12.5%") at full opacity. Tapping again, or tapping empty rock, closes it. Only one is open at a time, and the tap target is padded past the letters.
-- **SPEC §4.1:** the server names only hand-reviewed pool answers. Anything only the AI accepted comes back as "something else", which is always set smallest (13px, roman, opacity 0.35) whatever its share, so it reads as a bucket rather than an answer. Its percent still shows on tap. During a run, the server also turns any fossil that answers the current layer into "something else". After the run ends, every pool fossil is named. The player's own answer is always their own text in their chain.
+- **Placement:** up to four per stratum, two on each wall, just beside the shaft where the headlamp reaches (not out at the screen edge in the dark). Most found first.
+- **Size by popularity:** the object's radius is 6px + 1.9 × √percent, capped at 18px and at the wall's width (about 8px for a 1% answer, 15px at 25%).
+- **Names:** where the wall is at least 90px wide (desktop, and the upper layers on a phone), the name sits under the object in EB Garamond italic 13px, faint. Where it isn't, the name appears on tap only.
+- **Tap state:** a tap shows "kiwi 12.5%" on a dark plate above everything, so it reads on any stratum. Tapping again, or tapping empty rock, closes it. One open at a time. The tap target is a circle at least 44px across.
+- **SPEC §4.1:** the server names only hand-reviewed pool answers. Anything only the AI accepted comes back as "something else", always drawn as the smallest plain pebble, whatever its share. Its percent still shows on tap. During a run, the server also turns any fossil that answers the current layer into "something else". After the run ends, every pool fossil is named.
+- **Access:** the canvas is hidden from screen readers; a visually hidden list under it gives every fossil with its percent, per layer (`#fossil-list`).
 - If stats fail to load, the rock simply has no fossils. Play never waits on them.
 
 ## 8. End screen
@@ -107,6 +109,8 @@ The inline view (`splash.html`) uses the same tokens and fonts: the strata colum
 
 ## 10. Still to build
 
+_Step 7 (world) is built: see §12._
+
 - **Step 7 (world):** the headlamp cone and darkness with depth, shaft walls narrowing one notch per layer, the Uranium glow lighting the lowest strata, clues carved on the rock face, keyboard and screen-reader access to fossils. Also: render the canvas at the device pixel ratio (it's 1× now, so rock patterns look soft on phones; lettering is already sharp), a warm daylight band above Surface, and make the end-screen pull-back pan and zoom move together (the pan currently aims at the final zoom, so the 600ms zoom-out briefly shows bedrock).
 - **Step 8 (juice):** pickaxe impact, shake and debris, ore by band in the rock (rubble, seam, cracked vein, glowing lode that lights the walls), the bright horizontal seam line on a rare strike, sound.
 - **Step 9 (end):** the graveyard as a distribution with a "YOU" marker (ref 09), "deeper than X% of redditors", the band legend, string-tied tags.
@@ -123,3 +127,19 @@ Nothing here needs commissioned art. Everything is drawn in code from the palett
 | **Ore glow**        | Code               | A radial-gradient texture generated at runtime, tinted per ore and drawn with additive blending; Mother Lode adds a short-lived light that brightens nearby wall edges. Reduced motion: shown at its final strength, no pulse.                                    |
 | **Headlamp**        | Code               | A darkness layer over the world with a soft radial cut-out around the shaft (render texture or mask). Darkness grows with depth; the cone stays still under reduced motion.                                                                                       |
 | **Uranium core**    | Code; art optional | Stacked tabular plates built from the Uranium icon's geometry at large scale, with the ore-glow texture lighting the lowest strata green. If we want one hero image for Devpost, a hand-painted core sprite is the only place art would add something code can't. |
+
+## 12. The world (step 7)
+
+Code: [`src/client/world.ts`](../src/client/world.ts); pure shaft and light maths (tested) in [`geometry.ts`](../src/client/geometry.ts).
+
+- **One cross-section:** Surface plus ten strata, each 220px tall with its own texture. A shaft is cut through all of them, and the rock either side is the stratum's texture. The shaft's back wall is a separate grey rock layer, tinted with the stratum colour as the camera passes, and it scrolls at 0.86× (parallax).
+- **Narrowing:** the shaft is 100% of its mouth width at the Surface and loses 5.5% per layer in steps (45% at layer 10). The mouth is the screen width minus 24px, capped at 560px. Each step has a lit ledge so the notch is visible.
+- **Core sample:** each cleared layer is a dark segment of the stratum, with a 5px ore bar on its left, holding the layer number and name in ore colour, the clue, and the answer chiselled in EB Garamond. Segments join into one column. Layers not reached are outlined slots (shown, with their clue, only on the end screen).
+- **The carved clue:** the current layer's segment is a dark niche with an outline in ore, with the clue in Atkinson bold 21px and a drop shadow. It is dark behind the text on every stratum, so the contrast rule holds. The DOM `#clue` stays for screen readers and is visually hidden once the canvas is up (`body[data-carved]`); the recess shows the chain, the layer line and the form.
+- **Light:** a darkness sprite with a soft elliptical hole (width follows the shaft, so the cone narrows as the shaft does), plus four solid images to cover the rest of the screen. Its opacity is `0.96 × (1 − e^(−depth/3.2))`: daylight at the Surface, about 0.9 by layer 7. A warm additive glow sits inside the hole. At the end the darkness lifts over 900ms so the whole core sample is visible.
+- **Uranium:** a green additive glow (the Uranium ore colour) pulses between 50% and 85% over 1.8s at the foot of the last shaft, above the darkness, so it lights the rock around it and shows from two layers away. Stacked tabular plates sit on the floor of the shaft. Reduced motion: fixed at 70%.
+- **Camera:** one tween (600ms, sine) moves zoom and centre together, so the end-screen pull-back no longer shows bedrock mid-way. A resumed run cuts straight to its layer. Reduced motion cuts instantly and has no dust.
+- **Sky:** a warm daylight band above the Surface.
+- **Sharpness:** the canvas is rendered at the device pixel ratio capped at 2 (shown at 1/K), and rock textures are drawn at K×.
+- **Performance:** stratum textures are drawn only within 3 layers of the camera (and one ahead, after it settles; all of them for the pull-back). Nothing is recomputed while the camera is still. The only particles are dust motes in the headlamp, capped at 14 alive.
+- **Side panel:** from 56rem wide, the HUD, chain and form move to a 26rem column on the right and the whole canvas is rock.

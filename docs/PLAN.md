@@ -62,9 +62,10 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 7. Dynamic world (Phaser) — Sat 28 – Sun 29 Nov
 
-- [ ] One continuous vertical cross-section; camera descends per layer; walls narrow; lighting darkens to a headlamp cone; Uranium glow at the bottom.
-- [ ] Clues carved into the rock; earlier clues and answers stay above as a core sample; fossils of other players' pool answers (tap for %).
-- [ ] DOM input stays over the canvas; no scroll traps.
+- [x] One continuous vertical cross-section; camera descends per layer; walls narrow; lighting darkens to a headlamp cone; Uranium glow at the bottom. _Built 22 Nov; see DESIGN §12._
+- [x] Clues carved into the rock; earlier clues and answers stay above as a core sample; fossils of other players' pool answers (tap for %), with a screen-reader list.
+- [x] DOM input stays over the canvas; no scroll traps. Desktop gets a side panel.
+- _Checked locally at 320, 375 and 1440 wide against the real routes with a mock Redis. **Not yet checked on Reddit, or for 60fps on a real mid-range phone** (the local preview renders in software, so its frame rate says nothing). Do both before ticking the "Done when" below._
 - **Done when:** a run plays fully in the world at 60fps on a mid-range phone, and it's usable with a keyboard and screen reader.
 
 ### 8. Juice: strike, ore, wrong answer, sound — Mon 30 Nov – Tue 1 Dec
