@@ -74,9 +74,27 @@ export type ResultResponse = {
   streak: number;
   share: string;
   /** All ten layers: the clue, plus this player's answer where cleared. */
-  chain: { layer: number; clue: string; cleared: ChainLink | null }[];
+  chain: {
+    layer: number;
+    clue: string;
+    cleared: ChainLink | null;
+    /** This player's answers that broke a pickaxe at this layer. */
+    missed: { answer: string; reason: string }[];
+  }[];
   finalAnswer: string;
+  /** The player's own username, shown on the comment button (they post as themselves). */
+  username: string | null;
+  subreddit: string | null;
+  /** Link to the post's comments, for when posting as the user isn't possible. */
+  postUrl: string | null;
+  /** The player has already posted their result as a comment. */
+  commented: boolean;
+  /** True once, on the first time a finished run is shown (SPEC §6.6). */
+  joinPrompt: boolean;
 };
+
+/** POST /api/comment, /api/subscribe, /api/flair: an explicit user action each (Devvit rules). */
+export type ActionResponse = { ok: true; url?: string; flair?: string };
 
 export type Fossil = {
   /** Pool canonical, or "something else" for answers only the AI accepted (SPEC §4.1). */
@@ -94,6 +112,8 @@ export type StatsResponse = {
   reached: number[];
   /** Only for layers this player has cleared, index 0 = layer 1. */
   fossils: Fossil[][];
+  /** % of the other finished runs today that ended shallower than this one; null until it ends. */
+  deeperThan: number | null;
 };
 
 export type ErrorResponse = { error: string };

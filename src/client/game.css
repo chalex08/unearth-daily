@@ -5,6 +5,7 @@
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V3 · weakest: V, the rock still has no headlamp light; the lighting is PLAN step 7, and the recess carries the mood until then */
 /* answered 39b: the input and Dig button are 48px, a phone game control, not app density */
 /* Hallmark · finish-review: subagent · fix · 7 findings · 6 resolved, 1 kept on purpose (HUD pips stay ore-coloured: REFERENCES.md ref 02 asks for pips coloured by mineral once cleared, and they match the share emoji) */
+/* waive 3: #join keeps the 5px ore bar on its left, the core-sample segment of DESIGN §12, not a decorative side stripe */
 @import url('./tokens.css');
 @import url('./base.css');
 
@@ -146,7 +147,7 @@ body {
   place-items: center;
   width: 44px;
   height: 44px;
-  margin-block: -12px;
+  margin-block: calc(-1 * var(--space-sm));
   padding: 0;
   color: var(--color-ink);
   background: none;
@@ -437,7 +438,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    oklch(93% 0.012 85 / 0.22),
+    var(--color-shimmer),
     transparent
   );
   animation: shimmer 560ms var(--ease-in-out);
@@ -765,4 +766,154 @@ body[data-carved] #clue {
   #score small {
     display: none;
   }
+}
+
+/* ---- Step 9: end screen ---- */
+
+/* The hero mineral rises into the recess as the camera finishes pulling back. */
+#end:not([hidden]) #end-head,
+#end:not([hidden]) #end-total {
+  animation: rise 700ms var(--ease-out) 450ms backwards;
+}
+
+#end:not([hidden]) #end-total {
+  animation-delay: 600ms;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #end:not([hidden]) #end-head,
+  #end:not([hidden]) #end-total {
+    animation: none;
+  }
+}
+
+#end h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+#end-actions,
+#join .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+/* Secondary actions: outlined, so Copy stays the one red button (DESIGN §8). */
+button.quiet {
+  color: var(--color-ink);
+  background: transparent;
+  box-shadow: inset 0 0 0 var(--rule-hair) var(--color-muted);
+}
+
+button.quiet:hover {
+  background: var(--color-paper-2);
+}
+
+#comment-note,
+#flair-note,
+#join p,
+#deeper {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+#deeper {
+  color: var(--color-ink);
+  font-size: var(--text-md);
+}
+
+#join {
+  display: grid;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  background: var(--color-paper-2);
+  border-left: 5px solid var(--ore);
+}
+
+#graveyard {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+#graveyard table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+#graveyard th {
+  padding: 0 var(--space-2xs) var(--space-2xs);
+  font-weight: 400;
+  text-align: right;
+  color: var(--color-muted);
+}
+
+#graveyard th:first-child {
+  text-align: left;
+}
+
+#graveyard td {
+  padding: var(--space-3xs) var(--space-2xs);
+  text-align: right;
+  border-top: var(--rule-hair) solid var(--color-rule);
+}
+
+#graveyard td:first-child {
+  text-align: left;
+  white-space: nowrap;
+  color: var(--ore);
+}
+
+#graveyard td.bar {
+  width: 40%;
+}
+
+/* The bar is the share of today's finished runs that stopped at this mineral. */
+#graveyard td.bar i {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: var(--ore);
+  transform-origin: left;
+  transform: scaleX(var(--w));
+}
+
+#graveyard tr.you td {
+  font-weight: 700;
+  background: var(--color-paper-2);
+}
+
+#graveyard tr.you td:first-child::after {
+  content: ' (you)';
+  font-weight: 400;
+  color: var(--color-ink-2);
+}
+
+#end-chain .miss {
+  grid-column: 3 / -1;
+  padding-top: 0;
+  font-size: var(--text-sm);
+  color: var(--color-accent-text);
+}
+
+#end-chain .miss s {
+  color: var(--color-ink-2);
+}
+
+#end-chain li.missed > :not(.miss) {
+  border-bottom-color: transparent;
+}
+
+#end-chain li.missed > .miss:last-child {
+  border-bottom: var(--rule-hair) solid var(--color-rule);
 }
