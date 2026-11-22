@@ -5,6 +5,7 @@
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V3 · weakest: V, the rock still has no headlamp light; the lighting is PLAN step 7, and the recess carries the mood until then */
 /* answered 39b: the input and Dig button are 48px, a phone game control, not app density */
 /* Hallmark · finish-review: subagent · fix · 7 findings · 6 resolved, 1 kept on purpose (HUD pips stay ore-coloured: REFERENCES.md ref 02 asks for pips coloured by mineral once cleared, and they match the share emoji) */
+/* answered 34: at 375 the canvas is 800 wide for 100ms after a live resize (world.ts debounces scale.resize so a keyboard animation doesn't reallocate it every frame); fresh loads and settled resizes measure 375, and html/body clip, so nothing scrolls */
 /* waive 3: #join keeps the 5px ore bar on its left, the core-sample segment of DESIGN §12, not a decorative side stripe */
 @import url('./tokens.css');
 @import url('./base.css');
@@ -569,7 +570,8 @@ body {
   font-size: var(--text-md);
   color: var(--color-ink);
   background: var(--color-paper-2);
-  border: var(--rule-hair) solid var(--color-rule);
+  /* Muted, not rule: a field's edge needs 3:1 against the recess (WCAG 1.4.11). */
+  border: var(--rule-hair) solid var(--color-muted);
   border-radius: var(--radius);
   transition: border-color var(--dur-micro) var(--ease-out);
 }
@@ -579,7 +581,7 @@ body {
 }
 
 #answer:hover {
-  border-color: var(--color-muted);
+  border-color: var(--color-ink-2);
 }
 
 #answer:disabled {

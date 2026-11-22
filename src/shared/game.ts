@@ -249,14 +249,6 @@ export function shareText(run: RunState): string {
   ].join('\n');
 }
 
-export type DayStats = {
-  players: number;
-  /** Runs ended per mineral, index = deepest layer cleared (the graveyard). */
-  ended: number[];
-  /** Per layer (index 0 = layer 1): valid answers by canonical. */
-  answers: Record<string, number>[];
-};
-
 /** UTC day key, YYYY-MM-DD. */
 export const dayKey = (date: Date): string => date.toISOString().slice(0, 10);
 

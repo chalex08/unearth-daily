@@ -37,13 +37,6 @@
         "endpoint": "/internal/menu/post-create"
       },
       {
-        "label": "Example form",
-        "description": "Show a simple form",
-        "location": "subreddit",
-        "forUserType": "moderator",
-        "endpoint": "/internal/menu/example-form"
-      },
-      {
         "label": "Seed fake answer counts (dev)",
         "description": "Loads made-up counts for today's puzzle. Refuses on the canonical app.",
         "location": "subreddit",
@@ -67,7 +60,6 @@
     ]
   },
   "forms": {
-    "exampleForm": "/internal/form/example-submit",
     "devJump": "/internal/form/dev-jump"
   },
   "scheduler": {

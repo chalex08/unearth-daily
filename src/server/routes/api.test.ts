@@ -44,6 +44,9 @@ const env = vi.hoisted(() => {
       strings.set(k, (strings.get(k) ?? 0) + n);
       return strings.get(k)!;
     },
+    hDel: async (k: string, fs: string[]) => {
+      for (const f of fs) hash(k).delete(f);
+    },
     expire: async () => {},
     del: async (...ks: string[]) => {
       for (const k of ks) {
@@ -299,7 +302,7 @@ describe('POST /answer', () => {
     const r = await answer('zzz unknown thing', 1);
     expect(r).toMatchObject({
       outcome: 'unchecked',
-      reason: "Couldn't check that, try again",
+      reason: 'Couldn’t check that, try again',
       lives: 3,
     });
     expect(env.hashes.get('verdicts:2026-11-21:1')?.size ?? 0).toBe(0);
@@ -539,6 +542,13 @@ describe('end screen and community', () => {
     expect((await json<ResultResponse>(api.request('/result'))).commented).toBe(
       true
     );
+  });
+
+  it('posts one comment when pressed twice at once', async () => {
+    await finish();
+    const codes = await Promise.all([post('/comment'), post('/comment')]);
+    expect(codes.map((r) => r.status).sort()).toEqual([200, 409]);
+    expect(env.comments.filter((c) => c.runAs === 'USER')).toHaveLength(1);
   });
 
   it('refuses the actions until the run has ended', async () => {

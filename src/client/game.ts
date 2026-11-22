@@ -229,7 +229,11 @@ function countTo(target: number) {
   const show = (n: number) => {
     const small = document.createElement('small');
     small.textContent = ' pts';
-    ui.score.replaceChildren(String(n), small);
+    small.setAttribute('aria-hidden', 'true');
+    const said = document.createElement('span');
+    said.className = 'visually-hidden';
+    said.textContent = ' points';
+    ui.score.replaceChildren(String(n), small, said);
   };
   if (from === target || reducedMotion()) return show(target);
   const t0 = performance.now();
@@ -276,7 +280,7 @@ async function start() {
     if (r.chain.length) void loadFossils();
   } catch (e) {
     showStatus(
-      e instanceof ApiError ? e.message : "Couldn't reach the server.",
+      e instanceof ApiError ? e.message : 'Couldn’t reach the server.',
       true
     );
   }
@@ -540,7 +544,7 @@ async function submit() {
     // 409: another tab or a stale layer; reload the real state.
     if (e instanceof ApiError && e.status === 409) return void (await start());
     ui.result.className = 'shimmer';
-    ui.result.textContent = "Couldn't check that, try again.";
+    ui.result.textContent = 'Couldn’t check that, try again.';
   } finally {
     busy = false;
     ui.form.removeAttribute('aria-busy');
@@ -560,7 +564,7 @@ function resultLine(r: AnswerResult): string {
     case 'ignored':
       return IGNORED[r.reason ?? ''] ?? 'Try another answer.';
     case 'unchecked':
-      return r.reason ?? "Couldn't check that, try again.";
+      return r.reason ?? 'Couldn’t check that, try again.';
   }
 }
 
@@ -572,7 +576,7 @@ async function end() {
   try {
     r = await api<ResultResponse>('GET', 'result');
   } catch {
-    return showStatus("Couldn't load your result.", true);
+    return showStatus('Couldn’t load your result.', true);
   }
   showStatus('');
   const cleared = r.chain.flatMap((l) => (l.cleared ? [l.cleared] : []));
@@ -661,8 +665,7 @@ ui.copy.addEventListener('click', async () => {
     ui.share.select();
     said = 'Select and copy the text';
   }
-  showToast(said);
-  // The button says it too, so the confirmation sits where the thumb is.
+  // The button says it, where the thumb is; no toast for an effect already shown.
   ui.copy.textContent = said === 'Copied' ? 'Copied' : 'Press and hold to copy';
   announce(said);
   clearTimeout(copyReset);

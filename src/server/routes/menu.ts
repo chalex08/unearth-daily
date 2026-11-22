@@ -11,30 +11,15 @@ menu.post('/post-create', async (c) => {
     const post = await dailyPost();
     return c.json<UiResponse>({
       showToast: post.created
-        ? "Today's post is up"
-        : "Today's post already exists",
+        ? 'Today’s post is up'
+        : 'Today’s post already exists',
       navigateTo: `https://reddit.com/r/${context.subredditName}/comments/${post.id.slice(3)}`,
     });
   } catch (error) {
     console.error(`Error creating post: ${error}`);
     return c.json<UiResponse>(
-      { showToast: `Couldn't create today's post: ${error}` },
+      { showToast: `Couldn’t create today’s post: ${error}` },
       400
     );
   }
-});
-
-menu.post('/example-form', async (c) => {
-  return c.json<UiResponse>(
-    {
-      showForm: {
-        name: 'exampleForm',
-        form: {
-          title: 'Example form',
-          fields: [{ name: 'message', label: 'Message', type: 'string' }],
-        },
-      },
-    },
-    200
-  );
 });

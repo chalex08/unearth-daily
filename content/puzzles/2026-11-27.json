@@ -1853,7 +1853,7 @@
       ]
     },
     {
-      "clue": "…that's a gemstone",
+      "clue": "…that’s a gemstone",
       "pool": [
         {
           "canonical": "diamond",
@@ -2118,7 +2118,7 @@
       ]
     },
     {
-      "clue": "…that's usually blue",
+      "clue": "…that’s usually blue",
       "pool": [
         {
           "canonical": "sapphire",
@@ -2338,7 +2338,7 @@
       ]
     },
     {
-      "clue": "…that's transparent",
+      "clue": "…that’s transparent",
       "pool": [
         {
           "canonical": "lazulite",
