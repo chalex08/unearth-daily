@@ -155,3 +155,44 @@ Sources: the docs repo `reddit/devvit-docs` (`docs/capabilities/analytics/devvit
 - **Clue on the rock, text in the DOM.** The carved clue is canvas text; `#clue` stays in the DOM for screen readers and is visually hidden only once the canvas sets `body[data-carved]`. If the world never starts, the DOM clue stays visible.
 - **Fossils are objects, not lettering** (SPEC §6.3 says embedded objects; DESIGN §7 updated). `#fossil-list` gives screen readers the same data.
 - **Dev tool quirk, not fixed here:** `?jump=11` (end screen) fails on the 22 Nov puzzle with "No unused answer for layer 10", because its layer-10 answer was already picked at layer 9. To reach the end locally, break all three pickaxes instead.
+
+## Step 7 review fixes (22 Nov 2026)
+
+- **Carved clue falls back to the recess** below 170px of rock showing (`MIN_CARVE` in `world.ts`), checked on every layout. Found at 390×440 (keyboard up), where the carved clue was cropped and the DOM copy hidden. Showing the DOM clue only shrinks the gap further, so the switch can't oscillate.
+- **Text:** a layout sets each Phaser `Text`'s style and content with `setText` then `TextStyle.setStyle(style, true)` (at most two renders, and `true` is needed: with `false` the font metrics aren't recomputed, so a 14px→21px change laid out with the old line height), skipped entirely when unchanged (each Text setter re-renders its canvas, and the keyboard fires a resize every frame). Fossils redraw only when the width, data, open fossil or pull-back changes. `scale.resize` is debounced 100ms.
+- **Textures** for strata not yet reached are drawn one every 250ms while the camera is still, so the end-of-run pull-back no longer draws up to seven in one frame (all 11 at K=2 is ~20 MB of texture).
+- **First descent:** the "first placement cuts" counter now counts a `dig` made before the scene exists, so the first strike after a slow font load still slides.
+- **Surface opening:** a fresh run (layer 1, nothing cleared) starts on the Surface and sinks to layer 1 (1.6s); resumed runs and reduced motion don't.
+
+## Step 7 second review: correctness, mobile performance, accessibility (22 Nov 2026)
+
+Three focused reviews of the step 7 world. Each claim was checked against the installed Phaser 4.2.1 source before acting. Fixed:
+
+- **Fossil tap area** is in the frame's own pixels (`InputManager.pointWithinHitArea` adds `displayOriginX/Y`), and canvas textures are K× (`canvas()`), so the hit circle is `Circle(32K, 32K, …)`. It was a quarter-size circle off-centre on every K=2 phone.
+- **Resizes keep animations running.** Phaser fires its scale `resize` from its own window listener too (and `ScaleManager.refresh` emits even at the same size), so the handler now retargets a running move (`layout(this.animating())`) instead of snapping it. The Surface opening is held by `layout()` itself while its timer waits, so a resize can't cut it, and the timer reads the current size when it fires.
+- **Panels re-measure the gap:** a ResizeObserver on `#hud`, `#play` and `#end` calls `world.relayout()`, which re-aims only if the gap changed.
+- **Opening only for fresh runs:** `game.ts` passes it (nothing cleared and no pickaxe broken), not inferred from layer 1.
+- **Frame rate:** `fps: { limit: 60 }` in the game config, and `game.loop.setFPSLimit(30)` whenever no camera or light tween runs (`TimeStep.setFPSLimit`, Phaser 4.2.0+). `render.antialiasGL: false`.
+- **Load:** only layers ±1 draw before first paint; idle prefetch does the rest. Text re-renders once for a text-only or style-only change. `setFossils` skips identical stats.
+- **Fossils above the darkness**, fainter (DESIGN §7). Computed contrast under the darkness had been 1.0–2.9:1.
+- **Screen readers:** `#clue` and `#reveal` lost `aria-live` (changes inside `display:none` aren't announced); one always-rendered `#announce` (`role="status"`) says each strike and each new clue. `#answer` is described by the layer line and clue. `#chain` and `#fossil-list` are focusable scroll boxes (Safari doesn't make scroll containers focusable).
+- **Short screens:** `#play` is a flex column with `min-height: 0` and the chain shrinks, so the input stays above the keyboard on small and landscape phones.
+- **Clue placement** also checks the clue's own height and scale (DESIGN §12); forced colours / more contrast always use the DOM clue; `visualViewport` `scroll` also runs `fit()` (iOS keyboard panning).
+
+Not changed, on purpose:
+
+- **Texture memory** is estimated at ~80 MB on a K=2 phone once every stratum is drawn: Phaser's `CanvasTexture` keeps an `imageData` copy of each canvas besides the canvas and the GL texture. Avoiding it means registering a plain canvas through `textures.addImage`, whose type only takes `HTMLImageElement`, i.e. a type cast, which AGENTS.md forbids. Revisit if the Reddit app's webview is seen being killed (profile first).
+- **K = min(DPR, 1.5)** would cut GPU fill ~44% at some loss of sharpness, and dropping the warm lamp glow ~0.7 screen of fill: both design calls, left until a profile on a real mid-range Android phone says they're needed.
+- **Dust motes run continuously** (WCAG 2.2.2 pause control): decorative, faint, and off under reduced motion; no pause control added.
+
+## Step 8: the feel (22 Nov 2026)
+
+- **Howler.js `2.2.4`** (the current release; last published Sep 2023, so no upstream fixes are coming) with `@types/howler@2.2.13`, both pinned. Sounds are Web Audio, fetched same-origin from `sounds/*.wav`, which the Devvit CSP should allow (only external requests are blocked). Not yet confirmed inside the Reddit webview; check in playtest.
+- **Sounds are original.** `tools/make-sounds.ts` synthesises five mono 16-bit WAVs into `public/sounds/` (strike, clink, descend, chime, hum; 118 KB in all), released CC0. Re-run `node tools/make-sounds.ts` to regenerate. Chosen over downloaded samples so nothing needs a licence check or a download.
+- **Mute** is a HUD button (`aria-pressed` = muted), remembered in `localStorage` (`unearth.muted`; storage failures fall back to session-only). `Howler.mute` is also on while the tab is hidden (PLAN step 8).
+- **Uranium hum** loops while the player is on layer 10 and fades out when the run ends. Howler queues it until the first tap unlocks audio, so a resumed run at layer 10 starts humming after the first interaction.
+- **Pacing changed from DESIGN §5:** Seam, Vein and Mother Lode no longer all hold 2.5s. Holds are now 1.0 / 1.5 / 2.0 / 2.5s (Common / Seam / Vein / Mother Lode and Uranium), counted from the strike, so rarer bands linger slightly longer. A tap or Enter still skips. Timings live in `src/client/feel.ts` (tested) and DESIGN §13.
+- **A wrong answer never blocks typing.** The input is never disabled for one, so the 420ms bounce (`WRONG_MS`, asserted under 600 in `feel.test.ts`) plays while you can already type.
+- **Haptics** use `navigator.vibrate` where it exists (Android webviews, not iOS) and are skipped under reduced motion.
+- **The in-world score label duplicates the recess reveal on purpose:** the label is the brief SPEC §6.4 transient on the rock; the recess reveal stays for reading and for screen readers (DESIGN §5).
+- Ore marks stay in the rock for the run and are not re-laid out if the canvas width changes mid-run (a `shortcut:` comment in `world.ts`).
