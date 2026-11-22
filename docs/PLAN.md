@@ -93,9 +93,9 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 11. Polish, audits, compliance, submission — Sat 5 – Sun 6 Dec
 
-- [ ] Accessibility, performance and Devvit-rules audits; data deletion on account deletion; README rewritten (non-template).
-- [ ] Terms and Privacy published and linked in the app details form (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app. _Domain and LLM approval granted 22 Nov for both the dev and canonical apps. Still to do: the app owner sets the canonical app's `geminiApiKey`._
+- [x] Accessibility, performance and Devvit-rules audits; data deletion on account deletion; README rewritten (non-template). _23 Nov: Hallmark and ponytail audits, rules re-read, 30-day TTL is the deletion path (no account-delete trigger exists); results in [QA.md](QA.md). Still by hand: the Reddit desktop, iOS and Android passes in QA.md._
+- [ ] Terms and Privacy published and linked in the app details form _(published 23 Nov from `site/`; pasting the links into the form is by hand)_ (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app. _Domain and LLM approval granted 22 Nov for both the dev and canonical apps. Still to do: the app owner sets the canonical app's `geminiApiKey`._
 - [ ] AI data audit (SPEC §5.3): the canonical app's `geminiApiKey` is from the billed project; no free-tier key exists in the project; no Reddit data reached any content-authoring AI session.
 - [ ] Enough reviewed puzzles (written with `/write-puzzle`, reviewed by hand) queued to cover every day through judging (the judging window isn't in the briefing; aim for 31 Dec).
-- [ ] Canonical app uploaded with `npm run deploy:prod` (upload only, **never publish**); public demo post live in r/UnearthDaily; demo video if required.
+- [ ] Canonical app uploaded with `npm run deploy:prod` (upload only, **never publish**); public demo post live in r/UnearthDaily; demo video if required. _Uploaded and installed 23 Nov; post, video and survey still to confirm by hand ([SUBMISSION.md](SUBMISSION.md))._
 - **Done when:** a stranger can open the demo post on mobile, play, share and come back tomorrow, and every item in SPEC §1 is satisfied.

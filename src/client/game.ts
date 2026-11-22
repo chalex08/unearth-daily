@@ -475,6 +475,12 @@ async function reveal(r: AnswerResult, layer: number) {
   await hold(STRIKE.hold[look]);
 }
 
+// Tapping Dig must not take focus from the input: on a phone that closes the keyboard, the
+// layout jumps, and focus() reopens it a moment later. The click (and keyboard use) still submit.
+ui.dig.addEventListener('pointerdown', (e) => {
+  if (document.activeElement === ui.input) e.preventDefault();
+});
+
 ui.form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (skipReveal) return skipReveal();
