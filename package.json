@@ -33,7 +33,7 @@
     "@hono/node-server": "2.1.6",
     "devvit": "0.15.4",
     "express": "5.3.0",
-    "hono": "4.13.17",
+    "hono": "4.13.20",
     "howler": "2.2.4",
     "phaser": "4.2.1"
   },
