@@ -559,3 +559,64 @@ label[for='share'] {
   font-size: var(--text-sm);
   color: var(--color-muted);
 }
+
+/* The clue is carved on the rock face once the world is up (world.ts). The text stays for screen
+   readers, and if the canvas never starts it simply stays visible. */
+body[data-carved] #clue {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Wide screens: HUD, answer and chain move to a side column and the whole canvas is rock. */
+@media (min-width: 56rem) {
+  #world {
+    right: 26rem;
+  }
+
+  #app {
+    left: auto;
+    width: 26rem;
+    background: var(--color-paper);
+    border-left: var(--rule-hair) solid var(--color-rule);
+    pointer-events: auto;
+  }
+
+  #hud {
+    padding-inline: var(--space-md);
+  }
+
+  .recess {
+    max-width: none;
+  }
+
+  #play {
+    flex: 1;
+    margin-top: 0;
+    align-content: end;
+  }
+
+  #chain {
+    max-height: calc(var(--vh, 100dvh) * 0.6);
+  }
+
+  #end {
+    flex: 1;
+    max-height: none;
+    margin-top: 0;
+  }
+}
+
+/* Narrow phones: the score stays on one line, without its unit, so the HUD never wraps. */
+#score {
+  white-space: nowrap;
+}
+
+@media (max-width: 22.5rem) {
+  #score small {
+    display: none;
+  }
+}
