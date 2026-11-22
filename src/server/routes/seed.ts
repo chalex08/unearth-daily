@@ -103,7 +103,7 @@ const isDevApp = () =>
 
 /**
  * Rewrites the caller's run for today so `to - 1` layers are cleared with pool answers (11 = all
- * ten, the Uranium finish). Bands cycle Common, Seam, Vein through the commonness labels, as on a
+ * ten, the Uranium finish). Bands cycle Rubble, Nugget, Pocket through the commonness labels, as on a
  * cold start. Answer counts, the graveyard and the streak are not touched.
  */
 export async function jumpRun(userId: string, to: number): Promise<string> {

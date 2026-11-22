@@ -10,7 +10,7 @@
 // the only particles are a capped handful of dust motes.
 import * as Phaser from 'phaser';
 import type { Fossil } from '../shared/api';
-import { MINERALS } from '../shared/game';
+import { BANDS, MINERALS } from '../shared/game';
 import {
   darkness,
   mix,
@@ -994,7 +994,7 @@ export class World extends Phaser.Scene {
     const cy = top + S / 2;
     const st = STRATA[layer]!;
     const ore = hex(st.ore);
-    const rank = ['Common', 'Seam', 'Vein', 'Mother Lode'].indexOf(look);
+    const rank = BANDS.indexOf(look);
     const hold = STRIKE.hold[look];
     this.busyUntil = this.time.now + hold;
 
@@ -1080,9 +1080,7 @@ export class World extends Phaser.Scene {
       });
     });
 
-    this.after(STRIKE.ore, () =>
-      this.showOre(layer, answer, look, cx, vw, reduce)
-    );
+    this.after(STRIKE.ore, () => this.showOre(layer, answer, look, cx, vw));
     this.after(labelAt(look), () => {
       const s = shaftWidth(layer, vw);
       const text = this.keep(
@@ -1121,14 +1119,13 @@ export class World extends Phaser.Scene {
     });
   }
 
-  /** The band, as ore in the rock: rubble, a seam, a cracked vein, or glowing ore that lights the walls. */
+  /** The band, as ore in the rock: rubble, one nugget, a pocket of them, a cracked vein, or glowing ore that lights the walls. */
   private showOre(
     layer: number,
     answer: string,
     look: Look,
     cx: number,
-    vw: number,
-    reduce: boolean
+    vw: number
   ) {
     const st = STRATA[layer]!;
     const ore = hex(st.ore);
@@ -1143,7 +1140,7 @@ export class World extends Phaser.Scene {
       return o;
     };
 
-    if (look === 'Common') {
+    if (look === 'Rubble') {
       // Dull rubble on the floor of the segment.
       for (let i = 0; i < 8; i++) {
         const size = 4 + rnd() * 5;
@@ -1164,22 +1161,35 @@ export class World extends Phaser.Scene {
       return;
     }
 
-    if (look === 'Seam') {
-      // A thin coloured line across the shaft and into both walls.
-      const seam = mark(
-        this.add
-          .rectangle(cx, y, half * 2, 3, ore)
-          .setRotation(0.03)
-          .setDepth(8)
-      );
-      if (reduce) this.fadeIn(seam, 1, ms);
-      else
-        this.tweens.add({
-          targets: seam,
-          scaleX: { from: 0, to: 1 },
-          duration: ms,
-          ease: 'Cubic.easeOut',
-        });
+    if (look === 'Nugget' || look === 'Pocket') {
+      // One chunk of ore, or a cluster of them, each with a small glint.
+      const lumps = look === 'Nugget' ? 1 : 5;
+      for (let i = 0; i < lumps; i++) {
+        const lx =
+          lumps === 1
+            ? cx
+            : cx + ((i - (lumps - 1) / 2) / lumps) * (s - MARGIN * 2) * 1.1;
+        const ly = y + (lumps === 1 ? 0 : (rnd() - 0.5) * 22);
+        const size = lumps === 1 ? 16 : 8 + rnd() * 6;
+        const lump = mark(
+          this.add
+            .image(lx, ly, 'chip')
+            .setDisplaySize(size, size)
+            .setRotation(rnd() * 6)
+            .setTint(ore)
+            .setDepth(8)
+        );
+        const glint = mark(
+          this.add
+            .image(lx, ly, 'glow')
+            .setTint(ore)
+            .setBlendMode(Phaser.BlendModes.ADD)
+            .setDisplaySize(size * 3.2, size * 3.2)
+            .setDepth(Z.glow)
+        );
+        this.fadeIn(lump, 1, ms);
+        this.fadeIn(glint, 0.7, ms);
+      }
       return;
     }
 

@@ -51,25 +51,29 @@ Rank = deepest layer cleared.
 
 **Share** = valid answers at that layer with the same canonical answer ÷ all valid answers at that layer today.
 
-| Band        | Share    | Bonus         |
-| ----------- | -------- | ------------- |
-| Common      | over 20% | +0            |
-| Seam        | 5–20%    | +25% of base  |
-| Vein        | 1–5%     | +50% of base  |
-| Mother Lode | under 1% | +100% of base |
+Five bands, named for how much of a find it was, each bigger and more joined-up than the last: loose bits, one chunk, a cluster, a line, the whole deposit. They describe the find, never the layer, so none is a mineral name.
+
+| Band        | Rarity     | Share    | Bonus         | Colour | Text glow |
+| ----------- | ---------- | -------- | ------------- | ------ | --------- |
+| Rubble      | Everywhere | over 25% | +0            | grey   | none      |
+| Nugget      | Plenty     | 10–25%   | +25% of base  | orange | a little  |
+| Pocket      | Scarce     | 4–10%    | +50% of base  | blue   | more      |
+| Vein        | Hidden     | 1–4%     | +100% of base | purple | more      |
+| Mother Lode | Fabled     | under 1% | +200% of base | gold   | the most  |
 
 - Bonus is rounded to the nearest integer.
 - Rarity is **locked at the moment of answering** (later answers by other players don't change it).
-- Boundaries: exactly 20% is Seam, exactly 5% is Seam, exactly 1% is Vein (each band includes its upper bound except Common).
+- Boundaries: each band includes its upper bound except Rubble (exactly 25% is Nugget, 10% is Nugget, 4% is Pocket, 1% is Vein).
 - Layer 10 has a single answer and gets no rarity bonus.
-- **Cold start:** until a layer has **50 valid answers**, use the puzzle file's commonness label (`common` → Common, `uncommon` → Seam, `rare` → Vein) and mark the result **"estimated"**. A valid answer not in the pool (accepted by the AI judge) defaults to **Vein (estimated)**.
+- Band colours say how rare the find was. They never paint the rock: stratum ore colours say which layer you are in.
+- **Cold start:** until a layer has **50 valid answers**, use the puzzle file's commonness label (`common` → Rubble, `uncommon` → Nugget, `rare` → Pocket) and mark the result **"estimated"**. A valid answer not in the pool (accepted by the AI judge) defaults to **Pocket (estimated)**.
 
 ### 3.3 Other scoring
 
 - **+50 per unbroken pickaxe** at the end of a run.
 - **Total** = Σ (base + rarity bonus) for each cleared layer + pickaxe bonus.
 - **Streak** = consecutive UTC days with a finished run (cleared or caved in). Missing a UTC day resets it to 0.
-- **Rare finds** = answers in the Vein or Mother Lode bands (estimated or not).
+- **Rare finds** = answers in the Pocket, Vein or Mother Lode bands (estimated or not).
 
 Worked example (the share text in §6.6): caved in at Gold with all 3 pickaxes broken = 635 base (10+20+30+50+75+100+150+200) + 218 rarity bonus + 0 pickaxe bonus = 853.
 
@@ -158,12 +162,14 @@ Two in-world hints (not modals):
 ### 6.4 Strike (correct answer)
 
 - Pickaxe impact, screen shake, debris; the answer is **chiselled into the stratum**.
-- Rarity appears as ore:
-  - Common → dull rubble
-  - Seam → a thin coloured seam
+- Rarity appears as ore in the rock:
+  - Rubble → dull rubble
+  - Nugget → one glinting chunk
+  - Pocket → a small cluster of glinting chunks
   - Vein → a bright cracked vein
   - Mother Lode → glowing ore that lights the walls
 - A transient in-world label shows: mineral, base, band, bonus, "% of players", new total.
+- The reveal names the **band** in its band colour, with glow growing from none (Rubble) to the most (Mother Lode). Directly under the band name: the **rarity** in plain words (Everywhere, Plenty, Scarce, Hidden, Fabled) and the **points** scored for that layer (base plus bonus).
 - The camera then descends.
 
 ### 6.5 Wrong answer

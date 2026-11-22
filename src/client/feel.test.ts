@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { labelAt, STRIKE, WRONG_MS, type Look } from './feel';
 
-const BANDS: Look[] = ['Common', 'Seam', 'Vein', 'Mother Lode'];
+const BANDS: Look[] = ['Rubble', 'Nugget', 'Pocket', 'Vein', 'Mother Lode'];
 
 describe('feel timings', () => {
   it('lets you type again in under 600ms after a wrong answer', () => {

@@ -50,6 +50,14 @@
   --color-accent-text: oklch(68% 0.17 28);
   --color-focus: oklch(68% 0.17 28);
 
+  /* Rarity bands, a ladder anyone can read: grey, orange, blue, purple, gold. None of these paint the
+     rock: ore colours (above) say which layer you are in, band colours say how rare the find was. */
+  --band-rubble: oklch(72% 0.012 75);
+  --band-nugget: oklch(76% 0.15 50);
+  --band-pocket: oklch(74% 0.14 245);
+  --band-vein: oklch(72% 0.19 310);
+  --band-mother-lode: oklch(84% 0.17 80);
+
   /* Set per element from strata.ts: the current stratum's ore. */
   --ore: oklch(68% 0.014 75);
 

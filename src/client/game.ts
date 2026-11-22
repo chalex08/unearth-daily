@@ -11,7 +11,7 @@ import type {
   RunResponse,
   StatsResponse,
 } from '../shared/api';
-import type { RarityBand } from '../shared/game';
+import { BAND_RARITY, type RarityBand } from '../shared/game';
 import { LAYER_COUNT } from '../shared/puzzle';
 import {
   COLD_START_THRESHOLD,
@@ -50,6 +50,8 @@ const ui = {
   reveal: $('reveal'),
   revealIcon: el('reveal-icon', HTMLImageElement),
   revealBand: $('reveal-band'),
+  revealRarity: $('reveal-rarity'),
+  revealPts: $('reveal-pts'),
   revealAnswer: $('reveal-answer'),
   revealBase: $('reveal-base'),
   revealBonus: $('reveal-bonus'),
@@ -298,7 +300,7 @@ async function loadFossils(): Promise<StatsResponse | null> {
 }
 
 function bandNote(points: number, band: RarityBand | null, estimated: boolean) {
-  const named = band && band !== 'Common' ? ` ${band}` : '';
+  const named = band && band !== 'Rubble' ? ` ${band}` : '';
   return `+${points}${named}${estimated && named ? ', estimated' : ''}`;
 }
 
@@ -319,6 +321,7 @@ function showLayer(opening = false) {
       note.className = 'link-note';
       // "estimated" is said in the reveal and on the end screen; here every line counts.
       note.textContent = bandNote(c.points, c.band, false);
+      if (c.band) note.dataset.band = bandKey(c.band);
       answer.append(c.answer, note);
       li.append(clue, answer);
       return li;
@@ -356,18 +359,24 @@ const IGNORED: Record<string, string> = {
 };
 
 const FLAVOUR: Record<RarityBand, string> = {
-  Common: 'The answer most diggers hit first.',
-  Seam: 'A thin line of something better.',
+  Rubble: 'The answer most diggers hit first.',
+  Nugget: 'A solid chunk most diggers walked past.',
+  Pocket: 'A little cluster few found.',
   Vein: 'Few swung their pick this way.',
   'Mother Lode': 'Almost nobody dug here.',
 };
 
 const SLAM: Record<RarityBand, string> = {
-  Common: '1',
-  Seam: '1.3',
-  Vein: '1.6',
+  Rubble: '1',
+  Nugget: '1.25',
+  Pocket: '1.5',
+  Vein: '1.75',
   'Mother Lode': '2',
 };
+
+/** Band name as a CSS key: the colour and glow in game.css hang off data-band. */
+const bandKey = (band: RarityBand | null) =>
+  band ? band.toLowerCase().replace(' ', '-') : 'core';
 
 // A reveal holds until it times out or the player taps it (or presses Enter in the input).
 let skipReveal: (() => void) | null = null;
@@ -405,14 +414,18 @@ async function reveal(r: AnswerResult, layer: number) {
   world.strike(layer, r.answer, look, scoreLabel(r, layer));
   setTimeout(() => {
     play('strike');
-    buzz(look === 'Common' ? 15 : [20, 30, 40]);
+    buzz(look === 'Rubble' ? 15 : [20, 30, 40]);
   }, STRIKE.impact);
   if (look === 'Mother Lode') setTimeout(() => play('chime'), STRIKE.ore);
   // Layer 10 has no band (SPEC §3.2), but reaching Uranium is the biggest moment of the run.
-  const rare = !band || band === 'Vein' || band === 'Mother Lode';
-  ui.reveal.classList.toggle('common', band === 'Common');
+  const rare =
+    !band || band === 'Pocket' || band === 'Vein' || band === 'Mother Lode';
+  ui.reveal.classList.toggle('rubble', band === 'Rubble');
+  ui.reveal.dataset.band = bandKey(band);
   ui.revealIcon.src = icon(layer);
   ui.revealBand.textContent = band ?? r.mineral ?? '';
+  ui.revealRarity.textContent = band ? BAND_RARITY[band] : 'Final layer';
+  ui.revealPts.textContent = `+${(r.base ?? 0) + (r.bonus ?? 0)} pts`;
   ui.revealAnswer.textContent = `“${r.canonical}”`;
   ui.revealBase.textContent = `+${r.base}`;
   ui.revealBonus.textContent = r.bonus ? `+${r.bonus} ${band}` : '';
@@ -591,6 +604,7 @@ async function end() {
         b.textContent = c.answer;
         text.append(`${l.clue}: `, b);
         note.textContent = bandNote(c.points, c.band, false);
+        if (c.band) note.dataset.band = bandKey(c.band);
       } else {
         li.className = 'unreached';
         text.textContent = l.clue;

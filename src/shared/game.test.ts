@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
   applyAnswer,
+  BAND_RARITY,
+  BANDS,
   checkAnswer,
   currentLayer,
   currentStreak,
@@ -39,57 +41,67 @@ function play(run: RunState, raw: string, band: RarityBand | 'invalid') {
 }
 
 describe('rarityBand', () => {
+  const band = (count: number, total: number) =>
+    rarityBand(count, total, null).band;
+
   it('uses the share once a layer has 50 answers, with inclusive boundaries', () => {
-    expect(rarityBand(11, 50, 'rare')).toEqual({
-      band: 'Common',
+    expect(rarityBand(14, 50, 'rare')).toEqual({
+      band: 'Rubble',
       estimated: false,
     });
-    expect(rarityBand(10, 50, 'rare')).toEqual({
-      band: 'Seam',
-      estimated: false,
-    }); // exactly 20%
-    expect(rarityBand(5, 100, null)).toEqual({
-      band: 'Seam',
-      estimated: false,
-    }); // exactly 5%
-    expect(rarityBand(4, 100, null)).toEqual({
-      band: 'Vein',
-      estimated: false,
-    });
-    expect(rarityBand(1, 100, null)).toEqual({
-      band: 'Vein',
-      estimated: false,
-    }); // exactly 1%
-    expect(rarityBand(1, 101, null)).toEqual({
-      band: 'Mother Lode',
-      estimated: false,
-    });
+    expect(band(25, 100)).toBe('Nugget'); // exactly 25%
+    expect(band(10, 100)).toBe('Nugget'); // exactly 10%
+    expect(band(9, 100)).toBe('Pocket');
+    expect(band(4, 100)).toBe('Pocket'); // exactly 4%
+    expect(band(3, 100)).toBe('Vein');
+    expect(band(1, 100)).toBe('Vein'); // exactly 1%
+    expect(band(1, 101)).toBe('Mother Lode');
+    expect(rarityBand(1, 101, null).estimated).toBe(false);
   });
 
   it('falls back to the commonness label, estimated, under 50 answers', () => {
     expect(rarityBand(1, 49, 'common')).toEqual({
-      band: 'Common',
+      band: 'Rubble',
       estimated: true,
     });
     expect(rarityBand(1, 49, 'uncommon')).toEqual({
-      band: 'Seam',
+      band: 'Nugget',
       estimated: true,
     });
     expect(rarityBand(1, 49, 'rare')).toEqual({
-      band: 'Vein',
+      band: 'Pocket',
       estimated: true,
     });
-    expect(rarityBand(1, 1, null)).toEqual({ band: 'Vein', estimated: true }); // AI-accepted
+    expect(rarityBand(1, 1, null)).toEqual({ band: 'Pocket', estimated: true }); // AI-accepted
   });
 });
 
 describe('layerPoints', () => {
   it('adds the band bonus to the base, rounded', () => {
-    expect(layerPoints(1, 'Common')).toBe(10);
-    expect(layerPoints(1, 'Vein')).toBe(15);
-    expect(layerPoints(4, 'Seam')).toBe(63); // 50 + 12.5 → 13
-    expect(layerPoints(5, 'Mother Lode')).toBe(150);
+    expect(layerPoints(1, 'Rubble')).toBe(10);
+    expect(layerPoints(1, 'Nugget')).toBe(13); // 10 + 2.5 → 3
+    expect(layerPoints(4, 'Nugget')).toBe(63); // 50 + 12.5 → 13
+    expect(layerPoints(1, 'Pocket')).toBe(15);
+    expect(layerPoints(5, 'Vein')).toBe(150);
+    expect(layerPoints(5, 'Mother Lode')).toBe(225);
     expect(layerPoints(10, null)).toBe(500);
+  });
+
+  it('names every band in order, most to least common', () => {
+    expect([...BANDS]).toEqual([
+      'Rubble',
+      'Nugget',
+      'Pocket',
+      'Vein',
+      'Mother Lode',
+    ]);
+    expect(BANDS.map((b) => BAND_RARITY[b])).toEqual([
+      'Everywhere',
+      'Plenty',
+      'Scarce',
+      'Hidden',
+      'Fabled',
+    ]);
   });
 });
 
@@ -102,7 +114,7 @@ describe('run state machine', () => {
   });
 
   it('ignores empty, too-long and reused input without breaking a pickaxe', () => {
-    let { run } = play(startRun(14), 'Traffic cone', 'Common');
+    let { run } = play(startRun(14), 'Traffic cone', 'Rubble');
     expect(checkAnswer(run, '  ?! ', pool(run))).toEqual({
       kind: 'ignored',
       reason: 'empty',
@@ -127,12 +139,12 @@ describe('run state machine', () => {
   });
 
   it('treats a judge canonical already used as reuse', () => {
-    const { run } = play(startRun(14), 'cheddar', 'Common');
+    const { run } = play(startRun(14), 'cheddar', 'Rubble');
     const out = applyAnswer(run, {
       valid: true,
       answer: 'mature cheddar',
       canonical: 'Cheddar',
-      band: 'Vein',
+      band: 'Pocket',
       estimated: true,
     });
     expect(out.result).toEqual({ kind: 'ignored', reason: 'reused' });
@@ -152,8 +164,8 @@ describe('run state machine', () => {
       'mandarin',
       'calamansi',
     ];
-    for (const a of answers) ({ run } = play(run, a, 'Common'));
-    const last = play(run, 'Chinotto', 'Mother Lode');
+    for (const a of answers) ({ run } = play(run, a, 'Rubble'));
+    const last = play(run, 'Chinotto', 'Vein');
     expect(last.result).toMatchObject({
       kind: 'valid',
       layer: 10,
@@ -172,15 +184,15 @@ describe('run state machine', () => {
 
 describe('sample run #14', () => {
   const inputs: [string, RarityBand | 'invalid'][] = [
-    ['Traffic cone', 'Vein'],
-    ['cheddar', 'Common'],
-    ['sweet potato', 'Common'],
-    ['apricot', 'Seam'],
-    ['persimmon', 'Mother Lode'],
-    ['navel orange', 'Seam'],
+    ['Traffic cone', 'Pocket'],
+    ['cheddar', 'Rubble'],
+    ['sweet potato', 'Rubble'],
+    ['apricot', 'Nugget'],
+    ['persimmon', 'Vein'],
+    ['navel orange', 'Nugget'],
     ['grapefruit', 'invalid'],
-    ['clementine', 'Common'],
-    ['satsuma', 'Vein'],
+    ['clementine', 'Rubble'],
+    ['satsuma', 'Pocket'],
     ['mandarin', 'invalid'],
     ['tangerine', 'invalid'],
   ];
@@ -200,7 +212,7 @@ describe('sample run #14', () => {
       rareFinds: 3,
       hero: { name: 'Gold' },
     });
-    expect(() => play(run, 'chinotto', 'Common')).toThrow('run is over');
+    expect(() => play(run, 'chinotto', 'Rubble')).toThrow('run is over');
   });
 
   it('builds the exact share text from SPEC §6.6', () => {
@@ -224,7 +236,7 @@ describe('share text edge cases', () => {
     );
   });
   it('uses the singular for one rare find', () => {
-    const { run } = play(startRun(3), 'goldfish', 'Vein');
+    const { run } = play(startRun(3), 'goldfish', 'Pocket');
     expect(shareText(run).split('\n')[2]).toBe('✨ 1 rare find');
   });
 });
