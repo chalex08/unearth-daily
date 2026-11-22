@@ -19,6 +19,7 @@ import {
   STRATUM as S,
 } from './geometry';
 import { drawStratum, STRATA } from './strata';
+import { labelAt, STRIKE, WRONG, type Look } from './feel';
 
 export const DISPLAY = '"EB Garamond Variable", Georgia, serif';
 export const BODY =
@@ -144,6 +145,13 @@ export class World extends Phaser.Scene {
   private need = 0;
   private clueScale = 1;
   private fossilData = '';
+  /** Transient strike and wrong-answer objects and timers, cleared when the next layer or answer comes. */
+  private temp: Phaser.GameObjects.GameObject[] = [];
+  private timers: Phaser.Time.TimerEvent[] = [];
+  /** Ore marks stay in the rock for the run. shortcut: not re-laid out if the width changes, fine for a phone run. */
+  private marks: Phaser.GameObjects.GameObject[] = [];
+  /** The loop runs at 60fps until this time (ms, scene clock) while a strike or bounce plays. */
+  private busyUntil = 0;
 
   /** The rock left showing on screen, [top, bottom] in CSS px: between the HUD and the panel (game.ts). */
   gap = (): [number, number] => [0, (this.scale.height / K) * 0.4];
@@ -241,6 +249,7 @@ export class World extends Phaser.Scene {
     animate = true,
     opening = false
   ) {
+    this.clearTemp();
     this.layer = layer;
     this.whole = false;
     this.links = links;
@@ -284,6 +293,7 @@ export class World extends Phaser.Scene {
 
   /** End of run: light up and pull back to show the whole core sample (SPEC §6.6). `links` is all ten. */
   pullBack(links: CoreLink[]) {
+    this.clearTemp();
     this.links = links;
     this.clue = null;
     this.layer = Math.max(1, links.filter((l) => l.answer).length);
@@ -423,6 +433,35 @@ export class World extends Phaser.Scene {
       },
       1
     );
+    // A rock chip for debris and rubble: a rough white polygon, tinted per use.
+    this.canvas('chip', 6, 6, (ctx) => {
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.moveTo(0.5, 2);
+      ctx.lineTo(3, 0);
+      ctx.lineTo(5.5, 3);
+      ctx.lineTo(3.5, 6);
+      ctx.lineTo(1, 5);
+      ctx.closePath();
+      ctx.fill();
+    });
+    // The pickaxe, the HUD icon's shape, in bone with a dark rim.
+    this.canvas('pick', 64, 64, (ctx) => {
+      ctx.lineCap = 'round';
+      for (const [colour, width] of [
+        ['rgba(0,0,0,0.6)', 9],
+        [BONE, 5],
+      ] as const) {
+        ctx.strokeStyle = colour;
+        ctx.lineWidth = width;
+        ctx.beginPath();
+        ctx.moveTo(8, 24);
+        ctx.quadraticCurveTo(32, -2, 56, 24);
+        ctx.moveTo(32, 12);
+        ctx.lineTo(32, 60);
+        ctx.stroke();
+      }
+    });
     this.canvas('mote', 6, 6, (ctx) => {
       ctx.fillStyle = BONE;
       ctx.beginPath();
@@ -877,7 +916,8 @@ export class World extends Phaser.Scene {
     if (!this.ready) return;
     // Half the frames (and GPU energy) while nothing moves: most of a run is spent typing. The
     // glow pulse and the dust still read fine at 30. Checked here so no path can forget to switch.
-    const fast = this.animating() || this.intro !== null;
+    const fast =
+      this.animating() || this.intro !== null || this.time.now < this.busyUntil;
     if (fast !== this.fast) {
       this.fast = fast;
       this.game.loop.setFPSLimit(fast ? 60 : 30);
@@ -907,6 +947,376 @@ export class World extends Phaser.Scene {
     this.back.setTint(
       mix(hex(STRATA[i]!.tint), hex(STRATA[i + 1]!.tint), p - i)
     );
+  }
+
+  // ---- feel: strike and wrong answer (timings in feel.ts, written up in DESIGN §13) ----
+
+  private after(ms: number, fn: () => void) {
+    this.timers.push(this.time.delayedCall(ms, fn));
+  }
+
+  private keep<T extends Phaser.GameObjects.GameObject>(o: T) {
+    this.temp.push(o);
+    return o;
+  }
+
+  private clearTemp() {
+    this.timers.forEach((t) => t.remove());
+    this.timers = [];
+    for (const o of this.temp) {
+      this.tweens.killTweensOf(o);
+      o.destroy();
+    }
+    this.temp = [];
+  }
+
+  /** Fades `o` from 0 to `to` and does nothing else: the reduced-motion version of every pop and slide. */
+  private fadeIn(
+    o: Phaser.GameObjects.Components.AlphaSingle,
+    to: number,
+    ms: number
+  ) {
+    o.setAlpha(0);
+    this.tweens.add({ targets: o, alpha: to, duration: ms });
+  }
+
+  /**
+   * A correct answer at `layer`: the pickaxe swings in and hits, the screen shakes, chips fly, the
+   * answer is chiselled into the stratum, the band shows as ore in the rock, then a short score label.
+   * The camera descends when game.ts calls dig() after STRIKE.hold. `label` is the label's lines.
+   */
+  strike(layer: number, answer: string, look: Look, label: string[]) {
+    if (!this.ready) return;
+    this.clearTemp();
+    const reduce = reducedMotion();
+    const vw = this.scale.width / K;
+    const [cx, top] = [vw / 2, layer * S];
+    const cy = top + S / 2;
+    const st = STRATA[layer]!;
+    const ore = hex(st.ore);
+    const rank = ['Common', 'Seam', 'Vein', 'Mother Lode'].indexOf(look);
+    const hold = STRIKE.hold[look];
+    this.busyUntil = this.time.now + hold;
+
+    // The pickaxe swings in from the upper right.
+    const pick = this.keep(
+      this.add
+        .image(cx + 70, cy - 70, 'pick')
+        .setDisplaySize(56, 56)
+        .setDepth(Z.tag)
+    );
+    if (reduce) {
+      pick.setPosition(cx + 8, cy - 6).setRotation(0.2);
+      this.fadeIn(pick, 1, STRIKE.impact);
+    } else {
+      pick.setRotation(-1.2);
+      this.tweens.add({
+        targets: pick,
+        x: cx + 8,
+        y: cy - 6,
+        rotation: 0.2,
+        duration: STRIKE.impact,
+        ease: 'Cubic.easeIn',
+      });
+    }
+
+    this.after(STRIKE.impact, () => {
+      this.tweens.add({ targets: pick, alpha: 0, duration: 150 });
+      if (!reduce) {
+        this.cameras.main.shake(STRIKE.shake, STRIKE.shakeBy[look]);
+        const spark = this.keep(
+          this.add
+            .image(cx, cy, 'glow')
+            .setTint(0xfff2cf)
+            .setBlendMode(Phaser.BlendModes.ADD)
+            .setDisplaySize(40, 40)
+            .setDepth(Z.tag)
+        );
+        this.tweens.add({
+          targets: spark,
+          alpha: { from: 1, to: 0 },
+          displayWidth: 120,
+          displayHeight: 120,
+          duration: 170,
+        });
+        // Rock chips in the stratum's colours, with ore among them once there is any.
+        const chips = this.keep(
+          this.add
+            .particles(cx, cy, 'chip', {
+              emitting: false,
+              lifespan: 480,
+              speed: { min: 90, max: 240 },
+              angle: { min: 200, max: 340 },
+              gravityY: 700,
+              rotate: { min: 0, max: 360 },
+              scale: { start: 1.3 / K, end: 0.4 / K },
+              alpha: { start: 1, end: 0 },
+              tint: [
+                mix(hex(st.tint), 0xffffff, 0.25),
+                hex(st.edge),
+                ...(rank ? [ore, ore] : []),
+              ],
+            })
+            .setDepth(Z.tag)
+        );
+        chips.explode(10 + rank * 5);
+      }
+      // The answer is chiselled into the stratum: the niche becomes a cleared segment.
+      this.links = [
+        ...this.links.slice(0, layer - 1),
+        { clue: this.clue ?? '', answer },
+      ];
+      this.clue = null;
+      this.drawCore(vw);
+      const text = this.segs[layer]!.answer;
+      const to = text.scale;
+      text.setAlpha(0);
+      this.tweens.add({
+        targets: text,
+        alpha: 1,
+        ...(reduce ? {} : { scale: { from: to * 1.3, to } }),
+        duration: STRIKE.chisel,
+        ease: 'Cubic.easeOut',
+      });
+    });
+
+    this.after(STRIKE.ore, () =>
+      this.showOre(layer, answer, look, cx, vw, reduce)
+    );
+    this.after(labelAt(look), () => {
+      const s = shaftWidth(layer, vw);
+      const text = this.keep(
+        this.add
+          .text(cx, cy, label.join('\n'), {
+            resolution: K,
+            fontFamily: BODY,
+            fontSize: '15px',
+            color: BONE,
+            align: 'center',
+            lineSpacing: 3,
+            wordWrap: { width: Math.min(s - 40, 300) },
+          })
+          .setOrigin(0.5)
+          .setDepth(Z.tag + 1)
+      );
+      const plate = this.keep(
+        this.add
+          .rectangle(cx, cy, text.width + 24, text.height + 16, 0x070605, 0.94)
+          .setStrokeStyle(2, ore, 1)
+          .setDepth(Z.tag)
+      );
+      for (const o of [plate, text]) {
+        this.fadeIn(o, o === plate ? 0.94 : 1, STRIKE.labelIn);
+        this.after(hold - STRIKE.labelOut, () =>
+          this.tweens.add({ targets: o, alpha: 0, duration: STRIKE.labelOut })
+        );
+      }
+      if (!reduce)
+        this.tweens.add({
+          targets: [plate, text],
+          y: { from: cy + 6, to: cy },
+          duration: STRIKE.labelIn,
+          ease: 'Cubic.easeOut',
+        });
+    });
+  }
+
+  /** The band, as ore in the rock: rubble, a seam, a cracked vein, or glowing ore that lights the walls. */
+  private showOre(
+    layer: number,
+    answer: string,
+    look: Look,
+    cx: number,
+    vw: number,
+    reduce: boolean
+  ) {
+    const st = STRATA[layer]!;
+    const ore = hex(st.ore);
+    const ms = STRIKE.oreMs[look];
+    const s = shaftWidth(layer, vw);
+    const half = s / 2 + 90;
+    const y = layer * S + S * 0.8;
+    let seed = Math.abs(hash(answer)) || 1;
+    const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const mark = <T extends Phaser.GameObjects.GameObject>(o: T) => {
+      this.marks.push(o);
+      return o;
+    };
+
+    if (look === 'Common') {
+      // Dull rubble on the floor of the segment.
+      for (let i = 0; i < 8; i++) {
+        const size = 4 + rnd() * 5;
+        const chip = mark(
+          this.add
+            .image(
+              cx + (rnd() * 2 - 1) * (s / 2 - MARGIN),
+              layer * S + S - 8 - rnd() * 12,
+              'chip'
+            )
+            .setDisplaySize(size, size)
+            .setRotation(rnd() * 6)
+            .setTint(mix(hex(st.tint), 0x000000, 0.2 + rnd() * 0.3))
+            .setDepth(8)
+        );
+        this.fadeIn(chip, 0.9, ms);
+      }
+      return;
+    }
+
+    if (look === 'Seam') {
+      // A thin coloured line across the shaft and into both walls.
+      const seam = mark(
+        this.add
+          .rectangle(cx, y, half * 2, 3, ore)
+          .setRotation(0.03)
+          .setDepth(8)
+      );
+      if (reduce) this.fadeIn(seam, 1, ms);
+      else
+        this.tweens.add({
+          targets: seam,
+          scaleX: { from: 0, to: 1 },
+          duration: ms,
+          ease: 'Cubic.easeOut',
+        });
+      return;
+    }
+
+    // Vein and Mother Lode: a bright cracked vein, drawn lit (above the darkness) and additive.
+    const g = mark(
+      this.add.graphics().setDepth(Z.glow).setBlendMode(Phaser.BlendModes.ADD)
+    );
+    for (let v = 0; v < (look === 'Vein' ? 1 : 2); v++) {
+      const vy = y - v * 26;
+      const pts: [number, number][] = Array.from({ length: 10 }, (_, i) => [
+        cx - half + ((half * 2) / 9) * i,
+        vy + (i === 0 || i === 9 ? 0 : (rnd() - 0.5) * 22),
+      ]);
+      const cracks = [3, 6].map((i): [number, number, number, number] => {
+        const [bx, by] = pts[i]!;
+        return [
+          bx,
+          by,
+          bx + (rnd() - 0.5) * 40,
+          by + (rnd() < 0.5 ? -1 : 1) * (14 + rnd() * 14),
+        ];
+      });
+      for (const [w, a] of [
+        [9, 0.25],
+        [3, 1],
+      ] as const) {
+        g.lineStyle(w, ore, a)
+          .beginPath()
+          .moveTo(...pts[0]!);
+        pts.slice(1).forEach(([px, py]) => g.lineTo(px, py));
+        g.strokePath();
+        for (const [x0, y0, x1, y1] of cracks)
+          g.beginPath().moveTo(x0, y0).lineTo(x1, y1).strokePath();
+      }
+    }
+    // The bright horizontal seam line across the whole screen (DESIGN §10).
+    const line = mark(
+      this.add
+        .rectangle(cx, y, vw + 400, 2, ore)
+        .setBlendMode(Phaser.BlendModes.ADD)
+        .setDepth(Z.glow)
+    );
+    this.fadeIn(g, 1, ms);
+    this.fadeIn(line, 0.9, ms);
+    this.tweens.add({ targets: line, alpha: 0.35, delay: ms, duration: 400 });
+
+    if (look === 'Mother Lode') {
+      // The lode lights the walls: a wide ore-coloured glow that flares, then settles.
+      const lode = mark(
+        this.add
+          .image(cx, y, 'glow')
+          .setTint(ore)
+          .setBlendMode(Phaser.BlendModes.ADD)
+          .setDisplaySize(s + 520, S * 1.8)
+          .setDepth(Z.glow)
+      );
+      this.fadeIn(lode, 0.9, ms);
+      this.tweens.add({ targets: lode, alpha: 0.4, delay: ms, duration: 900 });
+    }
+  }
+
+  /** A wrong answer: the word flies at the wall, clinks, bounces off, and the rock cracks. */
+  bounce(word: string) {
+    if (!this.ready) return;
+    this.clearTemp();
+    const reduce = reducedMotion();
+    const vw = this.scale.width / K;
+    const s = shaftWidth(this.layer, vw);
+    const cy = this.layer * S + S / 2;
+    // Which wall it hits varies with the word, so repeated misses don't all land in one place.
+    const side = Math.abs(hash(word)) % 2 ? 1 : -1;
+    const wallX = vw / 2 + side * (s / 2 - 4);
+    this.busyUntil = this.time.now + WRONG.hit + WRONG.bounce + 60;
+    const text = this.keep(
+      this.add
+        .text(vw / 2, cy + 40, word, {
+          resolution: K,
+          fontFamily: DISPLAY,
+          fontStyle: 'italic',
+          fontSize: '24px',
+          color: BONE,
+          wordWrap: { width: s - 40 },
+        })
+        .setOrigin(0.5)
+        .setShadow(0, 2, '#000000', 3, false, true)
+        .setDepth(Z.tag)
+    );
+    if (reduce) {
+      text.setPosition(wallX, cy);
+      this.fadeIn(text, 1, WRONG.hit);
+    } else {
+      this.tweens.add({
+        targets: text,
+        x: wallX,
+        y: cy,
+        duration: WRONG.hit,
+        ease: 'Cubic.easeIn',
+      });
+    }
+    this.after(WRONG.hit, () => {
+      // The crack fans out into the wall.
+      const crack = this.keep(this.add.graphics().setDepth(9));
+      let seed = Math.abs(hash(word)) || 1;
+      const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const rays = Array.from({ length: 4 }, () => {
+        const ang = (rnd() - 0.5) * 2.2 + (side > 0 ? 0 : Math.PI);
+        let [x, y] = [wallX + side * 6, cy + (rnd() - 0.5) * 16];
+        const pts: [number, number][] = [[x, y]];
+        for (let k = 0; k < 3; k++) {
+          x += Math.cos(ang + (rnd() - 0.5) * 0.9) * (12 + rnd() * 10);
+          y += Math.sin(ang + (rnd() - 0.5) * 0.9) * (12 + rnd() * 10);
+          pts.push([x, y]);
+        }
+        return pts;
+      });
+      for (const [w, colour, a] of [
+        [3, 0x000000, 0.85],
+        [1, 0xefe6d2, 0.45],
+      ] as const) {
+        crack.lineStyle(w, colour, a);
+        for (const pts of rays) {
+          crack.beginPath().moveTo(...pts[0]!);
+          pts.slice(1).forEach(([px, py]) => crack.lineTo(px, py));
+          crack.strokePath();
+        }
+      }
+      this.fadeIn(crack, 1, 60);
+      this.tweens.add({
+        targets: text,
+        alpha: 0,
+        duration: WRONG.bounce,
+        ease: 'Quad.easeOut',
+        ...(reduce
+          ? {}
+          : { x: wallX - side * s * 0.2, y: cy + 46, rotation: -side * 0.5 }),
+      });
+    });
   }
 
   // ---- fossils: other players' answers, as small objects in the walls ----

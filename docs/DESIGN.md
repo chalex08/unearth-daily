@@ -72,7 +72,7 @@ The reveal replaces the clue in the recess (in place, never a modal), in Krillio
 - **Vein and Mother Lode** tint the whole screen in the ore colour for about 220ms (ref 07).
 - **The Uranium finish** (layer 10, which has no band) gets the full treatment: the mineral name at full size in Uranium green, the tint, a 2.5s hold, and "You hit the core."
 - **Flavour lines** are our own: Common "The answer most diggers hit first.", Seam "A thin line of something better.", Vein "Few swung their pick this way.", Mother Lode "Almost nobody dug here." Then "N% of diggers found it." once the band is measured (not during cold start, where a small-sample percent would contradict the estimated band, and not at layer 10). During cold start the head stays the band name alone and the flavour line adds "Estimated until 50 diggers answer this layer."
-- **Pacing** _(adjustment 3)_: there's no Dig tap between layers. Common strikes move on after about 1s. Seam, Vein, Mother Lode and the Uranium finish hold for about 2.5s, or until the player taps the reveal or presses Enter. The camera descends and the next clue appears once the reveal ends. The keyboard stays up throughout, so the player can type the next answer during a reveal, and Dig stays live (it skips the reveal).
+- **Pacing** _(adjustment 3)_: there's no Dig tap between layers. Common strikes move on after about 1s. Rarer bands linger a little longer (§13: Seam 1.5s, Vein 2s, Mother Lode and the Uranium finish 2.5s), or until the player taps the reveal or presses Enter. The camera descends and the next clue appears once the reveal ends. The keyboard stays up throughout, so the player can type the next answer during a reveal, and Dig stays live (it skips the reveal).
 
 ### Mineral icons
 
@@ -114,7 +114,7 @@ The inline view (`splash.html`) uses the same tokens and fonts: the strata colum
 _Step 7 (world) is built: see §12._
 
 - **Step 7 (world):** the headlamp cone and darkness with depth, shaft walls narrowing one notch per layer, the Uranium glow lighting the lowest strata, clues carved on the rock face, keyboard and screen-reader access to fossils. Also: render the canvas at the device pixel ratio (it's 1× now, so rock patterns look soft on phones; lettering is already sharp), a warm daylight band above Surface, and make the end-screen pull-back pan and zoom move together (the pan currently aims at the final zoom, so the 600ms zoom-out briefly shows bedrock).
-- **Step 8 (juice):** pickaxe impact, shake and debris, ore by band in the rock (rubble, seam, cracked vein, glowing lode that lights the walls), the bright horizontal seam line on a rare strike, sound.
+- **Step 8 (juice), built: see §13.** Was: pickaxe impact, shake and debris, ore by band in the rock (rubble, seam, cracked vein, glowing lode that lights the walls), the bright horizontal seam line on a rare strike, sound.
 - **Step 9 (end):** the graveyard as a distribution with a "YOU" marker (ref 09), "deeper than X% of redditors", the band legend, string-tied tags.
 
 ## 11. Step 7 asset list
@@ -146,3 +146,50 @@ Code: [`src/client/world.ts`](../src/client/world.ts); pure shaft and light math
 - **Short screens:** the chain is what gives way (it shrinks and scrolls) so the input never ends up under the keyboard, down to 320×300.
 - **Performance:** stratum textures are drawn within 1 layer of the camera at once, and the rest one at a time (250ms apart) while the camera is still, so neither a descent nor the pull-back has to draw several in one frame. Nothing is recomputed while the camera is still; a layout re-renders only text and fossils that changed; canvas resizes are debounced 100ms (a mobile keyboard animates the height). The only particles are dust motes in the headlamp, capped at 14 alive. The loop is capped at 60fps (90/120Hz phones would double the work) and drops to 30fps whenever nothing is moving; WebGL antialiasing is off (nothing drawn has geometry edges). Smooth gradients (lamp, glows, sky) are drawn at 1×. Glow pulse and dust follow a reduced-motion change live.
 - **Side panel:** from 56rem wide, the HUD, chain and form move to a 26rem column on the right and the whole canvas is rock.
+
+## 13. The feel (step 8)
+
+Code: choreography in [`world.ts`](../src/client/world.ts) (`strike`, `showOre`, `bounce`), timings in [`feel.ts`](../src/client/feel.ts) (tested), sound and haptics in [`sound.ts`](../src/client/sound.ts), wiring in `game.ts`. All times are ms from the server's answer.
+
+### Strike
+
+| t (ms)     | What                                                                                                                                                                                                                                                                               |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 to 110   | The pickaxe swings in from the upper right (cubic ease-in).                                                                                                                                                                                                                        |
+| **110**    | **Impact:** strike sound, haptic, screen shake 140ms, a spark (170ms), rock chips (10 on Common, +5 per band up, in the stratum's tint and edge, with ore chips from Seam up). The niche becomes a cleared segment and the answer is chiselled in (180ms, scaling down from 130%). |
+| 200        | The ore starts to show, in the rock at the foot of the segment, over a band-dependent time (below). The Mother Lode chime starts here.                                                                                                                                             |
+| end of ore | The score label fades in (120ms): mineral, band (with "est." while estimated), "+base base, +bonus bonus", "N% of players" (not while estimated or at layer 10), "total T".                                                                                                        |
+| hold − 150 | The label fades out (150ms).                                                                                                                                                                                                                                                       |
+| **hold**   | The camera descends (600ms) with the descend sound, and the next clue appears. A tap or Enter skips to here.                                                                                                                                                                       |
+
+| Band                                         | Ore                                                                                                                                                  | Ore time | Label in | Shake | Hold |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------- | ----- | ---- |
+| Common                                       | Dull rubble: eight chips in the stratum's darkened tint, fading in                                                                                   | 160      | 360      | 0.3%  | 1000 |
+| Seam                                         | A thin 3px line in the ore colour, drawn out from the middle across the shaft and into both walls                                                    | 260      | 460      | 0.4%  | 1500 |
+| Vein                                         | A bright cracked vein: a jagged additive line with two side cracks, drawn above the darkness, plus a bright full-width seam line that settles to 35% | 380      | 580      | 0.6%  | 2000 |
+| Mother Lode (and Uranium, which has no band) | Two veins, and a wide ore-coloured glow that flares to 90% and settles to 40%, lighting the walls                                                    | 520      | 720      | 0.8%  | 2500 |
+
+The ore stays in the rock for the rest of the run, so the camera passes it on the way down.
+
+### Wrong answer
+
+| t (ms)     | What                                                                                                                       |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------- |
+| 0 to 120   | The word (italic, bone) flies sideways at a shaft wall, from the middle of the segment. The wall alternates with the word. |
+| **120**    | **Contact:** clink sound, haptic, a crack fans out into the wall (60ms fade-in; it stays until the next answer).           |
+| 120 to 420 | The word bounces back, spinning, and fades.                                                                                |
+| 0 to 420   | The HUD pickaxe that broke snaps (§9). The reason line appears at 0 in the accent colour.                                  |
+
+The input is never disabled and keeps focus, so you can type from 0ms. The whole beat is 420ms, under the 600ms limit (asserted in `feel.test.ts`).
+
+### Couldn't check
+
+No world effect, no sound, no pickaxe lost. The feedback line (muted ink, not red) gets a 560ms light sweep across it.
+
+### Sound and haptics
+
+Five files in `public/sounds/`, original and synthesised by `tools/make-sounds.ts`: strike 13 KB, clink 12 KB, descend 24 KB, chime 43 KB, hum 26 KB. Strike at impact, clink at contact, descend as the camera moves, chime for Mother Lode (and the Uranium finish), hum looping on layer 10. The HUD speaker button mutes everything and is remembered locally; sound is also muted while the tab is hidden. Haptics: 15ms on a Common strike, 20-30-40ms on a rarer one, 12-40-12ms on a clink, where `navigator.vibrate` exists.
+
+### Reduced motion
+
+No shake, swing, chips, spark, slide, scale, bounce or bar-draw. The pickaxe and the word fade in and out in place; the chiselled answer, ore, crack and label fade in; the shimmer is a soft fade; the camera cuts (as before). The same information shows on the same timings. Sound still plays (it is not motion). Haptics are skipped.

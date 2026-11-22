@@ -133,8 +133,46 @@ body {
   border: 2px solid var(--color-ink);
 }
 
-#score {
+#hud-end {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+/* The 44px target is the button; the icon inside stays 20px like the pickaxes. */
+#mute {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-block: -12px;
+  padding: 0;
+  color: var(--color-ink);
+  background: none;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+#mute svg {
+  width: 20px;
+  height: 20px;
+}
+
+#mute .off,
+#mute[aria-pressed='true'] .on {
+  display: none;
+}
+
+#mute[aria-pressed='true'] .off {
+  display: inline;
+}
+
+#mute[aria-pressed='true'] {
+  color: var(--color-muted);
+}
+
+#score {
   font-weight: 700;
   font-size: var(--text-lg);
 }
@@ -384,6 +422,55 @@ body {
 
 #result.wrong {
   color: var(--color-accent-text);
+}
+
+/* "Couldn't check": a neutral light sweep over the line, no red, no penalty. */
+#result.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+#result.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(93% 0.012 85 / 0.22),
+    transparent
+  );
+  animation: shimmer 560ms var(--ease-in-out);
+}
+
+@keyframes shimmer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #result.shimmer::after {
+    animation: shimmer-soft 560ms var(--ease-in-out);
+  }
+}
+
+@keyframes shimmer-soft {
+  from {
+    transform: none;
+    opacity: 0;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 0;
+  }
 }
 
 #answer {

@@ -20,6 +20,8 @@ import {
 } from '../shared/game';
 import { BODY, DISPLAY, FOSSILS_SHOWN, K, World } from './world';
 import { STRATA } from './strata';
+import { STRIKE, WRONG } from './feel';
+import { buzz, isMuted, play, setHum, setMuted } from './sound';
 
 function el<T extends HTMLElement>(id: string, type: { new (): T }): T {
   const e = document.getElementById(id);
@@ -33,6 +35,7 @@ const ui = {
   pickaxes: $('pickaxes'),
   pips: el('pips', HTMLOListElement),
   score: $('score'),
+  mute: el('mute', HTMLButtonElement),
   flash: $('flash'),
   status: $('status'),
   statusText: $('status-text'),
@@ -116,6 +119,13 @@ for (const panel of [ui.hud, ui.play, ui.end]) panels.observe(panel);
 
 const reducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const paintMute = () => ui.mute.setAttribute('aria-pressed', String(isMuted()));
+paintMute();
+ui.mute.addEventListener('click', () => {
+  setMuted(!isMuted());
+  paintMute();
+});
 
 /** The mineral's icon (public/icons, REFERENCES §7). */
 const icon = (layer: number) =>
@@ -308,6 +318,7 @@ function showLayer(opening = false) {
   ui.dig.disabled = false;
   ui.reveal.hidden = true;
   ui.current.hidden = false;
+  setHum(run.layer === LAYER_COUNT);
   world.dig(
     run.layer,
     run.chain.map((c) => ({ clue: c.clue, answer: c.answer })),
@@ -357,9 +368,31 @@ const hold = (ms: number) =>
   });
 ui.reveal.addEventListener('click', () => skipReveal?.());
 
-/** Strike reveal (SPEC §6.4). Common strikes move on after ~1s; rarer ones hold ~2.5s or a tap. */
+/** The in-world score label's lines (SPEC §6.4). No percent while estimated or at layer 10, as in the reveal. */
+function scoreLabel(r: AnswerResult, layer: number): string[] {
+  const name = mineral(layer).name;
+  const pct =
+    r.percent === null || !r.band || r.estimated
+      ? ''
+      : `${r.percent}% of players, `;
+  return [
+    r.band ? `${name}, ${r.band}${r.estimated ? ' est.' : ''}` : name,
+    `+${r.base} base${r.bonus ? `, +${r.bonus} bonus` : ''}`,
+    `${pct}total ${r.total}`,
+  ];
+}
+
+/** Strike reveal (SPEC §6.4): the world's choreography (feel.ts), then the hold; rarer bands linger longer. */
 async function reveal(r: AnswerResult, layer: number) {
   const band = r.band;
+  // Layer 10 has no band (SPEC §3.2) but gets the full Mother Lode treatment.
+  const look = band ?? 'Mother Lode';
+  world.strike(layer, r.answer, look, scoreLabel(r, layer));
+  setTimeout(() => {
+    play('strike');
+    buzz(look === 'Common' ? 15 : [20, 30, 40]);
+  }, STRIKE.impact);
+  if (look === 'Mother Lode') setTimeout(() => play('chime'), STRIKE.ore);
   // Layer 10 has no band (SPEC §3.2), but reaching Uranium is the biggest moment of the run.
   const rare = !band || band === 'Vein' || band === 'Mother Lode';
   ui.reveal.classList.toggle('common', band === 'Common');
@@ -395,7 +428,7 @@ async function reveal(r: AnswerResult, layer: number) {
     void ui.flash.offsetWidth; // restart the animation
     ui.flash.classList.add('on');
   }
-  await hold(band === 'Common' ? 1000 : 2500);
+  await hold(STRIKE.hold[look]);
 }
 
 ui.form.addEventListener('submit', (e) => {
@@ -417,8 +450,20 @@ async function submit() {
     });
     // The server has answered: Dig is live again (during a reveal it skips ahead).
     ui.form.removeAttribute('aria-busy');
-    ui.result.className = r.outcome === 'invalid' ? 'wrong' : '';
+    ui.result.className =
+      r.outcome === 'invalid'
+        ? 'wrong'
+        : r.outcome === 'unchecked'
+          ? 'shimmer'
+          : '';
     ui.result.textContent = resultLine(r);
+    if (r.outcome === 'invalid') {
+      world.bounce(r.answer);
+      setTimeout(() => {
+        play('clink');
+        buzz([12, 40, 12]);
+      }, WRONG.hit);
+    }
     if (r.outcome === 'valid' || r.outcome === 'invalid') ui.input.value = '';
     let struck = false;
     if (r.valid && r.canonical && r.base !== null) {
@@ -448,11 +493,13 @@ async function submit() {
     if (r.ended) return await end();
     if (r.nextClue) {
       run.clue = r.nextClue;
+      if (struck) play('descend');
       showLayer();
     }
   } catch (e) {
     // 409: another tab or a stale layer; reload the real state.
     if (e instanceof ApiError && e.status === 409) return void (await start());
+    ui.result.className = 'shimmer';
     ui.result.textContent = "Couldn't check that, try again.";
   } finally {
     busy = false;
@@ -479,6 +526,7 @@ function resultLine(r: AnswerResult): string {
 
 async function end() {
   run = null;
+  setHum(false);
   ui.play.hidden = true;
   let r: ResultResponse;
   try {

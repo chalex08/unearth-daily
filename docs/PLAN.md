@@ -70,9 +70,9 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 8. Juice: strike, ore, wrong answer, sound — Mon 30 Nov – Tue 1 Dec
 
-- [ ] Strike: impact, shake, debris, chiselled answer, ore by band, transient score label, descend.
-- [ ] Wrong: bounce, clink, crack, pickaxe snaps, reason shown, focus kept.
-- [ ] Howler sounds (strike, clink, descend, Uranium hum), mute toggle, mute on hidden tab; `prefers-reduced-motion` respected.
+- [x] Strike: impact, shake, debris, chiselled answer, ore by band, transient score label, descend. _Built 22 Nov; timings in DESIGN §13._
+- [x] Wrong: bounce, clink, crack, pickaxe snaps, reason shown, focus kept. _420ms; typing is never blocked._
+- [x] Howler sounds (strike, clink, descend, Uranium hum), mute toggle, mute on hidden tab; `prefers-reduced-motion` respected. _Checked locally (strike, wrong, mute, no errors). Not yet seen or heard on Reddit: audio inside the webview and haptics are unconfirmed._
 - **Done when:** every SPEC §6.4, §6.5 and §6.8 item is visible on Reddit mobile and desktop.
 
 ### 9. End screen + community features — Wed 2 Dec

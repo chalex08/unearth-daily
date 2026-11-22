@@ -21,7 +21,32 @@
       <header id="hud" hidden>
         <span id="pickaxes" role="img"></span>
         <ol id="pips"></ol>
-        <span id="score" class="num"></span>
+        <div id="hud-end">
+          <span id="score" class="num"></span>
+          <button
+            id="mute"
+            type="button"
+            aria-pressed="false"
+            aria-label="Mute sound"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 9v6h4l5 4V5L8 9z" />
+              <path
+                class="on"
+                d="M16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"
+              />
+              <path class="off" d="M17 9l5 6M22 9l-5 6" />
+            </svg>
+          </button>
+        </div>
       </header>
 
       <div id="status" class="recess" hidden>
