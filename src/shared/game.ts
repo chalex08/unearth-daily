@@ -24,19 +24,37 @@ export const MINERALS: readonly Mineral[] = [
 export const mineral = (layer: number): Mineral =>
   MINERALS[layer] ?? MINERALS[0]!;
 
-export type RarityBand = 'Common' | 'Seam' | 'Vein' | 'Mother Lode';
+/** Most to least common: loose bits, one chunk, a cluster, a line, the whole deposit. SPEC §3.2. */
+export const BANDS = [
+  'Rubble',
+  'Nugget',
+  'Pocket',
+  'Vein',
+  'Mother Lode',
+] as const;
+export type RarityBand = (typeof BANDS)[number];
 
 const BONUS_PERCENT: Record<RarityBand, number> = {
-  Common: 0,
-  Seam: 25,
-  Vein: 50,
-  'Mother Lode': 100,
+  Rubble: 0,
+  Nugget: 25,
+  Pocket: 50,
+  Vein: 100,
+  'Mother Lode': 200,
+};
+
+/** Plain-words rarity shown under the band name. */
+export const BAND_RARITY: Record<RarityBand, string> = {
+  Rubble: 'Everywhere',
+  Nugget: 'Plenty',
+  Pocket: 'Scarce',
+  Vein: 'Hidden',
+  'Mother Lode': 'Fabled',
 };
 
 const COLD_START_BAND: Record<Commonness, RarityBand> = {
-  common: 'Common',
-  uncommon: 'Seam',
-  rare: 'Vein',
+  common: 'Rubble',
+  uncommon: 'Nugget',
+  rare: 'Pocket',
 };
 
 export const COLD_START_THRESHOLD = 50;
@@ -52,18 +70,20 @@ export function rarityBand(
 ): { band: RarityBand; estimated: boolean } {
   if (total < COLD_START_THRESHOLD)
     return {
-      band: commonness ? COLD_START_BAND[commonness] : 'Vein',
+      band: commonness ? COLD_START_BAND[commonness] : 'Pocket',
       estimated: true,
     };
-  // Integer comparisons so exact boundaries (20%, 5%, 1%) don't hit float error.
+  // Integer comparisons so exact boundaries (25%, 10%, 4%, 1%) don't hit float error.
   const band: RarityBand =
-    count * 100 > total * 20
-      ? 'Common'
-      : count * 100 >= total * 5
-        ? 'Seam'
-        : count * 100 >= total
-          ? 'Vein'
-          : 'Mother Lode';
+    count * 100 > total * 25
+      ? 'Rubble'
+      : count * 100 >= total * 10
+        ? 'Nugget'
+        : count * 100 >= total * 4
+          ? 'Pocket'
+          : count * 100 >= total
+            ? 'Vein'
+            : 'Mother Lode';
   return { band, estimated: false };
 }
 
@@ -198,7 +218,7 @@ export function applyAnswer(
 }
 
 const isRare = (c: ClearedLayer) =>
-  c.band === 'Vein' || c.band === 'Mother Lode';
+  c.band === 'Pocket' || c.band === 'Vein' || c.band === 'Mother Lode';
 
 /** SPEC §3.3. The pickaxe bonus counts whatever is left, so call it once the run is over. */
 export function scoreRun(run: RunState): {

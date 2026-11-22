@@ -13,14 +13,32 @@ export const STRIKE = {
   chisel: 180,
   /** The ore starts showing 90ms after impact; how long it takes to settle depends on the band. */
   ore: 200,
-  oreMs: { Common: 160, Seam: 260, Vein: 380, 'Mother Lode': 520 },
+  oreMs: {
+    Rubble: 160,
+    Nugget: 240,
+    Pocket: 320,
+    Vein: 420,
+    'Mother Lode': 560,
+  },
   /** Shake strength, as a fraction of the screen. */
-  shakeBy: { Common: 0.003, Seam: 0.004, Vein: 0.006, 'Mother Lode': 0.008 },
+  shakeBy: {
+    Rubble: 0.003,
+    Nugget: 0.004,
+    Pocket: 0.005,
+    Vein: 0.006,
+    'Mother Lode': 0.008,
+  },
   /** The in-world score label shows from the end of the ore reveal and fades over `labelOut`. */
   labelIn: 120,
   labelOut: 150,
   /** Strike start to the camera descending (or a tap). */
-  hold: { Common: 1000, Seam: 1500, Vein: 2000, 'Mother Lode': 2500 },
+  hold: {
+    Rubble: 1000,
+    Nugget: 1400,
+    Pocket: 1700,
+    Vein: 2100,
+    'Mother Lode': 2600,
+  },
 } as const;
 
 /** A wrong answer: the word flies at the rock, clinks, bounces off. Typing never waits for it. */

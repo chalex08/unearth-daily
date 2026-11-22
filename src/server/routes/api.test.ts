@@ -254,7 +254,7 @@ describe('POST /answer', () => {
       canonical: 'tiger',
       mineral: 'Dirt',
       base: 10,
-      band: 'Common',
+      band: 'Rubble',
       estimated: true,
       bonus: 0,
       percent: 100,
@@ -346,7 +346,7 @@ describe('POST /answer', () => {
     expect(r).toMatchObject({
       outcome: 'valid',
       canonical: 'orange kazoo',
-      band: 'Vein',
+      band: 'Pocket',
       estimated: true,
       bonus: 5,
     });

@@ -306,7 +306,7 @@ body {
 
 /* The current clue: unlit bar (outline only) until it is cleared. */
 #current::before,
-#reveal.common::before {
+#reveal.rubble::before {
   background: none;
   border: 2px solid var(--ore);
 }
@@ -365,7 +365,7 @@ body {
   flex-shrink: 0;
 }
 
-#reveal.common #reveal-icon {
+#reveal.rubble #reveal-icon {
   width: 24px;
   height: 24px;
 }
@@ -376,17 +376,76 @@ body {
   align-items: center;
 }
 
+/* Band colour and glow: each rarer band is a brighter colour and glows a little more. Rubble does not glow.
+   The glow is a fixed shadow, so reduced motion changes nothing here. */
+[data-band] {
+  --band: var(--ore);
+}
+
+[data-band='rubble'] {
+  --band: var(--band-rubble);
+  --glow: none;
+}
+
+[data-band='nugget'] {
+  --band: var(--band-nugget);
+  --glow: 0 0 6px color-mix(in oklch, var(--band) 45%, transparent);
+}
+
+[data-band='pocket'] {
+  --band: var(--band-pocket);
+  --glow:
+    0 0 8px color-mix(in oklch, var(--band) 55%, transparent),
+    0 0 16px color-mix(in oklch, var(--band) 30%, transparent);
+}
+
+[data-band='vein'] {
+  --band: var(--band-vein);
+  --glow:
+    0 0 8px color-mix(in oklch, var(--band) 70%, transparent),
+    0 0 20px color-mix(in oklch, var(--band) 45%, transparent);
+}
+
+[data-band='mother-lode'],
+[data-band='core'] {
+  --band: var(--band-mother-lode);
+  --glow:
+    0 0 8px color-mix(in oklch, var(--band) 90%, transparent),
+    0 0 22px color-mix(in oklch, var(--band) 65%, transparent),
+    0 0 44px color-mix(in oklch, var(--band) 40%, transparent);
+}
+
+/* Reaching the core keeps the Uranium green, with the biggest glow. */
+[data-band='core'] {
+  --band: var(--ore);
+}
+
 #reveal-band {
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--text-3xl);
   line-height: 1;
-  color: var(--ore);
+  color: var(--band);
+  text-shadow: var(--glow, none);
 }
 
-#reveal.common #reveal-band {
-  font-size: var(--text-lg);
-  color: var(--color-muted);
+/* Under the band name: how rare it was, then the points it scored. */
+#reveal-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-sm);
+  align-items: baseline;
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+}
+
+#reveal-pts {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.link-note[data-band] {
+  color: var(--band);
 }
 
 #reveal-answer {
