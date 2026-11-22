@@ -37,6 +37,13 @@
           <p id="helper">Every clue above still applies.</p>
         </div>
         <div id="reveal" aria-live="polite" hidden>
+          <img
+            id="reveal-icon"
+            src="icons/00-surface.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
           <p id="reveal-band"></p>
           <p id="reveal-answer"></p>
           <p id="reveal-points">
@@ -64,15 +71,25 @@
       </main>
 
       <main id="end" class="recess" hidden>
-        <h1 id="end-title"></h1>
+        <div id="end-head">
+          <img
+            id="end-icon"
+            src="icons/00-surface.svg"
+            alt=""
+            width="48"
+            height="48"
+          />
+          <h1 id="end-title"></h1>
+        </div>
         <p id="end-total" class="num"></p>
-        <dl id="end-stats"></dl>
-        <ol id="end-chain"></ol>
-        <p id="final-answer"></p>
         <label for="share">Your result, spoiler-free</label>
         <textarea id="share" rows="3" readonly></textarea>
         <button id="copy" type="button">Copy result</button>
         <p id="next"></p>
+        <dl id="end-stats"></dl>
+        <ol id="end-chain" aria-label="Your core sample"></ol>
+        <p id="end-note" hidden></p>
+        <p id="final-answer"></p>
       </main>
     </div>
     <script type="module" src="game.ts"></script>

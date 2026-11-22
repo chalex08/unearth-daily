@@ -22,12 +22,15 @@ const reducedMotion = () =>
 
 export class World extends Phaser.Scene {
   private strata: Phaser.GameObjects.TileSprite[] = [];
+  private bedrock: Phaser.GameObjects.Rectangle | null = null;
   private answers: Phaser.GameObjects.Text[] = [];
   private fossilTexts: Phaser.GameObjects.Text[] = [];
   private fossils: Fossil[][] = [];
   private layer = 0;
   private whole = false;
   private ready = false;
+  /** The rock left showing on screen, [top, bottom] in px: between the HUD and the panel (game.ts). */
+  gap = (): [number, number] => [0, this.scale.height * 0.4];
 
   constructor() {
     super('World');
@@ -47,6 +50,7 @@ export class World extends Phaser.Scene {
       // Smith-style lettering along the layer: number, then the name in italic.
       this.add.text(12, y + 12, `${i}  ${m.name}`, {
         fontFamily: DISPLAY,
+        resolution: window.devicePixelRatio,
         fontStyle: 'italic',
         fontSize: '17px',
         color: STRATA[i]!.letter,
@@ -55,6 +59,7 @@ export class World extends Phaser.Scene {
         this.add
           .text(0, y + STRATUM / 2, '', {
             fontFamily: DISPLAY,
+            resolution: window.devicePixelRatio,
             fontSize: '26px',
             color: STRATA[i]!.letter,
           })
@@ -65,6 +70,16 @@ export class World extends Phaser.Scene {
     this.input.on('pointerdown', (_p: unknown, hit: unknown[]) => {
       if (hit.length === 0) this.drawFossils();
     });
+    // Dark rock under Uranium so the shaft never ends in a void (the glow comes in step 7).
+    this.bedrock = this.add
+      .rectangle(
+        0,
+        MINERALS.length * STRATUM,
+        1,
+        STRATUM * 4,
+        Phaser.Display.Color.HexStringToColor(STRATA.at(-1)!.edge).color
+      )
+      .setOrigin(0);
     this.scale.on('resize', () => this.layout(false));
     this.ready = true;
     this.drawFossils();
@@ -110,15 +125,17 @@ export class World extends Phaser.Scene {
             shown ? `${f.answer}  ${f.percent}%` : f.answer,
             {
               fontFamily: DISPLAY,
+              resolution: window.devicePixelRatio,
               fontStyle: unnamed ? 'normal' : 'italic',
               // Sized by popularity: 15px for a rare one up to 28px for the answer everyone gave.
-              fontSize: `${Math.round(Math.min(28, 13 + Math.sqrt(f.percent) * 2.2))}px`,
+              // "something else" stays smallest: it is a bucket, not an answer.
+              fontSize: `${unnamed ? 13 : Math.round(Math.min(28, 13 + Math.sqrt(f.percent) * 2.2))}px`,
               color: STRATA[i + 1]!.letter,
               padding: { x: 8, y: 10 },
             }
           )
           .setOrigin(sx < 0.5 ? 0 : 1, 0.5)
-          .setAlpha(shown ? 1 : unnamed ? 0.4 : 0.6)
+          .setAlpha(shown ? 1 : unnamed ? 0.35 : 0.6)
           .setInteractive({ useHandCursor: true });
         t.on('pointerdown', () => this.drawFossils(shown ? undefined : f));
         this.fossilTexts.push(t);
@@ -129,18 +146,18 @@ export class World extends Phaser.Scene {
   private layout(animate: boolean) {
     const { width, height } = this.scale;
     this.strata.forEach((r) => r.setSize(width, STRATUM));
+    this.bedrock?.setSize(width, STRATUM * 4);
     this.answers.forEach((t) => t.setX(width / 2));
     this.drawFossils();
     // RESIZE mode resizes the canvas but not the camera viewport.
     this.cameras.resize(width, height);
     const cam = this.cameras.main;
     const total = MINERALS.length * STRATUM;
-    // Pulled back, the whole column fits the top 40%; the end panel covers the rest (#end in game.css).
-    const zoom = this.whole ? Math.min(1, (height * 0.4) / total) : 1;
-    const y = this.whole
-      ? total / 2 + (height * 0.3) / zoom
-      : // 40% down the screen: the gap between the HUD and the answer panel.
-        this.layer * STRATUM + STRATUM / 2 + height * 0.1;
+    // Centre the current stratum (or, pulled back, the whole column) in the rock left showing.
+    const [top, bottom] = this.gap();
+    const zoom = this.whole ? Math.min(1, ((bottom - top) * 0.92) / total) : 1;
+    const target = this.whole ? total / 2 : this.layer * STRATUM + STRATUM / 2;
+    const y = target + (height / 2 - (top + bottom) / 2) / zoom;
     if (animate && !reducedMotion()) {
       cam.zoomTo(zoom, 600, 'Sine.easeInOut', true);
       cam.pan(width / 2, y, 600, 'Sine.easeInOut', true);

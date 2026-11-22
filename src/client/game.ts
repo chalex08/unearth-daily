@@ -12,7 +12,12 @@ import type {
 } from '../shared/api';
 import type { RarityBand } from '../shared/game';
 import { LAYER_COUNT } from '../shared/puzzle';
-import { mineral, PICKAXES } from '../shared/game';
+import {
+  COLD_START_THRESHOLD,
+  mineral,
+  MINERALS,
+  PICKAXES,
+} from '../shared/game';
 import { DISPLAY, World } from './world';
 import { STRATA } from './strata';
 
@@ -39,6 +44,7 @@ const ui = {
   clue: $('clue'),
   helper: $('helper'),
   reveal: $('reveal'),
+  revealIcon: el('reveal-icon', HTMLImageElement),
   revealBand: $('reveal-band'),
   revealAnswer: $('reveal-answer'),
   revealBase: $('reveal-base'),
@@ -46,12 +52,15 @@ const ui = {
   revealFlavour: $('reveal-flavour'),
   form: el('answer-form', HTMLFormElement),
   input: el('answer', HTMLInputElement),
+  dig: el('dig', HTMLButtonElement),
   result: $('result'),
   end: $('end'),
+  endIcon: el('end-icon', HTMLImageElement),
   endTitle: $('end-title'),
   endTotal: $('end-total'),
   endStats: $('end-stats'),
   endChain: el('end-chain', HTMLOListElement),
+  endNote: $('end-note'),
   finalAnswer: $('final-answer'),
   share: el('share', HTMLTextAreaElement),
   copy: el('copy', HTMLButtonElement),
@@ -59,6 +68,14 @@ const ui = {
 };
 
 const world = new World();
+// The recess grows with the chain, so aim the camera at whatever rock is left showing.
+world.gap = () => {
+  const panel = ui.play.hidden ? ui.end : ui.play;
+  return [
+    ui.hud.hidden ? 0 : ui.hud.getBoundingClientRect().bottom,
+    panel.hidden ? window.innerHeight : panel.getBoundingClientRect().top,
+  ];
+};
 // Phaser letters the rock in EB Garamond, so wait for the bundled face (or its failure) first.
 void Promise.allSettled([
   document.fonts.load(`20px ${DISPLAY}`),
@@ -76,6 +93,10 @@ void Promise.allSettled([
 
 const reducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/** The mineral's icon (public/icons, REFERENCES §7). */
+const icon = (layer: number) =>
+  `icons/${String(layer).padStart(2, '0')}-${(MINERALS[layer] ?? MINERALS[0]!).name.toLowerCase()}.svg`;
 
 /** Paints an element (and its children) in a stratum's ore colour, via `--ore`. */
 const setOre = (e: HTMLElement, layer: number) =>
@@ -230,7 +251,8 @@ function showLayer() {
       answer.className = 'link-answer';
       const note = document.createElement('small');
       note.className = 'link-note';
-      note.textContent = bandNote(c.points, c.band, c.estimated);
+      // "estimated" is said in the reveal and on the end screen; here every line counts.
+      note.textContent = bandNote(c.points, c.band, false);
       answer.append(c.answer, note);
       li.append(clue, answer);
       return li;
@@ -241,6 +263,8 @@ function showLayer() {
   ui.layer.textContent = `Layer ${run.layer} of ${LAYER_COUNT}, ${mineral(run.layer).name}`;
   ui.clue.textContent = run.clue;
   ui.helper.hidden = run.chain.length === 0;
+  ui.input.disabled = false;
+  ui.dig.disabled = false;
   ui.reveal.hidden = true;
   ui.current.hidden = false;
   world.dig(
@@ -286,17 +310,25 @@ ui.reveal.addEventListener('click', () => skipReveal?.());
 /** Strike reveal (SPEC §6.4). Common strikes move on after ~1s; rarer ones hold ~2.5s or a tap. */
 async function reveal(r: AnswerResult, layer: number) {
   const band = r.band;
-  const rare = band === 'Vein' || band === 'Mother Lode';
-  ui.reveal.classList.toggle('common', !band || band === 'Common');
-  ui.revealBand.textContent = band
-    ? `${band}${r.estimated ? ', estimated' : ''}`
-    : (r.mineral ?? '');
+  // Layer 10 has no band (SPEC §3.2), but reaching Uranium is the biggest moment of the run.
+  const rare = !band || band === 'Vein' || band === 'Mother Lode';
+  ui.reveal.classList.toggle('common', band === 'Common');
+  ui.revealIcon.src = icon(layer);
+  ui.revealBand.textContent = band ?? r.mineral ?? '';
   ui.revealAnswer.textContent = `“${r.canonical}”`;
   ui.revealBase.textContent = `+${r.base}`;
   ui.revealBonus.textContent = r.bonus ? `+${r.bonus} ${band}` : '';
   ui.revealBonus.style.setProperty('--slam', band ? SLAM[band] : '1');
-  const pct = r.percent === null ? '' : ` ${r.percent}% of diggers found it.`;
-  ui.revealFlavour.textContent = `${band ? FLAVOUR[band] : 'The bottom of the shaft.'}${pct}`;
+  // No percent at layer 10 (everyone gives the one final answer) or during cold start, where the
+  // band comes from the puzzle's commonness label and a small-sample percent would contradict it.
+  const pct =
+    r.percent === null || !band || r.estimated
+      ? ''
+      : ` ${r.percent}% of diggers found it.`;
+  const est = r.estimated
+    ? ` Estimated until ${COLD_START_THRESHOLD} diggers answer this layer.`
+    : '';
+  ui.revealFlavour.textContent = `${band ? FLAVOUR[band] : 'You hit the core.'}${pct}${est}`;
   ui.current.hidden = true;
   ui.reveal.hidden = false;
   if (rare) {
@@ -305,7 +337,7 @@ async function reveal(r: AnswerResult, layer: number) {
     void ui.flash.offsetWidth; // restart the animation
     ui.flash.classList.add('on');
   }
-  await hold(band && band !== 'Common' ? 2500 : 1000);
+  await hold(band === 'Common' ? 1000 : 2500);
 }
 
 ui.form.addEventListener('submit', (e) => {
@@ -325,6 +357,8 @@ async function submit() {
       answer: ui.input.value,
       layer: run.layer,
     });
+    // The server has answered: Dig is live again (during a reveal it skips ahead).
+    ui.form.removeAttribute('aria-busy');
     ui.result.className = r.outcome === 'invalid' ? 'wrong' : '';
     ui.result.textContent = resultLine(r);
     if (r.outcome === 'valid' || r.outcome === 'invalid') ui.input.value = '';
@@ -343,6 +377,11 @@ async function submit() {
       run.layer += 1;
     }
     hud(r.lives, r.total, run.chain.length, run.layer);
+    if (r.ended) {
+      // The run is over: no more answers, but a tap on the reveal still skips it.
+      ui.input.disabled = true;
+      ui.dig.disabled = true;
+    }
     if (struck) {
       void loadFossils();
       setOre(ui.play, run.layer - 1);
@@ -392,9 +431,9 @@ async function end() {
   showStatus('');
   const cleared = r.chain.flatMap((l) => (l.cleared ? [l.cleared] : []));
   hud(r.lives, r.total, cleared.length, 0);
-  world.pullBack(cleared.map((c) => c.answer));
   void loadFossils();
   setOre(ui.end, cleared.length);
+  ui.endIcon.src = icon(cleared.length);
   ui.end.hidden = false;
   ui.endTitle.textContent =
     r.status === 'cleared' ? `Struck ${r.hero}` : `Caved in at ${r.hero}`;
@@ -418,9 +457,10 @@ async function end() {
   ui.endChain.replaceChildren(
     ...r.chain.map((l) => {
       const li = document.createElement('li');
-      const tag = document.createElement('span');
-      tag.className = 'tag';
-      tag.textContent = String(l.layer);
+      setOre(li, l.layer);
+      const num = document.createElement('span');
+      num.className = 'end-num num';
+      num.textContent = String(l.layer);
       const text = document.createElement('span');
       const note = document.createElement('span');
       note.className = 'link-note';
@@ -429,19 +469,23 @@ async function end() {
         const b = document.createElement('b');
         b.textContent = c.answer;
         text.append(`${l.clue}: `, b);
-        note.textContent = bandNote(c.points, c.band, c.estimated);
+        note.textContent = bandNote(c.points, c.band, false);
       } else {
         li.className = 'unreached';
         text.textContent = l.clue;
         note.textContent = 'not reached';
       }
-      li.append(tag, text, note);
+      li.append(num, text, note);
       return li;
     })
   );
+  ui.endNote.hidden = !cleared.some((c) => c.estimated && c.band);
+  ui.endNote.textContent = `Bands are estimated until ${COLD_START_THRESHOLD} diggers have answered a layer.`;
   ui.finalAnswer.textContent = `The last answer was “${r.finalAnswer}”.`;
   ui.share.value = r.share;
   countdown();
+  // After the panel is filled, so the camera fits the column into the rock left above it.
+  world.pullBack(cleared.map((c) => c.answer));
 }
 
 ui.copy.addEventListener('click', async () => {
@@ -487,4 +531,11 @@ if (vv) {
   fit();
 }
 
-void start();
+// Local preview only: `game.html?jump=6` (or `?jump=11` for the end screen) rewrites today's run
+// first. The route 404s outside dev apps, and a Reddit post's webview URL never carries the param.
+const jump = new URLSearchParams(window.location.search).get('jump');
+void (
+  jump
+    ? api('POST', 'dev/jump', { to: Number(jump) }).catch(() => undefined)
+    : Promise.resolve()
+).then(start);

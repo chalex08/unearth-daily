@@ -57,7 +57,7 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 6. Design direction (Hallmark) — Fri 27 Nov
 
-- [x] Hallmark + frontend-design: palette per mineral, type, rock textures, HUD, motion rules, reduced-motion variants. _Written in `docs/DESIGN.md` and applied to the real client rather than a throwaway mock: patterned strata, bundled fonts, HUD, the recess with the core-sample chain, strike reveal with pacing, wrong-answer line, fossils, end screen. Checked locally at 390×780, 390×440 (keyboard) and desktop; not yet on Reddit. Waiting on your OK of the look._
+- [x] Hallmark + frontend-design: palette per mineral, type, rock textures, HUD, motion rules, reduced-motion variants. _Written in `docs/DESIGN.md` and applied to the real client rather than a throwaway mock: patterned strata, bundled fonts, HUD, the recess with the core-sample chain, strike reveal with pacing, wrong-answer line, fossils, end screen. Checked locally at 390×780, 390×440 (keyboard) and desktop; screenshots of every state in `docs/screenshots/`; Hallmark finish review done. Not yet seen on Reddit. Waiting on your OK of the look._
 - **Done when:** a written design direction in `docs/` and one static mock of play and end screens agreed. Nothing looks generic or AI-generated.
 
 ### 7. Dynamic world (Phaser) — Sat 28 – Sun 29 Nov

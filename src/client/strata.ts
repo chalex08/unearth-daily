@@ -183,7 +183,9 @@ export function drawStratum(
       }
       break;
     case 'pebbles':
-      for (let i = 0; i < (w * h) / 500; i++) {
+      // Filled, as conglomerate is printed on a lithology column.
+      ctx.globalAlpha = 0.4;
+      for (let i = 0; i < (w * h) / 1000; i++) {
         ctx.beginPath();
         ctx.ellipse(
           r() * w,
@@ -194,7 +196,7 @@ export function drawStratum(
           0,
           Math.PI * 2
         );
-        ctx.stroke();
+        ctx.fill();
       }
       break;
     case 'wire':
@@ -206,10 +208,10 @@ export function drawStratum(
       }
       break;
     case 'plates':
-      for (let i = 0; i < (w * h) / 1100; i++) {
+      for (let i = 0; i < (w * h) / 1900; i++) {
         const x = r() * w;
         const y = r() * h;
-        const k = 4 + r() * 3;
+        const k = 6 + r() * 4;
         ctx.beginPath();
         for (let a = 0; a < 6; a++)
           ctx.lineTo(
@@ -236,9 +238,15 @@ export function drawStratum(
       }
       break;
     case 'stack':
-      for (let y = 6, row = 0; y < h; y += 8, row++)
-        for (let x = (row % 3) * 10; x < w; x += 30)
-          ctx.strokeRect(x, y, 22, 5);
+      // Tabular plates of random length in loose stacks, so it never reads as Stone's brick.
+      for (let y = 8; y < h; y += 12) {
+        let x = r() * 20;
+        while (x < w) {
+          const len = 30 + r() * 50;
+          ctx.strokeRect(x, y + r() * 3, len, 4);
+          x += len + 10 + r() * 30;
+        }
+      }
       break;
   }
   // Edge line along the top, as on a hand-tinted section.

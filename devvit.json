@@ -52,11 +52,19 @@
         "location": "subreddit",
         "forUserType": "moderator",
         "endpoint": "/internal/menu/reset-my-run"
+      },
+      {
+        "label": "Jump to a layer (dev)",
+        "description": "Sets your run for today to any layer or the end screen. Refuses on the canonical app.",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/dev-jump"
       }
     ]
   },
   "forms": {
-    "exampleForm": "/internal/form/example-submit"
+    "exampleForm": "/internal/form/example-submit",
+    "devJump": "/internal/form/dev-jump"
   },
   "triggers": {
     "onAppInstall": "/internal/triggers/on-app-install"
