@@ -13,8 +13,15 @@
   <body>
     <canvas id="strata" aria-hidden="true"></canvas>
     <main>
-      <h1>Unearth</h1>
-      <p>Ten clues, one shaft. How deep can you dig?</p>
+      <div class="head">
+        <h1>Unearth <span id="number"></span></h1>
+        <p id="meta">
+          <span id="date"></span>
+          <span id="players"></span>
+        </p>
+      </div>
+      <p id="clue-label" hidden>Clue 1 of 10</p>
+      <p id="clue">Ten clues, one shaft. How deep can you dig?</p>
       <button id="start-button" type="button">Play</button>
     </main>
     <script type="module" src="splash.ts"></script>

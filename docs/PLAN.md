@@ -32,7 +32,7 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 ### 3. Content pipeline + seed data — Mon 23 Nov
 
 - [x] Puzzle drafting: the `/write-puzzle` Claude Code skill (replaced the Gemini free-tier script on 21 Nov) writes a puzzle from an optional hand-written seed theme into `content/puzzles/drafts/` for review, checked by an independent critic subagent. Its only inputs are seed themes and our own puzzle files: no Reddit data (SPEC §5.3).
-- [x] Validator: 10 clues, a pool for each layer with aliases and commonness, exactly one answer at layer 10, and every answer at layer N also valid for layers 1..N−1.
+- [x] Validator: 10 clues, a pool for each layer with aliases and commonness, and every answer at layer N also valid for layers 1..N−1.
 - [ ] Puzzle #14 seeded by hand (done: `content/puzzles/2026-11-21.json`), plus at least 6 more reviewed puzzles written with `/write-puzzle`. The five Gemini drafts (22–26 Nov) have long, multi-constraint clues; rewrite them with the skill.
 - [x] Dev-only fake answer counts (mod menu item), see [CONTENT.md](CONTENT.md).
 - **Done when:** the validator passes on every committed puzzle in CI, nothing in `src/` references a free-tier key (the `GEMINI_FREE` check in CI), and no `tools/` script or content skill reads Redis, the Reddit API or the answer log.
@@ -84,17 +84,18 @@ Pure TypeScript in `src/shared/`, no Devvit imports.
 
 ### 10. Daily post, onboarding, Journeys, feed view — Thu 3 – Fri 4 Dec
 
-- [ ] Scheduler job at 00:00 UTC creates "Unearth #N — <first clue>"; idempotent; verified to fire at UTC midnight.
-- [ ] In-world first-run hints (SPEC §6.2).
-- [ ] Journeys: run started, layer progress (layer/10), finished or caved in; no per-input events; receipts checked. Setup notes in DECISIONS "Journeys setup": the package's telemetry router is Express, our server is Hono; playtest versions always get `DENIED_PLAYTEST`, so check receipts on an uploaded version.
-- [ ] Inline feed view: strata teaser, number, date, player count, first clue, Play. Under 1s, Lighthouse mobile above 80. Optional `_direct_launch`.
+- [x] Scheduler job at 00:00 UTC creates "Unearth #N — <first clue>"; idempotent; mod menu fallback; pinned. _Still to verify: it fires at UTC midnight on the uploaded app._
+- [x] In-world first-run hints (SPEC §6.2), dismissable, once per player.
+- [x] Journeys: run started, layer progress (layer/10), finished or caved in; no per-input events; receipts checked. Setup notes in DECISIONS "Journeys setup": the package's telemetry router is Express, our server is Hono; playtest versions always get `DENIED_PLAYTEST`, so check receipts on an uploaded version. _Built server-side (DECISIONS "Step 10"); receipts still to read on the uploaded canonical app._
+- [x] Inline feed view: strata teaser, number, date, player count, first clue, Play. Under 1s, Lighthouse mobile above 80. Optional `_direct_launch`. _Lighthouse not run yet; `_direct_launch` skipped._
+- [x] Midnight rollover: runs are bound to their post's day (`postData`), so a run open at 00:00 UTC finishes on its puzzle.
 - **Done when:** a new post appears on its own at midnight UTC and the feed view meets the inline rules.
 
 ### 11. Polish, audits, compliance, submission — Sat 5 – Sun 6 Dec
 
-- [ ] Accessibility, performance and Devvit-rules audits; data deletion on account deletion; README rewritten (non-template).
-- [ ] Terms and Privacy published and linked in the app details form (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app. _Domain and LLM approval granted 22 Nov for both the dev and canonical apps. Still to do: the app owner sets the canonical app's `geminiApiKey`._
+- [x] Accessibility, performance and Devvit-rules audits; data deletion on account deletion; README rewritten (non-template). _23 Nov: Hallmark and ponytail audits, rules re-read, 30-day TTL is the deletion path (no account-delete trigger exists); results in [QA.md](QA.md). Still by hand: the Reddit desktop, iOS and Android passes in QA.md._
+- [ ] Terms and Privacy published and linked in the app details form _(published 23 Nov from `site/`; pasting the links into the form is by hand)_ (Privacy names Gemini paid tier as the only processor of player answers); fetch domain approved; LLM approval granted, or the no-AI mode verified on the canonical app. _Domain and LLM approval granted 22 Nov for both the dev and canonical apps. Still to do: the app owner sets the canonical app's `geminiApiKey`._
 - [ ] AI data audit (SPEC §5.3): the canonical app's `geminiApiKey` is from the billed project; no free-tier key exists in the project; no Reddit data reached any content-authoring AI session.
 - [ ] Enough reviewed puzzles (written with `/write-puzzle`, reviewed by hand) queued to cover every day through judging (the judging window isn't in the briefing; aim for 31 Dec).
-- [ ] Canonical app uploaded with `npm run deploy:prod` (upload only, **never publish**); public demo post live in r/UnearthDaily; demo video if required.
+- [ ] Canonical app uploaded with `npm run deploy:prod` (upload only, **never publish**); public demo post live in r/UnearthDaily; demo video if required. _Uploaded and installed 23 Nov; post, video and survey still to confirm by hand ([SUBMISSION.md](SUBMISSION.md))._
 - **Done when:** a stranger can open the demo post on mobile, play, share and come back tomorrow, and every item in SPEC §1 is satisfied.

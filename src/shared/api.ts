@@ -25,8 +25,20 @@ export type RunResponse = {
   chain: ChainLink[];
   lives: number;
   score: number;
-  /** True until this player has started a first run (SPEC §6.2 hints). */
+  /** True until this player dismisses the first-run hints (SPEC §6.2). */
   onboarding: boolean;
+};
+
+/** GET /api/feed: the inline feed view for this post's puzzle (SPEC §6.1). */
+export type FeedResponse = {
+  puzzleNumber: number;
+  date: string;
+  /** Clue 1, already public in the post title. */
+  clue: string;
+  /** Runs started on this puzzle. */
+  players: number;
+  /** A past day's post: new runs are on today's post. */
+  closed: boolean;
 };
 
 /** POST /api/answer. `layer` is the layer the client thinks it is on; a stale one is rejected. */

@@ -3,20 +3,20 @@ You are writing a Devvit web application that will be executed on Reddit.com.
 ## Tech Stack
 
 - **Frontend**: Phaser, Vite
-- **Backend**: Node.js v22 serverless environment (Devvit), Hono, TRPC
-- **Communication**: tRPC v11 for end-to-end type safety
+- **Backend**: Node.js serverless environment (Devvit), Hono, Devvit Redis
+- **Communication**: plain `fetch` to `/api/*`, request and response types in `src/shared/api.ts`
 
 ## Layout & Architecture
 
 - `/src/server`: **Backend Code**. This runs in a secure, serverless environment.
-  - `trpc.ts`: Defines the API router and procedures.
+  - `routes/`: Hono routes (`api.ts` for `/api/*`, the rest under `/internal/*`).
   - `index.ts`: Main server entry point (Hono app).
   - Access `redis`, `reddit`, and `context` here via `@devvit/web/server`.
 - `/src/client`: **Frontend Code**. This is executed inside of an iFrame on reddit.com
   - To add an entrypoint, create a HTML file and add to the mapping inside of `devvit.json`
   - Entrypoints:
-    - `game.html`: The main React entry point (Expanded View).
-    - `splash.html`: The initial React entry point (Inline View). This will be shown in the reddit.com feed. Please keep it fast and keep heavy dependencies inside of `game.html`
+    - `game.html`: The game (Expanded View): Phaser world plus DOM overlay.
+    - `splash.html`: The feed card (Inline View), plain DOM. Keep it fast and keep heavy dependencies inside of `game.html`
 - `/src/shared`: **Shared Code**. Code to share between the client and server
 
 ## Frontend
@@ -38,7 +38,7 @@ You are writing a Devvit web application that will be executed on Reddit.com.
 - `npm run lint`: Check the linter
 - `npm run test -- my-file-name`: Run Vitest tests isolated to a file
 - `npm run dev`: Playtest on Reddit (uses DEVVIT_APP_NAME / DEVVIT_SUBREDDIT from .env)
-- Never run `devvit publish`, `npm run deploy:prod` or `npm run launch:after-hackathon`.
+- Never run `devvit publish` or `npm run launch:after-hackathon`. `npm run deploy:prod` uploads the canonical app without publishing (CLAUDE.md).
 
 ## Code Style
 

@@ -18,6 +18,7 @@
       "asUser": ["SUBMIT_COMMENT", "SUBSCRIBE_TO_SUBREDDIT"]
     },
     "redis": true,
+    "journeys": true,
     "http": {
       "domains": ["generativelanguage.googleapis.com"]
     }
@@ -29,18 +30,11 @@
   "menu": {
     "items": [
       {
-        "label": "Create a new post",
-        "description": "unearth-daily",
+        "label": "Create today's Unearth post",
+        "description": "Makes today's daily post if the 00:00 UTC job hasn't, or opens it.",
         "location": "subreddit",
         "forUserType": "moderator",
         "endpoint": "/internal/menu/post-create"
-      },
-      {
-        "label": "Example form",
-        "description": "Show a simple form",
-        "location": "subreddit",
-        "forUserType": "moderator",
-        "endpoint": "/internal/menu/example-form"
       },
       {
         "label": "Seed fake answer counts (dev)",
@@ -66,8 +60,15 @@
     ]
   },
   "forms": {
-    "exampleForm": "/internal/form/example-submit",
     "devJump": "/internal/form/dev-jump"
+  },
+  "scheduler": {
+    "tasks": {
+      "daily-post": {
+        "endpoint": "/internal/scheduler/daily-post",
+        "cron": "0 0 * * *"
+      }
+    }
   },
   "triggers": {
     "onAppInstall": "/internal/triggers/on-app-install"

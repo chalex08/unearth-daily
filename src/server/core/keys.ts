@@ -20,6 +20,8 @@ export const keys = {
   verdicts: (day: string, layer: number) => `verdicts:${day}:${layer}`,
   /** Hash, field `id`: the app's stickied comment on this post, which shared results reply to. */
   sticky: (postId: string) => `sticky:${postId}`,
-  /** Hash: `count`, `lastDay` (the Streak), `best` (deepest mineral ever), `prompted` (join prompt shown). */
+  /** Hash, field `post`: the day's post id (`creating` while it's being made). One post per day. */
+  daily: (day: string) => `daily:${day}`,
+  /** Hash: `count`, `lastDay` (the Streak), `best` (deepest mineral ever), `prompted` (join prompt shown), `onboarded` (hints dismissed). */
   user: (userId: string) => `user:${userId}`,
 };

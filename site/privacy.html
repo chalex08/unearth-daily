@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unearth privacy policy</title>
+    <meta
+      name="description"
+      content="What the Unearth daily puzzle on Reddit stores, what it sends to Google Gemini, and how long it keeps it."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Unearth privacy policy</h1>
+      <p class="updated">Last updated 22 November 2026</p>
+
+      <p>
+        Unearth is a daily word puzzle that runs inside Reddit posts, built on
+        Reddit’s Developer Platform (Devvit). It is an independent app, not made
+        or endorsed by Reddit. This page says exactly what the app keeps about
+        you, what it sends elsewhere, and for how long. See also the
+        <a href="terms.html">terms of use</a>.
+      </p>
+
+      <h2>What we store</h2>
+      <p>
+        Everything is kept in the app’s own Redis database on Reddit’s platform,
+        separately for each subreddit the app is installed in. You are
+        identified by your Reddit user ID (the <code>t2_</code> number), never
+        by your username.
+      </p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">What</th>
+              <th scope="col">Linked to you?</th>
+              <th scope="col">Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Your run for the day: the answers you typed, which were accepted
+                or rejected, your score and pickaxes left
+              </td>
+              <td>Yes, by user ID</td>
+              <td>So you can resume a run and see your end screen</td>
+            </tr>
+            <tr>
+              <td>
+                Your streak (days in a row and the last day you played), your
+                deepest mineral, and whether you have dismissed the first-run
+                hints or seen the join prompt
+              </td>
+              <td>Yes, by user ID</td>
+              <td>Streaks, the optional flair, and not repeating hints</td>
+            </tr>
+            <tr>
+              <td>Whether you posted your result as a comment today</td>
+              <td>Yes, by user ID</td>
+              <td>So the comment button is only used once per run</td>
+            </tr>
+            <tr>
+              <td>
+                Counts of each accepted answer per layer, and how many players
+                reached or stopped at each layer
+              </td>
+              <td>No, totals only</td>
+              <td>Rarity scores and the day’s statistics</td>
+            </tr>
+            <tr>
+              <td>
+                Cached answer checks: an answer’s text and whether it fitted the
+                clues
+              </td>
+              <td>No</td>
+              <td>So the same answer is not checked twice</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Your sound on/off setting is kept in your own browser’s local storage,
+        not on a server.
+      </p>
+      <p>
+        Other players only ever see answers from the puzzle’s hand-written
+        answer list, never anything else you type. Your username is read from
+        Reddit only to show it to you before you post a comment or set flair; it
+        is not stored by the app.
+      </p>
+
+      <h2>What we send to Google Gemini</h2>
+      <p>
+        Most answers are checked against the day’s hand-written answer list and
+        never leave Reddit. When you type an answer that is not on the list and
+        has not been checked before, the app sends it to the Google Gemini API
+        to ask whether it fits the clues. The request contains only the day’s
+        clues up to your current layer and your answer (lowercased, punctuation
+        removed, at most 40 characters). It contains no username, user ID or
+        other information about you.
+      </p>
+      <p>
+        We use Gemini’s paid service, through a Google Cloud project with
+        billing enabled. Under Google’s
+        <a href="https://ai.google.dev/gemini-api/terms"
+          >Gemini API Additional Terms of Service</a
+        >, Google does not use prompts or responses from paid services to
+        improve its products, and keeps them for a limited time only to detect
+        abuse. Google is the only outside service that receives anything from
+        Unearth.
+      </p>
+
+      <h2>What happens on Reddit when you press a button</h2>
+      <p>
+        Three buttons on the end screen act as you on Reddit, and only when you
+        press them: <strong>Discuss in comments</strong> posts your spoiler-free
+        result as a comment under your username;
+        <strong>Join</strong> subscribes you to the subreddit; the
+        <strong>flair</strong> button sets your flair in that subreddit to your
+        streak and deepest mineral. Comments are ordinary Reddit comments: you
+        can edit or delete them on Reddit at any time.
+      </p>
+      <p>
+        The app also sends Reddit progress events (a run started, a layer
+        cleared, a run finished, and its score) through Reddit’s own analytics
+        for apps. They contain no answers or usernames.
+      </p>
+
+      <h2>How long we keep it</h2>
+      <p>
+        Every record above is set to delete itself 30 days after it was last
+        changed. If you stop playing, or delete your Reddit account, all data
+        linked to your user ID is gone within 30 days.
+      </p>
+
+      <h2>What we never do</h2>
+      <ul>
+        <li>Sell, share or license your data.</li>
+        <li>Use it, or let anyone use it, to train AI models.</li>
+        <li>Ask for passwords, real names, email addresses or locations.</li>
+        <li>Track you outside the Unearth post.</li>
+      </ul>
+
+      <h2>Your choices and contact</h2>
+      <p>
+        You can stop playing at any time; the app never posts, joins or sets
+        flair without your press. To ask what is stored about you, to have it
+        deleted sooner, or to report a problem, send a message to the moderators
+        of
+        <a href="https://www.reddit.com/message/compose?to=r/UnearthDaily"
+          >r/UnearthDaily</a
+        >. Reddit’s own handling of your data is covered by Reddit’s privacy
+        policy.
+      </p>
+      <p>
+        Reddit accounts are for people aged 13 and over, and Unearth is not
+        aimed at anyone younger. If this policy changes, the date at the top
+        changes with it.
+      </p>
+    </main>
+  </body>
+</html>

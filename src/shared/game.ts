@@ -249,14 +249,6 @@ export function shareText(run: RunState): string {
   ].join('\n');
 }
 
-export type DayStats = {
-  players: number;
-  /** Runs ended per mineral, index = deepest layer cleared (the graveyard). */
-  ended: number[];
-  /** Per layer (index 0 = layer 1): valid answers by canonical. */
-  answers: Record<string, number>[];
-};
-
 /** UTC day key, YYYY-MM-DD. */
 export const dayKey = (date: Date): string => date.toISOString().slice(0, 10);
 
@@ -264,7 +256,8 @@ export type Streak = { count: number; lastDay: string };
 
 /** SPEC §3.3: call when a run finishes. A missed UTC day restarts the count. */
 export function updateStreak(streak: Streak | null, today: string): Streak {
-  if (streak?.lastDay === today) return streak;
+  // >=: yesterday's run finished after today's (it spanned midnight) changes nothing.
+  if (streak && streak.lastDay >= today) return streak;
   const yesterday = dayKey(new Date(Date.parse(today) - 86_400_000));
   return {
     count: streak?.lastDay === yesterday ? streak.count + 1 : 1,
