@@ -1,9 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { validatePuzzle } from '../src/shared/puzzle.ts';
+import { poolShapeErrors, validatePuzzle } from '../src/shared/puzzle.ts';
 import { puzzle14 } from '../src/shared/fixtures/puzzle-14.ts';
 import {
   noOpLayers,
   numberFor,
+  parseLadderText,
+  puzzlesDir,
+  readPuzzleFiles,
   toDraft,
   toPuzzle,
   type Draft,
@@ -55,13 +58,70 @@ describe('toPuzzle', () => {
     ]);
     expect(noOpLayers(puzzle14)).toEqual([]);
   });
-  it('lets the validator catch a final layer with two answers', () => {
-    const two = {
-      ...draft,
-      answers: draft.answers.map((a) => ({ ...a, depth: 10 })),
-    };
-    expect(validatePuzzle(toPuzzle(two, 15, '2026-11-22'))).toContain(
-      'layer 10 must have exactly one answer'
-    );
+});
+
+describe('parseLadderText', () => {
+  const text = [
+    '# a comment',
+    '1: Name an animal',
+    '2: …that has a backbone',
+    '== 2',
+    'zebra',
+    'mouse = mice',
+    'okapi !',
+    '== 1',
+    'sea star = starfish ~',
+    'jeans',
+    'berry',
+    'bus',
+  ].join('\n');
+
+  it('reads clues, depths, aliases and commonness marks', () => {
+    const d = parseLadderText(text);
+    expect(d.clues).toEqual(['Name an animal', '…that has a backbone']);
+    expect(d.answers.find((a) => a.canonical === 'okapi')).toMatchObject({
+      depth: 2,
+      commonness: 'rare',
+    });
+    expect(d.answers.find((a) => a.canonical === 'sea star')).toMatchObject({
+      depth: 1,
+      commonness: 'uncommon',
+      aliases: ['starfish', 'sea stars'],
+    });
+    expect(d.answers.find((a) => a.canonical === 'zebra')).toMatchObject({
+      depth: 2,
+      commonness: 'common',
+    });
   });
+
+  it('adds a plain plural unless the name ends in s or another answer owns it', () => {
+    const by = (name: string) =>
+      parseLadderText(text).answers.find((a) => a.canonical === name)!.aliases;
+    expect(by('zebra')).toEqual(['zebras']);
+    expect(by('mouse')).toEqual(['mice', 'mouses']);
+    expect(by('berry')).toEqual(['berries']);
+    expect(by('bus')).toEqual([]);
+    expect(by('jeans')).toEqual([]);
+  });
+
+  it('rejects an answer with no depth line and a depth out of range', () => {
+    expect(() => parseLadderText('zebra')).toThrow('before any');
+    expect(() => parseLadderText('== 11')).toThrow('depth 11');
+  });
+});
+
+describe('bundled puzzles', () => {
+  const files = readPuzzleFiles(puzzlesDir);
+  it('has at least one puzzle', () => {
+    expect(files.length).toBeGreaterThan(0);
+  });
+  for (const { file, data } of files) {
+    it(`${file} is valid and has the funnel shape (SPEC §2)`, () => {
+      expect(typeof data).not.toBe('string');
+      expect(validatePuzzle(data)).toEqual([]);
+      expect(
+        poolShapeErrors(data as Parameters<typeof poolShapeErrors>[0])
+      ).toEqual([]);
+    });
+  }
 });

@@ -10,6 +10,7 @@ coverage
 
 # write-puzzle working files (the built draft is the source of truth)
 content/puzzles/drafts/*.ladder.json
+content/puzzles/drafts/*.ladder.txt
 
 # Claude Code: share project skills, keep machine-local config out
 .claude/launch.json

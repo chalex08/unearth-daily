@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { puzzle14 } from './fixtures/puzzle-14';
-import { matchAnswer, normalise, validatePuzzle } from './puzzle';
+import {
+  matchAnswer,
+  normalise,
+  poolShapeErrors,
+  validatePuzzle,
+  type Puzzle,
+} from './puzzle';
 
 const clone = () => structuredClone(puzzle14);
 
@@ -50,19 +56,6 @@ describe('validatePuzzle', () => {
     ]);
   });
 
-  it('needs exactly one answer at layer 10', () => {
-    const p = clone();
-    p.layers[9]!.pool.push(p.layers[8]!.pool[0]!);
-    p.layers[9]!.pool[1] = {
-      canonical: 'kumquat2',
-      aliases: [],
-      commonness: 'rare',
-    };
-    expect(validatePuzzle(p)).toContain(
-      'layer 10 must have exactly one answer'
-    );
-  });
-
   it('rejects duplicate canonicals and aliases that match two answers', () => {
     const p = clone();
     p.layers[0]!.pool.push({
@@ -100,6 +93,61 @@ describe('validatePuzzle', () => {
     );
     expect(errors).toContain(
       'layer 2 pool[0] commonness must be common, uncommon or rare'
+    );
+  });
+});
+
+describe('poolShapeErrors', () => {
+  /** A puzzle whose layer N holds sizes[N-1] answers, each also in every layer above it. */
+  const shaped = (sizes: number[]): Puzzle => ({
+    number: 1,
+    date: '2026-11-08',
+    layers: sizes.map((n, i) => ({
+      clue: `clue ${i + 1}`,
+      pool: Array.from({ length: n }, (_, j) => ({
+        canonical: `answer ${j}`,
+        aliases: [],
+        commonness: 'common' as const,
+      })),
+    })),
+  });
+  const FUNNEL = [506, 311, 194, 120, 75, 47, 29, 18, 11, 7];
+
+  it('accepts a funnel from 500+ down to 5-10', () => {
+    expect(poolShapeErrors(shaped(FUNNEL))).toEqual([]);
+  });
+
+  it('needs at least 500 answers at layer 1', () => {
+    expect(poolShapeErrors(shaped([499, ...FUNNEL.slice(1)]))).toEqual(
+      [
+        'layer 1 has 499 answers; it needs at least 500',
+        'layer 2 keeps 62% of layer 1 (311 of 499); it needs 35% to 85%',
+      ].slice(0, 1)
+    );
+  });
+
+  it('needs 5 to 10 answers at layer 10', () => {
+    expect(poolShapeErrors(shaped([...FUNNEL.slice(0, 9), 4]))).toContain(
+      'layer 10 has 4 answers; it needs 5 to 10'
+    );
+    expect(poolShapeErrors(shaped([...FUNNEL.slice(0, 9), 11]))).toContain(
+      'layer 10 has 11 answers; it needs 5 to 10'
+    );
+    expect(poolShapeErrors(shaped([...FUNNEL.slice(0, 8), 14, 10]))).toEqual(
+      []
+    );
+  });
+
+  it('rejects a clue that removes too little or too much', () => {
+    const little = [...FUNNEL];
+    little[1] = 450;
+    expect(poolShapeErrors(shaped(little))).toContain(
+      'layer 2 keeps 89% of layer 1 (450 of 506); it needs 35% to 85%'
+    );
+    const much = [...FUNNEL];
+    much[3] = 40;
+    expect(poolShapeErrors(shaped(much))).toContain(
+      'layer 4 keeps 21% of layer 3 (40 of 194); it needs 35% to 85%'
     );
   });
 });

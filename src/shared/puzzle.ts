@@ -82,10 +82,44 @@ export function validatePuzzle(data: unknown): string[] {
         if (!previous.has(c))
           errors.push(`${at} "${c}" is missing from layer ${i}`);
     }
-    if (i === LAYER_COUNT - 1 && layer.pool.length !== 1)
-      errors.push(`${at} must have exactly one answer`);
     previous = canonicals;
   });
+  return errors;
+}
+
+/** SPEC §2: the funnel. Layer 1 is wide open, layer 10 leaves a handful, every clue removes a steady share. */
+export const POOL_SHAPE = {
+  /** Answers at layer 1 or more. */
+  firstMin: 500,
+  /** Answers at layer 10, inclusive. */
+  lastMin: 5,
+  lastMax: 10,
+  /** Each layer keeps between these shares of the layer above (so 15% to 65% of it is removed). */
+  keepMin: 0.35,
+  keepMax: 0.85,
+} as const;
+
+/** Problems with the pool sizes of a structurally valid puzzle. Empty means the funnel is right. */
+export function poolShapeErrors(puzzle: Puzzle): string[] {
+  const sizes = puzzle.layers.map((l) => l.pool.length);
+  const { firstMin, lastMin, lastMax, keepMin, keepMax } = POOL_SHAPE;
+  const errors: string[] = [];
+  if (sizes[0]! < firstMin)
+    errors.push(
+      `layer 1 has ${sizes[0]} answers; it needs at least ${firstMin}`
+    );
+  const last = sizes[LAYER_COUNT - 1]!;
+  if (last < lastMin || last > lastMax)
+    errors.push(
+      `layer ${LAYER_COUNT} has ${last} answers; it needs ${lastMin} to ${lastMax}`
+    );
+  for (let i = 1; i < sizes.length; i++) {
+    const kept = sizes[i]! / sizes[i - 1]!;
+    if (kept > keepMax || kept < keepMin)
+      errors.push(
+        `layer ${i + 1} keeps ${Math.round(kept * 100)}% of layer ${i} (${sizes[i]} of ${sizes[i - 1]}); it needs ${Math.round(keepMin * 100)}% to ${Math.round(keepMax * 100)}%`
+      );
+  }
   return errors;
 }
 

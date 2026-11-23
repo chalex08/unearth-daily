@@ -3,6 +3,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import {
   LAYER_COUNT,
+  normalise,
   validatePuzzle,
   type AnswerEntry,
   type Puzzle,
@@ -66,6 +67,73 @@ export function toDraft(puzzle: Puzzle): Draft {
       ).length,
     })),
   };
+}
+
+/** Regular plural of the last word, or null when the name already ends in "s" (jeans, scissors). */
+const plural = (name: string): string | null =>
+  /s$/.test(name)
+    ? null
+    : /[^aeiou]y$/.test(name)
+      ? `${name.slice(0, -1)}ies`
+      : /(x|z|ch|sh)$/.test(name)
+        ? `${name}es`
+        : `${name}s`;
+
+/**
+ * Parses the compact depth list. Comment lines start with `#`; `N: clue` sets clue N (1-10); `== D`
+ * starts the answers valid through layer D; each answer line is
+ * `canonical [= alias, alias] [~|!]`, where a trailing `~` is uncommon and `!` is rare (no mark is
+ * common). A plain plural of each canonical is added as an alias unless another answer already owns
+ * that spelling, so only irregular plurals and real variants need writing out.
+ */
+export function parseLadderText(text: string): Draft {
+  const clues: string[] = [];
+  const answers: Draft['answers'] = [];
+  let depth = 0;
+  text.split(/\r?\n/).forEach((raw, n) => {
+    const line = raw.trim();
+    if (!line || line.startsWith('#')) return;
+    const at = `line ${n + 1}`;
+    const clue = /^(\d+):\s*(.+)$/.exec(line);
+    if (clue) {
+      const num = Number(clue[1]);
+      if (num < 1 || num > LAYER_COUNT) throw new Error(`${at}: clue ${num}`);
+      clues[num - 1] = clue[2]!;
+      return;
+    }
+    const section = /^==\s*(\d+)$/.exec(line);
+    if (section) {
+      depth = Number(section[1]);
+      if (depth < 1 || depth > LAYER_COUNT)
+        throw new Error(`${at}: depth ${depth} must be 1..${LAYER_COUNT}`);
+      return;
+    }
+    if (!depth) throw new Error(`${at}: answer before any "== depth" line`);
+    const mark = /\s([~!])$/.exec(line)?.[1];
+    const body = mark ? line.slice(0, -1).trim() : line;
+    const [canonical = '', rest = ''] = body.split(/\s=\s/);
+    answers.push({
+      canonical: canonical.trim(),
+      aliases: rest
+        .split(',')
+        .map((a) => a.trim())
+        .filter(Boolean),
+      commonness: mark === '~' ? 'uncommon' : mark === '!' ? 'rare' : 'common',
+      depth,
+    });
+  });
+  const taken = new Set(
+    answers.flatMap((a) => [a.canonical, ...a.aliases].map(normalise))
+  );
+  for (const a of answers) {
+    const extra = plural(a.canonical);
+    const key = extra ? normalise(extra) : '';
+    if (extra && key && !taken.has(key)) {
+      taken.add(key);
+      a.aliases.push(extra);
+    }
+  }
+  return { clues, answers };
 }
 
 /** Layers (1-based) whose clue removes nothing: same pool size as the layer above. */

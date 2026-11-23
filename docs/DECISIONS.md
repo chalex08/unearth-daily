@@ -197,6 +197,17 @@ Not changed, on purpose:
 - **The in-world score label duplicates the recess reveal on purpose:** the label is the brief SPEC §6.4 transient on the rock; the recess reveal stays for reading and for screen readers (DESIGN §5).
 - Ore marks stay in the rock for the run and are not re-laid out if the canvas width changes mid-run (a `shortcut:` comment in `world.ts`).
 
+## Funnel of pool sizes (23 Nov 2026)
+
+Players found the puzzles too hard: the old rule made answers nicher with depth and left one niche answer at layer 10. Changed to a funnel of **500+ answers at layer 1 down to 5 to 10 at layer 10** (SPEC §2).
+
+- **Shape rule:** `POOL_SHAPE` / `poolShapeErrors` in `src/shared/puzzle.ts`. Layer 1 at least 500, layer 10 5 to 10, every layer keeps 35% to 85% of the one above. `validatePuzzle` stays structural (so the small test fixture is still valid); the shape is checked by `npm run validate:puzzles`, `puzzle:build`, `npm run review` and `tools/puzzle-files.test.ts` over every bundled file.
+- **Authoring format:** `content/puzzles/drafts/<date>.ladder.txt` (gitignored), a compact depth list parsed by `parseLadderText`: `N: clue`, `== depth` sections, `canonical = alias, alias ~|!` (`~` uncommon, `!` rare). A plain plural is added as an alias automatically. The older `.ladder.json` still works.
+- **All nine bundled puzzles were rebuilt** to the funnel, not just resized: a clue-1 category has to hold 500 real answers, so several themes changed (wheels became vehicles, elements became drinks, capital cities became cities, orange things became things you can wear). The commonness labels on new answers are estimates and need the usual hand review.
+- **Layer 10 has no rarity band** (unchanged), and the end screen shows one example final answer (`pool[0]` of layer 10).
+- **Bundle size:** the nine puzzle files are about 1.9 MB of JSON (every layer repeats its answers). Watch the Devvit server bundle; if it becomes a problem, store each answer once with its depth and expand at load.
+- **Dev jump** (`jumpRun`) now picks answers from the deepest layer down, so the small layer-10 pool isn't used up by earlier layers.
+
 ## Step 9: end screen and community (22 Nov 2026)
 
 Checked against the installed `@devvit/reddit` 0.15.4 types, the config schema (`@devvit/shared-types/schemas/config-file.v1.json`) and `reddit/devvit-docs` `docs/capabilities/server/userActions.mdx` (developers.reddit.com refuses automated fetches).

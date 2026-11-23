@@ -630,7 +630,7 @@ async function end() {
   paintActions(r);
   ui.endNote.hidden = !cleared.some((c) => c.estimated && c.band);
   ui.endNote.textContent = `Bands are estimated until ${COLD_START_THRESHOLD} diggers have answered a layer.`;
-  ui.finalAnswer.textContent = `The last answer was “${r.finalAnswer}”.`;
+  ui.finalAnswer.textContent = `One last answer that worked: “${r.finalAnswer}”.`;
   ui.share.value = r.share;
   countdown();
   // After the panel is filled, so the camera fits the column into the rock left above it.

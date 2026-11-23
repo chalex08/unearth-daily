@@ -19,8 +19,8 @@ Platform facts referenced here were checked against the Devvit docs on 21 Nov 20
 
 - One shared puzzle per **UTC day**: a chain of **10 clues**.
 - Clue 1 is broad. Each later clue adds a constraint, so an answer at layer N must satisfy clues 1..N.
-- Clue 10 has **exactly one** valid answer.
-- **Answers get nicher with depth.** Early layers are full of everyday answers; by layers 7–9 most survivors are things only enthusiasts know; the layer-10 answer is **niche**: real and checkable, but unknown to most adults.
+- **The pool funnels.** Layer 1 has **500 or more** valid answers and layer 10 has **5 to 10**. Every clue removes a steady share: each layer keeps between **35% and 85%** of the layer above, so the pool dwindles at reasonable steps and never collapses (a typical puzzle runs about 520, 330, 200, 125, 75, 47, 29, 18, 11, 7). The rule is `POOL_SHAPE` in `src/shared/puzzle.ts`, checked by `npm run validate:puzzles`, the build tool and a test over every bundled file.
+- **Answers get more specific with depth, not more obscure.** Anyone can answer clue 1; a later clue only narrows the same everyday knowledge. Every answer is something an average adult would recognise, and the last few clues may be about the name itself (one word, fewer than nine letters).
 - Each answer may be used **once per run**.
 - **Puzzle number** = UTC days since the launch day **2026-11-08** + 1 (2026-11-21 is #14). Each puzzle file's `number` must match; a test checks every bundled file.
 - **3 pickaxes** (lives). An invalid answer breaks one. Repeated or empty input does not.
@@ -64,7 +64,7 @@ Five bands, named for how much of a find it was, each bigger and more joined-up 
 - Bonus is rounded to the nearest integer.
 - Rarity is **locked at the moment of answering** (later answers by other players don't change it).
 - Boundaries: each band includes its upper bound except Rubble (exactly 25% is Nugget, 10% is Nugget, 4% is Pocket, 1% is Vein).
-- Layer 10 has a single answer and gets no rarity bonus.
+- Layer 10 gets no rarity bonus (its handful of answers is the finish, not a share to rank).
 - Band colours say how rare the find was. They never paint the rock: stratum ore colours say which layer you are in.
 - **Cold start:** until a layer has **50 valid answers**, use the puzzle file's commonness label (`common` → Rubble, `uncommon` → Nugget, `rare` → Pocket) and mark the result **"estimated"**. A valid answer not in the pool (accepted by the AI judge) defaults to **Pocket (estimated)**.
 
@@ -111,7 +111,7 @@ There are two separate AI uses. Only the runtime judge calls an AI API; puzzles 
 
 - Puzzles are written by Claude in a Claude Code session with the project skill `/write-puzzle` (`.claude/skills/write-puzzle/`). No API key and no Gemini call is involved.
 - **Input is only optional hand-written seed themes and our own puzzle files.** Never Reddit data (§5.3).
-- Produces the 10-clue chain and per-layer answer pools, with **aliases** and a **commonness label** (`common` / `uncommon` / `rare`) for each answer, as a draft in `content/puzzles/drafts/`.
+- Produces the 10-clue chain and per-layer answer pools shaped as the §2 funnel (500+ answers at layer 1 down to 5 to 10 at layer 10), with **aliases** and a **commonness label** (`common` / `uncommon` / `rare`) for each answer, as a draft in `content/puzzles/drafts/`.
 - **Every puzzle is reviewed by hand** before it is committed to `content/puzzles/`.
 
 ### 5.2 Runtime judge (inside Devvit, Gemini paid tier)
@@ -181,7 +181,7 @@ Two in-world hints (not modals):
 
 - The camera pulls back to show the **whole core sample**.
 - Hero mineral, total points, rare finds, pickaxes left.
-- The **full chain revealed**: your answers and bands, unreached clues, and the final answer.
+- The **full chain revealed**: your answers and bands, unreached clues, and an example final answer.
 - **Graveyard:** runs ended per mineral; players reaching each mineral.
 - Spoiler-free **share text** with a copy button:
 
@@ -234,7 +234,7 @@ Routes (types in `src/shared/api.ts`; all need a logged-in user and a puzzle for
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `POST /api/start`     | Starts or resumes today's run: current clue, chain so far, lives, score, onboarding flag (true until the player's first finished run).                   |
 | `POST /api/answer`    | `{ answer, layer }` → `AnswerResult`. A `layer` that isn't the current one, or a second submit while one is being checked, gets 409 and changes nothing. |
-| `GET /api/result`     | End-screen payload with the full chain and final answer. 409 until the run has ended.                                                                    |
+| `GET /api/result`     | End-screen payload with the full chain and an example final answer. 409 until the run has ended.                                                         |
 | `GET /api/stats`      | Players, graveyard, players reaching each mineral, and fossils only for layers this player has cleared (§4.1 display rules; mid-run hiding in §6.3).     |
 | `POST /api/comment`   | Posts the share text as the player (`runAs: USER`), a reply to the app's stickied comment on the post. Once per run; 409 until the run has ended.        |
 | `POST /api/subscribe` | Joins the subreddit as the player. 409 until the run has ended.                                                                                          |
@@ -256,7 +256,7 @@ Redis keys (`src/server/core/keys.ts`). `{day}` is the UTC day key, `{userId}` t
 
 ## 9. Sample puzzle #14
 
-Used in tests and seed data.
+Used in tests and seed data. It is the one exception to the §2 funnel: a short, hand-checkable ladder for unit tests (`src/shared/fixtures/puzzle-14.ts`). The bundled puzzles in `content/puzzles/` must follow §2.
 
 | Layer | Clue                                 |
 | ----: | ------------------------------------ |

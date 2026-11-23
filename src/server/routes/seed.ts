@@ -12,7 +12,7 @@ import {
   startRun,
 } from '../../shared/game';
 import { LAYER_COUNT, normalise } from '../../shared/puzzle';
-import type { Commonness } from '../../shared/puzzle';
+import type { AnswerEntry, Commonness } from '../../shared/puzzle';
 import { fakeCounts } from '../core/fakeCounts';
 import { keys, TTL_SECONDS } from '../core/keys';
 import { puzzleFor, puzzles } from '../core/puzzles';
@@ -112,20 +112,25 @@ export async function jumpRun(userId: string, to: number): Promise<string> {
   if (!puzzle) return 'No puzzle today';
   let run = startRun(puzzleNumber(day));
   const want: Commonness[] = ['common', 'uncommon', 'rare'];
-  for (let layer = 1; layer < to; layer++) {
+  // Pools nest and shrink to a handful at layer 10, so choose from the deepest layer down: each
+  // layer then takes its answer while the small deep pools are still unspent.
+  const picks: AnswerEntry[] = [];
+  for (let layer = to - 1; layer >= 1; layer--) {
     const pool = puzzle.layers[layer - 1]!.pool.filter(
-      (a) => !run.used.includes(normalise(a.canonical))
+      (a) => !picks.some((p) => p.canonical === a.canonical)
     );
     const pick =
       pool.find((a) => a.commonness === want[(layer - 1) % 3]) ?? pool[0];
     if (!pick) return `No unused answer for layer ${layer}`;
+    picks[layer - 1] = pick;
+  }
+  for (const pick of picks)
     run = applyAnswer(run, {
       valid: true,
       answer: normalise(pick.canonical),
       canonical: pick.canonical,
       ...rarityBand(1, 1, pick.commonness),
     }).run;
-  }
   const runKey = keys.run(day, userId);
   await redis.hSet(runKey, { state: JSON.stringify(run) });
   await redis.expire(runKey, TTL_SECONDS);

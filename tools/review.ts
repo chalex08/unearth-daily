@@ -4,7 +4,11 @@
 import { existsSync, readFileSync, renameSync } from 'node:fs';
 import path from 'node:path';
 import { createInterface } from 'node:readline/promises';
-import { validatePuzzle, type AnswerEntry } from '../src/shared/puzzle.ts';
+import {
+  poolShapeErrors,
+  validatePuzzle,
+  type AnswerEntry,
+} from '../src/shared/puzzle.ts';
 import {
   draftsDir,
   isDate,
@@ -28,6 +32,12 @@ if (!existsSync(from)) {
 const data: unknown = JSON.parse(readFileSync(from, 'utf8'));
 if (!isPuzzle(data)) {
   console.error(`✖ Draft is invalid:\n  ${validatePuzzle(data).join('\n  ')}`);
+  process.exit(1);
+}
+
+const shape = poolShapeErrors(data);
+if (shape.length) {
+  console.error(`✖ Draft pool sizes are wrong:\n  ${shape.join('\n  ')}`);
   process.exit(1);
 }
 

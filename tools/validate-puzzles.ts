@@ -2,7 +2,7 @@
 //
 // Usage: node tools/validate-puzzles.ts [dir]   (default content/puzzles; drafts/ is not included)
 import path from 'node:path';
-import { validatePuzzle } from '../src/shared/puzzle.ts';
+import { poolShapeErrors, validatePuzzle } from '../src/shared/puzzle.ts';
 import { isPuzzle, puzzlesDir, readPuzzleFiles, root } from './puzzle-files.ts';
 
 const dir = process.argv[2] ? path.resolve(process.argv[2]) : puzzlesDir;
@@ -14,6 +14,7 @@ for (const { file, data } of files) {
   const errors = typeof data === 'string' ? [data] : validatePuzzle(data);
   if (isPuzzle(data)) {
     const p = data;
+    errors.push(...poolShapeErrors(p));
     if (`${p.date}.json` !== file)
       errors.push(`file name must be ${p.date}.json`);
     const clash = numbers.get(p.number);

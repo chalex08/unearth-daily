@@ -119,19 +119,29 @@ const gemini = (text: string) =>
 const verdict = (valid: boolean, canonical: string, reason = '') =>
   gemini(JSON.stringify({ valid, canonical, offensive: false, reason }));
 
-// Puzzle #14 (content/puzzles/2026-11-21.json): one valid answer per layer.
-const WIN = [
-  'tiger',
-  'orange juice',
-  'carrot',
-  'pumpkin',
-  'mango',
-  'navel orange',
-  'clementine',
-  'mandarin',
-  'calamondin',
-  'chinotto',
-];
+// The tests play whatever puzzle #14 (content/puzzles/2026-11-21.json) holds, so rewriting that
+// puzzle doesn't break them. Pools nest, so a winning path is picked from the deepest layer up.
+const P = puzzles.find((p) => p.date === '2026-11-21')!;
+const inPool = (layer: number, canonical: string) =>
+  P.layers[layer - 1]!.pool.some((a) => a.canonical === canonical);
+const LAYER = (n: number) => P.layers[n - 1]!.clue;
+const WIN = (() => {
+  const path: string[] = [];
+  for (let layer = 10; layer >= 1; layer--)
+    path[layer - 1] = P.layers[layer - 1]!.pool.find(
+      (a) => !path.includes(a.canonical)
+    )!.canonical;
+  return path;
+})();
+/** A common answer valid at layer 1 only, with an alias to type (so Rubble while estimated). */
+const FIRST = P.layers[0]!.pool.find(
+  (a) =>
+    a.commonness === 'common' && a.aliases.length > 0 && !inPool(2, a.canonical)
+)!;
+/** A common answer valid at layers 1 and 2: a mid-run fossil of it must read "something else". */
+const SHARED = P.layers[0]!.pool.find(
+  (a) => a.commonness === 'common' && inPool(2, a.canonical)
+)!;
 
 beforeEach(() => {
   env.reset();
@@ -157,24 +167,24 @@ describe('POST /start', () => {
       date: '2026-11-21',
       status: 'playing',
       layer: 1,
-      clue: 'Name something orange',
+      clue: LAYER(1),
       chain: [],
       lives: 3,
       score: 0,
       onboarding: true,
     });
-    await answer('tiger', 1);
+    await answer(FIRST.canonical, 1);
     const again = await start();
     expect(again.layer).toBe(2);
-    expect(again.chain.map((c) => c.answer)).toEqual(['tiger']);
+    expect(again.chain.map((c) => c.answer)).toEqual([FIRST.canonical]);
     expect(env.hashes.get('reached:2026-11-21')?.get('0')).toBe('1');
   });
 
   it('never sends future clues or pools', async () => {
     const body = JSON.stringify(await start());
-    expect(body).not.toContain('that you can eat');
-    expect(body).not.toContain('chinotto');
-    expect(body).not.toContain('traffic cone');
+    expect(body).not.toContain(LAYER(2));
+    expect(body).not.toContain(WIN[9]!);
+    expect(body).not.toContain(WIN[8]!);
   });
 
   it('needs a logged-in user and a puzzle for today', async () => {
@@ -192,11 +202,11 @@ describe('POST /answer', () => {
   it('validates pool answers with no AI and locks rarity', async () => {
     const fetchSpy = vi.fn();
     vi.stubGlobal('fetch', fetchSpy);
-    const r = await answer('Tigers!', 1);
+    const r = await answer(`${FIRST.aliases[0]!}!`, 1);
     expect(r).toMatchObject({
       outcome: 'valid',
       valid: true,
-      canonical: 'tiger',
+      canonical: FIRST.canonical,
       mineral: 'Dirt',
       base: 10,
       band: 'Rubble',
@@ -205,16 +215,16 @@ describe('POST /answer', () => {
       percent: 100,
       total: 10,
       lives: 3,
-      nextClue: '…that you can eat',
+      nextClue: LAYER(2),
       ended: false,
     });
     expect(fetchSpy).not.toHaveBeenCalled();
-    expect(env.zsets.get('answers:2026-11-21:1')?.get('tiger')).toBe(1);
+    expect(env.zsets.get('answers:2026-11-21:1')?.get(FIRST.canonical)).toBe(1);
   });
 
   it('ignores empty, too-long and reused answers at no cost', async () => {
-    await answer('tiger', 1);
-    for (const text of ['  ', 'x'.repeat(41), 'tigers']) {
+    await answer(FIRST.canonical, 1);
+    for (const text of ['  ', 'x'.repeat(41), FIRST.aliases[0]!]) {
       const r = await answer(text, 2);
       expect(r.outcome).toBe('ignored');
       expect(r.lives).toBe(3);
@@ -222,11 +232,11 @@ describe('POST /answer', () => {
   });
 
   it('rejects a stale layer (double submit) and concurrent submits', async () => {
-    await answer('tiger', 1);
+    await answer(FIRST.canonical, 1);
     expect((await submit('fox', 1)).status).toBe(409);
     const [a, b] = await Promise.all([
-      submit('fanta', 2),
-      submit('cheetos', 2),
+      submit(P.layers[1]!.pool[0]!.canonical, 2),
+      submit(P.layers[1]!.pool[1]!.canonical, 2),
     ]);
     expect([a.status, b.status].sort()).toEqual([200, 409]);
     expect((await start()).chain).toHaveLength(2);
@@ -273,14 +283,17 @@ describe('POST /answer', () => {
   it('mid-run fossils never name an answer valid at the current layer', async () => {
     env.state.userId = 't2_bob';
     await start();
-    await answer('orange juice', 1); // also valid at layer 2
+    await answer(SHARED.canonical, 1); // also valid at layer 2
     env.state.userId = 't2_alice';
-    await answer('tiger', 1);
+    await answer(FIRST.canonical, 1);
     const stats = await json<StatsResponse>(api.request('/stats'));
-    expect(stats.fossils[0]).toEqual([
-      { answer: 'something else', count: 1, percent: 50 },
-      { answer: 'tiger', count: 1, percent: 50 },
-    ]);
+    expect(stats.fossils[0]).toHaveLength(2);
+    expect(stats.fossils[0]).toEqual(
+      expect.arrayContaining([
+        { answer: 'something else', count: 1, percent: 50 },
+        { answer: FIRST.canonical, count: 1, percent: 50 },
+      ])
+    );
   });
 
   it('AI-approved answers count, are cached, and show as "something else" to others', async () => {
@@ -331,17 +344,17 @@ describe('POST /answer', () => {
       verdict(false, 'x', 'no')
     );
     vi.stubGlobal('fetch', fetchSpy);
-    await answer('tiger', 1);
+    await answer(FIRST.canonical, 1);
     await answer('Orange  Lego!', 2);
     const [url, init] = fetchSpy.mock.calls[0]!;
     expect(url).toContain('generativelanguage.googleapis.com');
     expect(new Headers(init.headers).get('x-goog-api-key')).toBe('test-key');
     const sent = String(init.body);
     expect(sent).toContain('\\"orange lego\\"');
-    expect(sent).toContain('that you can eat');
-    expect(sent).not.toContain('that grows on a plant');
+    expect(sent).toContain(LAYER(2));
+    expect(sent).not.toContain(LAYER(3));
     expect(sent).not.toContain('alice');
-    expect(sent).not.toContain('tiger');
+    expect(sent).not.toContain(`\\"${FIRST.canonical}\\"`);
   });
 });
 
@@ -360,7 +373,7 @@ describe('a full run', () => {
       hero: 'Uranium',
       lives: 3,
       streak: 1,
-      finalAnswer: 'chinotto',
+      finalAnswer: WIN[9],
     });
     expect(res.chain).toHaveLength(10);
     expect(res.chain.every((c) => c.cleared)).toBe(true);
@@ -399,7 +412,7 @@ describe('a full run', () => {
       total: 0,
     });
     expect(res.chain[0]).toMatchObject({
-      clue: 'Name something orange',
+      clue: LAYER(1),
       cleared: null,
     });
   });
@@ -459,7 +472,7 @@ describe('end screen and community', () => {
     );
     env.state.userId = 't2_bob';
     await start();
-    await answer('tiger', 1);
+    await answer(FIRST.canonical, 1);
     for (const text of ['x1', 'x2', 'x3']) await answer(text, 2);
     stats = await json<StatsResponse>(api.request('/stats'));
     expect(stats.deeperThan).toBe(33);
